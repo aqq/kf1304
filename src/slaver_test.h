@@ -78,7 +78,7 @@ void slaver_test_grab()
 	stream = fopen(filename.c_str(), "r");
 	//fprintf(stream, "This is a test");
 
-	long curpos, length;
+	long  length;
 	//curpos = ftell(stream);
  fseek(stream, 0L, SEEK_END);
 	length = ftell(stream);

@@ -4,21 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/PageHunter.cpp \
+../src/kf1304.cpp \
 ../src/main.cpp \
 ../src/master.cpp \
 ../src/master_test.cpp \
 ../src/slaver.cpp 
 
 OBJS += \
-./src/PageHunter.o \
+./src/kf1304.o \
 ./src/main.o \
 ./src/master.o \
 ./src/master_test.o \
 ./src/slaver.o 
 
 CPP_DEPS += \
-./src/PageHunter.d \
+./src/kf1304.d \
 ./src/main.d \
 ./src/master.d \
 ./src/master_test.d \

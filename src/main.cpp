@@ -76,7 +76,8 @@ int main1(int argc, char** argv)
 		//"bdshare_firstime=1353718390129;BDREFER=%7Burl%3A%22http%3A//news.baidu.com/%22%2Cword%3A%22%22%7D; BAIDUID=8EDAAD9053BEA3C4F1A021013F88C5C9:FG=1; BAIDU_WISE_UID=AA1658B98730EA255C698C58D3D5210E; MCITY=-131%3A; BAIDULXBCB=40B588D2439B02F1D36A9824FFAFE1CE82E3C21B9B5C1156F5A4564C424E77E20E6FEA0F362DCCF8691571DACAB4AD4ED81C9F2C6082612485F72776FEFABC24F44538870A759B1DF2BEA7BB60F7AA33DB1D5937E1";
 		char request[4096];
 		snprintf(request,4096,http_request,cookie);
-		int w = write(sockfd, request, strlen(request));
+		//int w =
+				write(sockfd, request, strlen(request));
 		char buf[4096];	
 		int count = 0;
 		
