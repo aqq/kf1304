@@ -25,6 +25,9 @@ typedef struct task
 	string store_ip;
 	int store_port;
 
+	string request_ip;
+	int request_port;
+
 	string url_header;
 	vector<string> *url_body;
 

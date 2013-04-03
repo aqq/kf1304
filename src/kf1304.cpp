@@ -13,6 +13,7 @@ using namespace poseidon;
 
 int main() {
 	 //slaver_test_getHttpHeader();//pass
-	 slaver_test_grab();//not pass
+	 slaver_test_grab(1);//not pass
+	 //slaver_test_grab_3();
 	return 0;
 }

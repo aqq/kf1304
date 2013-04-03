@@ -38,7 +38,7 @@ bool tail_with_feature(char* buf,int count,const char* feature)
 
 int main1(int argc, char** argv)
 {
-//
+//int argc, char** argv
 	argc=3;
 	argv[1]="119.75.220.34";
 	argv[2]="80";
