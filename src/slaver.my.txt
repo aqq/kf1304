@@ -25,9 +25,6 @@
 #include "zlib.h"
 
 #include "GlobalHelper.h"
-#include "TextLogger.h"
-
-#define DEBUG
 namespace poseidon
 {
 
@@ -60,23 +57,25 @@ bool slaver::work(task mytask)
 }
 bool slaver::grabpage(task mytask, int index)
 {
-#ifdef DEBUG
-	cout << mytask.url_body->at(index) << endl;
-#endif
-	struct sockaddr_in dest_addr;
 
+	//create socket
 	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (-1 == sockfd)
 	{
 		perror("socket fd create fail...");
 		return -1;
 	}
-
+	//prepare socket's dest ip and port
+	struct sockaddr_in dest_addr;
 	dest_addr.sin_family = AF_INET;
+	//dest_addr.sin_port = htons(mytask.request_port);
 	dest_addr.sin_port = htons(mytask.request_port);
+	//dest_addr.sin_addr.s_addr = inet_addr(mytask.request_ip.c_str());
 	dest_addr.sin_addr.s_addr = inet_addr(mytask.request_ip.c_str());
 	bzero(&(dest_addr.sin_zero), 8);
 
+
+	// connect
 	if (-1
 			== connect(sockfd, (struct sockaddr*) &dest_addr,
 					sizeof(struct sockaddr)))
@@ -84,74 +83,43 @@ bool slaver::grabpage(task mytask, int index)
 		perror("socket fd connet fail...");
 		return -1;
 	}
-
-	write(sockfd, mytask.url_body->at(index).c_str(),
-			strlen(mytask.url_body->at(index).c_str()));
-	char buf[4096];
+	///prepare http_request_header
+	//string http_request_header = mytask.url_body->at(index);
+	//write(sockfd, http_request_header.c_str(), http_request_header.length());
+	char http_request[] =
+			"GET /question/530490556.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
+	char cookie[] = "Cookie: ";
+	char request[4096];
+	snprintf(request, 4096, http_request, cookie);
+	//
+	char read_buf[4096]; //read_buf
 	int count = 0;
-
-	GlobalHelper *gh = new GlobalHelper();
-	string response_content;
-	string::size_type response_content_size;
-	bool flag = false;
-
-	string filename = "./temp" + gh->num2str(index) + ".txt";
+	//output
+	ostringstream ret_ostring;
+	string filename = "./";
+	filename.append(mytask.url_body->at(index));
+	filename.append(".txt");
+	//
 	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_APPEND);
-
-#ifdef DEBUG
-	cout << "begin while" << endl;
-#endif
-
-	while ((count = read(sockfd, buf, 1448)) > 0)
+	//int fd = open("./result.log", O_CREAT | O_WRONLY | O_APPEND);
+	while ((count = read(sockfd, read_buf, sizeof(read_buf))) > 0)
 	{
-#ifdef DEBUG
-		//cout << buf << "****" << endl;
-#endif
-		//response_content.append(buf);
-		write(fd, buf, count);
-
-		//[001]尝试通过CONTENT－LEN来判断 BEGIN
-		//if (!flag)		{			flag = gh->Content_length(response_content, &response_content_size);		}
-		//string::size_type current_size =
-		//response_content.size();
-		//cout << "current_size:" << current_size << "total_size:"				<< response_content_size << endl;
-		/*	if (flag && (current_size == response_content_size))
-		 {
-		 #ifdef DEBUG
-		 cout << response_content << endl;
-		 #endif
-		 break;
-		 }
-		 */
-		//[001]尝试通过CONTENT－LEN来判断 END
-		if (gh->tail_with_feature(buf, count, "\r\n0\r\n\r\n"))
-		{
-			break;
-		}
-
-		if (gh->tail_with_feature(buf, count, "</html>\r\n\r\n"))
-		{
-			break;
-		}
-		if (gh->tail_with_feature(buf, count, "</html>"))
+		write(fd, read_buf, 1448);
+		//
+		string s1(read_buf);
+		cout << "s1:" << s1 << endl;
+		//
+		if (tail_with_feature(read_buf, count, "\r\n0\r\n\r\n"))
 		{
 			break;
 		}
 
 	}
-
 	close(fd);
-
+	//close socket
 	close(sockfd);
-
-	//尝试通过C＋＋函数写入本地文件，内容缺失，，猜测是STR.APPEND的时候加入了‘、0’
-	//string filename2 = "./txt_" + gh->num2str(index) + ".txt";
-	//TextLogger *logger = new TextLogger(filename2.c_str());
-	//logger->LogContent(response_content);
-
-	printf("Client Dying.....\n");
-
-	return 0;
+	cout << "finish grab page" << endl;
+	return 1;
 }
 bool slaver::localStorePage()
 {

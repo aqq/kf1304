@@ -4,6 +4,8 @@
  *  Created on: 2013-4-1
  *      Author: root
  */
+#ifndef slaver_test_H_
+#define slaver_test_H_
 
 #include "slaver.h"
 #include <stdio.h>
@@ -17,13 +19,34 @@
 #define UPDATE 2
 #define GRABPAGE 3
 
-//#include "GlobalHelper.h"
+#include "GlobalHelper.h"
+#include "TextLogger.h"
 
 #include <iostream>
 using namespace std;
 
 namespace poseidon
 {
+//slaver_test_grab
+//==========================================================================
+void init_grabpage_iis(task *mytask)
+{
+	//csdn 117.79.93.222
+	//iis 10.2.112.11
+	mytask->request_ip = "10.2.112.11";
+	mytask->request_port = 81;
+	mytask->url_body = new vector<string>();
+	mytask->url_body->push_back(
+			"GET / HTTP/1.1\r\n"
+					"Host: 10.2.112.11:81\r\n"
+					"Connection: close\r\n"
+					"Cache-Control: max-age=0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+					"Accept-Encoding: gzip,deflate,sdch\r\n"
+					"Accept-Language: zh-CN,zh;q=0.8\r\n"
+					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n\r\n");
+}
 //===============================================================
 void init_task(task *mytask)
 {
@@ -34,7 +57,7 @@ void init_task(task *mytask)
 	mytask->task_id = 1;
 	mytask->url_body = new vector<string>();
 	mytask->url_header =
-			"GET /question/#.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
+			"GET /question/#.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
 
 	mytask->url_body->push_back("1");
 	mytask->url_body->push_back("537211931");
@@ -51,10 +74,10 @@ void slaver_test_getHttpHeader()
 	cout << "!!!Hello World!!!" << endl;
 	bool b1 =
 			s1
-					== "GET /question/1.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
+					== "GET /question/1.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
 	bool b2 =
 			s2
-					== "GET /question/537211931.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
+					== "GET /question/537211931.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
 	cout << b1 <<
 	//":"<< s1<<
 			endl;
@@ -72,45 +95,101 @@ void init_task_4_grabpage_114_wx_1(task *mytask)
 	mytask->request_port = 80;
 
 	mytask->url_body = new vector<string>();
-
-	mytask->url_body->push_back(
-			"GET /question/530490556.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n");
 	//子站首页
-
 	mytask->url_body->push_back(
-			"GET /tradehtml/320200/3202001212190001/index.html HTTP/1.1\r\nHost: www.114chn.com\r\nConnection: keep-alive\r\nAccept: */*\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\nReferer: http://wx.114chn.com/tradehtml/320200/3202001212190001/index.html\r\nAccept-Encoding: gzip,deflate,sdch\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\nCookie: \r\n");
+			"GET /tradehtml/320200/3202001212190001/index.html HTTP/1.1\r\n"
+					"Host: wx.114chn.com\r\n"
+					"Connection: keep-alive\r\n"
+					"Cache-Control: max-age=0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+					"Accept-Encoding: gzip,deflate,sdch\r\n"
+					"Accept-Language: zh-CN,zh;q=0.8\r\n"
+					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+					"\r\n");
 	//子站列表页
 	mytask->url_body->push_back(
-			"GET /tradehtml/320200/3202001212190001/News.html HTTP/1.1\r\nHost: www.114chn.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n");
+			"GET /tradehtml/320200/3202001212190001/News.html HTTP/1.1\r\n"
+					"Host: wx.114chn.com\r\n"
+					"Connection: close\r\n"
+					"Cache-Control: max-age=0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+					"Accept-Encoding: gzip,deflate,sdch\r\n"
+					"Accept-Language: zh-CN,zh;q=0.8\r\n"
+					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+					"\r\n");
 	//子站文章内容页
 	mytask->url_body->push_back(
-			"GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=130890 HTTP/1.1\r\nHost: www.114chn.com\r\nConnection: keep-alive\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n");
-
+			"GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=130890 HTTP/1.1\r\n"
+					"Host: wx.114chn.com\r\n"
+					"Connection: close\r\n"
+					"Cache-Control: max-age=0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+					"Accept-Encoding: gzip,deflate,sdch\r\n"
+					"Accept-Language: zh-CN,zh;q=0.8\r\n"
+					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+					"\r\n");
 }
-
-void slaver_test_grab(int index)
+void slaver_test_grab_local(int index)
 {
+	//timing_begin();
+
 	task mytask; //commad
-	init_task_4_grabpage_114_wx_1(&mytask);
+	init_grabpage_iis(&mytask);
+	//	init_grabpage_iis(&mytask);
 	//bool request_result;
 	slaver * worker = new slaver();
-	//int index = 0;
+
 	worker->grabpage(mytask, index);
 
-	string filename = "./page";
-	filename += (index+48);
+	string filename = "./temp";
+	filename += (index + 48);
 	filename.append(".txt");
 
 	FILE *stream;
 	stream = fopen(filename.c_str(), "r");
 	long length;
-	//curpos = ftell(stream);
 	fseek(stream, 0L, SEEK_END);
 	length = ftell(stream);
-	//fseek(stream, curpos, SEEK_SET);
 	fclose(stream);
+
+	//clock_t cast_time = timing_end();
+#ifdef DEBUG
+	cout << "filename" << filename << " slaver_test_grab :" << (length > 0)
+	<< "; size: " << length << endl;
+#endif
+
+}
+//========================================
+void slaver_test_grab(int index)
+{
+	GlobalHelper *gh = new GlobalHelper();
+	gh->timing_begin();
+
+	task mytask; //commad
+	init_task_4_grabpage_114_wx_1(&mytask);
+
+	slaver * worker = new slaver();
+	worker->grabpage(mytask, index);
+
+	string filename = "./temp" + gh->num2str(index) + ".txt";
+
+	//clock_t cast_time = timing_end();
+#ifdef DEBUG
 	cout << "filename" << filename << "slaver_test_grab :" << (length > 0)
-			<< "; size: " << length << endl;
+	<< "; size: " << length << endl;
+#endif
+	gh->timing_end();
+	TextLogger *logger = new TextLogger("log/grab_114.txt");
+
+	string info = "no:" + gh->num2str(index);
+	info += " castTime:" + gh->cast_time();
+	info += " pagesize:" + gh->num2str(gh->file_size(filename));
+	info += " \n:";
+
+	logger->LogContent(info);
 
 }
 void slaver_test_grab_3()
@@ -153,3 +232,4 @@ void slaver_test()
 }
 
 } /* namespace poseidon */
+#endif /* slave_test_H_ */

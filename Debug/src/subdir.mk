@@ -4,22 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/GlobalHelper.cpp \
+../src/StringHelper.cpp \
+../src/TextLogger.cpp \
 ../src/kf1304.cpp \
-../src/main.cpp \
 ../src/master.cpp \
 ../src/master_test.cpp \
 ../src/slaver.cpp 
 
 OBJS += \
+./src/GlobalHelper.o \
+./src/StringHelper.o \
+./src/TextLogger.o \
 ./src/kf1304.o \
-./src/main.o \
 ./src/master.o \
 ./src/master_test.o \
 ./src/slaver.o 
 
 CPP_DEPS += \
+./src/GlobalHelper.d \
+./src/StringHelper.d \
+./src/TextLogger.d \
 ./src/kf1304.d \
-./src/main.d \
 ./src/master.d \
 ./src/master_test.d \
 ./src/slaver.d 
