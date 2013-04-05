@@ -1,0 +1,80 @@
+/*
+ * slaver.h
+ *
+ *  Created on: 2013-4-1
+ *      Author: root
+ */
+
+#ifndef SLAVER_H_
+#define SLAVER_H_
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include <fcntl.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <unistd.h>
+#include <vector>
+#include <stdio.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+namespace poseidon {
+typedef struct task {
+	int sleep_time;
+
+	int task_id;
+	int command;
+
+	string store_ip;
+	int store_port;
+
+	string request_ip;
+	int request_port;
+
+	string url_header;
+	vector<string> *url_body;
+
+};
+class slaver {
+private:
+	int master_port;
+	string master_ip;
+protected:
+	int slave_id;
+	int pro_version;
+	int application_version;
+public:
+	slaver() {
+	}
+	virtual ~slaver();
+	bool requestTask(task *mytask);
+	bool work(task mytask);
+	bool grabpage(task mytask, int index);
+	bool localStorePage();
+	bool remoteStorePage();
+	//
+	string& replace_all(string& str, const string& old_value,
+			const string& new_value);
+	string getHttpHeader(string url_header, vector<string> url_body, int id);
+	//help
+	void init_address(struct sockaddr_in *dest_addr, int sin_family) {
+		bzero(dest_addr, sizeof(dest_addr));
+		dest_addr->sin_family = sin_family;
+		dest_addr->sin_port = htons(master_port);
+		dest_addr->sin_addr.s_addr = inet_addr(master_ip.c_str());
+		bzero(&(dest_addr->sin_zero), 8);
+	}
+
+};
+
+} /* namespace poseidon */
+#endif /* SLAVER_H_ */

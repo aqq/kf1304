@@ -1,0 +1,729 @@
+
+**** Clean-only build of configuration Debug for project kf1304_slave ****
+
+make clean 
+rm -rf  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304.o ./src/master.o ./src/master_test.o ./src/slaver.o  ./src/GlobalHelper.d ./src/StringHelper.d ./src/TextLogger.d ./src/kf1304.d ./src/master.d ./src/master_test.d ./src/slaver.d  kf1304
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building file: ../src/TextLogger.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TextLogger.d" -MT"src/TextLogger.d" -o "src/TextLogger.o" "../src/TextLogger.cpp"
+Finished building: ../src/TextLogger.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/master_test.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master_test.d" -MT"src/master_test.d" -o "src/master_test.o" "../src/master_test.cpp"
+Finished building: ../src/master_test.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage(poseidon::task, int)’:
+../src/slaver.cpp:95: 警告：未使用的变量 ‘response_content_size’
+../src/slaver.cpp:96: 警告：未使用的变量 ‘flag’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/master.o ./src/master_test.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::init_address(poseidon::sockaddr_in*, int, poseidon::task)’:
+../src/slaver.h:57: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:58: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:58: 错误：‘htons’ 在此作用域中尚未声明
+../src/slaver.h:59: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:59: 错误：‘inet_addr’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::init_address(poseidon::sockaddr_in*, int)’:
+../src/slaver.h:56: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:57: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:57: 错误：‘mytask’ 在此作用域中尚未声明
+../src/slaver.h:57: 错误：‘htons’ 在此作用域中尚未声明
+../src/slaver.h:58: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:58: 错误：‘inet_addr’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h:54: 错误：‘sockaddr_in’ 未声明
+../src/slaver.h: In member function ‘void poseidon::slaver::init_address(int*, int)’:
+../src/slaver.h:56: 错误：对成员 ‘sin_family’ 的请求出现在 ‘* dest_addr’ 中，而后者具有非类类型 ‘int’
+../src/slaver.h:57: 错误：对成员 ‘sin_port’ 的请求出现在 ‘* dest_addr’ 中，而后者具有非类类型 ‘int’
+../src/slaver.h:57: 错误：‘mytask’ 在此作用域中尚未声明
+../src/slaver.h:57: 错误：‘htons’ 在此作用域中尚未声明
+../src/slaver.h:58: 错误：对成员 ‘sin_addr’ 的请求出现在 ‘* dest_addr’ 中，而后者具有非类类型 ‘int’
+../src/slaver.h:58: 错误：‘inet_addr’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::init_address(poseidon::sockaddr_in*, int)’:
+../src/slaver.h:56: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:57: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:57: 错误：‘mytask’ 在此作用域中尚未声明
+../src/slaver.h:57: 错误：‘htons’ 在此作用域中尚未声明
+../src/slaver.h:58: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+../src/slaver.h:58: 错误：‘inet_addr’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage(poseidon::task, int)’:
+../src/slaver.cpp:73: 错误：聚合 ‘poseidon::sockaddr_in dest_addr’ 类型不完全，无法被定义
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::init_address(poseidon::sockaddr_in*, int)’:
+../src/slaver.h:56: 错误：invalid use of undefined type ‘struct poseidon::sockaddr_in’
+../src/slaver.h:54: 错误：forward declaration of ‘struct poseidon::sockaddr_in’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage(poseidon::task, int)’:
+../src/slaver.cpp:73: 错误：聚合 ‘poseidon::sockaddr_in dest_addr’ 类型不完全，无法被定义
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp:14:16: 错误：in.h：没有那个文件或目录
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:47: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:47: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:46: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:48: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In constructor ‘poseidon::slaver::slaver()’:
+../src/slaver.h:57: 错误：从类型 ‘const char*’ 到类型 ‘int’ 的转换无效
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:43: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:45: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:42: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:41: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:42: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:43: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:42: 错误：聚合 ‘poseidon::socketaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:41: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:42: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:43: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:43: 错误：聚合 ‘poseidon::sockeaddr_in server_addr’ 类型不完全，无法被定义
+../src/slaver.cpp:41: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:43: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:44: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:41: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:43: 警告：未使用的变量 ‘server_addr’
+../src/slaver.cpp:44: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:51: 错误：‘class poseidon::slaver’ 没有名为 ‘init_address’ 的成员
+../src/slaver.cpp:41: 警告：未使用的变量 ‘buf’
+../src/slaver.cpp:44: 警告：未使用的变量 ‘host’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h:52: 错误：ISO C++ 不允许成员 ‘command_request_task’ 的初始化
+../src/slaver.h:52: 错误：使 ‘command_request_task’ 成为静态的
+../src/slaver.h:52: 错误：类中对具有非整数类型 ‘const std::string’ 的静态数据成员的初始化无效
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In constructor ‘poseidon::slaver::slaver()’:
+../src/slaver.h:62: 错误：expected `;' before ‘}’ token
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:41: 警告：未使用的变量 ‘write_buf’
+../src/slaver.cpp:43: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:42: 警告：未使用的变量 ‘write_buf’
+../src/slaver.cpp:44: 警告：未使用的变量 ‘host’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h:53: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/slaver.h:53: 错误：expected ‘;’ before ‘*’ token
+../src/slaver.h: In constructor ‘poseidon::slaver::slaver()’:
+../src/slaver.h:63: 错误：‘gh’ 在此作用域中尚未声明
+../src/slaver.h:63: 错误：expected type-specifier before ‘GlobalHelper’
+../src/slaver.h:63: 错误：expected `;' before ‘GlobalHelper’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h:53: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/slaver.h:53: 错误：expected ‘;’ before ‘*’ token
+../src/slaver.h: In constructor ‘poseidon::slaver::slaver()’:
+../src/slaver.h:63: 错误：‘gh’ 在此作用域中尚未声明
+../src/slaver.h:63: 错误：expected type-specifier before ‘GlobalHelper’
+../src/slaver.h:63: 错误：expected `;' before ‘GlobalHelper’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In constructor ‘poseidon::slaver::slaver()’:
+../src/slaver.h:65: 错误：no match 为 ‘operator=’ 在 ‘*((poseidon::slaver*)this)->poseidon::slaver::gh = (((poseidon::GlobalHelper*)operator new(28u)), (<anonymous>->poseidon::GlobalHelper::GlobalHelper(), <anonymous>))’ 中
+../src/GlobalHelper.h:26: 附注：备选为： poseidon::GlobalHelper& poseidon::GlobalHelper::operator=(const poseidon::GlobalHelper&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:79: 错误：‘buf’ 在此作用域中尚未声明
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project kf1304_master ****
+
+make clean 
+rm -rf  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o  ./src/GlobalHelper.d ./src/StringHelper.d ./src/TextLogger.d ./src/kf1304_master.d ./src/master.d ./src/slaver.d  kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building file: ../src/TextLogger.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TextLogger.d" -MT"src/TextLogger.d" -o "src/TextLogger.o" "../src/TextLogger.cpp"
+Finished building: ../src/TextLogger.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:68: 错误：continue 语句出现在循环以外
+../src/slaver.cpp:80: 错误：break 语句不在循环或开关语句内
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:68: 错误：continue 语句出现在循环以外
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:68: 错误：continue 语句出现在循环以外
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

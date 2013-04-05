@@ -1,0 +1,145 @@
+/*
+ * master.h
+ *
+ *  Created on: 2013-4-1
+ *      Author: root
+ */
+
+#ifndef MASTER_H_
+#define MASTER_H_
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include<fcntl.h>
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+#include <unistd.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include "GlobalHelper.h"
+using namespace std;
+
+namespace poseidon {
+
+class master {
+
+private:
+	int master_port; //80
+	string master_ip; //"192.168.75.128";
+	//command 1 salve 1
+	string command_m2s_1; //"2\r\n1\r\n\f";
+	GlobalHelper *gh;
+public:
+	master() {
+		master_port = 9000;
+		master_ip = "192.168.75.128";
+		command_m2s_1 = "2\r\n1\r\n\f";
+		gh = new GlobalHelper();
+	}
+	int service() {
+		//1 init variable
+		int socketfd;
+		socklen_t size;
+		int new_fd;
+		struct sockaddr_in client_addr;
+		struct sockaddr_in local_addr;
+		char request_buff[gh->TASK_BUF_SIZE];
+		//2 create socket
+		if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+			perror("socket fd create fail...");
+			return -1;
+		}
+		//3 prepare listen access point
+		gh->init_address(&local_addr, PF_INET, this->master_port, INADDR_ANY);
+		//4 bind and listen
+		if (-1
+				== bind(socketfd, (struct sockaddr*) &local_addr,
+						sizeof(struct sockaddr))) {
+			perror("socket fd connet fail...");
+			return -1;
+		}
+		if (listen(socketfd, 128) == -1) {
+			perror("socket fd listen fail...");
+			return -1;
+		}
+		cout << "waiting for your connection!" << endl;
+		//5   revice str
+		while (1) {
+
+			size = sizeof(client_addr);
+			//accept
+			if ((new_fd = accept(socketfd, (struct sockaddr *) (&client_addr),
+					&size)) == -1) {
+				perror("socket new_fd accept fail...");
+				return -1;
+			}
+			cout << "conntection from" << inet_ntoa(client_addr.sin_addr)
+					<< endl;
+			int read_count;
+			//
+			while (1) {
+				read_count = read(new_fd, request_buff, sizeof request_buff);
+
+				if (read_count == 0) {
+					perror("socket fd read fail...");
+					break;
+				}
+				if (gh->tail_with_feature(request_buff, read_count, "^")) {
+					break;
+				}
+
+			} //hand request
+			request_buff[read_count] = '\0';
+			cout << "request is :" << request_buff << endl;
+			string request_str = request_buff;
+			vector<string> *vec = new vector<string>();
+			gh->split_line(request_str, vec);
+			int commd_id = vec->at(0);
+			string respose_content = "hi!^";
+			switch (commd_id) {
+			case 1:
+				respose_content = "commd_id:4\r\n"
+						"slave_id:1\r\n"
+						"time:60\r\n"
+						"\f";
+
+				break;
+			case 2:
+				respose_content = "commd_id:4\r\n"
+						"slave_id:1\r\n"
+						"time:60\r\n"
+						"\f";
+
+				break;
+
+			}
+
+			//write to request
+			string respose_content = "hi!^";
+			int write_result = write(new_fd, respose_content.c_str(),
+					strlen(respose_content.c_str()));
+			if (write_result < 0) {
+				perror("socket fd write fail...");
+			}
+			cout << "response:" << respose_content << endl;
+			//
+			//6 sleep
+			sleep(3);
+			//	close(socketfd);
+			//	string result = "";
+
+		}
+		return 0;
+	}
+	virtual ~master();
+};
+
+}
+/* namespace poseidon */
+#endif /* MASTER_H_ */

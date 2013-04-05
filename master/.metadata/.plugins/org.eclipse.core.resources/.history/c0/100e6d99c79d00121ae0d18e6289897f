@@ -1,0 +1,107 @@
+/*
+ * master.h
+ *
+ *  Created on: 2013-4-1
+ *      Author: root
+ */
+
+#ifndef MASTER_H_
+#define MASTER_H_
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include<fcntl.h>
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+#include <unistd.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include "GlobalHelper.h"
+using namespace std;
+
+namespace poseidon {
+
+class master {
+
+private:
+	int master_port;
+	string master_ip;
+	//command 1 salve 1
+	string command_m2s_1;
+	GlobalHelper *gh;
+public:
+	master() {
+		master_port = 9000;
+		master_ip = "192.168.75.128";
+		command_m2s_1 = "1\r\n1\r\n\f";
+		gh = new GlobalHelper();
+	}
+	int service() {
+		//1 init variable
+		int socketfd;
+		socklen_t size;
+		int new_fd;
+		struct sockaddr_in client_addr;
+		struct sockaddr_in local_addr;
+		char request_buff[gh->TASK_BUF_SIZE];
+		//2 create socket
+		if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+			perror("socket fd create fail...");
+			return -1;
+		}
+		//3 prepare listen access point
+		gh->init_address(&local_addr, PF_INET, this->master_port, INADDR_ANY);
+		//4 bind and listen
+		if (-1
+				== bind(socketfd, (struct sockaddr*) &local_addr,
+						sizeof(struct sockaddr))) {
+			perror("socket fd connet fail...");
+			return -1;
+		}
+		if (listen(socketfd, 128) == -1) {
+			perror("socket fd listen fail...");
+			return -1;
+		}
+		cout << "waiting for your connection!" << endl;
+		//5   revice str
+		while (1) {
+			size = sizeof(client_addr);
+
+			//accept
+			if ((new_fd = accept(socketfd, (struct sockaddr *) (&client_addr),
+					&size)) == -1) {
+				perror("socket new_fd accept fail...");
+				return -1;
+			}
+			cout << "conntection from" << inet_ntoa(client_addr.sin_addr)
+					<< endl;
+
+			//
+			int read_count;
+			while (1) {
+				read_count = read(new_fd, request_buff, sizeof request_buff);
+				if (read_count<0) {
+				}
+				if (read_count<0) {
+								}
+
+			}
+
+		}
+
+		//6 clear socket
+		close(socketfd);
+		string result = "";
+		return 1;
+	}
+	virtual ~master();
+};
+
+} /* namespace poseidon */
+#endif /* MASTER_H_ */
