@@ -19,23 +19,17 @@
 #include <iterator>
 
 using namespace std;
-namespace poseidon
-{
+namespace poseidon {
 
-StringHelper::StringHelper()
-{
-	// TODO Auto-generated constructor stub
+StringHelper::StringHelper() {
 
 }
 
-StringHelper::~StringHelper()
-{
-	// TODO Auto-generated destructor stub
+StringHelper::~StringHelper() {
+
 }
-void StringHelper::CharCopy(char * des, char* src, int size)
-{
-	for (int i = 0; i < size; i++)
-	{
+void StringHelper::CharCopy(char * des, char* src, int size) {
+	for (int i = 0; i < size; i++) {
 		*(des + i) = *(src + i);
 	}
 
@@ -48,11 +42,9 @@ void StringHelper::CharCopy(char * des, char* src, int size)
 // Return: <返回值及其描述>
 // Exception: <异常情况描述>
 //----------------------------------------------------------------------------
-void StringHelper::LineOpt(char *thefileName)
-{
+void StringHelper::LineOpt(char *thefileName) {
 	int i = 0;
-	while (1)
-	{
+	while (1) {
 		if (thefileName[i] != '\n')
 			i++;
 		else
@@ -67,8 +59,7 @@ void StringHelper::LineOpt(char *thefileName)
 // Return: <返回值及其描述>
 // Exception: <异常情况描述>
 //----------------------------------------------------------------------------
-void StringHelper::LineSplit(string s1, string* name, int* t1, int *t2)
-{
+void StringHelper::LineSplit(string s1, string* name, int* t1, int *t2) {
 
 	int f1 = s1.find_first_of(':');
 	int f2 = s1.find_first_of(',');
@@ -94,36 +85,31 @@ void StringHelper::LineSplit(string s1, string* name, int* t1, int *t2)
 	//cout<<*list[2]<<endl;
 }
 void StringHelper::split(string in, vector<string> &vec) //以" "为分隔符
-{
+		{
 	istringstream ss(in);
 	string t;
-	while (ss >> t)
-	{
+	while (ss >> t) {
 		vec.push_back(t);
 	}
 
 }
-string StringHelper::readLine(string filename, int num)
-{
+string StringHelper::readLine(string filename, int num) {
 	FILE *fp;
 	char *filep;
 	char thefileName[1024];
 	char *PCAPINDEX = NULL;
 
-	if ((fp = fopen(filename.c_str(), "r")) == NULL)
-	{
+	if ((fp = fopen(filename.c_str(), "r")) == NULL) {
 		printf("open file %s error!!\n", PCAPINDEX);
 		return "";
 	}
 
-	while (num--)
-	{
+	while (num--) {
 		filep = fgets(thefileName, 1024, fp); //每次调用文件指针fp会自动后移一行
 		if (!filep) //文件读取结束则跳出循环
 			break;
 	}
-	if (num > 0)
-	{
+	if (num > 0) {
 		cout << filename << "行数不足" << num << endl;
 	}
 	string s1 = thefileName;

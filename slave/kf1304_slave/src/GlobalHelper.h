@@ -20,6 +20,7 @@
 #include <string>
 #include <iostream>
 #include <sys/time.h>
+#include "map"
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find_if
 #include <vector>       // std::vector
@@ -188,7 +189,7 @@ public:
 		istringstream ss(in);
 		string t;
 		while (ss >> t) {
-			cout << t << endl;
+		//	cout << t << endl;
 			vec->push_back(t);
 		}
 	}
@@ -244,6 +245,119 @@ public:
 		return res;
 
 	}
+	//==================================
+	//无限分割入VEC
+	void split(const string& src, const string& separator,
+			vector<string>& dest) {
+		string str = src;
+		string substring;
+		string::size_type start = 0, index;
+		do {
+			index = str.find_first_of(separator, start);
+			if (index != string::npos) {
+				substring = str.substr(start, index - start);
+				dest.push_back(substring);
+				start = str.find_first_not_of(separator, index);
+				if (start == string::npos)
+					return;
+			}
+		} while (index != string::npos);
+		//the last token
+		substring = str.substr(start);
+		dest.push_back(substring);
+	}
+	bool split_test() {
+		vector<string> str_vec;
+		string s1 = "1#www.baidu.com#2.com#";
+		const string s2 = "#";
+
+		split(s1, "#", str_vec);
+		cout << str_vec.at(0) << endl;
+		cout << str_vec.at(1) << endl;
+		cout << str_vec.at(2) << endl;
+		cout << "SIZE:" << str_vec.size() << endl;
+		return 1;
+		//split(s1, &s2, &str_vec);
+	}
+
+	//==================================
+	void command_str_to_map(string command1, map<string, string> *command_map) {
+		vector<string> *vec = new vector<string>();
+		vector<string>::iterator it1;
+		split_line(command1, vec);
+		for (it1 = vec->begin(); it1 != vec->end(); ++it1) {
+			vector<string> vec2;
+			split_by_split_char(*it1, &vec2, ':');
+			string key = vec2.at(0);
+			string value = vec2.at(1);
+			(*command_map)[key] = value;
+		}
+	}
+	//以"\r "为分隔符
+	bool command_str_to_map_test() {
+
+		map<string, string> command_map;
+		string command1 = "commd_id:1\r\n"
+				"slave_id:1\r\n"
+				"application_version:1\r\n"
+				"\f";
+
+		command_str_to_map(command1, &command_map);
+
+		for (map<string, string>::iterator it2 = command_map.begin();
+				it2 != command_map.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << '\n';
+		}
+		//cout << "split_line_test:" << (commd_id == 1) << endl;
+
+		return 1;
+	}
+	//==========================================
+	string replace(string str, string new_str, string special_char) {
+		string::size_type pos(0);
+		pos = str.find_first_of(special_char);
+		str = str.replace(pos, 1, "");
+		return str.insert(pos, new_str);
+	}
+	void replace_test() {
+		string s1 = "GET /question/#.html Host:@\r\n";
+		string s2 = replace(s1, "123", "#");
+		cout << "s2:" << s2 << endl;
+		string s3 = replace(s2, "345", "@");
+		cout << "s3:" << s3 << endl;
+
+	}
+	string convert_url_to_http_req(string url) {
+		string req =
+				"GET # HTTP/1.1\r\n"
+						"Host: @\r\n"
+						"Connection: close\r\n"
+						"Cache-Control: max-age=0\r\n"
+						"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+						"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+						"Accept-Encoding: gzip,deflate,sdch\r\n"
+						"Accept-Language: zh-CN,zh;q=0.8\r\n"
+						"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+						"\r\n";
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string sitename = url.substr(0, pos1);
+		string urlbody = url.substr(pos1);
+
+		req = replace(req, urlbody, "#");
+		req = replace(req, sitename, "@");
+		cout << "sitename:" << sitename << endl;
+		cout << "urlbody:" << urlbody << endl;
+		return req;
+	}
+	bool convert_url_to_http_req_test() {
+		string url = "wx.114chn.com/m/web/shop/index.aspx";
+		cout << "url:" << url << endl;
+		string http_req = convert_url_to_http_req(url);
+		cout << "http_req:" << http_req << endl;
+		return 1;
+	}
+	//==========================================
 }
 ;
 

@@ -15,10 +15,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define SLEEP 1
-#define UPDATE 2
-#define GRABPAGE 3
-
 #include "GlobalHelper.h"
 #include "TextLogger.h"
 
@@ -49,7 +45,7 @@ void init_grabpage_iis(task *mytask) {
 void init_task(task *mytask) {
 	mytask->sleep_time = 1000;
 	mytask->store_ip = "180.149.131.104";
-	mytask->command = GRABPAGE;
+	mytask->cmd_id = GRABPAGE;
 	mytask->store_port = 80;
 	mytask->task_id = 1;
 	mytask->url_body = new vector<string>();
@@ -61,26 +57,6 @@ void init_task(task *mytask) {
 
 }
 
-void slaver_test_getHttpHeader() {
-	task mytask; //commad
-	init_task(&mytask);
-	slaver * worker = new slaver();
-	string s1 = worker->getHttpHeader(mytask.url_header, *mytask.url_body, 0);
-	string s2 = worker->getHttpHeader(mytask.url_header, *mytask.url_body, 1);
-	cout << "!!!Hello World!!!" << endl;
-	bool b1 =
-			s1
-					== "GET /question/1.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
-	bool b2 =
-			s2
-					== "GET /question/537211931.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
-	cout << b1 <<
-	//":"<< s1<<
-			endl;
-	cout << b2 <<
-	//":"<< s2<<
-			endl;
-}
 //slaver_test_grab
 //==========================================================================
 void init_task_4_grabpage_114_wx_1(task *mytask) {
@@ -196,49 +172,72 @@ void slaver_test_grab_3() {
 void slaver_test_request() {
 	slaver * worker = new slaver();
 	task mytask; //commad
+	//int i = 2;
+//	while (i--) {
 	worker->requestTask(&mytask);
+//	}
 }
 //slaver_test
 //==========================================================================
 void slaver_test() {
-	task mytask; //commad
-	//bool request_result;
 	slaver * worker = new slaver();
-	while (true) {
-		//request_result =
-		memset(&mytask, 0, sizeof(mytask));
-		worker->requestTask(&mytask);
-		switch (mytask.command) {
-		case SLEEP:
-			sleep(1000); //sleep 1 second;
-			break;
-		case UPDATE:
-
-			break;
-		case GRABPAGE:
-			worker->work(mytask);
-			break;
-		default:
-			break;
-		}
-	}
-//slaver_worker
-
+	worker->work();
 }
 
 bool str2task_test() {
 	task mytask;
+	GlobalHelper *gh;
+	gh = new GlobalHelper();
 	slaver * worker = new slaver();
 	string command1 = "commd_id:1\r\n"
-			"slave_id:1\r\n"
-			"application_version:1\r\n"
+			"slave_id:2\r\n"
+			"application_version:3\r\n"
+			"urls:www.1.com/1.html#www.2.com/2.html#www.3.com/3.html#\r\n"
 			"\f";
 	worker->str2task(command1, &mytask);
-	bool res = mytask.command == 1;
-	cout << res << endl;
+
+	cout << mytask.cmd_id << endl;
+	cout << mytask.response_cmd_map["slave_id"] << endl;
+	cout << mytask.response_cmd_map["application_version"] << endl;
+	for (vector<string>::iterator it = mytask.url_body->begin();
+			it != mytask.url_body->end(); it++) {
+		mytask.url_body->push_back(gh->convert_url_to_http_req(*it));
+	}
 //str
 	return 1;
 }
+bool slaver_test_prepare_req_cmd() {
+	slaver * worker = new slaver();
+	worker->prepare_req_cmd();
+	cout << "worker->cmd_req_2send: " << worker->cmd_req_2send << endl;
+	worker->app_version += 1;
+	worker->prepare_req_cmd();
+	cout << "worker->cmd_req_2send: " << worker->cmd_req_2send << endl;
+	return 1;
+}
 
+void hand_response_test() {
+	slaver * worker = new slaver();
+	task mytask; //commad
+	mytask.sleep_time = 1;
+	mytask.store_ip = "180.149.131.104";
+	mytask.cmd_id = GRABPAGE;
+	mytask.store_port = 80;
+	mytask.task_id = 1;
+	mytask.url_body = new vector<string>();
+	mytask.url_body->push_back("1");
+	mytask.url_body->push_back("537211931");
+	mytask.version = 3;
+
+	mytask.cmd_id = SLEEP;
+	worker->hand_response(mytask);
+
+	mytask.cmd_id = UPDATE;
+	worker->hand_response(mytask);
+
+	mytask.cmd_id = GRABPAGE;
+	worker->hand_response(mytask);
+
+}
 } /* namespace poseidon */
 #endif /* slave_test_H_ */

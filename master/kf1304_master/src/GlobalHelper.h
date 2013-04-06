@@ -7,43 +7,35 @@
 
 #ifndef GLOBALHELPER_H_
 #define GLOBALHELPER_H_
+//current project
 
-#include<fcntl.h>
-#include<string.h>
-#include<stdio.h>
-#include<stdlib.h>
-//#include <time.h>
-#include <sstream>
-#include <string>
-#include <iostream>
-#include <sys/time.h>
-
-#include<sys/types.h>
-#include<sys/socket.h>
-#include<netinet/in.h>
+//network
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 #include <arpa/inet.h>
-
+//c
 #include<fcntl.h>
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
-
+#include <sys/time.h>
+//c++
 #include <unistd.h>
 #include <sstream>
 #include <string>
 #include <iostream>
-
+//c++ 容器
 #include <algorithm>    // std::find_if
 #include <vector>       // std::vector
-using namespace std;
+#include <map>
 
 using namespace std;
 namespace poseidon {
 
 class GlobalHelper {
 private:
-	//	clock_t clockBegin;
-	//	clock_t clockEnd;
+
 	struct timeval start, stop, diff;
 	int tim_subtract(struct timeval *result, struct timeval *start,
 			struct timeval *stop) {
@@ -59,6 +51,21 @@ private:
 		}
 		return 0;
 	}
+protected:
+	/*	string command1 = "commd_id:1\r\n"
+	 "slave_id:1\r\n"
+	 "application_version:1\r\n"
+	 "\f";
+	 string command2 = "commd_id:2\r\n"
+	 "slave_id:1\r\n"
+	 "time:60\r\n"
+	 "\f";
+	 string command3 = "";
+	 string command4 = "commd_id:4\r\n"
+	 "slave_id:1\r\n"
+	 "task_id:1\r\n";
+	 string command5 = "";
+	 */
 public:
 
 	int TASK_BUF_SIZE; //1448
@@ -205,7 +212,7 @@ public:
 		istringstream ss(in);
 		string t;
 		while (ss >> t) {
-			cout << t << endl;
+			//	cout << t << endl;
 			vec->push_back(t);
 		}
 	}
@@ -217,7 +224,6 @@ public:
 		vec->push_back(str.substr(0, pos));
 		vec->push_back(str.substr(pos + 1, str.size()));
 	}
-	//以"\r "为分隔符
 	bool split_line_test() {
 		vector<string> *vec = new vector<string>();
 		vector<string> *vec2 = new vector<string>();
@@ -232,6 +238,41 @@ public:
 		return commd_id == 1;
 
 	}
+	//==================================
+	void command_str_to_map(string command1, map<string, string> *command_map) {
+		vector<string> *vec = new vector<string>();
+		vector<string>::iterator it1;
+		split_line(command1, vec);
+		for (it1 = vec->begin(); it1 != vec->end(); ++it1) {
+			vector<string> vec2;
+			split_by_split_char(*it1, &vec2, ':');
+			string key = vec2.at(0);
+			string value = vec2.at(1);
+			(*command_map)[key] = value;
+		}
+	}
+	//以"\r "为分隔符
+	bool command_str_to_map_test() {
+
+		map<string, string> command_map;
+		string command1 = "commd_id:1\r\n"
+				"slave_id:1\r\n"
+				"application_version:1\r\n"
+				"\f";
+
+		command_str_to_map(command1, &command_map);
+
+		for (map<string, string>::iterator it2 = command_map.begin();
+				it2 != command_map.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << '\n';
+		}
+		//cout << "split_line_test:" << (commd_id == 1) << endl;
+//==========================================
+		/* */
+
+		return 1;
+	}
+
 };
 
 }

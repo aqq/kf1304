@@ -18,11 +18,11 @@ int main() {
 	//(new GlobalHelper())->time_test2();//pass测试计算耗时函数
 	//(new GlobalHelper())->string_contain_test();//pass 测试 字符串包含函数
 	//(new GlobalHelper())->split_line_test(); //pass 测试 字符串包含函数
+	//	(new GlobalHelper())->init_command_map_test();//pass
 
-	//slaver_test_getHttpHeader();//pass测试替换HTTP头
-	//slaver_test_grab(2); //pass
-	//	slaver_test_grab_3(); //pass
-	master_test2slave(); //test pass
+	//read_site_test();//pass
+ //hand_request_test();//pass
+	 master_test2slave(); //test pass
 
 	return 0;
 }

@@ -1,0 +1,229 @@
+/*
+ * slaver.cpp
+ *
+ *  Created on: 2013-4-1
+ *      Author: root
+ */
+
+#include "slaver.h"
+
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include <arpa/inet.h>
+
+#include<fcntl.h>
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+#include <unistd.h>
+//#include "utility.h"
+#include <sstream>
+#include <string>
+#include <iostream>
+#include "zlib.h"
+
+#include "GlobalHelper.h"
+#include "TextLogger.h"
+
+#define DEBUG
+#define BUFSIZE 1449
+#define READ_BUFF_SIZE 1448
+namespace poseidon {
+
+slaver::~slaver() {
+
+}
+
+bool slaver::requestTask(task *mytask) {
+	//1 init variable
+	int socketfd;
+	struct sockaddr_in dest_addr;
+
+	//2 create socket
+	if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+		perror("socket fd create fail...");
+		return -1;
+	}
+
+	//3 prepare server address
+	this->init_address(&dest_addr, PF_INET, this->master_port, this->master_ip);
+
+	//4 connect to server
+	if (-1
+			== connect(socketfd, (struct sockaddr*) &dest_addr,
+					sizeof(struct sockaddr))) {
+		perror("socket fd connet fail...");
+		return -1;
+	}
+#ifdef DEBUG
+	cout << "connect to " << this->master_ip << ":" << master_port << endl;
+#endif
+
+	//5 talk with server
+	int bytes_count;
+	char read_buf[BUFSIZE];
+	bzero(&read_buf, sizeof read_buf);
+
+//	while (1) { //loop if request failed
+//command_request_task
+	string cmd_req_str = this->cmd_req;
+	cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->slave_id), "#");
+	cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->app_version), "@");
+	int write_result = write(socketfd, cmd_req_str.c_str(),
+			strlen(cmd_req_str.c_str()));
+	if (write_result < 0) {
+		perror("socket fd write fail...");
+		//continue;
+	}
+
+	cout << "write:" << cmd_req_str << endl;
+	while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
+		if (bytes_count == 0) {
+			perror("socket fd read fail...");
+			break;
+		}
+
+		if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+			break;
+		}
+		read_buf[bytes_count] = '\0';
+	}
+
+	//}
+	//6 clear socket
+	close(socketfd);
+	//7  init task
+#ifdef DEBUG
+	cout << "receive:" << read_buf << endl;
+#endif
+	string task_str = read_buf;
+	str2task(task_str, mytask);
+
+	cout << (*mytask).cmd_id << endl;
+	cout << (*mytask).response_cmd_map["slave_id"] << endl;
+	cout << (*mytask).response_cmd_map["version"] << endl;
+
+	return 1;
+}
+
+bool slaver::grabpage_work(task mytask) {
+	uint count = mytask.url_body->size();
+	for (uint k = 0; k < count; k++) {
+		grabpage(mytask, k);
+	}
+	return 1;
+}
+bool slaver::grabpage(task mytask, int index) {
+#ifdef DEBUGwrite_buf
+	cout << mytask.url_body->at(index) << endl;
+#endif
+	struct sockaddr_in dest_addr;
+
+	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	if (-1 == sockfd) {
+		perror("socket fd create fail...");
+		return -1;
+	}
+//[002] prepare 2 reflactor
+	dest_addr.sin_family = AF_INET;
+	dest_addr.sin_port = htons(mytask.request_port);
+	dest_addr.sin_addr.s_addr = inet_addr(mytask.request_ip.c_str());
+	bzero(&(dest_addr.sin_zero), 8);
+//[002]
+	if (-1
+			== connect(sockfd, (struct sockaddr*) &dest_addr,
+					sizeof(struct sockaddr))) {
+		perror("socket fd connet fail...");
+		return -1;
+	}
+
+	write(sockfd, mytask.url_body->at(index).c_str(),
+			strlen(mytask.url_body->at(index).c_str()));
+	char buf[4096];
+	int count = 0;
+
+	string response_content;
+	//string::size_type response_content_size;
+	//bool flag = false;
+
+	string filename = "./temp" + gh->num2str(index) + ".txt";
+	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_APPEND);
+
+#ifdef DEBUG
+	cout << "begin while" << endl;
+#endif
+
+	while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
+#ifdef DEBUG
+		//cout << buf << "****" << endl;
+#endif
+		//response_content.append(buf);
+		write(fd, buf, count);
+
+		//[001]尝试通过CONTENT－LEN来判断 BEGIN
+		//if (!flag)		{			flag = gh->Content_length(response_content, &response_content_size);		}
+		//string::size_type current_size =
+		//response_content.size();
+		//cout << "current_size:" << current_size << "total_size:"				<< response_content_size << endl;
+		/*	if (flag && (current_size == response_content_size))
+		 {
+		 #ifdef DEBUG
+		 cout << response_content << endl;
+		 #endif
+		 break;
+		 }
+		 */
+		//[001]尝试通过CONTENT－LEN来判断 END
+		if (gh->tail_with_feature(buf, count, "\r\n0\r\n\r\n")) {
+			break;
+		}
+
+		if (gh->tail_with_feature(buf, count, "</html>\r\n\r\n")) {
+			break;
+		}
+		if (gh->tail_with_feature(buf, count, "</html>")) {
+			break;
+		}
+
+	}
+
+	close(fd);
+
+	close(sockfd);
+
+	//尝试通过C＋＋函数写入本地文件，内容缺失，，猜测是STR.APPEND的时候加入了‘、0’
+	//string filename2 = "./txt_" + gh->num2str(index) + ".txt";
+	//TextLogger *logger = new TextLogger(filename2.c_str());
+	//logger->LogContent(response_content);
+
+	printf("Client Dying.....\n");
+
+	return 0;
+}
+bool slaver::localStorePage() {
+	return 1;
+}
+bool slaver::remoteStorePage() {
+	return 1;
+}
+/*
+ string slaver::getHttpHeader(string url_header, vector<string> url_body,
+ int id) {
+ //url_header.replace(url_header.find_first_of('#'),,url_body);
+
+ string::size_type pos(0);
+
+ const string special_char = "#";
+ const string s4 = url_body.at(id);
+
+ pos = url_header.find_first_of('#');
+ //	if ((pos = url_header.find(special_char)) != string::npos)
+
+ url_header = url_header.replace(pos, 1, "");
+ return url_header.insert(pos, s4);
+
+ }*/
+
+} /* namespace poseidon */

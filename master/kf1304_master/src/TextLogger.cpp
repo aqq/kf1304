@@ -14,20 +14,20 @@ namespace poseidon
 
 TextLogger::TextLogger(const char* filename)
 {
-	// TODO Auto-generated constructor stub
+
 	fname = filename;
 	//	strcpy(filename, fname);
 }
 
 TextLogger::TextLogger()
 {
-	// TODO Auto-generated constructor stub
+
 	fname = "log.txt";
 	//	strcpy(filename, fname);
 }
 TextLogger::~TextLogger()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 void TextLogger::LogContent(string content)

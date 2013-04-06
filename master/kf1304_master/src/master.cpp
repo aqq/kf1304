@@ -12,7 +12,7 @@ namespace poseidon
 
 master::~master()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 } /* namespace poseidon */

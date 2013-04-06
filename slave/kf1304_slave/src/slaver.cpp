@@ -36,7 +36,7 @@ slaver::~slaver() {
 
 }
 
-bool slaver::requestTask(task *mytask) {
+string slaver::requestTask(task *mytask) {
 	//1 init variable
 	int socketfd;
 	struct sockaddr_in dest_addr;
@@ -44,7 +44,7 @@ bool slaver::requestTask(task *mytask) {
 	//2 create socket
 	if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
 		perror("socket fd create fail...");
-		return -1;
+		return "-1";
 	}
 
 	//3 prepare server address
@@ -55,7 +55,7 @@ bool slaver::requestTask(task *mytask) {
 			== connect(socketfd, (struct sockaddr*) &dest_addr,
 					sizeof(struct sockaddr))) {
 		perror("socket fd connet fail...");
-		return -1;
+		return "-1";
 	}
 #ifdef DEBUG
 	cout << "connect to " << this->master_ip << ":" << master_port << endl;
@@ -67,14 +67,17 @@ bool slaver::requestTask(task *mytask) {
 	bzero(&read_buf, sizeof read_buf);
 
 //	while (1) { //loop if request failed
-	int write_result = write(socketfd, this->command_request_task.c_str(),
-			strlen(this->command_request_task.c_str()));
+//command_request_task
+	prepare_req_cmd();
+
+	int write_result = write(socketfd, this->cmd_req_2send.c_str(),
+			strlen(this->cmd_req_2send.c_str()));
 	if (write_result < 0) {
 		perror("socket fd write fail...");
 		//continue;
 	}
 
-	cout << "write:" << this->command_request_task << endl;
+	cout << "write:" << this->cmd_req_2send << endl;
 	while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
 		if (bytes_count == 0) {
 			perror("socket fd read fail...");
@@ -91,14 +94,19 @@ bool slaver::requestTask(task *mytask) {
 	//6 clear socket
 	close(socketfd);
 	//7  init task
-	string task_str = read_buf;
-	str2task(task_str, mytask);
+#ifdef DEBUG
 	cout << "receive:" << read_buf << endl;
-	return 1;
+#endif
+	string task_str = read_buf;
+
+//cout << "cmd_id:" << (*mytask).cmd_id << endl;
+	//cout << "slave_id:" << (*mytask).response_cmd_map["slave_id"] << endl;
+//	cout << "version" << (*mytask).response_cmd_map["version"] << endl;
+
+	return task_str;
 }
 
-bool slaver::work(task mytask) {
-
+bool slaver::grabpage_work(task mytask) {
 	uint count = mytask.url_body->size();
 	for (uint k = 0; k < count; k++) {
 		grabpage(mytask, k);
@@ -198,22 +206,22 @@ bool slaver::localStorePage() {
 bool slaver::remoteStorePage() {
 	return 1;
 }
+/*
+ string slaver::getHttpHeader(string url_header, vector<string> url_body,
+ int id) {
+ //url_header.replace(url_header.find_first_of('#'),,url_body);
 
-string slaver::getHttpHeader(string url_header, vector<string> url_body,
-		int id) {
-	//url_header.replace(url_header.find_first_of('#'),,url_body);
+ string::size_type pos(0);
 
-	string::size_type pos(0);
+ const string special_char = "#";
+ const string s4 = url_body.at(id);
 
-	const string special_char = "#";
-	const string s4 = url_body.at(id);
+ pos = url_header.find_first_of('#');
+ //	if ((pos = url_header.find(special_char)) != string::npos)
 
-	pos = url_header.find_first_of('#');
-//	if ((pos = url_header.find(special_char)) != string::npos)
+ url_header = url_header.replace(pos, 1, "");
+ return url_header.insert(pos, s4);
 
-	url_header = url_header.replace(pos, 1, "");
-	return url_header.insert(pos, s4);
-
-}
+ }*/
 
 } /* namespace poseidon */

@@ -17,14 +17,19 @@ int main() {
 	//
 
 	//(new GlobalHelper())->time_test2();//pass
-//	(new GlobalHelper())->string_contain_test();//pass
-	//(new GlobalHelper())->split_line_test();//pass
+	//(new GlobalHelper())->string_contain_test();//pass
+	//(new Gread_buflobalHelper())->split_line_test();//pass
+	//(new GlobalHelper())->split_test();//pass
+	//(new GlobalHelper())->replace_test(); //pass
+	//(new GlobalHelper())->convert_url_to_http_req_test(); //pass
 
-//slaver_test_getHttpHeader();//pass
 	//slaver_test_grab(2); //pass
-//	slaver_test_grab_3(); //pass
-//	str2task_test(); //not pass
-	slaver_test_request(); //
+	//	slaver_test_grab_3(); //pass
+	str2task_test(); //  pass
+
+	//slaver_test_request(); //pass
+	//slaver_test_prepare_req_cmd();
+ //slaver_test();
 
 	return 0;
 }
