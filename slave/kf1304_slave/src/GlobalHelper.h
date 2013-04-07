@@ -24,7 +24,12 @@
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find_if
 #include <vector>       // std::vector
+#include <iostream>
+#include "fstream"
 using namespace std;
+
+#define DEBUG
+#define LOG
 namespace poseidon {
 
 class GlobalHelper {
@@ -189,7 +194,7 @@ public:
 		istringstream ss(in);
 		string t;
 		while (ss >> t) {
-		//	cout << t << endl;
+			//	cout << t << endl;
 			vec->push_back(t);
 		}
 	}
@@ -290,6 +295,10 @@ public:
 			split_by_split_char(*it1, &vec2, ':');
 			string key = vec2.at(0);
 			string value = vec2.at(1);
+			//	log("**************");
+			//	log("key:" + key);
+			//	log("value:" + value);
+			//	log("**************");
 			(*command_map)[key] = value;
 		}
 	}
@@ -314,6 +323,7 @@ public:
 	}
 	//==========================================
 	string replace(string str, string new_str, string special_char) {
+
 		string::size_type pos(0);
 		pos = str.find_first_of(special_char);
 		str = str.replace(pos, 1, "");
@@ -327,18 +337,35 @@ public:
 		cout << "s3:" << s3 << endl;
 
 	}
+	string get_sitename(string url) {
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string sitename = url.substr(0, pos1);
+		return sitename;
+	}
 	string convert_url_to_http_req(string url) {
 		string req =
+		//"GET # HTTP/1.1\r\n"
+		//		"Host: @\r\n"
+		//	"Connection: keep-alive\r\n"
+		//	"Cache-Control: max-age=0\r\n"
+		//	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+		//	"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+		//	"Accept-Encoding: gzip,deflate,sdch\r\n"
+		//	"Accept-Language: zh-CN,zh;q=0.8\r\n"
+		//	"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+		//	"Cookie: $\r\n"
+		//	"\r\n";*/
+		//string req_lb=
 				"GET # HTTP/1.1\r\n"
 						"Host: @\r\n"
-						"Connection: close\r\n"
+						"Connection: keep-alive\r\n"
 						"Cache-Control: max-age=0\r\n"
+						"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\n"
 						"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
-						"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
-						"Accept-Encoding: gzip,deflate,sdch\r\n"
-						"Accept-Language: zh-CN,zh;q=0.8\r\n"
-						"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
-						"\r\n";
+						"Accept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\n"
+						"Accept-Charset: utf-8;q=0.7,*;q=0.3\r\n"
+						"Cookie: $\r\n\r\n";
 		string::size_type pos1; //  pos of  '/'
 		pos1 = url.find_first_of('/', 0);
 		string sitename = url.substr(0, pos1);
@@ -346,8 +373,9 @@ public:
 
 		req = replace(req, urlbody, "#");
 		req = replace(req, sitename, "@");
-		cout << "sitename:" << sitename << endl;
-		cout << "urlbody:" << urlbody << endl;
+		req = replace(req, "", "$");
+		//cout << "sitename:" << sitename << endl;
+		//	cout << "urlbody:" << urlbody << endl;
 		return req;
 	}
 	bool convert_url_to_http_req_test() {
@@ -357,9 +385,65 @@ public:
 		cout << "http_req:" << http_req << endl;
 		return 1;
 	}
-	//==========================================
-}
-;
+	void log(string filename, string content) {
+		ofstream outfile(filename.c_str(), ios::app);
+		outfile << content;
+		outfile.close();
+	}
+	void log(string content) {
+#ifdef DEBUG
+		cout << content << endl;
+#endif
 
+#ifdef LOG
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, "%Y%m%d", newtime);
+		string time_str = tmpbuf;
+		//cout << time_str << endl;
+		string filename = "./log/slave#.txt";
+		filename = replace(filename, time_str, "#");
+
+		ofstream outfile(filename.c_str(), ios::app);
+		outfile << content << endl;
+		outfile.close();
+#endif
+
+	}
+	void log_test() {
+		log("111");
+	}
+	//==========================================
+
+	string grab_page_filename(int index) {
+		string filename = "./download/" + num2str(index) + ".html";
+		return filename;
+	}
+
+	bool is_html_endtail_with_feature(char* buf, int count) {
+		{
+			while (1) {
+				if (tail_with_feature(buf, count, "\r\n0\r\n\r\n")) {
+					break;
+				}
+				if (tail_with_feature(buf, count, "</html>\r\n\r\n")) {
+					break;
+				}
+				if (tail_with_feature(buf, count, "</HTML>\r\n\r\n")) {
+					break;
+				}
+
+				if (tail_with_feature(buf, count, "</html>")) {
+					break;
+				}
+				return 0;
+			}
+			return 0;
+		}
+	}
+};
 }
 #endif /* GLOBALHELPER_H_ */

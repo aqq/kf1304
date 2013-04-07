@@ -22,14 +22,20 @@ int main() {
 	//(new GlobalHelper())->split_test();//pass
 	//(new GlobalHelper())->replace_test(); //pass
 	//(new GlobalHelper())->convert_url_to_http_req_test(); //pass
+	//(new GlobalHelper())->log_test(); //pass
 
 	//slaver_test_grab(2); //pass
 	//	slaver_test_grab_3(); //pass
-	str2task_test(); //  pass
+	//prepare_urls_test(); //  pass
+//	str2task_test(); //  pass
 
 	//slaver_test_request(); //pass
-	//slaver_test_prepare_req_cmd();
- //slaver_test();
+	//get_ip_by_name_test(); //test ip
+	//lookup_ip_test(); //pass
+	//grabpage_work_test(); //pass
+// hand_response_test(); //pass
+
+ slaver_work_test(); //final test
 
 	return 0;
 }

@@ -8,10 +8,12 @@
 #ifndef SLAVER_H_
 #define SLAVER_H_
 
+//network
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <netdb.h>
 
 #include <fcntl.h>
 #include <string.h>
@@ -31,6 +33,9 @@
 #define SLEEP 2
 #define UPDATE 3
 #define GRABPAGE 4
+
+#define DEBUG
+
 using namespace std;
 
 namespace poseidon {
@@ -47,9 +52,11 @@ typedef struct task {
 	string request_ip;
 	int request_port;
 
-	string url_header;
-	vector<string> *url_body;
+	string url_header; //no use
+	string urls;
 
+	vector<string> urls_http_req;
+	vector<string> urls_sites;
 	map<string, string> response_cmd_map;
 
 	int version;
@@ -79,11 +86,13 @@ public:
 				"application_version:@\r\n"
 				"\f";
 		gh = new GlobalHelper();
+
 	}
 	virtual ~slaver();
-	string requestTask(task *mytask);
-	bool grabpage_work(task mytask);
-	bool grabpage(task mytask, int index);
+	bool requestTask(task *mytask, string& str_cmd);
+	bool grabpage_work(task&  mytask);
+	bool grab_page(string request_ip, int request_port, int index,
+			string http_req);
 	bool localStorePage();
 	bool remoteStorePage();
 
@@ -91,14 +100,19 @@ public:
 		task mytask; //commad
 		string task_str;
 		int i = 2;
-		while (i--) {
+		while (i) {
 			memset(&mytask, 0, sizeof(mytask));
-			task_str = requestTask(&mytask);
+			if (!requestTask(&mytask, task_str)) {
+				cout << "Master is sleep.so i will sleep 2 seconds." << endl;
+				//	sleep(2);
+				continue;
+			}
+			gh->log("\n*str2task:" + task_str + "*\n");
 			str2task(task_str, &mytask);
-#ifdef DEBUG
-			cout <<"hand_response cmd_id:"<< mytask.cmd_id <<endl;
-#endif
+
+			gh->log("hand_response:" + gh->num2str(mytask.cmd_id));
 			hand_response(mytask);
+			//		sleep(2);
 		}
 		//slaver_worker
 
@@ -107,35 +121,109 @@ public:
 
 		switch (mytask.cmd_id) {
 		case SLEEP:
-			cout << "sleep_time" << mytask.sleep_time << endl;
+			cout << "Sleep :" << mytask.sleep_time << " secoonds." << endl;
 			sleep(mytask.sleep_time); //sleep 1 second;
 			break;
 		case UPDATE:
 			//update app begin
 			//TODO::ADD update app begin
 			//update app end
-			cout << "updata version" << mytask.version << endl;
+			cout << "Updata version:" << mytask.version << "." << endl;
 			this->app_version = mytask.version;
 			break;
 		case GRABPAGE:
-			cout << "GRABPAGE  " << mytask.url_body->size() << endl;
+			cout << "Grab page totals:" << mytask.urls_http_req.size() << endl;
 			grabpage_work(mytask);
 			break;
 		}
 	}
-	void prepare_urls(task mytask) {
-		string urls = mytask.response_cmd_map["urls"];
+	void grab_page_log_time(string request_ip, int request_port, int index,
+			string http_req) {
+		gh->timing_begin();
+		grab_page(request_ip, request_port, index, http_req);
+		gh->timing_end();
+
+		string filename = gh->grab_page_filename(index);
+		/*string info = "no:" + gh->num2str(index);
+		 info += " castTime:" + gh->cast_time();
+		 info += " pagesize:" + gh->num2str(gh->file_size(filename));
+		 info += " \n";
+		 */
+		string info = "" + gh->num2str(index);
+		info += " " + gh->cast_time();
+		info += " " + gh->num2str(gh->file_size(filename));
+		info += "\n";
+		string filename2 = "log/114chn";
+		//	filename2 += request_ip;
+		//	filename2 += "_";
+		//	filename2 += request_port;
+		filename2 += ".log";
+
+		gh->log(filename2, info);
+
+	}
+	void urls_str_to_http_reqs(task& mytask, string urls) {
 		vector<string> str_vec;
 		gh->split(urls, "#", str_vec);
 
-#ifdef DEBUG
-		cout<<"mytask.url_body:"<<str_vec.size()<<endl;
-#endif
-		vector<string>::iterator it;
+		vector<string>::iterator url_it;
 		string req;
-		for (it = str_vec.begin(); it != str_vec.end(); it++) {
-			mytask.url_body->push_back(gh->convert_url_to_http_req(*it));
+		//urls_http_req
+		for (url_it = str_vec.begin(); url_it != str_vec.end(); url_it++) {
+			string str1 = gh->convert_url_to_http_req(*url_it);
+			mytask.urls_http_req.push_back(str1);
 		}
+		//urls_sites
+		for (url_it = str_vec.begin(); url_it != str_vec.end(); url_it++) {
+			string str1 = gh->get_sitename(*url_it);
+			mytask.urls_sites.push_back(str1);
+		}
+	}
+//
+	map<string, string> dns_map;
+	bool lookup_ip(string sitename, string& dest_ip) {
+//1 check map
+		dest_ip = dns_map[sitename];
+		if (dest_ip != "") {
+			cout << "get" << sitename << " from cache!" << endl;
+			return true;
+		}
+
+		//2 lookup ip
+		if (get_ip_by_name(sitename, dest_ip)) {
+			dns_map[sitename] = dest_ip;
+			return true;
+		} else {
+// not find
+			return false;
+		}
+
+	}
+	bool get_ip_by_name(string hostname, string& ip) {
+		struct hostent *pt;
+		char **ptr;
+		char str[INET_ADDRSTRLEN];
+
+		if ((pt = gethostbyname(hostname.c_str())) == NULL) {
+			cout << "gethostname " << hostname << " error\n" << endl;
+
+		}
+
+		switch (pt->h_addrtype) {
+		case AF_INET:
+			ptr = pt->h_addr_list;
+			for (; *ptr != NULL; ptr++) {
+				ip = inet_ntop(pt->h_addrtype, *ptr, str, sizeof(str));
+				//printf("IP addrss: %s\n", ip);
+			}
+			break;
+		default:
+			//printf("unknown address type");
+			return 0;
+			break;
+		}
+
+		return 1;
 	}
 	//
 	string& replace_all(string& str, const string& old_value,
@@ -154,30 +242,41 @@ public:
 	//
 	void str2task(string response_command, task *mytask) {
 		map<string, string> response_cmd_map;
+
 		gh->command_str_to_map(response_command, &response_cmd_map);
-		int cmd_id = atoi(response_cmd_map["commd_id"].c_str());
-		mytask->cmd_id = cmd_id;
+
+		mytask->cmd_id = atoi(response_cmd_map["commd_id"].c_str());
 		mytask->response_cmd_map = response_cmd_map;
 		mytask->sleep_time = atoi(mytask->response_cmd_map["time"].c_str());
 		mytask->slave_id = atoi(mytask->response_cmd_map["slave_id"].c_str());
 		mytask->version = atoi(mytask->response_cmd_map["version"].c_str());
-		prepare_urls(*mytask);
-		//cout << "cmd_id:" << (*mytask).cmd_id << endl;
-		//cout << "slave_id:" << (*mytask).response_cmd_map["slave_id"] << endl;
-		//	cout << "version" << (*mytask).response_cmd_map["version"] << endl;
+		//TODO:: can't read urls if we don't have.but it work when it's
+		//others,eg it's "a12"
+
+		//	string a1 = response_cmd_map["urls"];
+		//	mytask->urls = a1;
+		if (mytask->cmd_id == 4) {
+//			string s1(mytask->response_cmd_map["urls"]); // << endl;
+
+			string s1 = mytask->response_cmd_map["urls"];
+			urls_str_to_http_reqs(*mytask, s1);
+			//s1 = new string(mytask->response_cmd_map["urls"]);
+			//	mytask->urls = *s1;
+			//	mytask->urls = s1;
+		}
 
 	}
 	void prepare_req_cmd() {
 		string cmd_req_str = this->cmd_req_model;
 
-		cout << "*app_version:" << app_version << endl;
+		//	cout << "*app_version:" << app_version << endl;
 		cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->slave_id),
 				"#");
 		cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->app_version),
 				"@");
 		this->cmd_req_2send = cmd_req_str;
 	}
-	//
+//
 
 //
 

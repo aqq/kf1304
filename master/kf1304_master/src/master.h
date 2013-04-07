@@ -75,7 +75,7 @@ public:
 		//	ifstream s1("./urls/site_2");
 		//site_2 = &s1;
 
-		sleep_time = "5";
+		sleep_time = "2";
 	}
 
 	bool is_worktime() {
@@ -229,7 +229,7 @@ public:
 		vector<string> vec;
 		string request_url;
 //lock in
-		read_site("./urls/site_2", 3, &vec);
+		read_site("./urls/site_2", 2, &vec);
 //lock out
 		for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
 			request_url.append(*it);

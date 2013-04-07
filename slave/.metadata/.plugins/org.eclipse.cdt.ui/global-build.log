@@ -3944,3 +3944,3873 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::prepare_urls(poseidon::task)’:
+../src/slaver.h:127: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:161: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver.h:162: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver.h:163: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver.h:164: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:200: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+../src/slaver_test.h:201: 错误：‘struct poseidon::task’ 没有名为 ‘response_cmd_map’ 的成员
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:166: 错误：对成员 ‘response_cmd_map’ 的请求出现在 ‘mytask’ 中，而后者具有非类类型 ‘poseidon::task*’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:214: 错误：对 ‘poseidon::slaver::prepare_urls(poseidon::task&, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&)’ 的调用没有匹配的函数
+../src/slaver.h:127: 附注：备选为： void poseidon::slaver::prepare_urls(poseidon::task, std::string)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:212: 错误：对成员 ‘url_body’ 的请求出现在 ‘mytask’ 中，而后者具有非类类型 ‘poseidon::task*’
+../src/slaver_test.h:213: 错误：对成员 ‘url_body’ 的请求出现在 ‘mytask’ 中，而后者具有非类类型 ‘poseidon::task*’
+../src/slaver_test.h:214: 错误：对成员 ‘url_body’ 的请求出现在 ‘mytask’ 中，而后者具有非类类型 ‘poseidon::task*’
+../src/slaver_test.h:214: 错误：‘gh’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:214: 错误：‘gh’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:210: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:210: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::urls_str_to_http_reqs(poseidon::task, std::string)’:
+../src/slaver.h:140: 错误：no match 为 ‘operator*’ 在 ‘*str1’ 中
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::hand_response(poseidon::task&)’:
+../src/slaver.h:123: 错误：‘->’ 的基操作数具有非指针类型 ‘std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >’
+../src/slaver.h: In member function ‘void poseidon::slaver::urls_str_to_http_reqs(poseidon::task, std::string)’:
+../src/slaver.h:142: 错误：‘->’ 的基操作数具有非指针类型 ‘std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >’
+../src/slaver_test.h: In function ‘void poseidon::init_grabpage_iis(poseidon::task*)’:
+../src/slaver_test.h:32: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘void poseidon::init_task(poseidon::task*)’:
+../src/slaver_test.h:51: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘void poseidon::init_task_4_grabpage_114_wx_1(poseidon::task*)’:
+../src/slaver_test.h:68: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:215: 错误：no match 为 ‘operator<<’ 在 ‘std::cout << mytask.poseidon::task::urls_http_req’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:67: 附注：备选为： std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:78: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:90: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:241: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:264: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:102: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:125: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:157: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:183: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:215: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:288: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:311: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:361: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:335: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:384: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:407: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:430: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>]
+../src/slaver_test.h: In function ‘void poseidon::hand_response_test()’:
+../src/slaver_test.h:238: 警告：statement 不起作用
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::init_task(poseidon::task*)’:
+../src/slaver_test.h:51: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘void poseidon::init_task_4_grabpage_114_wx_1(poseidon::task*)’:
+../src/slaver_test.h:68: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+../src/slaver_test.h: In function ‘void poseidon::prepare_urls_test()’:
+../src/slaver_test.h:215: 错误：no match 为 ‘operator<<’ 在 ‘std::cout << mytask.poseidon::task::urls_http_req’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:67: 附注：备选为： std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:78: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:90: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:241: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:264: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:102: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:125: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:157: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:183: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:215: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:288: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:311: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:361: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:335: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:384: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:407: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:430: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>]
+../src/slaver_test.h: In function ‘void poseidon::hand_response_test()’:
+../src/slaver_test.h:238: 警告：statement 不起作用
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::init_task(poseidon::task*)’:
+../src/slaver_test.h:51: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘void poseidon::init_task_4_grabpage_114_wx_1(poseidon::task*)’:
+../src/slaver_test.h:68: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:110: 错误：‘->’ 的基操作数具有非指针类型 ‘std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >’
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage(poseidon::task, int)’:
+../src/slaver.cpp:140: 错误：‘->’ 的基操作数具有非指针类型 ‘std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >’
+../src/slaver.cpp:141: 错误：‘->’ 的基操作数具有非指针类型 ‘std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::init_task(poseidon::task*)’:
+../src/slaver_test.h:51: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘void poseidon::init_task_4_grabpage_114_wx_1(poseidon::task*)’:
+../src/slaver_test.h:68: 警告：statement 不起作用
+../src/slaver_test.h: In function ‘bool poseidon::str2task_test()’:
+../src/slaver_test.h:189: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:118: 错误：‘template<class _Tp, class _Alloc> class std::vector’ 使用时未带模板参数
+../src/slaver.cpp:118: 错误：expected `;' before ‘k’
+../src/slaver.cpp:118: 错误：‘k’ 在此作用域中尚未声明
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:118: 错误：‘template<class _Tp, class _Alloc> class std::vector’ 使用时未带模板参数
+../src/slaver.cpp:118: 错误：expected `;' before ‘k’
+../src/slaver.cpp:118: 错误：‘k’ 在此作用域中尚未声明
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘bool poseidon::slaver::lookup_ip(std::string, std::string&)’:
+../src/slaver.h:152: 错误：no match 为 ‘operator!=’ 在 ‘dest_ip != 0’ 中
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:114: 错误：对 ‘poseidon::slaver::lookup_ip(std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)’ 的调用没有匹配的函数
+../src/slaver.h:149: 附注：备选为： bool poseidon::slaver::lookup_ip(std::string, std::string&)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:117: 错误：对 ‘poseidon::slaver::grab_page(poseidon::task&, int&)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:146: 错误：对 ‘poseidon::slaver::grab_page(poseidon::task&, int&)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:118: 错误：‘grab_page’ 在此作用域中尚未声明
+../src/slaver_test.h:115: 警告：未使用的变量 ‘worker’
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:147: 错误：对 ‘poseidon::slaver::grab_page(poseidon::task&, int&)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:118: 错误：从类型 ‘int’ 到类型 ‘const char*’ 的转换无效
+../src/slaver_test.h:118: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:147: 错误：对 ‘poseidon::slaver::grab_page(poseidon::task&, int&)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:115: 警告：未使用的变量 ‘worker’
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:146: 错误：对 ‘poseidon::slaver::grab_page(poseidon::task&, int&)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:115: 警告：未使用的变量 ‘worker’
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:145: 警告：未使用的变量 ‘worker’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:121: 错误：从类型 ‘int’ 到类型 ‘const char*’ 的转换无效
+../src/slaver.cpp:121: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)’:
+../src/slaver.cpp:142: 错误：不能从 ‘std::string’ 转换到 ‘uint16_t’，为实参 ‘1’(属于 ‘uint16_t htons(uint16_t)’)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘bool poseidon::slaver::grabpage_work(poseidon::task)’:
+../src/slaver.cpp:121: 错误：从类型 ‘int’ 到类型 ‘const char*’ 的转换无效
+../src/slaver.cpp:121: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+../src/slaver.cpp: At global scope:
+../src/slaver.cpp:129: 错误：‘bool poseidon::slaver::grab_page(std::string, int, int, std::string)’ 的原型不匹配类 ‘poseidon::slaver’ 中的任何一个
+../src/slaver.h:91: 错误：备选为：bool poseidon::slaver::grab_page(std::string, std::string, int, std::string)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:115: 警告：未使用的变量 ‘worker’
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:145: 警告：未使用的变量 ‘worker’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab_local(int)’:
+../src/slaver_test.h:115: 警告：未使用的变量 ‘worker’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:153: 错误：‘length’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_grab(int)’:
+../src/slaver_test.h:153: 错误：‘length’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:381: 错误：请求从 ‘tm*’ 转换到非标量类型 ‘std::basic_string<char, std::char_traits<char>, std::allocator<char> >’
+../src/GlobalHelper.h:384: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:383: 错误：‘time_str’ 在此作用域中尚未声明
+../src/GlobalHelper.h:384: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:384: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:386: 错误：对 ‘std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(std::string&, const std::_Ios_Openmode&)’ 的调用没有匹配的函数
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/fstream:572: 附注：备选为： std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const char*, std::_Ios_Openmode) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/fstream:556: 附注：         std::basic_ofstream<_CharT, _Traits>::basic_ofstream() [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/iosfwd:92: 附注：         std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(const std::basic_ofstream<char, std::char_traits<char> >&)
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:65: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)":")) + ((poseidon::slaver*)this)->poseidon::slaver::master_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:65: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)":")) + ((poseidon::slaver*)this)->poseidon::slaver::master_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:64: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)":")) + ((poseidon::slaver*)this)->poseidon::slaver::master_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:64: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)":")) + ((poseidon::slaver*)this)->poseidon::slaver::master_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:65: 错误：从类型 ‘int’ 到类型 ‘const char*’ 的转换无效
+../src/slaver.cpp:65: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::append(const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp: In member function ‘std::string poseidon::slaver::requestTask(poseidon::task*)’:
+../src/slaver.cpp:67: 错误：对 ‘poseidon::GlobalHelper::log()’ 的调用没有匹配的函数
+../src/GlobalHelper.h:371: 附注：备选为： void poseidon::GlobalHelper::log(std::string)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp:39: 错误：‘bool poseidon::slaver::requestTask(poseidon::task*, std::string&)’ 的原型不匹配类 ‘poseidon::slaver’ 中的任何一个
+../src/slaver.h:91: 错误：备选为：std::string poseidon::slaver::requestTask(poseidon::task*)
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::work()’:
+../src/slaver.h:104: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_request()’:
+../src/slaver_test.h:181: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::work()’:
+../src/slaver.h:104: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_request()’:
+../src/slaver_test.h:181: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_request()’:
+../src/slaver_test.h:181: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_request()’:
+../src/slaver_test.h:181: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver_test.h: In function ‘void poseidon::slaver_test_request()’:
+../src/slaver_test.h:181: 错误：对 ‘poseidon::slaver::requestTask(poseidon::task*)’ 的调用没有匹配的函数
+../src/slaver.h:91: 附注：备选为： bool poseidon::slaver::requestTask(poseidon::task*, std::string&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:144: 错误：‘TextLogger’ 在此作用域中尚未声明
+../src/slaver.h:144: 错误：‘logger’ 在此作用域中尚未声明
+../src/slaver.h:145: 错误：expected type-specifier before ‘TextLogger’
+../src/slaver.h:145: 错误：expected `;' before ‘TextLogger’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:149: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+../src/slaver.h:157: 错误：‘logger’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:149: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:148: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:146: 错误：‘filename’ 在此作用域中尚未声明
+../src/slaver.h:148: 错误：redeclaration of ‘std::string filename’
+../src/slaver.h:146: 错误：‘<typeprefixerror>filename’ 已在此声明过
+../src/slaver.h:148: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:149: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+../src/slaver.h:150: 错误：expected ‘,’ or ‘;’ before ‘gh’
+../src/slaver.h:149: 警告：未使用的变量 ‘filename2’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:148: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::grab_page_log_time(std::string, int, int, std::string)’:
+../src/slaver.h:148: 错误：no match 为 ‘operator+’ 在 ‘std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>](((const char*)"_")) + request_port’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:267: 附注：备选为： std::_Bit_iterator std::operator+(ptrdiff_t, const std::_Bit_iterator&)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_bvector.h:353: 附注：         std::_Bit_const_iterator std::operator+(ptrdiff_t, const std::_Bit_const_iterator&)
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+在包含自 ../src/slaver_test.h：10 的文件中，
+                 从 ../src/kf1304_slave.cpp：10:
+../src/slaver.h:275:2: 错误：#endif 没有匹配的 #if
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/kf1304_slave.cpp: In function ‘int main()’:
+../src/kf1304_slave.cpp:17: 错误：C 函数 ‘int main()’ 的声明
+../src/main.h:39: 错误：与此处早先的声明 ‘int main(int, char**)’ 冲突
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/kf1304_slave.cpp: In function ‘int main1()’:
+../src/kf1304_slave.cpp:19: 错误：‘main_lb’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/main.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:258: 错误：从类型 ‘std::string*’ 到类型 ‘char’ 的转换无效
+../src/slaver.h:258: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:258: 错误：‘ytask’ 在此作用域中尚未声明
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:259: 错误：赋值运算中的左值无效
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:261: 错误：从类型 ‘std::string*’ 到类型 ‘char’ 的转换无效
+../src/slaver.h:261: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:261: 错误：赋值运算中的左值无效
+make: *** [src/kf1304_slave.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:259: 警告：未使用的变量 ‘s1’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:259: 警告：未使用的变量 ‘s1’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:259: 警告：未使用的变量 ‘s1’
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.h: In member function ‘void poseidon::slaver::str2task(std::string, poseidon::task*)’:
+../src/slaver.h:259: 警告：未使用的变量 ‘s1’
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.cpp:9: 错误：expected unqualified-id before ‘namespace’
+../src/GlobalHelper.cpp:21: 错误：expected `}' at end of input
+../src/GlobalHelper.h: In member function ‘bool poseidon::GlobalHelper::is_html_endtail_with_feature(char*, int)’:
+../src/GlobalHelper.h:428: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:429: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:431: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:432: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:434: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:435: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:438: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:439: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:442: 警告：在有返回值的函数中未发现 return 语句
+../src/GlobalHelper.h: At global scope:
+../src/GlobalHelper.h:442: 错误：expected unqualified-id at end of input
+../src/GlobalHelper.h:442: 错误：expected `}' at end of input
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘bool poseidon::GlobalHelper::is_html_endtail_with_feature(char*, int)’:
+../src/GlobalHelper.h:429: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:430: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:432: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:433: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:435: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:436: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:439: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:440: 错误：break 语句不在循环或开关语句内
+../src/GlobalHelper.h:443: 警告：在有返回值的函数中未发现 return 语句
+../src/GlobalHelper.cpp: At global scope:
+../src/GlobalHelper.cpp:9: 错误：expected unqualified-id before ‘namespace’
+../src/GlobalHelper.cpp:21: 错误：expected `}' at end of input
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘bool poseidon::GlobalHelper::is_html_endtail_with_feature(char*, int)’:
+../src/GlobalHelper.h:429: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:432: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:435: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.h:439: 错误：‘gh’ 在此作用域中尚未声明
+../src/GlobalHelper.cpp: At global scope:
+../src/GlobalHelper.cpp:9: 错误：expected unqualified-id before ‘namespace’
+../src/GlobalHelper.cpp:21: 错误：expected `}' at end of input
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.cpp:9: 错误：expected unqualified-id before ‘namespace’
+../src/GlobalHelper.cpp:21: 错误：expected `}' at end of input
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_slave ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_slave.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
+Finished building: ../src/kf1304_slave.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_slave
+Invoking: GCC C++ Linker
+g++  -o "kf1304_slave"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_slave.o ./src/slaver.o   
+Finished building target: kf1304_slave
+ 
+
+**** Build Finished ****
