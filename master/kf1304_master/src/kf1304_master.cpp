@@ -19,10 +19,16 @@ int main() {
 	//(new GlobalHelper())->string_contain_test();//pass 测试 字符串包含函数
 	//(new GlobalHelper())->split_line_test(); //pass 测试 字符串包含函数
 	//	(new GlobalHelper())->init_command_map_test();//pass
+	//(new GlobalHelper())->get_time_str_test();
 
-	//read_site_test();//pass
- //hand_request_test();//pass
-	 master_test2slave(); //test pass
+	// dynamic assign urls
+	//1.read conf and test
+	config_test();
+	//2.
+
+	// read_site_test();//pass
+	//hand_request_test();//pass
+	//	master_test2slave(); //test pass
 
 	return 0;
 }

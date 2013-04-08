@@ -52,6 +52,9 @@ private:
 		return 0;
 	}
 public:
+	//
+	string split_char_betwen_pages;
+	//
 	GlobalHelper();
 	virtual ~GlobalHelper();
 
@@ -77,6 +80,7 @@ public:
 		ss << i;
 		return ss.str();
 	}
+
 	string ld2str(long int i) {
 		stringstream ss;
 		ss << i;
@@ -416,14 +420,36 @@ public:
 	void log_test() {
 		log("111");
 	}
+	//=====================================
+	void get_time_str(string& time_str) {
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, "%Y%m%d_%H%M%S", newtime);
+		time_str.append(tmpbuf);
+
+		struct timeval tmp_time;
+		gettimeofday(&tmp_time, 0);
+		string str_usec = ld2str(tmp_time.tv_usec);
+		time_str.append("_");
+		time_str.append(str_usec);
+
+	}
+	void get_time_str_test() {
+		string s2;
+		get_time_str(s2);
+		cout << s2 << endl;
+	}
 	//==========================================
 
-	string grab_page_filename(int index) {
-		string filename = "./download/" + num2str(index) + ".html";
+	string grab_page_filename(int index, string task_id) {
+		string filename = "./download/" + task_id;
 		return filename;
 	}
 
-	bool is_html_endtail_with_feature(char* buf, int count) {
+	bool is_html_end(char* buf, int count) {
 		{
 			while (1) {
 				if (tail_with_feature(buf, count, "\r\n0\r\n\r\n")) {
@@ -435,14 +461,24 @@ public:
 				if (tail_with_feature(buf, count, "</HTML>\r\n\r\n")) {
 					break;
 				}
-
+				if (tail_with_feature(buf, count, "</HTML>")) {
+					break;
+				}
 				if (tail_with_feature(buf, count, "</html>")) {
 					break;
 				}
 				return 0;
 			}
-			return 0;
+			return 1;
 		}
+	}
+
+	void test_strlen_size_len() {
+		//string s2 = "\a";
+		string s2 = "123";
+		cout << "size:" << s2.size() << "	strlen:" << strlen(s2.c_str())
+				<< "	length:" << s2.length() << endl;
+
 	}
 };
 }

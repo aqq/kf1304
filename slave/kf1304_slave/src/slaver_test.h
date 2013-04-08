@@ -49,7 +49,7 @@ void init_task(task *mytask) {
 	mytask->store_ip = "180.149.131.104";
 	mytask->cmd_id = GRABPAGE;
 	mytask->store_port = 80;
-	mytask->task_id = 1;
+	mytask->task_id.push_back("1");
 	//mytask->urls_http_req;
 	mytask->url_header =
 			"GET /question/#.html HTTP/1.1\r\nHost: zhidao.baidu.com\r\nConnection: close\r\nCache-Control: max-age=0\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: utf-8;q=0.7,*;q=0.3\r\n%s\r\n\r\n";
@@ -115,7 +115,7 @@ void slaver_test_grab_local(int index) {
 	slaver * worker = new slaver();
 
 	worker->grab_page(mytask.request_ip, mytask.request_port, index,
-			mytask.urls_http_req.at(index));
+			mytask.urls_http_req.at(index), "1");
 	string filename = "./temp";
 	filename += (index + 48);
 	filename.append(".txt");
@@ -143,8 +143,9 @@ void slaver_test_grab(int index) {
 	init_task_4_grabpage_114_wx_1(&mytask);
 
 	slaver * worker = new slaver();
+
 	worker->grab_page(mytask.request_ip, mytask.request_port, index,
-			mytask.urls_http_req.at(index));
+			mytask.urls_http_req.at(index), "1");
 
 	string filename = "./temp" + gh->num2str(index) + ".txt";
 
@@ -196,25 +197,24 @@ bool str2task_test() {
 	string command1 =
 			"commd_id:4\r\n"
 					"slave_id:1\r\n"
+					"task_id:20130408132500283768\r\n"
 					"version:3\r\n"
 					"urls:wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#wx.114chn.com/tradehtml/320200/3202001212190001/index.html#\r\n"
 					"\f";
-	worker->str2task(command1, &mytask);
-	cout << "urls:\n" << mytask.urls << endl;
+	worker->str2task(command1, mytask);
+
+///	cout << "cmd_id:" << mytask.cmd_id << endl;
+	//cout << "task_id:" << mytask.task_id_str << endl;
+
+	//cout << "urls:\n" << mytask.urls << endl;
+
 	assert(
 			mytask.urls=="wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#wx.114chn.com/tradehtml/320200/3202001212190001/index.html#");
-
 	assert( mytask.cmd_id==4);
+	assert( mytask.task_id.at(0)=="20130408132500283768");
 	assert( mytask.slave_id==1);
 	assert( mytask.version==3);
-	return 1;
-	command1 = "commd_id:1\r\n"
-			"slave_id:2\r\n"
-			"version:3\r\n"
-			//	"urls:www.1.com/1.html#www.2.com/2.html#www.3.com/3.html#\r\n"
-			"\f";
-	worker->str2task(command1, &mytask);
-	assert(mytask.urls=="");
+
 	return 1;
 }
 
@@ -246,7 +246,7 @@ void hand_response_test() {
 	task mytask; //commad
 	mytask.sleep_time = 1;
 	mytask.cmd_id = GRABPAGE;
-	mytask.task_id = 1;
+	mytask.task_id.push_back(  "1");
 	string urls =
 			"urls:"
 					"wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014"
@@ -300,7 +300,7 @@ void grabpage_work_test() {
 	//mytask.request_port = 80;
 	mytask.cmd_id = GRABPAGE;
 	mytask.store_port = 80;
-	mytask.task_id = 1;
+	mytask.task_id .push_back( "1");
 	string urls =
 	//"urls:"
 	//		"10.2.112.11/index.html#"

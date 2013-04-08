@@ -31,12 +31,12 @@
 using namespace std;
 
 namespace poseidon {
+
 struct site {
 	string site_name;
 	int good;
 	int bad;
 	int process;
-	int total;
 };
 struct slave_status {
 	string slave_id;
@@ -56,19 +56,28 @@ class master {
 
 private:
 	int master_port; //80
-	string master_ip; //"192.168.75.128";
+//	string master_ip; //"192.168.75.128";
 	//command 1 salve 1
-	string command_m2s_1; //"2\r\n1\r\n\f";
+
 	GlobalHelper *gh;
 	bool isworktime;
 	int current_version;
 	string sleep_time;
 	ifstream *site_2;
+	FILE *fp;
+	int read_url_num;
+	//map<string,FILE> url_map;//key=site;value file
+
+	//assign_url_number
+
+	map<string, FILE> url_map;
+	//
+	map<string, slave_status> slave_map;
 public:
+	int assign_url_number;
 	master() {
 		master_port = 9000;
-		master_ip = "192.168.75.128";
-		command_m2s_1 = "2\r\n1\r\n\f";
+
 		gh = new GlobalHelper();
 		isworktime = false;
 		current_version = 2;
@@ -76,11 +85,21 @@ public:
 		//site_2 = &s1;
 
 		sleep_time = "2";
+		string filename = "./urls/site_2";
+		if ((fp = fopen(filename.c_str(), "r")) == NULL) {
+			printf("open file %s error!!\n", filename.c_str());
+			exit(0);
+		}
+
+		read_url_num = 3;
+
+		this->config_master();
+		this->config_website();
 	}
 
 	bool is_worktime() {
 		isworktime = !isworktime;
-		return isworktime;
+		return 1;
 	}
 	int service() {
 		//1 init variable
@@ -101,7 +120,7 @@ public:
 
 		//4 bind and listen
 		if (-1
-				== bind(socketfd, (struct sockaddr*) &local_addr,
+				== bind(socketfd, (struct sockaddr*) (((&local_addr))),
 						sizeof(struct sockaddr))) {
 			perror("socket fd connet fail...");
 			return -1;
@@ -111,20 +130,18 @@ public:
 			return -1;
 		}
 		cout << "waiting for your connection!" << endl;
-
 		//5  service is receive cmd and response cmd
 		socklen_t size;
 		while (1) {
 			size = sizeof(client_addr);
 			//5.1 accept
-			if ((new_fd = accept(socketfd, (struct sockaddr *) (&client_addr),
-					&size)) == -1) {
+			if ((new_fd = accept(socketfd,
+					(struct sockaddr*) ((((&client_addr)))), &size)) == -1) {
 				perror("socket new_fd accept fail...");
 				return -1;
 			}
 			cout << "conntection from:" << inet_ntoa(client_addr.sin_addr)
 					<< endl;
-
 			//5.2  accept the full message
 			int read_count;
 			while (1) {
@@ -138,30 +155,26 @@ public:
 					//TODO:: extract a function :is revice OK?
 				}
 			}
-			request_buff[read_count] = '\0';
-#ifdef DEBUG
-			cout << "request is :" << request_buff << endl;
-#endif
 
+			request_buff[read_count] = '\0';
+			cout << "request is :" << request_buff << endl;
 			//5.3 hand request
 			string request_str = request_buff;
 			string respose_content = hand_request(request_str);
-#ifdef DEBUG
 			cout << "response:" << respose_content << endl;
-#endif
-
 			//5.4 write to request
 			int write_result = write(new_fd, respose_content.c_str(),
 					strlen(respose_content.c_str()));
 			if (write_result < 0) {
 				perror("socket fd write fail...");
 			}
-
 		} //end step 5
+
 		return 0;
 	}
+
 	//input cmd and return string
-	string init_command(map<string, string> &cmd_map) {
+	string init_command(map<string, string>& cmd_map) {
 		map<string, string>::iterator it2;
 		string cmd_str;
 		for (it2 = cmd_map.begin(); it2 != cmd_map.end(); ++it2) {
@@ -171,6 +184,37 @@ public:
 		cmd_str.append("\f");
 		return cmd_str;
 	}
+
+	void init_sleep_cmd(map<string, string>& response_cmd_map,
+			struct command req_cmd) {
+		//2.1.2 sleep time
+		response_cmd_map["commd_id"] = "2";
+		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
+		response_cmd_map["time"] = this->sleep_time;
+	}
+
+	void init_updata_cmd(map<string, string>& response_cmd_map,
+			struct command& req_cmd) {
+		response_cmd_map["commd_id"] = "3";
+		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
+		response_cmd_map["version"] = gh->num2str(this->current_version);
+		response_cmd_map["url"] = "192.168.1.1/slave_v2.gz";
+	}
+
+	void init_assign_cmd(struct command& req_cmd,
+			map<string, string>& response_cmd_map) {
+
+		string urls;
+		if (assign_request(req_cmd.slave_id, urls)) {
+			response_cmd_map["urls"] = urls;
+			response_cmd_map["commd_id"] = "4";
+			response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
+			response_cmd_map["task_id"] = gh->get_time_str();
+		} else {
+			init_sleep_cmd(response_cmd_map, req_cmd);
+		}
+	}
+
 	//
 	string hand_request(string request_str) {
 		string respose_content;
@@ -183,34 +227,30 @@ public:
 		req_cmd.commd_id = atoi(req_cmd_map["commd_id"].c_str());
 		req_cmd.app_version = atoi(req_cmd_map["application_version"].c_str());
 		req_cmd.slave_id = atoi(req_cmd_map["slave_id"].c_str());
-#ifdef DEBUG
+
 		cout << "request_command:" << req_cmd.commd_id << endl;
-#endif
 
 		//==============================================
-		//2 switch command type
+		//2 updata slave_status
+		//==============================================
+
+
+		//==============================================
+		//3 switch command type
 		//==============================================
 		map<string, string> response_cmd_map;
 		switch (req_cmd.commd_id) {
 		case 1: //request from slave
 			//2.1.1 version
 			if (req_cmd.app_version < this->current_version) {
-				response_cmd_map["commd_id"] = "3";
-				response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
-				response_cmd_map["version"] = gh->num2str(
-						this->current_version);
-				response_cmd_map["url"] = "192.168.1.1/slave_v2.gz";
-			} //2.1.2 is work time
-			else if (is_worktime()) {
-				response_cmd_map["commd_id"] = "4";
-				response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
-//task_id
-				response_cmd_map["urls"] = assign_request(req_cmd.slave_id);
-
-			} else { //2.1.2 sleep time
-				response_cmd_map["commd_id"] = "2";
-				response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
-				response_cmd_map["time"] = this->sleep_time;
+				init_updata_cmd(response_cmd_map, req_cmd);
+			} //2.1.2 is work timeelse
+			if (is_worktime()) {
+				//		bool is_exist_work = 0;
+				init_assign_cmd(req_cmd, response_cmd_map);
+			} else {
+				//2.1.2 sleep time
+				init_sleep_cmd(response_cmd_map, req_cmd);
 			}
 			respose_content = init_command(response_cmd_map);
 			break;
@@ -224,48 +264,93 @@ public:
 		}
 		return respose_content;
 	}
-	string assign_request(int slave_id) {
+	bool assign_request(int slave_id, string& request_url) {
 		//TODO::assign_task1
 		vector<string> vec;
-		string request_url;
+//		string request_url;
 //lock in
-		read_site("./urls/site_2", 2, &vec);
+		if (!read_site(slave_id, &vec)) {
+			return 0;
+		}
 //lock out
 		for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
 			request_url.append(*it);
 			request_url.append("#");
 		}
-		return request_url;
+		return 1;
 	}
 
-	bool read_site(string filename, int urlnum, vector<string> *vec) {
-		FILE *fp;
+	bool read_site(int slave_id, vector<string> *vec) {
+
 		char *filep;
 		string url;
 
-		if ((fp = fopen(filename.c_str(), "r")) == NULL) {
-			printf("open file %s error!!\n", filename.c_str());
-			return 0;
-		}
-
 		char read_buff[1024];
-		while (urlnum--) {
+		while (read_url_num--) {
 			filep = fgets(read_buff, 1024, fp);
+			if (filep == NULL) {
+				return false;
+			}
 			string s1 = read_buff;
 			int f1 = s1.find_first_of('\n');
 			string url = s1.substr(0, f1);
-			/*
-			 *site_2 >> url;
-			 if ((*site_2).bad()) { //if we all lines is read!
-			 return false;
-			 }*/
 			vec->push_back(url);
 		}
+
 		return 1;
 	}
-	virtual ~master();
-};
+	//
+	bool config_master() {
+		map<string, string> config_map1;
 
+		gh->read_config(gh->MASTER_CONF, config_map1);
+		this->assign_url_number = atoi(
+				(config_map1["assign_url_number"]).c_str());
+
+		//
+		return 1;
+	}
+	bool config_website() {
+		map<string, string> config_map2;
+		gh->read_config(gh->WEBSITE_CONF, config_map2);
+
+		//foreach
+		for (map<string, string>::iterator it2 = config_map2.begin();
+				it2 != config_map2.end(); ++it2) {
+			//	std::cout << it2->first << " => " << it2->second << '\n';
+			string site = it2->first;
+			long num = atol(it2->second.c_str());
+//init var
+			FILE *fp_config;
+
+			string fsite = "./urls/" + site;
+			string url_config;
+			//open file
+			if ((fp_config = fopen(fsite.c_str(), "r")) == NULL) {
+				printf("open file %s error!!\n", fsite.c_str());
+				return false;
+			}
+			//
+			char *filep;
+			char read_buff[1024];
+			while (num--) {
+				filep = fgets(read_buff, 1024, fp_config);
+				if (filep == NULL) {
+					return false;
+				}
+			}
+			//store fp into map
+			url_map[site] = *fp;
+		}
+
+		return 1;
+	}
+
+	virtual ~master() {
+		//fclose(fp);
+	}
+
+};
 }
 /* namespace poseidon */
 #endif /* MASTER_H_ */

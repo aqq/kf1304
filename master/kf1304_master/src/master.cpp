@@ -7,12 +7,6 @@
 
 #include "master.h"
 
-namespace poseidon
-{
-
-master::~master()
-{
-
-}
+namespace poseidon {
 
 } /* namespace poseidon */

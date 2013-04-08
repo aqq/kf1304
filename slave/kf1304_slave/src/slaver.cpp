@@ -117,11 +117,15 @@ bool slaver::grabpage_work(task& mytask) {
 
 	//}
 //2
+
+	this->last_task_status = 0;
 	uint count = mytask.urls_http_req.size();
 	for (vector<string>::size_type index = 0; index < count; index++) {
+
 		if (lookup_ip(mytask.urls_sites.at(index), dest_ip)) {
+
 			grab_page_log_time(dest_ip, 80, index,
-					mytask.urls_http_req.at(index));
+					mytask.urls_http_req.at(index), mytask.task_id.at(0));
 			//grab_page
 		}
 
@@ -130,10 +134,12 @@ bool slaver::grabpage_work(task& mytask) {
 }
 //ip:port,http_req,index
 bool slaver::grab_page(string request_ip, int request_port, int index,
-		string http_req) {
+		string http_req, string task_id) {
 #ifdef DEBUG
 	cout << "grab index:" << index << ";" << request_ip << ":" << request_port
-			<< ";" << "http_req:\n" << http_req << endl;
+			<< endl;
+	gh->log(http_req);
+	//	<< ";" << "http_req:\n" << http_req
 #endif
 	struct sockaddr_in dest_addr;
 
@@ -155,7 +161,7 @@ bool slaver::grab_page(string request_ip, int request_port, int index,
 		return -1;
 	}
 
-	write(sockfd, http_req.c_str(), strlen(http_req.c_str()));
+	write(sockfd, http_req.c_str(), http_req.size());
 	char buf[4096];
 	int count = 0;
 
@@ -163,7 +169,7 @@ bool slaver::grab_page(string request_ip, int request_port, int index,
 	//string::size_type response_content_size;
 	//bool flag = false;
 
-	string filename = gh->grab_page_filename(index);
+	string filename = gh->grab_page_filename(index, task_id);
 	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_APPEND);
 
 #ifdef DEBUG
@@ -191,22 +197,16 @@ bool slaver::grab_page(string request_ip, int request_port, int index,
 		 }
 		 */
 		//[001]尝试通过CONTENT－LEN来判断 END
-
-		if (gh->tail_with_feature(buf, count, "\r\n0\r\n\r\n")) {
+		if (gh->is_html_end(buf, count)) {
 			break;
 		}
-		if (gh->tail_with_feature(buf, count, "</html>\r\n\r\n")) {
-			break;
-		}
-		if (gh->tail_with_feature(buf, count, "</HTML>\r\n\r\n")) {
-			break;
-		}
-
-		if (gh->tail_with_feature(buf, count, "</html>")) {
-			break;
-		}
-
 	}
+//append '\a' between different pages
+	string split_char = "\a";
+	write(fd, gh->split_char_betwen_pages.c_str(),
+			gh->split_char_betwen_pages.size());
+
+	this->last_task_status = 1;//
 
 	close(fd);
 

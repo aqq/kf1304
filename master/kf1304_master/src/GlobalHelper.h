@@ -69,8 +69,12 @@ protected:
 public:
 
 	int TASK_BUF_SIZE; //1448
+	string MASTER_CONF;
+	string WEBSITE_CONF;
 	GlobalHelper() {
 		TASK_BUF_SIZE = 1448;
+		MASTER_CONF = "./conf/master.conf";
+		WEBSITE_CONF = "./conf/website_grabing.log";
 	}
 	virtual ~GlobalHelper();
 
@@ -272,6 +276,66 @@ public:
 
 		return 1;
 	}
+
+	//=====================================
+	string get_time_str() {
+		string time_str;
+
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, "%Y%m%d%H%M%S", newtime);
+		time_str.append(tmpbuf);
+
+		struct timeval tmp_time;
+		gettimeofday(&tmp_time, 0);
+		string str_usec = ld2str(tmp_time.tv_usec);
+//		time_str.append("_");
+		time_str.append(str_usec);
+		return time_str;
+	}
+	void get_time_str_test() {
+		string s2;
+
+		cout << get_time_str() << endl;
+	}
+	//==========================================
+	bool read_config(string fname, map<string, string>& config_map) {
+		//
+		FILE *fp;
+		char *filep;
+		string url;
+		if ((fp = fopen(fname.c_str(), "r")) == NULL) {
+			printf("open file %s error!!\n", fname.c_str());
+		}
+		//
+		vector<string> *vec = new vector<string>();
+		char read_buff[1024];
+		while (1) {
+			filep = fgets(read_buff, 1024, fp);
+			if (filep == NULL) {
+				break;
+			}
+			string s1 = read_buff;
+			int f1 = s1.find_first_of('\n');
+			string item = s1.substr(0, f1);
+			vec->push_back(item);
+		}
+		fclose(fp);
+		//
+		vector<string>::iterator it1;
+		for (it1 = vec->begin(); it1 != vec->end(); ++it1) {
+			vector<string> vec2;
+			split_by_split_char(*it1, &vec2, ':');
+			string key = vec2.at(0);
+			string value = vec2.at(1);
+			(config_map)[key] = value;
+		}
+		return 1;
+	}
+	//==========================================
 
 };
 

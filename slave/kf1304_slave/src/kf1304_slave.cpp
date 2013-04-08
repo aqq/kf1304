@@ -24,10 +24,13 @@ int main() {
 	//(new GlobalHelper())->convert_url_to_http_req_test(); //pass
 	//(new GlobalHelper())->log_test(); //pass
 
+	//(new GlobalHelper())->test_strlen_size_len(); //pass
+	//	(new GlobalHelper())->get_time_str_test(); //pass
+
 	//slaver_test_grab(2); //pass
 	//	slaver_test_grab_3(); //pass
 	//prepare_urls_test(); //  pass
-//	str2task_test(); //  pass
+	//str2task_test(); //  pass
 
 	//slaver_test_request(); //pass
 	//get_ip_by_name_test(); //test ip
@@ -35,7 +38,7 @@ int main() {
 	//grabpage_work_test(); //pass
 // hand_response_test(); //pass
 
- slaver_work_test(); //final test
+	slaver_work_test(); //final test
 
 	return 0;
 }

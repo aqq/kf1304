@@ -6,16 +6,12 @@
  */
 
 #include "GlobalHelper.h"
-namespace poseidon
-{
-GlobalHelper::GlobalHelper()
-{
-	// TODO Auto-generated constructor stub
-
+namespace poseidon {
+GlobalHelper::GlobalHelper() {
+	split_char_betwen_pages = "\a";
 }
 
-GlobalHelper::~GlobalHelper()
-{
+GlobalHelper::~GlobalHelper() {
 	// TODO Auto-generated destructor stub
 }
 }
