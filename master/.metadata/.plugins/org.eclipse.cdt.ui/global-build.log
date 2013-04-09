@@ -4609,3 +4609,2396 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:243: 错误：no match 为 ‘operator!=’ 在 ‘s_status != 0’ 中
+../src/master.h:246: 错误：expected `;' before ‘}’ token
+../src/master.h:246: 警告：statement 不起作用
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:243: 错误：no match 为 ‘operator!=’ 在 ‘s_status != 0’ 中
+../src/master.h:246: 错误：expected `;' before ‘}’ token
+../src/master.h:246: 警告：statement 不起作用
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:243: 错误：no match 为 ‘operator!=’ 在 ‘s_status.poseidon::slave_status::slave_id != 0’ 中
+../src/master.h:246: 错误：expected `;' before ‘}’ token
+../src/master.h:246: 警告：statement 不起作用
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:243: 错误：no match 为 ‘operator!=’ 在 ‘s_status.poseidon::slave_status::slave_id != 0’ 中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:250: 错误：no match 为 ‘operator|=’ 在 ‘s_status.poseidon::slave_status::site_status |= 4096’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ios_base.h:91: 附注：备选为： std::_Ios_Fmtflags& std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ios_base.h:131: 附注：         std::_Ios_Openmode& std::operator|=(std::_Ios_Openmode&, std::_Ios_Openmode)
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ios_base.h:169: 附注：         std::_Ios_Iostate& std::operator|=(std::_Ios_Iostate&, std::_Ios_Iostate)
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+../src/master.h:258: 警告：未使用的变量 ‘s_status1’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+../src/master.h:258: 警告：未使用的变量 ‘s_status1’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:259: 错误：对 ‘poseidon::slave_status::slave_status(void*)’ 的调用没有匹配的函数
+../src/master.h:40: 附注：备选为： poseidon::slave_status::slave_status()
+../src/master.h:40: 附注：         poseidon::slave_status::slave_status(const poseidon::slave_status&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:264: 错误：‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’ 使用时未带模板参数
+../src/master.h:264: 错误：expected `;' before ‘it’
+../src/master.h:265: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:264: 错误：‘template<class _Key, class _Tp, class _Compare, class _Alloc> class std::map’ 使用时未带模板参数
+../src/master.h:264: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:264: 错误：‘File’ 在此作用域中尚未声明
+../src/master.h:264: 错误：模板参数 2 无效
+../src/master.h:264: 错误：模板参数 4 无效
+../src/master.h:264: 错误：expected initializer before ‘*’ token
+../src/master.h:265: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:264: 错误：不能将 ‘std::_Rb_tree_iterator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _IO_FILE> >’ 转换为 ‘std::_Rb_tree_iterator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _IO_FILE> >*’，在 initialization 中
+../src/master.h:265: 错误：no match 为 ‘operator!=’ 在 ‘it != ((poseidon::master*)this)->poseidon::master::url_map.std::map<_Key, _Tp, _Compare, _Alloc>::end [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = _IO_FILE, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _IO_FILE> >]()’ 中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master.h:82: 错误：‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > > poseidon::master::slave_map’ 是私有的
+../src/master_test.h:72: 错误：在此上下文中
+../src/master.h:82: 错误：‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > > poseidon::master::slave_map’ 是私有的
+../src/master_test.h:74: 错误：在此上下文中
+../src/master.h:82: 错误：‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > > poseidon::master::slave_map’ 是私有的
+../src/master_test.h:77: 错误：在此上下文中
+../src/master_test.h:77: 错误：ISO C++ 不允许比较指针和整数的值
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master.h:82: 错误：‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > > poseidon::master::slave_map’ 是私有的
+../src/master_test.h:72: 错误：在此上下文中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master.h:82: 错误：‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > > poseidon::master::slave_map’ 是保护的
+../src/master_test.h:72: 错误：在此上下文中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master_test.h:77: 错误：ISO C++ 不允许比较指针和整数的值
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status(poseidon::command&)’:
+../src/master.h:256: 错误：对 ‘std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> > >::insert(std::string&, poseidon::slave_status&)’ 的调用没有匹配的函数
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_map.h:395: 附注：备选为： std::pair<typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator, bool> std::map<_Key, _Tp, _Compare, _Alloc>::insert(const std::pair<const _Key, _Tp>&) [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::slave_status, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> >]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_map.h:419: 附注：         typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator std::map<_Key, _Tp, _Compare, _Alloc>::insert(typename std::_Rb_tree<_Key, std::pair<const _Key, _Tp>, std::_Select1st<std::pair<const _Key, _Tp> >, _Compare, typename _Alloc::rebind<std::pair<const _Key, _Tp> >::other>::iterator, const std::pair<const _Key, _Tp>&) [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::slave_status, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status> >]
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master_test.h:72: 错误：expected unqualified-id before ‘:’ token
+../src/master_test.h:74: 错误：‘it’ 在此作用域中尚未声明
+../src/master_test.h:74: 错误：‘struct poseidon::slave_status’ 没有名为 ‘end’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master_test.h:72: 错误：expected unqualified-id before ‘:’ token
+../src/master_test.h:74: 错误：‘it’ 在此作用域中尚未声明
+../src/master_test.h:74: 错误：‘struct poseidon::slave_status’ 没有名为 ‘end’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master_test.h:73: 错误：‘struct poseidon::slave_status’ 没有名为 ‘begin’ 的成员
+../src/master_test.h:74: 错误：‘struct poseidon::slave_status’ 没有名为 ‘end’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::update_slave_status_test()’:
+../src/master_test.h:75: 错误：no match 为 ‘operator<<’ 在 ‘std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(& std::cout)), ((const char*)"alibb:")) << it.std::_Rb_tree_iterator<_Tp>::operator* [with _Tp = std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status>]()->std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::slave_status>::second.poseidon::slave_status::site_status.std::map<_Key, _Tp, _Compare, _Alloc>::operator[] [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::site, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site> >](((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& std::basic_string<char, std::char_traits<char>, std::allocator<char> >(((const char*)"alibb"), ((const std::allocator<char>&)((const std::allocator<char>*)(& std::allocator<char>())))))))’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:67: 附注：备选为： std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:78: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:90: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:241: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:264: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:102: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:125: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:157: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:183: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:215: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:288: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:311: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:361: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:335: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:384: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:407: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:430: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>]
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status(poseidon::command&)’:
+../src/master.h:240: 错误：no match 为 ‘operator<<’ 在 ‘std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(& std::cout)), ((const char*)"last_task_site:")) << s_status.poseidon::slave_status::site_status.std::map<_Key, _Tp, _Compare, _Alloc>::operator[] [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::site, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site> >](((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >*)(& s_status.poseidon::slave_status::last_task_site))))’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:67: 附注：备选为： std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:78: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:90: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:241: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:264: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:102: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:125: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:157: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:183: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:215: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:288: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:311: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:361: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:335: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:384: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:407: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:430: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>]
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status(poseidon::command&)’:
+../src/master.h:240: 错误：no match 为 ‘operator<<’ 在 ‘std::operator<< [with _Traits = std::char_traits<char>](((std::basic_ostream<char, std::char_traits<char> >&)(& std::cout)), ((const char*)"last_task_site:")) << s_status.poseidon::slave_status::site_status.std::map<_Key, _Tp, _Compare, _Alloc>::operator[] [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::site, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site> >](((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >*)(& s_status.poseidon::slave_status::last_task_site))))’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:67: 附注：备选为： std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:78: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ios<_CharT, _Traits>& (*)(std::basic_ios<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:90: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:241: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:264: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:102: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:125: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:157: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:183: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:215: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:288: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:311: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:361: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:335: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:384: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:407: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>]
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/ostream.tcc:430: 附注：         std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_streambuf<_CharT, _Traits>*) [with _CharT = char, _Traits = std::char_traits<char>]
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status(poseidon::command&)’:
+../src/master.h:237: 错误：no match 为 ‘operator=’ 在 ‘s_status.poseidon::slave_status::site_status = 1’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_map.h:225: 附注：备选为： std::map<_Key, _Tp, _Compare, _Alloc>& std::map<_Key, _Tp, _Compare, _Alloc>::operator=(const std::map<_Key, _Tp, _Compare, _Alloc>&) [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = poseidon::site, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site> >]
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:331: 错误：对 ‘poseidon::GlobalHelper::num2str(std::string&)’ 的调用没有匹配的函数
+../src/GlobalHelper.h:98: 附注：备选为： std::string poseidon::GlobalHelper::num2str(int)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:331: 错误：不能将 ‘_IO_FILE’ 转换为 ‘FILE*’，在 assignment 中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:335: 错误：expected ‘,’ or ‘;’ before ‘fp_now’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：expected primary-expression before ‘,’ token
+../src/master.h:337: 错误：missing template arguments before ‘it’
+../src/master.h:337: 错误：expected `;' before ‘it’
+../src/master.h:339: 错误：‘it’ 在此作用域中尚未声明
+../src/master.h:339: 错误：‘struct poseidon::slave_status’ 没有名为 ‘end’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:337: 错误：模板参数 2 无效
+../src/master.h:337: 错误：模板参数 4 无效
+../src/master.h:337: 错误：expected initializer before ‘it’
+../src/master.h:339: 错误：‘it’ 在此作用域中尚未声明
+../src/master.h:339: 错误：‘struct poseidon::slave_status’ 没有名为 ‘end’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:337: 错误：模板参数 2 无效
+../src/master.h:337: 错误：模板参数 4 无效
+../src/master.h:337: 错误：expected initializer before ‘it’
+../src/master.h:338: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:336: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:336: 错误：模板参数 2 无效
+../src/master.h:336: 错误：模板参数 4 无效
+../src/master.h:336: 错误：expected initializer before ‘it’
+../src/master.h:337: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:337: 错误：模板参数 2 无效
+../src/master.h:337: 错误：模板参数 4 无效
+../src/master.h:337: 错误：expected initializer before ‘it’
+../src/master.h:338: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:337: 错误：模板参数 2 无效
+../src/master.h:337: 错误：模板参数 4 无效
+../src/master.h:337: 错误：expected initializer before ‘it’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:337: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:337: 错误：模板参数 2 无效
+../src/master.h:337: 错误：模板参数 4 无效
+../src/master.h:337: 错误：expected initializer before ‘it’
+../src/master.h:338: 错误：‘it’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:336: 错误：‘site’ 不能出现在常量表达式中
+../src/master.h:336: 错误：模板参数 2 无效
+../src/master.h:336: 错误：模板参数 4 无效
+../src/master.h:336: 错误：expected initializer before ‘i1’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:343: 错误：expected primary-expression before ‘]’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:343: 错误：expected primary-expression before ‘]’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:343: 错误：expected primary-expression before ‘]’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:356: 错误：expected primary-expression before ‘]’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:356: 错误：expected primary-expression before ‘]’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:356: 错误：expected primary-expression before ‘]’ token
+../src/master.h:364: 错误：不能从 ‘FILE’ 转换到 ‘FILE*’，为实参 ‘3’(属于 ‘char* fgets(char*, int, FILE*)’)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:364: 错误：不能从 ‘FILE’ 转换到 ‘FILE*’，为实参 ‘3’(属于 ‘char* fgets(char*, int, FILE*)’)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+../src/master.h: In member function ‘bool poseidon::master::read_urls(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:356: 错误：不能将 ‘_IO_FILE’ 转换为 ‘FILE*’，在 initialization 中
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:338: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h: In member function ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’:
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/stl_pair.h:69: 错误：非静态的常量成员 ‘const std::basic_string<char, std::char_traits<char>, std::allocator<char> > std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::first’，不能使用默认的赋值运算符
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:340: 附注：在这里第一次需要生成的方法 ‘std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>& std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>::operator=(const std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site>&)’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::get_min_bad_of_sites(int)’:
+../src/master.h:337: 错误：redeclaration of ‘std::string site_name’
+../src/master.h:331: 错误：‘std::string site_name’ 已在此声明过
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::config_website()’:
+../src/master.h:425: 错误：‘fp’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

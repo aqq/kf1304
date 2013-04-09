@@ -98,10 +98,10 @@ bool slaver::requestTask(task *mytask, string& str_cmd) {
 	close(socketfd);
 	//7  init task
 #ifdef DEBUG
-	cout << "receive:" << read_buf << endl;
+//	cout << "receive:" << read_buf << endl;
 #endif
 	str_cmd = read_buf;
-	gh->log(str_cmd);
+//	gh->log(str_cmd);
 	return req_seccess;
 //cout << "cmd_id:" << (*mytask).cmd_id << endl;
 	//cout << "slave_id:" << (*mytask).response_cmd_map["slave_id"] << endl;
@@ -111,21 +111,24 @@ bool slaver::requestTask(task *mytask, string& str_cmd) {
 
 bool slaver::grabpage_work(task& mytask) {
 	string dest_ip;
-	//1 dns ip 208.87.35.103
-	//for (vector<string>::iterator it = mytask.urls_sites.begin();
-	//		it != mytask.urls_sites.end(); it++) {
-
-	//}
-//2
 
 	this->last_task_status = 0;
 	uint count = mytask.urls_http_req.size();
 	for (vector<string>::size_type index = 0; index < count; index++) {
 
 		if (lookup_ip(mytask.urls_sites.at(index), dest_ip)) {
+			grabtask gt;
+			gt.http_req = mytask.urls_http_req.at(index);
+			gt.request_ip = dest_ip;
+			gt.request_port = 80;
+			gt.index = index;
+			gt.task_id = mytask.task_id.at(0);
+			gt.url = mytask.urls_vec.at(index);
 
-			grab_page_log_time(dest_ip, 80, index,
-					mytask.urls_http_req.at(index), mytask.task_id.at(0));
+			grab_page_log_time(gt);
+
+			//grab_page_log_time(dest_ip, 80, index,
+			//	mytask.urls_http_req.at(index), mytask.task_id.at(0));
 			//grab_page
 		}
 
@@ -133,11 +136,18 @@ bool slaver::grabpage_work(task& mytask) {
 	return 1;
 }
 //ip:port,http_req,index
-bool slaver::grab_page(string request_ip, int request_port, int index,
-		string http_req, string task_id) {
+bool slaver::grab_page(grabtask gt) {
+
+	string http_req = gt.http_req; //= mytask.urls_http_req.at(index);
+	string request_ip = gt.request_ip;
+	int request_port = gt.request_port;
+	int task_index = gt.index;
+	string task_id = gt.task_id; // = mytask.task_id.at(0);
+	string url = gt.url; //mytask.urls.at(index);
+
 #ifdef DEBUG
-	cout << "grab index:" << index << ";" << request_ip << ":" << request_port
-			<< endl;
+	cout << "grab index:" << task_index << ";" << request_ip << ":"
+			<< request_port << endl;
 	gh->log(http_req);
 	//	<< ";" << "http_req:\n" << http_req
 #endif
@@ -169,44 +179,30 @@ bool slaver::grab_page(string request_ip, int request_port, int index,
 	//string::size_type response_content_size;
 	//bool flag = false;
 
-	string filename = gh->grab_page_filename(index, task_id);
+	string filename = gh->grab_page_filename(task_index, task_id);
 	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_APPEND);
 
 #ifdef DEBUG
-	cout << "wait to reading from socket" << endl;
+	cout << "wait to reading from socket:" << endl;
 #endif
 
 	while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
-#ifdef DEBUG
-		//	cout << "READ_BUFF:" << buf << endl;
-		//	cout << "===================" << endl;
-#endif
+
 		//response_content.append(buf);
 		write(fd, buf, count);
 		//[001]尝试通过CONTENT－LEN来判断 BEGIN
-		//if (!flag)		{			flag = gh->Content_length(response_content, &response_content_size);		}
-		//string::size_type current_size =
-		//response_content.size();
-		//cout << "current_size:" << current_size << "total_size:"				<< response_content_size << endl;
-		/*	if (flag && (current_size == response_content_size))
-		 {
-		 #ifdef DEBUG
-		 cout << response_content << endl;
-		 #endif
-		 break;
-		 }
-		 */
+
 		//[001]尝试通过CONTENT－LEN来判断 END
 		if (gh->is_html_end(buf, count)) {
 			break;
 		}
 	}
 //append '\a' between different pages
-	string split_char = "\a";
-	write(fd, gh->split_char_betwen_pages.c_str(),
-			gh->split_char_betwen_pages.size());
 
-	this->last_task_status = 1;//
+	string split_s1 = gh->get_str_betwen_pages(gt.url);
+	write(fd, split_s1.c_str(), split_s1.size());
+
+	this->last_task_status = 1; //
 
 	close(fd);
 

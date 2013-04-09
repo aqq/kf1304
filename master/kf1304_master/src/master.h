@@ -36,12 +36,15 @@ struct site {
 	string site_name;
 	int good;
 	int bad;
-	int process;
 };
 struct slave_status {
 	string slave_id;
 	int status;
-	vector<site> site_status;
+	//key=site_name,value=site_status
+	map<string, site> site_status;
+	string last_task_site;
+	//int last_task_site;
+
 };
 
 struct command {
@@ -49,8 +52,12 @@ struct command {
 	int slave_id;
 	int app_version;
 	int time;
-	int task_id;
-	vector<string> http_request_headers;
+	//int task_id;
+
+	int last_task_status;
+
+	vector<string> urls; //master to slave
+	vector<string> task_id;
 };
 class master {
 
@@ -63,17 +70,19 @@ private:
 	bool isworktime;
 	int current_version;
 	string sleep_time;
-	ifstream *site_2;
-	FILE *fp;
+	//ifstream *site_2;
+	//FILE *fp;
 	int read_url_num;
 	//map<string,FILE> url_map;//key=site;value file
 
 	//assign_url_number
-
-	map<string, FILE> url_map;
-	//
-	map<string, slave_status> slave_map;
 public:
+	//key=site,value=FILE POINT
+	map<string, FILE> url_map;
+
+	//key=slave_id,value=slave_status
+	map<string, slave_status> slave_map;
+
 	int assign_url_number;
 	master() {
 		master_port = 9000;
@@ -85,11 +94,11 @@ public:
 		//site_2 = &s1;
 
 		sleep_time = "2";
-		string filename = "./urls/site_2";
-		if ((fp = fopen(filename.c_str(), "r")) == NULL) {
-			printf("open file %s error!!\n", filename.c_str());
-			exit(0);
-		}
+		//string filename = "./urls/site_2";
+		//	if ((fp = fopen(filename.c_str(), "r")) == NULL) {
+		//		printf("open file %s error!!\n", filename.c_str());
+		//		exit(0);
+//		}
 
 		read_url_num = 3;
 
@@ -120,7 +129,7 @@ public:
 
 		//4 bind and listen
 		if (-1
-				== bind(socketfd, (struct sockaddr*) (((&local_addr))),
+				== bind(socketfd, (struct sockaddr*) (((((&local_addr))))),
 						sizeof(struct sockaddr))) {
 			perror("socket fd connet fail...");
 			return -1;
@@ -136,7 +145,8 @@ public:
 			size = sizeof(client_addr);
 			//5.1 accept
 			if ((new_fd = accept(socketfd,
-					(struct sockaddr*) ((((&client_addr)))), &size)) == -1) {
+					(struct sockaddr*) ((((((&client_addr)))))), &size))
+					== -1) {
 				perror("socket new_fd accept fail...");
 				return -1;
 			}
@@ -203,7 +213,6 @@ public:
 
 	void init_assign_cmd(struct command& req_cmd,
 			map<string, string>& response_cmd_map) {
-
 		string urls;
 		if (assign_request(req_cmd.slave_id, urls)) {
 			response_cmd_map["urls"] = urls;
@@ -213,6 +222,40 @@ public:
 		} else {
 			init_sleep_cmd(response_cmd_map, req_cmd);
 		}
+	}
+
+	//2 update slave_status
+	void update_slave_status(struct command& req_cmd) {
+		//2.1 weather slave_id in map
+		slave_status s_status;
+		string tmp_slave_id = gh->num2str(req_cmd.slave_id);
+		if (slave_map.find(tmp_slave_id) != slave_map.end()) {
+			s_status = slave_map[tmp_slave_id];
+			s_status.status = 1;
+			if (req_cmd.last_task_status) {
+				cout << "last_task_site:" << s_status.last_task_site << endl;
+				s_status.site_status[s_status.last_task_site].good++;
+			} else {
+				s_status.site_status[s_status.last_task_site].bad++;
+			}
+			slave_map[tmp_slave_id] = s_status;
+		} else {
+			//add_slave
+			slave_status s_status1; //= (slave_status) malloc(t1);
+			s_status1.slave_id = gh->num2str(req_cmd.slave_id);
+			for (map<string, FILE>::iterator it = this->url_map.begin();
+					it != this->url_map.end(); it++) {
+				site s1;
+				s1.bad = 0;
+				s1.good = 0;
+				s1.site_name = (*it).first;
+				s_status1.site_status[s1.site_name] = s1;
+				//	cout << "site_name:" << (*it).first << endl;
+			}
+			//s_status1.site_status
+			slave_map[s_status1.slave_id] = s_status1;
+		}
+
 	}
 
 	//
@@ -227,14 +270,13 @@ public:
 		req_cmd.commd_id = atoi(req_cmd_map["commd_id"].c_str());
 		req_cmd.app_version = atoi(req_cmd_map["application_version"].c_str());
 		req_cmd.slave_id = atoi(req_cmd_map["slave_id"].c_str());
-
+		req_cmd.last_task_status = atoi(
+				req_cmd_map["last_task_status"].c_str());
 		cout << "request_command:" << req_cmd.commd_id << endl;
-
 		//==============================================
-		//2 updata slave_status
+		//2 update slave_status
 		//==============================================
-
-
+		update_slave_status(req_cmd);
 		//==============================================
 		//3 switch command type
 		//==============================================
@@ -245,9 +287,11 @@ public:
 			if (req_cmd.app_version < this->current_version) {
 				init_updata_cmd(response_cmd_map, req_cmd);
 			} //2.1.2 is work timeelse
-			if (is_worktime()) {
-				//		bool is_exist_work = 0;
+			else if (is_worktime()) {
+				//	bool is_exist_work = 0;
 				init_assign_cmd(req_cmd, response_cmd_map);
+				// show slaves status
+				show_slave_status();
 			} else {
 				//2.1.2 sleep time
 				init_sleep_cmd(response_cmd_map, req_cmd);
@@ -262,42 +306,80 @@ public:
 			respose_content = "-_-!,bad request!\f";
 			break;
 		}
+
 		return respose_content;
 	}
+
 	bool assign_request(int slave_id, string& request_url) {
 		//TODO::assign_task1
-		vector<string> vec;
-//		string request_url;
-//lock in
-		if (!read_site(slave_id, &vec)) {
+		vector<string> vec_urls;
+		//		string request_url;
+		//lock in
+		if (!read_urls(slave_id, &vec_urls)) {
 			return 0;
 		}
-//lock out
-		for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
+		//lock out
+		for (vector<string>::iterator it = vec_urls.begin();
+				it < vec_urls.end(); it++) {
 			request_url.append(*it);
 			request_url.append("#");
 		}
 		return 1;
 	}
+	//================================================
+	//get the min bad of all site
+	string get_min_bad_of_sites(int slave_id) {
 
-	bool read_site(int slave_id, vector<string> *vec) {
+		struct slave_status s_status;
+		s_status = this->slave_map[gh->num2str(slave_id)];
 
+		map<string, site>::iterator it = s_status.site_status.begin();
+		int badnum = (*it).second.bad;
+		string site_name = (*it).second.site_name;
+		//int
+		for (; it != s_status.site_status.end(); it++) {
+			if (badnum > ((*it).second.bad)) {
+				badnum = (*it).second.bad;
+				site_name = (*it).second.site_name;
+			}
+			//cout << "key:" << (*it).first << " v:" << (*it).second.slave_id << endl;
+		}
+
+		//site_name = (*min_fail_site).second.site_name;
+		return site_name;
+	}
+
+	bool read_urls(int slave_id, vector<string>* vec_urls) {
+		//
+		//FILE* fp_now;
+		//void assign_fp(){}
+		string site_name = get_min_bad_of_sites(slave_id);
+		cout << "site_name:" << site_name << endl;
+		//================================================
+		//get the min bad of all site
+		//================================================
+		FILE fp_now1 = this->url_map[site_name];
+		FILE *fp_now = &fp_now1;
 		char *filep;
 		string url;
 
 		char read_buff[1024];
-		while (read_url_num--) {
-			filep = fgets(read_buff, 1024, fp);
+		bool isok = true;
+		int read_line = this->read_url_num;
+		while (read_line--) {
+			filep = fgets(read_buff, 1024, fp_now);
 			if (filep == NULL) {
-				return false;
+				isok = false;
+				break;
 			}
 			string s1 = read_buff;
 			int f1 = s1.find_first_of('\n');
 			string url = s1.substr(0, f1);
-			vec->push_back(url);
+			vec_urls->push_back(url);
 		}
-
-		return 1;
+		//FILE fp_now1 = (
+//		this->url_map[site_name] = fp_now1;
+		return isok;
 	}
 	//
 	bool config_master() {
@@ -318,19 +400,19 @@ public:
 		for (map<string, string>::iterator it2 = config_map2.begin();
 				it2 != config_map2.end(); ++it2) {
 			//	std::cout << it2->first << " => " << it2->second << '\n';
-			string site = it2->first;
+			string site_name = it2->first;
 			long num = atol(it2->second.c_str());
 //init var
 			FILE *fp_config;
 
-			string fsite = "./urls/" + site;
+			string fsite = "./urls/" + site_name;
 			string url_config;
 			//open file
 			if ((fp_config = fopen(fsite.c_str(), "r")) == NULL) {
 				printf("open file %s error!!\n", fsite.c_str());
 				return false;
 			}
-			//
+			//read  num line
 			char *filep;
 			char read_buff[1024];
 			while (num--) {
@@ -340,12 +422,15 @@ public:
 				}
 			}
 			//store fp into map
-			url_map[site] = *fp;
+			url_map[site_name] = *fp_config;
+
 		}
 
 		return 1;
 	}
+	void show_slave_status() {
 
+	}
 	virtual ~master() {
 		//fclose(fp);
 	}

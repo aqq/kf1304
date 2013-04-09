@@ -44,7 +44,8 @@ struct grabtask {
 	int request_port;
 	int index;
 	string http_req;
-	long int task_id;
+	string task_id;
+	string url;
 
 };
 typedef struct task {
@@ -66,6 +67,7 @@ typedef struct task {
 	string url_header; //no use
 	string urls;
 
+	vector<string> urls_vec;
 	vector<string> urls_http_req;
 	vector<string> urls_sites;
 	map<string, string> response_cmd_map;
@@ -95,18 +97,17 @@ public:
 		this->master_ip = "192.168.75.128";
 		cmd_req_model = "commd_id:1\r\n"
 				"slave_id:#\r\n"
-				"last_task_status:^"
+				"last_task_status:^\r\n"
 				"application_version:@\r\n"
 				"\f";
 		gh = new GlobalHelper();
-		last_task_status=2;//2 means no last task
+		last_task_status = 2; //2 means no last task
 
 	}
 	virtual ~slaver();
 	bool requestTask(task *mytask, string& str_cmd);
 	bool grabpage_work(task& mytask);
-	bool grab_page(string request_ip, int request_port, int index,
-			string http_req, string task_id);
+	bool grab_page(grabtask gtask);
 	bool localStorePage();
 	bool remoteStorePage();
 
@@ -151,10 +152,17 @@ public:
 			break;
 		}
 	}
-	void grab_page_log_time(string request_ip, int request_port, int index,
-			string http_req, string task_id) {
+	void grab_page_log_time(grabtask gt) {
+
+		string http_req = gt.http_req; //= mytask.urls_http_req.at(index);
+		string request_ip = gt.request_ip;// = dest_ip;
+		int request_port = gt.request_port;
+	 int index=	gt.index ;
+		string task_id = gt.task_id; // = mytask.task_id.at(0);
+		string url = gt.url; //mytask.urls.at(index);
+
 		gh->timing_begin();
-		grab_page(request_ip, request_port, index, http_req, task_id);
+		grab_page(gt);
 		gh->timing_end();
 
 		string filename = gh->grab_page_filename(index, task_id);
@@ -188,6 +196,11 @@ public:
 		for (url_it = str_vec.begin(); url_it != str_vec.end(); url_it++) {
 			string str1 = gh->get_sitename(*url_it);
 			mytask.urls_sites.push_back(str1);
+		}
+		//urls
+		for (url_it = str_vec.begin(); url_it != str_vec.end(); url_it++) {
+	//		string str1 = gh->convert_url_to_urls(*url_it);
+			mytask.urls_vec.push_back(*url_it);
 		}
 	}
 //
@@ -284,16 +297,7 @@ public:
 		}
 
 	}
-	void covert_fuck_bug_string(string &dest_str, string origin_str) {
-		cout << "origin_str:" << origin_str << endl;
-		vector<string> vec;
-		//	dest_str = origin_str;
-		//	cout << "dest_str:" << dest_str << endl;
 
-		vec.push_back(origin_str);
-		dest_str = vec.at(0);
-		cout << "dest_str:" << dest_str << endl;
-	}
 	void prepare_req_cmd() {
 		string cmd_req_str = this->cmd_req_model;
 
@@ -302,8 +306,8 @@ public:
 				"#");
 		cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->app_version),
 				"@");
-		cmd_req_str = gh->replace(cmd_req_str, gh->num2str(this->last_task_status),
-						"^");
+		cmd_req_str = gh->replace(cmd_req_str,
+				gh->num2str(this->last_task_status), "^");
 		this->cmd_req_2send = cmd_req_str;
 	}
 //

@@ -106,33 +106,33 @@ void init_task_4_grabpage_114_wx_1(task *mytask) {
 					"\r\n");
 }
 void slaver_test_grab_local(int index) {
-	//timing_begin();
+	/*/timing_begin();
 
-	task mytask; //commad
-	init_grabpage_iis(&mytask);
-	//	init_grabpage_iis(&mytask);
-	//bool request_result;
-	slaver * worker = new slaver();
+	 task mytask; //commad
+	 init_grabpage_iis(&mytask);
+	 //	init_grabpage_iis(&mytask);
+	 //bool request_result;
+	 slaver * worker = new slaver();
 
-	worker->grab_page(mytask.request_ip, mytask.request_port, index,
-			mytask.urls_http_req.at(index), "1");
-	string filename = "./temp";
-	filename += (index + 48);
-	filename.append(".txt");
+	 worker->grab_page(mytask.request_ip, mytask.request_port, index,
+	 mytask.urls_http_req.at(index), "1");
+	 string filename = "./temp";
+	 filename += (index + 48);
+	 filename.append(".txt");
 
-	FILE *stream;
-	stream = fopen(filename.c_str(), "r");
-	long length;
-	fseek(stream, 0L, SEEK_END);
-	length = ftell(stream);
-	fclose(stream);
+	 FILE *stream;
+	 stream = fopen(filename.c_str(), "r");
+	 long length;
+	 fseek(stream, 0L, SEEK_END);
+	 length = ftell(stream);
+	 fclose(stream);
 
-	//clock_t cast_time = timing_end();
-#ifdef DEBUG
-	cout << "filename" << filename << " slaver_test_grab :" << (length > 0)
-			<< "; size: " << length << endl;
-#endif
-
+	 //clock_t cast_time = timing_end();
+	 #ifdef DEBUG
+	 cout << "filename" << filename << " slaver_test_grab :" << (length > 0)
+	 << "; size: " << length << endl;
+	 #endif
+	 */
 }
 //========================================
 void slaver_test_grab(int index) {
@@ -142,28 +142,37 @@ void slaver_test_grab(int index) {
 	task mytask; //commad
 	init_task_4_grabpage_114_wx_1(&mytask);
 
+	mytask.urls_vec.push_back("www.test.com/123.com");
+	mytask.task_id.push_back("slaver_test_grab_1");
 	slaver * worker = new slaver();
+	grabtask gt;
+	gt.http_req = mytask.urls_http_req.at(index);
+	gt.request_ip = mytask.request_ip;
+	gt.request_port = 80;
+	gt.index = index;
+	gt.task_id = mytask.task_id.at(0);
+	gt.url = mytask.urls_vec.at(index);
+	worker->grab_page(gt);
+//	worker->grab_page(mytask.request_ip, mytask.request_port, index,
+//			mytask.urls_http_req.at(index), "1");
 
-	worker->grab_page(mytask.request_ip, mytask.request_port, index,
-			mytask.urls_http_req.at(index), "1");
+	/*string filename = "./temp" + gh->num2str(index) + ".txt";
 
-	string filename = "./temp" + gh->num2str(index) + ".txt";
+	 //clock_t cast_time = timing_end();
 
-	//clock_t cast_time = timing_end();
+	 gh->timing_end();
+	 TextLogger *logger = new TextLogger("log/grab_114.txt");
 
-	gh->timing_end();
-	TextLogger *logger = new TextLogger("log/grab_114.txt");
-
-	string info = "no:" + gh->num2str(index);
-	info += " castTime:" + gh->cast_time();
-	info += " pagesize:" + gh->num2str(gh->file_size(filename));
-	info += " \n";
-#ifdef DEBUG
-//	cout << "filename" << filename << "slaver_test_grab :"
-	//<< (length > 0)	<< "; size: " << length << endl;
-	cout << info << endl;
-#endif
-	logger->LogContent(info);
+	 string info = "no:" + gh->num2str(index);
+	 info += " castTime:" + gh->cast_time();
+	 info += " pagesize:" + gh->num2str(gh->file_size(filename));
+	 info += " \n";
+	 #ifdef DEBUG
+	 //	cout << "filename" << filename << "slaver_test_grab :"
+	 //<< (length > 0)	<< "; size: " << length << endl;
+	 cout << info << endl;
+	 #endif
+	 logger->LogContent(info);*/
 
 }
 void slaver_test_grab_3() {
@@ -219,16 +228,21 @@ bool str2task_test() {
 }
 
 void prepare_urls_test() {
-	string urls = "urls:www.1.com/1.html#www.2.com/2.html#www.3.com/3.html#";
+	string urls = "www.1.com/1.html#www.2.com/2.html#www.3.com/3.html#";
 	task mytask;
 //	GlobalHelper *gh = new GlobalHelper();
 	//notice! the http request header is not set here
 	(new slaver())->urls_str_to_http_reqs(mytask, urls);
 	assert( mytask.urls_http_req.size()==3);
-	for (vector<string>::iterator it = mytask.urls_http_req.begin();
-			it != mytask.urls_http_req.end(); it++) {
-		cout << *it << endl;
+	/*for (vector<string>::iterator it = mytask.urls_http_req.begin();
+	 it != mytask.urls_http_req.end(); it++) {
+	 cout << *it << endl;
+	 }*/
+	for (vector<string>::iterator it2 = mytask.urls_vec.begin();
+			it2 != mytask.urls_vec.end(); it2++) {
+		cout << ":" << *it2 << endl;
 	}
+
 }
 
 bool slaver_test_prepare_req_cmd() {
@@ -246,18 +260,18 @@ void hand_response_test() {
 	task mytask; //commad
 	mytask.sleep_time = 1;
 	mytask.cmd_id = GRABPAGE;
-	mytask.task_id.push_back(  "1");
+	mytask.task_id.push_back("1");
 	string urls =
 			"urls:"
-					"wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014"
-					"wx.114chn.com/tradehtml/320200/3202001212190001/index.html"
-					"wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999"
-					"shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html"
-					"py.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html"
-					"smt.114chn.com/Webpub/320200/090331000004/web/index.shtml"
-					"smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08"
-					"smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml"
-					"wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002";
+					"wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#"
+			 	"wx.114chn.com/tradehtml/320200/3202001212190001/index.html#"
+			//		"wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#"
+			//		"shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#"
+			//		"py.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html#"
+			//		"smt.114chn.com/Webpub/320200/090331000004/web/index.shtml#"
+			//	"smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08#"
+			//		"smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml#"
+			 		"wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002#";
 	worker->urls_str_to_http_reqs(mytask, urls);
 	//mytask.urls_http_req.push_back("1");
 //	mytask.urls_http_req.push_back("537211931");
@@ -300,7 +314,7 @@ void grabpage_work_test() {
 	//mytask.request_port = 80;
 	mytask.cmd_id = GRABPAGE;
 	mytask.store_port = 80;
-	mytask.task_id .push_back( "1");
+	mytask.task_id.push_back("1");
 	string urls =
 	//"urls:"
 	//		"10.2.112.11/index.html#"
@@ -340,5 +354,9 @@ void grabpage_work_test() {
 	worker->urls_str_to_http_reqs(mytask, urls);
 	worker->grabpage_work(mytask);
 }
+void grab_url_fail() {
+
+}
+
 } /* namespace poseidon */
 #endif /* slave_test_H_ */

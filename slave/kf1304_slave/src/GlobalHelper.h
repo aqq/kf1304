@@ -26,6 +26,8 @@
 #include <vector>       // std::vector
 #include <iostream>
 #include "fstream"
+#include "assert.h"
+
 using namespace std;
 
 #define DEBUG
@@ -167,14 +169,14 @@ public:
 	}
 
 //是否以给定字符串结尾
-	bool tail_with_feature(char* buf, int count, const char* feature) {
+	bool tail_with_feature(char* buf, size_t count, const char* feature) {
 
-		int feature_len = strlen(feature);
+		size_t feature_len = strlen(feature);
 
 		if (count < feature_len || 0 >= feature_len) {
 			return false;
 		}
-		for (int j = 0; j < feature_len; ++j) {
+		for (size_t j = 0; j < feature_len; ++j) {
 			if (buf[count - j - 1] != feature[feature_len - j - 1]) {
 				return false;
 			}
@@ -347,6 +349,21 @@ public:
 		string sitename = url.substr(0, pos1);
 		return sitename;
 	}
+	string convert_url_to_urls(string url) {
+		string req = "";
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string sitename = url.substr(0, pos1);
+		string urlbody = url.substr(pos1);
+
+		req = replace(req, urlbody, "#");
+		req = replace(req, sitename, "@");
+		req = replace(req, "", "$");
+		//cout << "sitename:" << sitename << endl;
+		//	cout << "urlbody:" << urlbody << endl;
+		return req;
+	}
+
 	string convert_url_to_http_req(string url) {
 		string req =
 		//"GET # HTTP/1.1\r\n"
@@ -448,8 +465,8 @@ public:
 		string filename = "./download/" + task_id;
 		return filename;
 	}
-
-	bool is_html_end(char* buf, int count) {
+	//================
+	bool is_html_end(char* buf, size_t count) {
 		{
 			while (1) {
 				if (tail_with_feature(buf, count, "\r\n0\r\n\r\n")) {
@@ -464,6 +481,15 @@ public:
 				if (tail_with_feature(buf, count, "</HTML>")) {
 					break;
 				}
+				if (tail_with_feature(buf, count, "</HTML>\r\n")) {
+					break;
+				}
+				if (tail_with_feature(buf, count, "</html>")) {
+					break;
+				}
+				if (tail_with_feature(buf, count, "</html>\r\n")) {
+					break;
+				}
 				if (tail_with_feature(buf, count, "</html>")) {
 					break;
 				}
@@ -472,7 +498,15 @@ public:
 			return 1;
 		}
 	}
+	void is_html_end_test() {
+		string s2 = "</TD></TR></TABLE></BODY></html>\r\n";
 
+		bool a1 = is_html_end((char *) s2.c_str(), s2.size());
+
+		assert(a1 == true);
+		cout << "</HTML>\r\n" << a1 << endl;
+	}
+	//================
 	void test_strlen_size_len() {
 		//string s2 = "\a";
 		string s2 = "123";
@@ -480,6 +514,34 @@ public:
 				<< "	length:" << s2.length() << endl;
 
 	}
+
+	//=======================
+
+	string get_str_betwen_pages(string url) {
+		string split_str = "\a\r\n";
+		split_str += "url:" + url + "\r\n";
+		return split_str;
+	}
+
+	//
+	void call_shell_test() {
+		int result = system("./updata.sh");
+
+		cin >> result;
+		cout << result << endl;
+	}
+	//
+	void auto_restart_test() {
+	//	int result = 1;
+		//	cin >> result;
+		//cout << result << endl;
+		while (1) {
+			this->log("./test", "yes i'm alive!");
+			sleep(5);
+		}
+	}
+	//
+
 };
 }
 #endif /* GLOBALHELPER_H_ */

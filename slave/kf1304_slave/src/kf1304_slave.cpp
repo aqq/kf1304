@@ -26,8 +26,9 @@ int main() {
 
 	//(new GlobalHelper())->test_strlen_size_len(); //pass
 	//	(new GlobalHelper())->get_time_str_test(); //pass
+	//(new GlobalHelper())->is_html_end_test(); //pass
 
-	//slaver_test_grab(2); //pass
+	//slaver_test_grab(0); //pass
 	//	slaver_test_grab_3(); //pass
 	//prepare_urls_test(); //  pass
 	//str2task_test(); //  pass
@@ -36,9 +37,12 @@ int main() {
 	//get_ip_by_name_test(); //test ip
 	//lookup_ip_test(); //pass
 	//grabpage_work_test(); //pass
-// hand_response_test(); //pass
+//	hand_response_test(); //pass
 
-	slaver_work_test(); //final test
+	//slaver_work_test(); //final test
+//----------sys call
+ //(new GlobalHelper())->call_shell_test();
+ (new GlobalHelper())->auto_restart_test();
 
 	return 0;
 }
