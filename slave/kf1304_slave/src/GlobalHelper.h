@@ -27,6 +27,14 @@
 #include <iostream>
 #include "fstream"
 #include "assert.h"
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include <arpa/inet.h>
+
+#include <sys/types.h>
+#include <dirent.h>
+#include <sys/stat.h>
 
 using namespace std;
 
@@ -82,7 +90,11 @@ public:
 		ss << i;
 		return ss.str();
 	}
-
+	string size_t2str(size_t i) {
+		stringstream ss;
+		ss << i;
+		return ss.str();
+	}
 	string ld2str(long int i) {
 		stringstream ss;
 		ss << i;
@@ -411,12 +423,17 @@ public:
 		outfile << content;
 		outfile.close();
 	}
+	void log(string content, int type) {
+		//	ofstream outfile(filename.c_str(), ios::app);
+		//	outfile << content;
+		//	outfile.close();
+	}
 	void log(string content) {
-#ifdef DEBUG
+//#ifdef DEBUG
 		cout << content << endl;
-#endif
+//#endif
 
-#ifdef LOG
+//#ifdef LOG
 		struct tm *newtime;
 		char tmpbuf[128];
 		time_t lt1;
@@ -431,9 +448,9 @@ public:
 		ofstream outfile(filename.c_str(), ios::app);
 		outfile << content << endl;
 		outfile.close();
-#endif
-
+//#endif
 	}
+
 	void log_test() {
 		log("111");
 	}
@@ -524,6 +541,11 @@ public:
 	}
 
 	//
+	void call_updata_shell() {
+		int result = system("./updata.sh");
+		//cin >> result;
+		log("updata:" + result);
+	}
 	void call_shell_test() {
 		int result = system("./updata.sh");
 
@@ -532,7 +554,7 @@ public:
 	}
 	//
 	void auto_restart_test() {
-	//	int result = 1;
+		//	int result = 1;
 		//	cin >> result;
 		//cout << result << endl;
 		while (1) {
@@ -540,8 +562,147 @@ public:
 			sleep(5);
 		}
 	}
+
+	int trave_dir(char* path, int depth, char filename[256][256], int& len) {
+		DIR *d; //声明一个句柄
+		struct dirent *file; //readdir函数的返回值就存放在这个结构体中
+		struct stat sb;
+
+		if (!(d = opendir(path))) {
+			printf("error opendir %s!!!/n", path);
+			return -1;
+		}
+		while ((file = readdir(d)) != NULL) {
+			//把当前目录.，上一级目录..及隐藏文件都去掉，避免死循环遍历目录
+			if (strncmp(file->d_name, ".", 1) == 0)
+				continue;
+			strcpy(filename[len++], file->d_name); //保存遍历到的文件名
+			//判断该文件是否是目录，及是否已搜索了三层，这里我定义只搜索了三层目录，太深就不搜了，省得搜出太多文件
+			if (stat(file->d_name, &sb) >= 0 && S_ISDIR(sb.st_mode)
+					&& depth <= 1) {
+				trave_dir(file->d_name, depth + 1, filename, len);
+			}
+		}
+		closedir(d);
+		return 0;
+	}
+	int trave_dir_test() {
+		char filename[256][256];
+		int len = 0;
+
+		int depth = 1;
+		int i;
+		trave_dir("./download/", depth, filename, len);
+		for (i = 0; i < len; i++) {
+			printf("%s\n", filename[i]);
+		}
+		printf("/n");
+		return 0;
+	}
+	//===================================
+	bool trave_dir_into_vec(string path, vector<string>& fnames_evc) {
+		DIR *d; //声明一个句柄
+		struct dirent *file; //readdir函数的返回值就存放在这个结构体中
+		if (!(d = opendir(path.c_str()))) {
+			printf("error opendir %s./n", path.c_str());
+			return 0;
+		}
+		while ((file = readdir(d)) != NULL) {
+			//把当前目录.，上一级目录..及隐藏文件都去掉，避免死循环遍历目录
+			if (strncmp(file->d_name, ".", 1) == 0)
+				continue;
+			//strcpy(filename[len++], file->d_name); //保存遍历到的文件名
+			string fname = file->d_name;
+			//过滤掉 包含.的文件
+			bool filter1 = fname.find_first_of('.', 0) == string::npos;
+			//过滤掉包含～的隐藏文件
+			bool filter2 = fname.find_first_of('~', 0) == string::npos;
+			if (filter1 && filter2) {
+				fnames_evc.push_back(file->d_name);
+			}
+		}
+		closedir(d);
+		return 1;
+	}
+	void trave_dir_into_vec_test() {
+		vector<string> fnames_evc;
+		trave_dir_into_vec("./download/", fnames_evc);
+		for (vector<string>::iterator it2 = fnames_evc.begin();
+				it2 != fnames_evc.end(); ++it2) {
+			std::cout << "   " << *it2 << endl;
+		}
+
+	}
+
+	void read_file() {
+
+	}
+	void init_address(struct sockaddr_in *dest_addr, int sin_family, int port,
+			in_addr_t ip) {
+		bzero(dest_addr, sizeof(dest_addr));
+		dest_addr->sin_family = sin_family;
+		dest_addr->sin_port = htons(port);
+		dest_addr->sin_addr.s_addr = ip;
+		bzero(&(dest_addr->sin_zero), 8);
+	}
 	//
 
+	bool page_read_binary(string send_filename, char * page_buff,
+			size_t& length) {
+		//==============================
+		//4.send content
+		//==============================
+
+		//read binary page and send. begin
+		ifstream is_page(send_filename.c_str(), ios::binary);
+		//char * page_buff;
+		if (!is_page) {
+			return false;
+		}
+		is_page.seekg(0, is_page.end);
+		length = is_page.tellg();
+		//char * page_buff; = is_page.tellg();
+		is_page.seekg(0, is_page.beg);
+		page_buff = (char *) malloc(length);
+		is_page.read(page_buff, length);
+		//read binary page and send. end
+		ofstream os_page("./download/t3.tar.gz", ios::binary);
+		os_page.write(page_buff, length);
+		os_page.close();
+		//
+		//	free(page_buff);
+		//}
+		is_page.close();
+		return 1;
+	}
+	//not pass
+	void page_read_binary_test() {
+		string send_filename = "./download/t1.tar.gz";
+		char * page_buff;
+		size_t length;
+		page_read_binary(send_filename, page_buff, length);
+		cout << "length:" << length << endl;
+		ofstream os_page("./download/t2.tar.gz", ios::binary);
+		os_page.write(page_buff, length);
+		os_page.close();
+		//free(page_buff);
+	}
+	// . connect to server
+	/*
+	 for (vector<string>::iterator it2
+	 = fnames_evc.begin();
+	 it2 != fnames_evc.end(); ++it2) {
+	 std::cout << it2->first << " => " << it2->second << '\n';
+	 }
+
+	 for (map<string, string>::iterator it2 = command_map.begin();
+	 it2 != command_map.end(); ++it2) {
+	 std::cout << it2->first << " => " << it2->second << '\n';
+	 }
+
+
+	 * */
+	//
 };
 }
 #endif /* GLOBALHELPER_H_ */

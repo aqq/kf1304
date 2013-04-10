@@ -1,0 +1,48 @@
+/*
+ * rep.h
+ *
+ *  Created on: 2013-4-10
+ *      Author: root
+ */
+
+#ifndef REP_TEST_H_
+#define REP_TEST_H_
+#include "rep.h"
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include<fcntl.h>
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+#include <unistd.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <fstream>
+
+#include "map"
+#include "vector"
+#include "GlobalHelper.h"
+#define DEBUG
+using namespace std;
+
+namespace poseidon {
+
+void rep_test() {
+
+	rep *rep1 = new rep();
+	rep1->service();
+}
+
+void service_test_5.5(){
+
+
+
+}
+}
+#endif

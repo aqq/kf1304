@@ -264,14 +264,14 @@ void hand_response_test() {
 	string urls =
 			"urls:"
 					"wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#"
-			 	"wx.114chn.com/tradehtml/320200/3202001212190001/index.html#"
-			//		"wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#"
-			//		"shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#"
-			//		"py.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html#"
-			//		"smt.114chn.com/Webpub/320200/090331000004/web/index.shtml#"
-			//	"smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08#"
-			//		"smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml#"
-			 		"wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002#";
+					"wx.114chn.com/tradehtml/320200/3202001212190001/index.html#"
+					//		"wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#"
+					//		"shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#"
+					//		"py.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html#"
+					//		"smt.114chn.com/Webpub/320200/090331000004/web/index.shtml#"
+					//	"smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08#"
+					//		"smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml#"
+					"wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002#";
 	worker->urls_str_to_http_reqs(mytask, urls);
 	//mytask.urls_http_req.push_back("1");
 //	mytask.urls_http_req.push_back("537211931");
@@ -354,8 +354,75 @@ void grabpage_work_test() {
 	worker->urls_str_to_http_reqs(mytask, urls);
 	worker->grabpage_work(mytask);
 }
+
+//==================================================
 void grab_url_fail() {
 
+}
+//
+
+void tar_pages_and_get_fnames_vec_test() {
+
+	vector<string> v1;
+	slaver * worker = new slaver();
+	worker->tar_pages_and_get_fnames_vec(v1);
+
+	string tar_download_sh_fname = "./download/tar_download.sh";
+	//ofstream outfile(tar_download_sh_fname.c_str(), ios::trunc);
+	for (vector<string>::iterator it2 = v1.begin(); it2 != v1.end(); ++it2) {
+		//outfile << *it2 << endl;
+		cout << "filename:" << *it2 << endl;
+	}
+//	outfile.close(); /**/
+}
+void remoteStorePage_test() {
+	slaver * worker = new slaver();
+	storetask s_task;
+	s_task.request_ip = "192.168.75.128";
+	s_task.request_port = 9001;
+
+	string send_filename = "./download/20130409181506335224.tar.gz";
+	string cmd = "commd_id:5\r\n"
+			"slave_id:1\r\n"
+			"task_id:20130409181510256411\r\n"
+			"content_size:#\r\n"
+			"\f";
+	worker->remoteStorePage(s_task, cmd, send_filename);
+}
+
+void store_page_test() {
+	slaver * worker = new slaver();
+	storetask s_task;
+
+	s_task.request_ip = "192.168.75.128";
+	s_task.request_port = 9001;
+	worker->store_page(s_task);
+}
+bool page_read_binary_test() {
+	//==============================
+	//4.send content
+	//==============================
+	string send_filename = "./download/t1.tar.gz";
+	//read binary page and send. begin
+	ifstream is_page(send_filename.c_str(), ios::binary);
+	char * page_buff;
+	if (!is_page) {
+		return false;
+	}
+	is_page.seekg(0, is_page.end);
+	size_t length = is_page.tellg();
+	is_page.seekg(0, is_page.beg);
+	page_buff = (char *) malloc(length);
+	is_page.read(page_buff, length);
+	//read binary page and send. end
+	ofstream os_page("./download/t2.tar.gz", ios::binary);
+	os_page.write(page_buff, length);
+	os_page.close();
+	//
+	free(page_buff);
+	//}
+	is_page.close();
+	return 1;
 }
 
 } /* namespace poseidon */

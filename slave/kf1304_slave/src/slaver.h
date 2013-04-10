@@ -33,12 +33,21 @@
 #define SLEEP 2
 #define UPDATE 3
 #define GRABPAGE 4
+#define STORE 5
 
 #define DEBUG
 
 using namespace std;
 
 namespace poseidon {
+struct storetask {
+	string request_ip;
+	int request_port;
+	//int index;
+	//string http_req;
+	vector<string> fnames_evc;
+
+};
 struct grabtask {
 	string request_ip;
 	int request_port;
@@ -95,21 +104,18 @@ public:
 		app_version = 1;
 		master_port = 9000;
 		this->master_ip = "192.168.75.128";
-		cmd_req_model = "commd_id:1\r\n"
-				"slave_id:#\r\n"
-				"last_task_status:^\r\n"
-				"application_version:@\r\n"
-				"\f";
+		cmd_req_model =
+				"commd_id:1\r\nslave_id:#\r\nlast_task_status:^\r\napplication_version:@\r\n\f";
 		gh = new GlobalHelper();
 		last_task_status = 2; //2 means no last task
-
 	}
+
 	virtual ~slaver();
-	bool requestTask(task *mytask, string& str_cmd);
+	bool requestTask(task* mytask, string& str_cmd);
 	bool grabpage_work(task& mytask);
 	bool grab_page(grabtask gtask);
-	bool localStorePage();
-	bool remoteStorePage();
+
+	bool remoteStorePage(storetask s_task, string cmd, string send_content);
 
 	void work() {
 		task mytask; //commad
@@ -117,21 +123,23 @@ public:
 		int i = 2;
 		while (i) {
 			memset(&mytask, 0, sizeof(mytask));
+			//1 requestTask
 			if (!requestTask(&mytask, task_str)) {
 				cout << "Master is sleep.so i will sleep 2 seconds." << endl;
 				sleep(5);
 				continue;
 			}
-			gh->log("\n*str2task:" + task_str + "*\n");
+			//2 str2task
+			gh->log("str2task:*" + task_str + "*");
 			str2task(task_str, mytask);
 
+			//3 hand_response
 			gh->log("hand_response:" + gh->num2str(mytask.cmd_id));
 			hand_response(mytask);
-			//	sleep(2);
 		}
-		//slaver_worker
 
 	}
+
 	void hand_response(task& mytask) {
 
 		switch (mytask.cmd_id) {
@@ -139,25 +147,95 @@ public:
 			cout << "Sleep :" << mytask.sleep_time << " secoonds." << endl;
 			sleep(mytask.sleep_time); //sleep 1 second;
 			break;
+
 		case UPDATE:
 			//update app begin
-			//TODO::ADD update app begin
+			//gh->call_updata_shell();
 			//update app end
-			cout << "Updata version:" << mytask.version << "." << endl;
+			gh->log("Updata version:" + mytask.version);
+			//in real updata,the app_version will be write in code.
 			this->app_version = mytask.version;
 			break;
+
 		case GRABPAGE:
 			cout << "Grab page totals:" << mytask.urls_http_req.size() << endl;
 			grabpage_work(mytask);
 			break;
+
+		case STORE:
+			//	store_page_work();
+			storetask s_task;
+			s_task.request_ip = "192.168.75.128";
+			s_task.request_port = 9001;
+			store_page(s_task);
+			break;
 		}
+	}
+	void tar_pages_and_get_fnames_vec(vector<string>& fnames_evc) {
+		//vector<string> fnames_evc;
+
+		//1.tar
+		//	string tar_fname = "./download/";
+
+		gh->trave_dir_into_vec("download/", fnames_evc);
+
+		string tar_download_sh_fname = "./script/tar_download.sh";
+		ofstream outfile(tar_download_sh_fname.c_str(), ios::trunc);
+		outfile << "cd  download" << endl;
+
+		for (vector<string>::iterator it2 = fnames_evc.begin();
+				it2 != fnames_evc.end(); ++it2) {
+			string it_tar_cmd = "tar -zcvf  " + *it2 + ".tar.gz " + *it2;
+			//tar -zcvf 1.tar.gz ../download/1
+			outfile << it_tar_cmd << endl;
+		}
+		outfile.close();
+		system("chmod 777 script/tar_download.sh");
+		system("./script/tar_download.sh");
+
+	}
+	void store_page(storetask s_task) {
+		//string tar_fname = "./download/";
+		//2. read file in menu
+		//vector<string> fnames_evc;
+		tar_pages_and_get_fnames_vec(s_task.fnames_evc);
+
+		//3. connect to server
+		//begin
+		string send_filename;
+		for (vector<string>::iterator it2 = s_task.fnames_evc.begin();
+				it2 != s_task.fnames_evc.end(); ++it2) {
+			string cmd_str;
+			map<string, string> cmd_map;
+
+			cmd_map["commd_id"] = "5";
+			cmd_map["slave_id"] = this->slave_id;
+			cmd_map["task_id"] = *it2;
+			cmd_map["content_size"] = "#";
+
+			for (map<string, string>::iterator it3 = cmd_map.begin();
+					it3 != cmd_map.end(); ++it3) {
+				cmd_str.append(it3->first + ":" + it3->second + "\r\n");
+			}
+			cmd_str.append("\f");
+
+			send_filename = "./download/" + *it2 + ".tar.gz";
+
+			//is_page << send_content;
+			//send_filename.append("\f");
+			gh->log("enter remoteStorePage");
+			this->remoteStorePage(s_task, cmd_str, send_filename);
+
+		}
+		//end
+
 	}
 	void grab_page_log_time(grabtask gt) {
 
 		string http_req = gt.http_req; //= mytask.urls_http_req.at(index);
-		string request_ip = gt.request_ip;// = dest_ip;
+		string request_ip = gt.request_ip; // = dest_ip;
 		int request_port = gt.request_port;
-	 int index=	gt.index ;
+		int index = gt.index;
 		string task_id = gt.task_id; // = mytask.task_id.at(0);
 		string url = gt.url; //mytask.urls.at(index);
 
@@ -199,7 +277,7 @@ public:
 		}
 		//urls
 		for (url_it = str_vec.begin(); url_it != str_vec.end(); url_it++) {
-	//		string str1 = gh->convert_url_to_urls(*url_it);
+			//		string str1 = gh->convert_url_to_urls(*url_it);
 			mytask.urls_vec.push_back(*url_it);
 		}
 	}
@@ -274,7 +352,7 @@ public:
 		mytask.sleep_time = atoi(response_cmd_map["time"].c_str());
 		mytask.slave_id = atoi(response_cmd_map["slave_id"].c_str());
 		mytask.version = atoi(response_cmd_map["version"].c_str());
-		//TODO:: can't read urls if we don't have.but it work when it's
+		//  can't read urls if we don't have.but it work when it's
 		//others,eg it's "a12"
 		//it's a c++ string copy on wirite technology!
 

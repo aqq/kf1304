@@ -14,7 +14,18 @@ using namespace std;
 using namespace poseidon;
 #define DEBUG
 int main() {
-	//
+	//slave to rep
+
+	//	(new GlobalHelper())->trave_dir_into_vec_test(); //pass	// read file in menu
+	// tar_pages_and_get_fnames_vec_test();//pass
+	//page_read_binary_test(); //
+	// message to hand
+	// remoteStorePage_test(); //pass  send and revice msg
+	store_page_test();
+	// hand msg
+//-----------------------------
+
+	//(new GlobalHelper())->page_read_binary_test(); //pass
 
 	//(new GlobalHelper())->time_test2();//pass
 	//(new GlobalHelper())->string_contain_test();//pass
@@ -41,8 +52,8 @@ int main() {
 
 	//slaver_work_test(); //final test
 //----------sys call
- //(new GlobalHelper())->call_shell_test();
- (new GlobalHelper())->auto_restart_test();
+	//(new GlobalHelper())->call_shell_test();
+	//(new GlobalHelper())->auto_restart_test();
 
 	return 0;
 }

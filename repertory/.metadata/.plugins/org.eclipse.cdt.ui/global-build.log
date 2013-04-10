@@ -1,0 +1,2092 @@
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building file: ../src/TextLogger.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TextLogger.d" -MT"src/TextLogger.d" -o "src/TextLogger.o" "../src/TextLogger.cpp"
+Finished building: ../src/TextLogger.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `main':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_repertory.cpp:12: multiple definition of `main'
+./src/kf1304_master.o:/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_master.cpp:17: first defined here
+/usr/bin/ld: Warning: size of symbol `main' changed from 36 in ./src/kf1304_master.o to 67 in ./src/kf1304_repertory.o
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘void repertory::service()’:
+../src/repertory.h:45: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:50: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:54: 错误：‘class repertory’ 没有名为 ‘master_port’ 的成员
+../src/repertory.h:61: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:65: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:77: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:84: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:99: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h:109: 错误：在返回‘void’的函数中，返回语句带返回值
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:35: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:35: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘void repertory::config()’:
+../src/repertory.h:42: 错误：‘master_port’ 在此作用域中尚未声明
+../src/repertory.h:44: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:44: 错误：expected type-specifier before ‘GlobalHelper’
+../src/repertory.h:44: 错误：expected `;' before ‘GlobalHelper’
+../src/repertory.h: In member function ‘void repertory::service()’:
+../src/repertory.h:54: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:59: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:63: 错误：‘class repertory’ 没有名为 ‘master_port’ 的成员
+../src/repertory.h:70: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:74: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:86: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:93: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:104: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:108: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h:118: 错误：在返回‘void’的函数中，返回语句带返回值
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:35: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:35: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘void repertory::config()’:
+../src/repertory.h:42: 错误：‘master_port’ 在此作用域中尚未声明
+../src/repertory.h:44: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:44: 错误：expected type-specifier before ‘GlobalHelper’
+../src/repertory.h:44: 错误：expected `;' before ‘GlobalHelper’
+../src/repertory.h: In member function ‘void repertory::service()’:
+../src/repertory.h:54: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:59: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:63: 错误：‘class repertory’ 没有名为 ‘master_port’ 的成员
+../src/repertory.h:70: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:74: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:86: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:93: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:104: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:108: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h:118: 错误：在返回‘void’的函数中，返回语句带返回值
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘void repertory::config()’:
+../src/repertory.h:46: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:46: 错误：expected type-specifier before ‘GlobalHelper’
+../src/repertory.h:46: 错误：expected `;' before ‘GlobalHelper’
+../src/repertory.h: In member function ‘void repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:61: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:72: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:76: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:88: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h:120: 错误：在返回‘void’的函数中，返回语句带返回值
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘void repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:61: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:72: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:76: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:88: 错误：在返回‘void’的函数中，返回语句带返回值
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h:120: 错误：在返回‘void’的函数中，返回语句带返回值
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘int repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘int repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘int repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project kf1304_repertory ****
+
+make clean 
+rm -rf  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o  ./src/GlobalHelper.d ./src/StringHelper.d ./src/TextLogger.d ./src/kf1304_master.d ./src/kf1304_repertory.d ./src/master.d ./src/repertory.d ./src/slaver.d  kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building file: ../src/TextLogger.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/TextLogger.d" -MT"src/TextLogger.d" -o "src/TextLogger.o" "../src/TextLogger.cpp"
+Finished building: ../src/TextLogger.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h:37: 错误：ISO C++ 不允许声明无类型的 ‘GlobalHelper’
+../src/repertory.h:37: 错误：expected ‘;’ before ‘*’ token
+../src/repertory.h: In member function ‘void repertory::config()’:
+../src/repertory.h:46: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:46: 错误：expected type-specifier before ‘GlobalHelper’
+../src/repertory.h:46: 错误：expected `;' before ‘GlobalHelper’
+../src/repertory.h: In member function ‘int repertory::service()’:
+../src/repertory.h:56: 错误：‘gh’ 在此作用域中尚未声明
+../src/repertory.h:95: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:106: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:110: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘std::string poseidon::repertory::hand_request(std::string)’:
+../src/repertory.h:130: 错误：聚合 ‘poseidon::command req_cmd’ 类型不完全，无法被定义
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘std::string poseidon::repertory::hand_request(std::string)’:
+../src/repertory.h:140: 错误：‘struct poseidon::command’ 没有名为 ‘app_version’ 的成员
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:118: 错误：‘hand_request’ 在此作用域中尚未声明
+../src/repertory.h: In member function ‘bool poseidon::repertory::is_req_store(std::string, poseidon::command&)’:
+../src/repertory.h:160: 错误：不能将 ‘std::string’ 转换为 ‘bool’，在 return 中
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:118: 错误：‘hand_request’ 在此作用域中尚未声明
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:121: 错误：‘respose_content’ 在此作用域中尚未声明
+../src/repertory.h:119: 警告：未使用的变量 ‘is1’
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:115: 错误：‘class poseidon::GlobalHelper’ 没有名为 ‘log’ 的成员
+../src/repertory.h:115: 错误：操作数类型 ‘const char [13]’ 和 ‘std::string*’ 对双目 ‘operator+’ 而言无效
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:115: 错误：操作数类型 ‘const char [13]’ 和 ‘std::string*’ 对双目 ‘operator+’ 而言无效
+../src/repertory.h:116: 错误：‘class poseidon::GlobalHelper’ 没有名为 ‘log’ 的成员
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:117: 错误：‘class poseidon::GlobalHelper’ 没有名为 ‘log’ 的成员
+make: *** [src/repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/repertory.h:48: 错误：构造函数不能被声明为虚函数
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/kf1304_repertory.cpp: In function ‘int main()’:
+../src/kf1304_repertory.cpp:19: 警告：未使用的变量 ‘rep’
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `repertory':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/repertory.h:48: undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/repertory.h:35: 错误：‘struct poseidon::command’ 重定义
+../src/master.h:50: 错误：‘struct poseidon::command’ 的上一个定义
+../src/repertory.h: In member function ‘int poseidon::repertory::service()’:
+../src/repertory.h:133: 错误：对 ‘poseidon::GlobalHelper::ld2str(std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&)’ 的调用没有匹配的函数
+../src/GlobalHelper.h:103: 附注：备选为： std::string poseidon::GlobalHelper::ld2str(long int)
+../src/repertory.h:135: 错误：对 ‘poseidon::GlobalHelper::ld2str(std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&)’ 的调用没有匹配的函数
+../src/GlobalHelper.h:103: 附注：备选为： std::string poseidon::GlobalHelper::ld2str(long int)
+../src/repertory.h:147: 错误：‘struct poseidon::command’ 没有名为 ‘content_size’ 的成员
+../src/repertory.h:133: 警告：未使用的变量 ‘filename’
+../src/repertory.h: In member function ‘bool poseidon::repertory::is_req_store(std::string, poseidon::command&)’:
+../src/repertory.h:170: 错误：no match 为 ‘operator=’ 在 ‘req_cmd->poseidon::command::task_id = atol(((std::basic_string<char, std::char_traits<char>, std::allocator<char> >*)req_cmd_map.std::map<_Key, _Tp, _Compare, _Alloc>::operator[] [with _Key = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Tp = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Compare = std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, _Alloc = std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >](((const std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)(& std::basic_string<char, std::char_traits<char>, std::allocator<char> >(((const char*)"task_id"), ((const std::allocator<char>&)((const std::allocator<char>*)(& std::allocator<char>()))))))))->std::basic_string<_CharT, _Traits, _Alloc>::c_str [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]())’ 中
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/vector.tcc:133: 附注：备选为： std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = std::basic_string<char, std::char_traits<char>, std::allocator<char> >, _Alloc = std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >]
+../src/repertory.h:172: 错误：‘struct poseidon::command’ 没有名为 ‘content_size’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `main1()':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_repertory.cpp:18: multiple definition of `main1()'
+./src/kf1304_master.o:/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_master.cpp:18: first defined here
+/usr/bin/ld: Warning: size of symbol `main1()' changed from 10 in ./src/kf1304_master.o to 100 in ./src/kf1304_repertory.o
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+./src/kf1304_repertory.o: In function `poseidon::repertory::repertory()':
+kf1304_repertory.cpp:(.text._ZN8poseidon9repertoryC1Ev[poseidon::repertory::repertory()]+0x8): undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/repertory.o ./src/slaver.o   
+./src/kf1304_repertory.o: In function `main1()':
+/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_repertory.cpp:18: multiple definition of `main1()'
+./src/kf1304_master.o:/opt/workspace2/kf1304/repertory/kf1304_repertory/Debug/../src/kf1304_master.cpp:18: first defined here
+/usr/bin/ld: Warning: size of symbol `main1()' changed from 10 in ./src/kf1304_master.o to 100 in ./src/kf1304_repertory.o
+/usr/lib/gcc/i386-redhat-linux/4.1.2/../../../crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+./src/kf1304_repertory.o: In function `poseidon::repertory::repertory()':
+kf1304_repertory.cpp:(.text._ZN8poseidon9repertoryC1Ev[poseidon::repertory::repertory()]+0x8): undefined reference to `vtable for poseidon::repertory'
+collect2: ld 返回 1
+make: *** [kf1304_repertory] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/kf1304_repertory.cpp: In function ‘int main1()’:
+../src/kf1304_repertory.cpp:19: 错误：‘repertory’ 在此作用域中尚未声明
+../src/kf1304_repertory.cpp:19: 错误：expected primary-expression before ‘=’ token
+../src/kf1304_repertory.cpp:19: 错误：expected type-specifier before ‘repertory’
+../src/kf1304_repertory.cpp:19: 错误：expected `;' before ‘repertory’
+../src/kf1304_repertory.cpp:20: 错误：expected unqualified-id before ‘->’ token
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/kf1304_repertory.cpp: In function ‘int main()’:
+../src/kf1304_repertory.cpp:19: 错误：‘repertory’ 在此作用域中尚未声明
+../src/kf1304_repertory.cpp:19: 错误：expected primary-expression before ‘=’ token
+../src/kf1304_repertory.cpp:19: 错误：expected type-specifier before ‘repertory’
+../src/kf1304_repertory.cpp:19: 错误：expected `;' before ‘repertory’
+../src/kf1304_repertory.cpp:20: 错误：expected unqualified-id before ‘->’ token
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/kf1304_repertory.cpp: In function ‘int main()’:
+../src/kf1304_repertory.cpp:20: 错误：‘class rep’ 没有名为 ‘service’ 的成员
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+../src/rep.cpp:10: 错误：‘rep’ 未声明
+../src/rep.cpp:10: 错误：ISO C++ 不允许声明无类型的 ‘rep’
+../src/rep.cpp:15: 错误：expected constructor, destructor, or type conversion before ‘::’ token
+make: *** [src/rep.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+../src/rep.cpp:10: 错误：redefinition of ‘poseidon::rep::rep()’
+../src/rep.h:45: 错误：‘poseidon::rep::rep()’ 已在此定义过
+make: *** [src/rep.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:117: 错误：‘is_req_store’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘void poseidon::rep_test()’:
+../src/rep_test.h:15: 错误：‘rep’ 在此作用域中尚未声明
+../src/rep_test.h:15: 错误：‘rep1’ 在此作用域中尚未声明
+../src/rep_test.h:15: 错误：expected type-specifier before ‘rep’
+../src/rep_test.h:15: 错误：expected `;' before ‘rep’
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:354: 错误：对 ‘replace(std::string&, std::string&, const char [2])’ 的调用没有匹配的函数
+../src/GlobalHelper.h:356: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:354: 错误：对 ‘replace(std::string&, std::string&, const char [2])’ 的调用没有匹配的函数
+../src/GlobalHelper.h:356: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log(std::string)’:
+../src/GlobalHelper.h:365: 错误：变量 ‘std::ofstream outfile’ 有初始值设定，但是类型不完全
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building file: ../src/repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/repertory.d" -MT"src/repertory.d" -o "src/repertory.o" "../src/repertory.cpp"
+Finished building: ../src/repertory.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘void poseidon::service_test_5_5()’:
+../src/rep_test.h:46: 错误：‘req_cmd’ 在此作用域中尚未声明
+../src/rep_test.h:52: 错误：‘read_count’ 在此作用域中尚未声明
+../src/rep_test.h:52: 错误：‘new_fd’ 在此作用域中尚未声明
+../src/rep_test.h:52: 错误：‘request_buff’ 在此作用域中尚未声明
+../src/rep_test.h:46: 警告：未使用的变量 ‘filename’
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘void poseidon::service_test_5_5()’:
+../src/rep_test.h:43: 警告：未使用的变量 ‘gh’
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:148: 警告：在有符号和无符号整数表达式间比较
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:148: 警告：在有符号和无符号整数表达式间比较
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::is_req_store(std::string, poseidon::rep_command&)’:
+../src/rep.h:175: 错误：‘atoul’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::is_req_store(std::string, poseidon::rep_command&)’:
+../src/rep.h:175: 错误：不能从 ‘std::basic_string<char, std::char_traits<char>, std::allocator<char> >’ 转换到 ‘const char*’，为实参 ‘1’(属于 ‘long unsigned int strtoul(const char*, char**, int)’)
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+/usr/include/stdlib.h: In member function ‘bool poseidon::rep::is_req_store(std::string, poseidon::rep_command&)’:
+/usr/include/stdlib.h:190: 错误：给予 function ‘long unsigned int strtoul(const char*, char**, int)’ 的实参太少
+../src/rep.h:175: 错误：在文件的这个地方
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::is_req_store(std::string, poseidon::rep_command&)’:
+../src/rep.h:175: 错误：从类型 ‘int’ 到类型 ‘char**’ 的转换无效
+/usr/include/stdlib.h:190: 错误：给予 function ‘long unsigned int strtoul(const char*, char**, int)’ 的实参太少
+../src/rep.h:175: 错误：在文件的这个地方
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::is_req_store(std::string, poseidon::rep_command&)’:
+../src/rep.h:175: 错误：不能从 ‘const char*’ 转换到 ‘char**’，为实参 ‘2’(属于 ‘long unsigned int strtoul(const char*, char**, int)’)
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:136: 错误：不能从 ‘std::string’ 转换到 ‘const char*’，为实参 ‘1’(属于 ‘int open(const char*, int, ...)’)
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:146: 错误：操作数类型 ‘const char*’ 和 ‘const char [2]’ 对双目 ‘operator+’ 而言无效
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:146: 错误：操作数类型 ‘const char [12]’ 和 ‘const char [2]’ 对双目 ‘operator+’ 而言无效
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘int poseidon::rep::service()’:
+../src/rep.h:146: 错误：操作数类型 ‘const char [12]’ 和 ‘char [(((unsigned int)(((int)((poseidon::rep*)this)->poseidon::rep::gh->poseidon::GlobalHelper::TASK_BUF_SIZE) - 1)) + 1u)]’ 对双目 ‘operator+’ 而言无效
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘void poseidon::disk_space_test()’:
+../src/rep_test.h:42: 错误：‘disk_space’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘int poseidon::disk_space()’:
+../src/rep_test.h:57: 警告：未使用的变量 ‘availableDisk1’
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘int poseidon::disk_space()’:
+../src/rep_test.h:62: 错误：expected ‘,’ or ‘;’ before ‘cout’
+../src/rep_test.h:47: 警告：未使用的变量 ‘totalsize’
+../src/rep_test.h:61: 警告：未使用的变量 ‘availableDisk_ft’
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘int poseidon::disk_space()’:
+../src/rep_test.h:62: 错误：expected ‘,’ or ‘;’ before ‘cout’
+../src/rep_test.h:63: 警告：当转换到 ‘int’ (从 ‘float’)时
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep_test.h: In function ‘float poseidon::disk_space()’:
+../src/rep_test.h:62: 错误：expected ‘,’ or ‘;’ before ‘cout’
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/repertory.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****

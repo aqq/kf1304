@@ -158,12 +158,10 @@ bool slaver::grab_page(grabtask gt) {
 		perror("socket fd create fail...");
 		return -1;
 	}
-//[002] prepare 2 reflactor
-	dest_addr.sin_family = AF_INET;
-	dest_addr.sin_port = htons(request_port);
-	dest_addr.sin_addr.s_addr = inet_addr(request_ip.c_str());
-	bzero(&(dest_addr.sin_zero), 8);
-//[002] prepare 2 reflactor end
+
+	gh->init_address(&dest_addr, AF_INET, request_port,
+			inet_addr(request_ip.c_str()));
+
 	if (-1
 			== connect(sockfd, (struct sockaddr*) &dest_addr,
 					sizeof(struct sockaddr))) {
@@ -217,11 +215,100 @@ bool slaver::grab_page(grabtask gt) {
 
 	return 0;
 }
-bool slaver::localStorePage() {
-	return 1;
-}
-bool slaver::remoteStorePage() {
-	return 1;
+
+bool slaver::remoteStorePage(storetask s_task, string send_cmd,
+		string send_filename) {
+
+	string request_ip = s_task.request_ip;
+	int request_port = s_task.request_port;
+	//==============================
+	//1.init var and connect to rep
+	//==============================
+	gh->log("connect to:" + request_ip + ":" + gh->num2str(request_port));
+	struct sockaddr_in dest_addr;
+
+	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+	if (-1 == sockfd) {
+		perror("socket fd create fail...");
+		return -1;
+	}
+
+	gh->init_address(&dest_addr, AF_INET, request_port,
+			inet_addr(request_ip.c_str()));
+
+	if (-1
+			== connect(sockfd, (struct sockaddr*) &dest_addr,
+					sizeof(struct sockaddr))) {
+		perror("socket fd connet fail...");
+		return false;
+	}
+	//==============================
+	//2.write cmd to rep
+	//==============================
+	//[001]read binary page and prepare send. begin
+	ifstream is_page(send_filename.c_str(), ios::binary);
+	char * page_buff;
+	if (!is_page) {
+		return false;
+	}
+	is_page.seekg(0, is_page.end);
+	size_t length = is_page.tellg();
+	is_page.seekg(0, is_page.beg);
+	page_buff = (char *) malloc(length);
+	is_page.read(page_buff, length);
+
+	//[001]read binary page and prepare send. end
+	send_cmd = gh->replace(send_cmd, gh->size_t2str(length), "#");
+	gh->log(send_cmd);
+	if (-1 == write(sockfd, send_cmd.c_str(), send_cmd.size())) {
+		gh->log(" 2.write cmd to rep , write error ! ");
+		//break; //simple lose
+		return false;
+	}
+
+	//==============================
+	//3.revice message
+	//==============================
+	int count = 0;
+	string response_content;
+	char buf[1449];
+	while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
+		buf[count] = '\0';
+		cout << "3.revice message buf :" << buf << endl;
+		if (count == 0) {
+			break;
+		}
+		if (count < 0) {
+			gh->log("read error");
+			break;
+		}
+		if (gh->tail_with_feature(buf, count, "\f")) {
+			break;
+		}
+	}
+
+	//==============================
+	//4.prepare send content
+	//==============================
+	cout << "4.prepare send content:*\n" << page_buff << "*" << endl;
+	//write
+	if (-1 == write(sockfd, page_buff, length)) {
+		//break; //simple lose
+		perror("4.prepare send content:write error. ");
+		return false;
+	}
+	free(page_buff);
+	//}
+	try {
+		is_page.close();
+
+		close(sockfd);
+	} catch (std::exception& e) {
+		gh->log(e.what());
+	}
+	printf("Socket close!\n");
+
+	return 0;
 }
 /*
  string slaver::getHttpHeader(string url_header, vector<string> url_body,

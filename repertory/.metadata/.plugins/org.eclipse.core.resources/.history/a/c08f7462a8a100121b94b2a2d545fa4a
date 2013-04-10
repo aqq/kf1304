@@ -1,0 +1,22 @@
+/*
+ * repertory.h
+ *
+ *  Created on: 2013-4-10
+ *      Author: andrew
+ */
+
+#ifndef REPERTORY_H_
+#define REPERTORY_H_
+
+class repertory {
+public:
+	repertory();
+	virtual ~repertory();
+	void config();
+	void service() {
+
+	}
+
+};
+
+#endif /* REPERTORY_H_ */

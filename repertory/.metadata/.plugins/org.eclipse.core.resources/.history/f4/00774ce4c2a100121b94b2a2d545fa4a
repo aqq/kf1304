@@ -1,0 +1,43 @@
+/*
+ * rep.h
+ *
+ *  Created on: 2013-4-10
+ *      Author: root
+ */
+
+#ifndef REP_H_
+#define REP_H_
+
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+#include<fcntl.h>
+#include<string.h>
+#include<stdio.h>
+#include<stdlib.h>
+
+#include <unistd.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <fstream>
+
+#include "map"
+#include "vector"
+#include "GlobalHelper.h"
+#define DEBUG
+using namespace std;
+namespace poseidon {
+class rep {
+public:
+	rep();
+	void service() {
+	}
+	virtual ~rep();
+};
+
+
+}
+#endif /* REP_H_ */

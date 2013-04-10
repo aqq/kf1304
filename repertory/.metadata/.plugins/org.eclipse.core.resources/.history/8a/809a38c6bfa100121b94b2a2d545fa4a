@@ -1,0 +1,17 @@
+/*
+ * rep.h
+ *
+ *  Created on: 2013-4-10
+ *      Author: root
+ */
+
+#ifndef REP_H_
+#define REP_H_
+
+class rep {
+public:
+	rep();
+	virtual ~rep();
+};
+
+#endif /* REP_H_ */
