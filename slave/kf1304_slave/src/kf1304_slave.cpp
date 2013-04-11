@@ -18,10 +18,10 @@ int main() {
 
 	//	(new GlobalHelper())->trave_dir_into_vec_test(); //pass	// read file in menu
 	// tar_pages_and_get_fnames_vec_test();//pass
-	//page_read_binary_test(); //
+	// page_read_binary_test(); //
 	// message to hand
 	// remoteStorePage_test(); //pass  send and revice msg
-	store_page_test();
+	//store_page_test();
 	// hand msg
 //-----------------------------
 
@@ -50,9 +50,9 @@ int main() {
 	//grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 
-	//slaver_work_test(); //final test
+	slaver_work_test(); //final test
 //----------sys call
-	//(new GlobalHelper())->call_shell_test();
+	// (new GlobalHelper())->call_updata_shell_test();
 	//(new GlobalHelper())->auto_restart_test();
 
 	return 0;

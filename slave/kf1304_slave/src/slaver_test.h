@@ -279,13 +279,13 @@ void hand_response_test() {
 //	208.87.35.103
 
 	mytask.cmd_id = SLEEP;
-	worker->hand_response(mytask);
+	worker->hand_task(mytask);
 
 	mytask.cmd_id = UPDATE;
-	worker->hand_response(mytask);
+	worker->hand_task(mytask);
 
 	mytask.cmd_id = GRABPAGE;
-	worker->hand_response(mytask);
+	worker->hand_task(mytask);
 
 }
 
@@ -423,6 +423,13 @@ bool page_read_binary_test() {
 	//}
 	is_page.close();
 	return 1;
+}
+
+void slave_config_test() {
+	slaver * worker = new slaver();
+	assert(worker->master_ip[0]=="192.168.75.128");
+	assert(worker->slave_id==1);
+	assert(worker->master_port==9000);
 }
 
 } /* namespace poseidon */

@@ -80,34 +80,51 @@ typedef struct task {
 	vector<string> urls_http_req;
 	vector<string> urls_sites;
 	map<string, string> response_cmd_map;
-
+	vector<string> new_version_url;
 	int version;
 
 };
 class slaver {
 private:
-	int master_port;
-	string master_ip;
+
 //command 1 salve 1
 	string cmd_req_model;
-
 	GlobalHelper *gh;
 protected:
 
 public:
+	vector<string> store_ip;
+	int store_port;
+	int master_port;
+	vector<string> master_ip;
 	int slave_id;
 	int app_version;
 	int last_task_status;
 	string cmd_req_2send;
+
 	slaver() {
-		slave_id = 1;
-		app_version = 1;
-		master_port = 9000;
-		this->master_ip = "192.168.75.128";
+	//	app_version = 2;
 		cmd_req_model =
 				"commd_id:1\r\nslave_id:#\r\nlast_task_status:^\r\napplication_version:@\r\n\f";
 		gh = new GlobalHelper();
 		last_task_status = 2; //2 means no last task
+		config();
+		show();
+	}
+	void show() {
+
+		gh->log("Slave " + gh->num2str(slave_id) + " wake up.");
+		gh->log("app_version:" + gh->num2str(app_version));
+
+	}
+	void config() {
+		map<string, string> config_map1;
+		gh->read_config(gh->SLAVE_CONF, config_map1);
+		this->master_port = atoi((config_map1["master_port"]).c_str());
+		this->master_ip.push_back(config_map1["master_ip"]);
+		this->slave_id = atoi((config_map1["slave_id"]).c_str());
+		this->app_version = atoi((config_map1["app_version"]).c_str());
+//todo:add store ip and store port
 	}
 
 	virtual ~slaver();
@@ -135,12 +152,12 @@ public:
 
 			//3 hand_response
 			gh->log("hand_response:" + gh->num2str(mytask.cmd_id));
-			hand_response(mytask);
+			hand_task(mytask);
 		}
 
 	}
 
-	void hand_response(task& mytask) {
+	void hand_task(task& mytask) {
 
 		switch (mytask.cmd_id) {
 		case SLEEP:
@@ -150,11 +167,12 @@ public:
 
 		case UPDATE:
 			//update app begin
-			//gh->call_updata_shell();
+			gh->call_updata_shell(mytask.new_version_url[0]);
 			//update app end
 			gh->log("Updata version:" + mytask.version);
 			//in real updata,the app_version will be write in code.
 			this->app_version = mytask.version;
+			exit(1); //in real one
 			break;
 
 		case GRABPAGE:
@@ -165,8 +183,8 @@ public:
 		case STORE:
 			//	store_page_work();
 			storetask s_task;
-			s_task.request_ip = "192.168.75.128";
-			s_task.request_port = 9001;
+			s_task.request_ip = this->store_ip[0]; //"192.168.75.128";
+			s_task.request_port = this->store_port; //9001;
 			store_page(s_task);
 			break;
 		}
@@ -352,13 +370,9 @@ public:
 		mytask.sleep_time = atoi(response_cmd_map["time"].c_str());
 		mytask.slave_id = atoi(response_cmd_map["slave_id"].c_str());
 		mytask.version = atoi(response_cmd_map["version"].c_str());
-		//  can't read urls if we don't have.but it work when it's
-		//others,eg it's "a12"
-		//it's a c++ string copy on wirite technology!
 
-		//cout << mytask.response_cmd_map["task_id"] << endl;
-
-		//		cout << "mytask.task_id_str:" << mytask.task_id << endl;
+		mytask.new_version_url.push_back(
+				response_cmd_map["new_version_url"].c_str());
 
 		if (mytask.cmd_id == 4) {
 

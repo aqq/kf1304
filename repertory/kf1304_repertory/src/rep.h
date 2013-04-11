@@ -40,17 +40,24 @@ struct rep_command {
 };
 
 class rep {
-	int master_port;
 	GlobalHelper *gh;
 public:
+	int master_port;
+	vector<string> master_ip;
 	rep() {
-		master_port = 9001;
-		gh = new GlobalHelper();
 
+		gh = new GlobalHelper();
+		config_rep();
 	}
 
 	virtual ~rep();
+	void config_rep() {
+		map<string, string> config_map1;
+		gh->read_config(gh->REP_CONF, config_map1);
+		this->master_port = atoi((config_map1["master_port"]).c_str());
+		this->master_ip.push_back(config_map1["master_ip"]);
 
+	}
 	int service() {
 
 		//1 init variable
@@ -147,7 +154,7 @@ public:
 				}
 				request_buff[read_count] = '\0';
 				gh->log("5.6 read  gzeip page:");
-			//	gh->log(request_buff);
+				//	gh->log(request_buff);
 
 				//write to local file
 				write(fd, request_buff, read_count);

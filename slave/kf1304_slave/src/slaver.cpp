@@ -52,7 +52,7 @@ bool slaver::requestTask(task *mytask, string& str_cmd) {
 
 		//3 prepare server address
 		this->init_address(&dest_addr, PF_INET, this->master_port,
-				this->master_ip);
+				this->master_ip[0]);
 
 		//4 connect to server
 		if (-1
@@ -64,7 +64,7 @@ bool slaver::requestTask(task *mytask, string& str_cmd) {
 
 		gh->log(
 				string(
-						"connect to " + this->master_ip + ":"
+						"connect to " + this->master_ip[0] + ":"
 								+ gh->num2str(this->master_port)));
 
 		//5 talk with server

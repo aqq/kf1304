@@ -17,8 +17,9 @@ using namespace std;
 
 int main() {
 //	disk_space_test();
-	report_disk_space_test();
+	//report_disk_space_test();
 	//rep_test();
+	read_config_test();
 
 	return 0;
 }

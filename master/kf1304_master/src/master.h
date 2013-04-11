@@ -73,34 +73,24 @@ private:
 	//ifstream *site_2;
 	//FILE *fp;
 	int read_url_num;
+	vector<string> new_version_url;
 	//map<string,FILE> url_map;//key=site;value file
 
 	//assign_url_number
 public:
 	//key=site,value=FILE POINT
-	map<string, FILE> url_map;
+	map<string, long int> url_map;
 
 	//key=slave_id,value=slave_status
 	map<string, slave_status> slave_map;
 
 	int assign_url_number;
 	master() {
-		master_port = 9000;
 
 		gh = new GlobalHelper();
 		isworktime = false;
 		current_version = 2;
-		//	ifstream s1("./urls/site_2");
-		//site_2 = &s1;
-
 		sleep_time = "2";
-		//string filename = "./urls/site_2";
-		//	if ((fp = fopen(filename.c_str(), "r")) == NULL) {
-		//		printf("open file %s error!!\n", filename.c_str());
-		//		exit(0);
-//		}
-
-		read_url_num = 3;
 
 		this->config_master();
 		this->config_website();
@@ -108,7 +98,7 @@ public:
 
 	bool is_worktime() {
 		isworktime = !isworktime;
-		return 1;
+		return 0;
 	}
 	int service() {
 		//1 init variable
@@ -144,9 +134,8 @@ public:
 		while (1) {
 			size = sizeof(client_addr);
 			//5.1 accept
-			if ((new_fd = accept(socketfd,
-					(struct sockaddr*) ((((((&client_addr)))))), &size))
-					== -1) {
+			if ((new_fd = accept(socketfd, (struct sockaddr*) (&client_addr),
+					&size)) == -1) {
 				perror("socket new_fd accept fail...");
 				return -1;
 			}
@@ -208,7 +197,7 @@ public:
 		response_cmd_map["commd_id"] = "3";
 		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
 		response_cmd_map["version"] = gh->num2str(this->current_version);
-		response_cmd_map["url"] = "192.168.1.1/slave_v2.gz";
+		response_cmd_map["new_version_url"] = this->new_version_url[0];
 	}
 
 	void init_assign_cmd(struct command& req_cmd,
@@ -243,7 +232,7 @@ public:
 			//add_slave
 			slave_status s_status1; //= (slave_status) malloc(t1);
 			s_status1.slave_id = gh->num2str(req_cmd.slave_id);
-			for (map<string, FILE>::iterator it = this->url_map.begin();
+			for (map<string, long>::iterator it = this->url_map.begin();
 					it != this->url_map.end(); it++) {
 				site s1;
 				s1.bad = 0;
@@ -350,22 +339,21 @@ public:
 	}
 
 	bool read_urls(int slave_id, vector<string>* vec_urls) {
-		//
-		//FILE* fp_now;
-		//void assign_fp(){}
+
 		string site_name = get_min_bad_of_sites(slave_id);
 		cout << "site_name:" << site_name << endl;
 		//================================================
 		//get the min bad of all site
 		//================================================
-		FILE fp_now1 = this->url_map[site_name];
-		FILE *fp_now = &fp_now1;
+		long int pos = this->url_map[site_name];
+		FILE *fp_now = fopen("", "");
 		char *filep;
 		string url;
 
 		char read_buff[1024];
 		bool isok = true;
-		int read_line = this->read_url_num;
+		int read_line = this->assign_url_number;
+		fseek(fp_now, pos, 0);
 		while (read_line--) {
 			filep = fgets(read_buff, 1024, fp_now);
 			if (filep == NULL) {
@@ -377,8 +365,8 @@ public:
 			string url = s1.substr(0, f1);
 			vec_urls->push_back(url);
 		}
-		//FILE fp_now1 = (
-//		this->url_map[site_name] = fp_now1;
+
+		this->url_map[site_name] = ftell(fp_now);
 		return isok;
 	}
 	//
@@ -388,7 +376,9 @@ public:
 		gh->read_config(gh->MASTER_CONF, config_map1);
 		this->assign_url_number = atoi(
 				(config_map1["assign_url_number"]).c_str());
-
+		this->master_port = atoi((config_map1["master_port"]).c_str());
+		//
+		this->new_version_url.push_back(config_map1["new_version_url"].c_str());
 		//
 		return 1;
 	}
@@ -422,7 +412,7 @@ public:
 				}
 			}
 			//store fp into map
-			url_map[site_name] = *fp_config;
+			url_map[site_name] = ftell(fp_config);
 
 		}
 

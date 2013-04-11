@@ -63,6 +63,7 @@ private:
 	}
 public:
 	//
+	string SLAVE_CONF;
 	string split_char_betwen_pages;
 	//
 	GlobalHelper();
@@ -392,11 +393,11 @@ public:
 		//string req_lb=
 				"GET # HTTP/1.1\r\n"
 						"Host: @\r\n"
-						"Connection: keep-alive\r\n"
+						"Connection: close\r\n"
 						"Cache-Control: max-age=0\r\n"
 						"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\n"
 						"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
-						"Accept-Language: zh-CN,zh;q=0.8\r\nAccept-Encoding: gzip,deflate\r\n"
+						"Accept-Language: zh-CN,zh;q=0.8\r\n"
 						"Accept-Charset: utf-8;q=0.7,*;q=0.3\r\n"
 						"Cookie: $\r\n\r\n";
 		string::size_type pos1; //  pos of  '/'
@@ -420,6 +421,11 @@ public:
 	}
 	void log(string filename, string content) {
 		ofstream outfile(filename.c_str(), ios::app);
+		outfile << content;
+		outfile.close();
+	}
+	void log(string filename, string content, ios::openmode t1) {
+		ofstream outfile(filename.c_str(), t1);
 		outfile << content;
 		outfile.close();
 	}
@@ -541,11 +547,31 @@ public:
 	}
 
 	//
-	void call_updata_shell() {
-		int result = system("./updata.sh");
+	int call_updata_shell(string url) {
 		//cin >> result;
+		string sh_str = "";
+		//"wget -O kf1304_slave_1 # \n";
+		//	sh_str += "ls \n";
+		//sh_str += "cd ..\n";
+		sh_str += "wget -O kf1304_slave_1 # \n";
+		sh_str += "mv kf1304_slave_1 kf1304_slave \n";
+		sh_str += "chmod 777 kf1304_slave \n";
+	//	sh_str += "./kf1304_slave \n";
+		sh_str = replace(sh_str, url, "#");
+
+		log("./script/updata.sh", sh_str, ios::trunc);
+		//"chmod 777 kf1304_slave \n";
+		system("chmod 777 script/updata.sh");
+		int result = system("./script/updata.sh");
 		log("updata:" + result);
+		return result;
 	}
+	void call_updata_shell_test() {
+		int result = call_updata_shell("www.csdn.net");
+		cin >> result;
+		cout << result << endl;
+	}
+	//===================================
 	void call_shell_test() {
 		int result = system("./updata.sh");
 
@@ -687,6 +713,44 @@ public:
 		os_page.close();
 		//free(page_buff);
 	}
+	//
+
+	//==========================================
+	bool read_config(string fname, map<string, string>& config_map) {
+		//
+		FILE *fp;
+		char *filep;
+		string url;
+		if ((fp = fopen(fname.c_str(), "r")) == NULL) {
+			printf("open file %s error!!\n", fname.c_str());
+		}
+		//
+		vector<string> *vec = new vector<string>();
+		char read_buff[1024];
+		while (1) {
+			filep = fgets(read_buff, 1024, fp);
+			if (filep == NULL) {
+				break;
+			}
+			string s1 = read_buff;
+			int f1 = s1.find_first_of('\n');
+			string item = s1.substr(0, f1);
+			vec->push_back(item);
+		}
+		fclose(fp);
+		//
+		vector<string>::iterator it1;
+		for (it1 = vec->begin(); it1 != vec->end(); ++it1) {
+			vector<string> vec2;
+			split_by_split_char(*it1, &vec2, ':');
+			string key = vec2.at(0);
+			string value = vec2.at(1);
+			(config_map)[key] = value;
+		}
+		return 1;
+	}
+
+	//==========================================
 	// . connect to server
 	/*
 	 for (vector<string>::iterator it2

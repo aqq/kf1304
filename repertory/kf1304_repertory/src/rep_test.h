@@ -38,7 +38,16 @@ void rep_test() {
 	rep *rep1 = new rep();
 	rep1->service();
 }
+void read_config_test() {
+	rep *rep1 = new rep();
+	GlobalHelper *gh;
+	gh = new GlobalHelper();
+	cout << rep1->master_ip[0] << endl;
+	cout << rep1->master_port << endl;
+	assert( rep1->master_ip[0]==gh->MASTER_IP);
+	assert( rep1->master_port==gh->MASTER_PORT);
 
+}
 float available_disk_space() {
 	struct statfs diskInfo;
 	statfs("/", &diskInfo);
@@ -54,7 +63,7 @@ void disk_space_test() {
 	available_disk_space();
 }
 void report_disk_space() {
-	float available_dk = available_disk_space();
+	//float available_dk = available_disk_space();
 
 //create socket and connect to master
 }
