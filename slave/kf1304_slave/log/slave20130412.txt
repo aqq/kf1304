@@ -1,0 +1,4856 @@
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412084857758528
+urls:wx.114chn.com/skip#wx.114chn.com/bad1#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /bad1 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412091454699189
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /mallhtml/320200/3202000911190002/freeindex.html HTTP/1.1
+Host: shop.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412091527463134
+urls:py.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html#smt.114chn.com/Webpub/320200/090331000004/web/index.shtml#
+
+*hand_response:4
+GET /mallhtml/410900/4109001211210001/product41090012112100010009.html HTTP/1.1
+Host: py.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /Webpub/320200/090331000004/web/index.shtml HTTP/1.1
+Host: smt.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412091544425006
+urls:smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08#smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml#
+
+*hand_response:4
+GET /web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08 HTTP/1.1
+Host: smt.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /Webpub/320200/090331000004/ConPD090410000085.shtml HTTP/1.1
+Host: smt.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412091556469917
+urls:wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002#ahfn.114chn.com/NewsHtml/341225/news130407000274.htm#
+
+*hand_response:4
+GET /m/web/shop/index.aspx?shopid=3202001009190002 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /NewsHtml/341225/news130407000274.htm HTTP/1.1
+Host: ahfn.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+GET /123 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412110803915947
+urls:wx.114chn.com/skip#wx.114chn.com/bad1#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /bad1 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412110805983951
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /mallhtml/320200/3202000911190002/freeindex.html HTTP/1.1
+Host: shop.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412110812143369
+urls:y.114chn.com/mallhtml/410900/4109001211210001/product41090012112100010009.html
+#smt.114chn.com/Webpub/320200/090331000004/web/index.shtml#
+
+*hand_response:4
+GET /mallhtml/410900/4109001211210001/product41090012112100010009.html HTTP/1.1
+Host: y.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412110817837823
+urls:smt.114chn.com/web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08#smt.114chn.com/Webpub/320200/090331000004/ConPD090410000085.shtml#
+
+*hand_response:4
+GET /web/CategoryProduct.aspx?profileId=090331000004&aid=320200&cid=08 HTTP/1.1
+Host: smt.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /Webpub/320200/090331000004/ConPD090410000085.shtml HTTP/1.1
+Host: smt.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412110826483214
+urls:wx.114chn.com/m/web/shop/index.aspx?shopid=3202001009190002#ahfn.114chn.com/NewsHtml/341225/news130407000274.htm#
+
+*hand_response:4
+GET /m/web/shop/index.aspx?shopid=3202001009190002 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /NewsHtml/341225/news130407000274.htm HTTP/1.1
+Host: ahfn.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412112837343760
+urls:wx.114chn.com/skip
+#wx.114chn.com/skip
+#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412112841989752
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999
+#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html
+#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412115632728263
+urls:ttp://wx.114chn.com/skip#ttp://wx.114chn.com/skip#
+
+*hand_response:4
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412120606505815
+urls:wx.114chn.com/skip#wx.114chn.com/skip#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412120611541722
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /mallhtml/320200/3202000911190002/freeindex.html HTTP/1.1
+Host: shop.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+Slave 1 wake up.
+app_version:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130533907637
+urls:wx.114chn.com/skip#wx.114chn.com/skip#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130539264112
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /mallhtml/320200/3202000911190002/freeindex.html HTTP/1.1
+Host: shop.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130555713195
+urls:info.b2b.hc360.com/bad.shtml#info.b2b.hc360.com/zt/jdi/index.shtml#
+
+*hand_response:4
+GET /bad.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130558596646
+urls:b2b.hc360.com/supplyself/186796160.html#info.b2b.hc360.com/zt/jdi/index.shtml#
+
+*hand_response:4
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130604781299
+urls:info.b2b.hc360.com/zt/jdi/index.shtml#b2b.hc360.com/supplyself/186796160.html#
+
+*hand_response:4
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412130613191581
+urls:info.b2b.hc360.com/zt/jdi/index.shtml#b2b.hc360.com/supplyself/186796160.html#
+
+*hand_response:4
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 192.168.75.128:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+Slave 1 wake up.
+app_version:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412152849176841
+urls:wx.114chn.com/skip#wx.114chn.com/skip#
+
+*hand_response:4
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /skip HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412152851964570
+urls:wx.114chn.com/TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999#shop.114chn.com/mallhtml/320200/3202000911190002/freeindex.html#
+
+*hand_response:4
+GET /TradeWeb/web/NewIndex/NewsShow.aspx?ID=3202001212190001&channelID=05&NewsID=125999 HTTP/1.1
+Host: wx.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /mallhtml/320200/3202000911190002/freeindex.html HTTP/1.1
+Host: shop.114chn.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412152859869707
+urls:info.b2b.hc360.com/bad.shtml#info.b2b.hc360.com/zt/jdi/index.shtml#
+
+*hand_response:4
+GET /bad.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:20130412152903271069
+urls:b2b.hc360.com/supplyself/186796160.html#info.b2b.hc360.com/zt/jdi/index.shtml#
+
+*hand_response:4
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:2013041215291524287
+urls:info.b2b.hc360.com/zt/jdi/index.shtml#b2b.hc360.com/supplyself/186796160.html#
+
+*hand_response:4
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:4
+slave_id:1
+task_id:2013041215291838685
+urls:info.b2b.hc360.com/zt/jdi/index.shtml#b2b.hc360.com/supplyself/186796160.html#
+
+*hand_response:4
+GET /zt/jdi/index.shtml HTTP/1.1
+Host: info.b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+GET /supplyself/186796160.html HTTP/1.1
+Host: b2b.hc360.com
+Connection: close
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: utf-8;q=0.7,*;q=0.3
+Cookie: 
+
+
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2
+connect to 10.2.112.92:9000
+*str2task:commd_id:2
+slave_id:1
+time:2
+
+*hand_response:2

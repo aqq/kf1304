@@ -35,7 +35,6 @@ void hand_request_test() {
 	s2 = mt->hand_request(command_request_task);
 	cout << "respose_content2:" << s2 << endl;
 
-
 	//req3 get grab job again
 	command_request_task = "commd_id:1\r\n"
 			"slave_id:1\r\n"
@@ -49,18 +48,45 @@ void hand_request_test() {
 
 void read_site_test() {
 	master * mt = new master();
+	//
+	//foreach
+	for (map<string, site_info>::iterator it2 = mt->url_map.begin();
+			it2 != mt->url_map.end(); ++it2) {
+		std::cout << it2->first << " : " << it2->second.finished_length << '\n';
+	}
+
 	vector<string> vec;
 
 	struct command req_cmd;
-	req_cmd.slave_id = 1;
+	int i = 14;
 
+	req_cmd.slave_id = 1;
+	req_cmd.last_task_status = 2;
 	mt->update_slave_status(req_cmd);
 
-	mt->read_urls(1, &vec);
+	mt->read_urls_and_record(1, &vec);
 	for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
-		cout << (*it) << endl;
+		cout << "url:" << (*it) << endl;
 	}
-
+	while (i--) {
+		cout << "read again 1:" << endl;
+		req_cmd.last_task_status = 1;
+		mt->update_slave_status(req_cmd);
+		vec.clear();
+		mt->read_urls_and_record(1, &vec);
+		for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
+			cout << "url:" << (*it) << endl;
+		}
+	}
+	return;
+	req_cmd.last_task_status = 0;
+	mt->update_slave_status(req_cmd);
+	cout << "read again 2:" << endl;
+	vec.clear();
+	mt->read_urls_and_record(1, &vec);
+	for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
+		cout << "url:" << (*it) << endl;
+	}
 }
 
 void config_test() {
@@ -110,12 +136,24 @@ void get_min_bad_of_sites_test() {
 	req_cmd.slave_id = 1;
 	mt->update_slave_status(req_cmd);
 	//mt->slave_map["1"].slave_id="1";
-	mt->slave_map["1"].site_status["alibb"].bad = 4;
+//	mt->slave_map["1"].site_status["alibb"].bad = 4;
 	mt->slave_map["1"].site_status["hc360"].bad = 2;
 	mt->slave_map["1"].site_status["114ch"].bad = 3;
-	string s1 = mt->get_min_bad_of_sites(1);
+	string s1;
+	mt->get_min_bad_of_sites(1, s1);
 	cout << "get_min_bad_of_sites: " << s1 << endl;
 	assert(s1=="hc360");
+}
+//
+
+void read_sitefile_lines_test() {
+	vector<string> vec_urls;
+	master * mt = new master();
+	string s1 = "114ch";
+	long i1=0;
+	mt->read_sitefile_lines(i1, s1, &vec_urls);
+	cout << vec_urls[0] << endl;
+	cout << vec_urls[1] << endl;
 }
 //
 } /* namespace poseidon */

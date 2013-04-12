@@ -57,7 +57,7 @@ struct grabtask {
 	string url;
 
 };
-typedef struct task {
+  struct task {
 	int sleep_time;
 
 	vector<string> task_id;
@@ -142,16 +142,16 @@ public:
 			memset(&mytask, 0, sizeof(mytask));
 			//1 requestTask
 			if (!requestTask(&mytask, task_str)) {
-				cout << "Master is sleep.so i will sleep 2 seconds." << endl;
+				cout << "Master is sleeping,so i will sleep 5 seconds." << endl;
 				sleep(5);
 				continue;
 			}
 			//2 str2task
-			gh->log("str2task:*" + task_str + "*");
+			gh->log("*str2task:" + task_str);
 			str2task(task_str, mytask);
 
 			//3 hand_response
-			gh->log("hand_response:" + gh->num2str(mytask.cmd_id));
+			gh->log("*hand_response:" + gh->num2str(mytask.cmd_id));
 			hand_task(mytask);
 		}
 

@@ -22,12 +22,13 @@
 #include <sstream>
 #include <string>
 #include <iostream>
-#include "zlib.h"
+
 
 #include "GlobalHelper.h"
-#include "TextLogger.h"
+
 
 #define DEBUG
+#define DEBUG_GRAB
 #define BUFSIZE 1449
 #define READ_BUFF_SIZE 1448
 namespace poseidon {
@@ -145,7 +146,7 @@ bool slaver::grab_page(grabtask gt) {
 	string task_id = gt.task_id; // = mytask.task_id.at(0);
 	string url = gt.url; //mytask.urls.at(index);
 
-#ifdef DEBUG
+#ifdef DEBUG //#define DEBUG_GRAB
 	cout << "grab index:" << task_index << ";" << request_ip << ":"
 			<< request_port << endl;
 	gh->log(http_req);
@@ -169,36 +170,42 @@ bool slaver::grab_page(grabtask gt) {
 		return -1;
 	}
 
-	write(sockfd, http_req.c_str(), http_req.size());
+	if (-1 == write(sockfd, http_req.c_str(), http_req.size())) {
+		perror("socket fd write fail...");
+		gh->log2("socket fd write fail...", "SOCKET");
+		return -1;
+	}
 	char buf[4096];
 	int count = 0;
-
 	string response_content;
-	//string::size_type response_content_size;
-	//bool flag = false;
 
+	//========================================
+	//open grab_page_file and write split_str into it
+	//========================================
 	string filename = gh->grab_page_filename(task_index, task_id);
 	int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_APPEND);
+	string split_s1 = gh->get_str_betwen_pages(gt.url);
+	write(fd, split_s1.c_str(), split_s1.size());
 
 #ifdef DEBUG
 	cout << "wait to reading from socket:" << endl;
 #endif
 
 	while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
-
-		//response_content.append(buf);
-		write(fd, buf, count);
-		//[001]尝试通过CONTENT－LEN来判断 BEGIN
-
-		//[001]尝试通过CONTENT－LEN来判断 END
-		if (gh->is_html_end(buf, count)) {
+		if (count == -1) {
+			gh->log("socket fd read faild...");
 			break;
 		}
+		if (count == 0) {
+			gh->log("socket fd read end...");
+			break;
+		}
+		write(fd, buf, count);
+		//	if (gh->is_html_end(buf, count)) {
+		//		break;
+		//		}
 	}
 //append '\a' between different pages
-
-	string split_s1 = gh->get_str_betwen_pages(gt.url);
-	write(fd, split_s1.c_str(), split_s1.size());
 
 	this->last_task_status = 1; //
 

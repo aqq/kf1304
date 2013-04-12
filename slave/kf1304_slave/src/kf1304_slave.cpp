@@ -39,8 +39,10 @@ int main() {
 	//	(new GlobalHelper())->get_time_str_test(); //pass
 	//(new GlobalHelper())->is_html_end_test(); //pass
 
-	//slaver_test_grab(0); //pass
-	//	slaver_test_grab_3(); //pass
+	//grab
+	//-------------------------------
+//	slaver_test_grab(); //pass
+	//slaver_test_grab_3(); //pass
 	//prepare_urls_test(); //  pass
 	//str2task_test(); //  pass
 
@@ -51,6 +53,7 @@ int main() {
 //	hand_response_test(); //pass
 
 	slaver_work_test(); //final test
+
 //----------sys call
 	// (new GlobalHelper())->call_updata_shell_test();
 	//(new GlobalHelper())->auto_restart_test();

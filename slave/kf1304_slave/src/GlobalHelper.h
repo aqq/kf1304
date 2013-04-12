@@ -66,7 +66,10 @@ public:
 	string SLAVE_CONF;
 	string split_char_betwen_pages;
 	//
-	GlobalHelper();
+	GlobalHelper() {
+		split_char_betwen_pages = "\a";
+		SLAVE_CONF = "./conf/slave.conf";
+	}
 	virtual ~GlobalHelper();
 
 	void timing_begin() {
@@ -81,7 +84,7 @@ public:
 	}
 	void time_test2() {
 		timing_begin();
-		usleep(1);
+
 		timing_end();
 		cout << "cast_time" << cast_time() << "秒" << endl;
 	}
@@ -356,6 +359,7 @@ public:
 		cout << "s3:" << s3 << endl;
 
 	}
+	//================================
 	string get_sitename(string url) {
 		string::size_type pos1; //  pos of  '/'
 		pos1 = url.find_first_of('/', 0);
@@ -429,24 +433,23 @@ public:
 		outfile << content;
 		outfile.close();
 	}
-	void log(string content, int type) {
-		//	ofstream outfile(filename.c_str(), ios::app);
-		//	outfile << content;
-		//	outfile.close();
+
+	void log2(string content, string type) {
+
+		string time_str = get_string_time("%Y%m%d");
+
+		string filename = "./log/slave_#_@.txt";
+		filename = replace(filename, time_str, "#");
+		filename = replace(filename, type, "@");
+		ofstream outfile(filename.c_str(), ios::app);
+		outfile << get_string_time("%T") << ":" << content << endl;
+		outfile.close();
 	}
 	void log(string content) {
-//#ifdef DEBUG
+#ifdef DEBUG
 		cout << content << endl;
-//#endif
-
-//#ifdef LOG
-		struct tm *newtime;
-		char tmpbuf[128];
-		time_t lt1;
-		time(&lt1);
-		newtime = localtime(&lt1);
-		strftime(tmpbuf, 128, "%Y%m%d", newtime);
-		string time_str = tmpbuf;
+#endif
+		string time_str = get_string_time("%Y%m%d");
 		//cout << time_str << endl;
 		string filename = "./log/slave#.txt";
 		filename = replace(filename, time_str, "#");
@@ -456,7 +459,18 @@ public:
 		outfile.close();
 //#endif
 	}
+	// %Y%m%d"
+	string get_string_time(string formart) {
 
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, formart.c_str(), newtime);
+		string time_str = tmpbuf;
+		return time_str;
+	}
 	void log_test() {
 		log("111");
 	}
@@ -556,7 +570,7 @@ public:
 		sh_str += "wget -O kf1304_slave_1 # \n";
 		sh_str += "mv kf1304_slave_1 kf1304_slave \n";
 		sh_str += "chmod 777 kf1304_slave \n";
-	//	sh_str += "./kf1304_slave \n";
+		//	sh_str += "./kf1304_slave \n";
 		sh_str = replace(sh_str, url, "#");
 
 		log("./script/updata.sh", sh_str, ios::trunc);
@@ -585,7 +599,7 @@ public:
 		//cout << result << endl;
 		while (1) {
 			this->log("./test", "yes i'm alive!");
-			sleep(5);
+
 		}
 	}
 

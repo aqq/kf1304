@@ -16,7 +16,7 @@
 #include<stdlib.h>
 
 #include "GlobalHelper.h"
-#include "TextLogger.h"
+
 
 #include <iostream>
 
@@ -72,7 +72,7 @@ void init_task_4_grabpage_114_wx_1(task *mytask) {
 	mytask->urls_http_req.push_back(
 			"GET /tradehtml/320200/3202001212190001/index.html HTTP/1.1\r\n"
 					"Host: wx.114chn.com\r\n"
-					"Connection: keep-alive\r\n"
+					"Connection: close\r\n"
 					"Cache-Control: max-age=0\r\n"
 					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
 					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
@@ -135,53 +135,38 @@ void slaver_test_grab_local(int index) {
 	 */
 }
 //========================================
-void slaver_test_grab(int index) {
+void slaver_test_grab() {
 	GlobalHelper *gh = new GlobalHelper();
 	gh->timing_begin();
 
-	task mytask; //commad
-	init_task_4_grabpage_114_wx_1(&mytask);
-
-	mytask.urls_vec.push_back("www.test.com/123.com");
-	mytask.task_id.push_back("slaver_test_grab_1");
 	slaver * worker = new slaver();
 	grabtask gt;
-	gt.http_req = mytask.urls_http_req.at(index);
-	gt.request_ip = mytask.request_ip;
+	gt.http_req =
+			"GET /123 HTTP/1.1\r\n"
+					"Host: wx.114chn.com\r\n"
+					"Connection: close\r\n"
+					"Cache-Control: max-age=0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
+					"Accept-Encoding: gzip,deflate,sdch\r\n"
+					"Accept-Language: zh-CN,zh;q=0.8\r\n"
+					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
+					"\r\n";
+	gt.request_ip = "122.115.32.51";
 	gt.request_port = 80;
-	gt.index = index;
-	gt.task_id = mytask.task_id.at(0);
-	gt.url = mytask.urls_vec.at(index);
+	gt.index = 1;
+	gt.task_id = "slaver_test_grab_1";
+	gt.url = "www.test.t";
 	worker->grab_page(gt);
-//	worker->grab_page(mytask.request_ip, mytask.request_port, index,
-//			mytask.urls_http_req.at(index), "1");
-
-	/*string filename = "./temp" + gh->num2str(index) + ".txt";
-
-	 //clock_t cast_time = timing_end();
-
-	 gh->timing_end();
-	 TextLogger *logger = new TextLogger("log/grab_114.txt");
-
-	 string info = "no:" + gh->num2str(index);
-	 info += " castTime:" + gh->cast_time();
-	 info += " pagesize:" + gh->num2str(gh->file_size(filename));
-	 info += " \n";
-	 #ifdef DEBUG
-	 //	cout << "filename" << filename << "slaver_test_grab :"
-	 //<< (length > 0)	<< "; size: " << length << endl;
-	 cout << info << endl;
-	 #endif
-	 logger->LogContent(info);*/
 
 }
 void slaver_test_grab_3() {
-	for (int i = 0; i < 3; i++) {
-		slaver_test_grab(i);
-	}
+	slaver_test_grab();
+	slaver_test_grab();
+	slaver_test_grab();
 
 }
-
+//=======================
 //slaver_test_request
 void slaver_test_request() {
 	slaver * worker = new slaver();

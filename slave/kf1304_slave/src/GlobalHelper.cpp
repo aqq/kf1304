@@ -7,10 +7,7 @@
 
 #include "GlobalHelper.h"
 namespace poseidon {
-GlobalHelper::GlobalHelper() {
-	split_char_betwen_pages = "\a";
-	SLAVE_CONF="./conf/slave.conf";
-}
+
 
 GlobalHelper::~GlobalHelper() {
 	// TODO Auto-generated destructor stub

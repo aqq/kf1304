@@ -336,7 +336,36 @@ public:
 		return 1;
 	}
 	//==========================================
+	string replace_str(string str, string new_str, string special_char) {
 
+		string::size_type pos(0);
+		pos = str.find_first_of(special_char);
+		string::size_type len = special_char.size();
+		str = str.replace(pos, len, "");
+		return str.insert(pos, new_str);
+	}
+	//
+	//[20130412-12:03] change replace size to be special_char.size()
+	//
+	string replace(string str, string new_str, string special_char) {
+
+		string::size_type pos(0);
+		pos = str.find_first_of(special_char);
+		str = str.replace(pos, special_char.size(), "");
+		return str.insert(pos, new_str);
+	}
+	void replace_test() {
+		string s1 = "GET http://www.1.com/question/#.html Host:@\r\n";
+		string s2 = replace(s1, "123", "#");
+		cout << "s2:" << s2 << endl;
+		string s3 = replace(s2, "345", "@");
+		cout << "s3:" << s3 << endl;
+
+		string s4 = replace(s2, "789", "http://www.1.com");
+		cout << "s4:" << s4 << endl;
+
+	}
+	//
 };
 
 }

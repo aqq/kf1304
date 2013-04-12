@@ -32,16 +32,24 @@ using namespace std;
 
 namespace poseidon {
 
-struct site {
+struct site_in_slave {
 	string site_name;
 	int good;
 	int bad;
 };
+
+struct site_info {
+
+	long int total_length;
+	long int finished_length;
+	bool isfinised;
+};
+
 struct slave_status {
 	string slave_id;
 	int status;
 	//key=site_name,value=site_status
-	map<string, site> site_status;
+	map<string, site_in_slave> site_status;
 	string last_task_site;
 	//int last_task_site;
 
@@ -79,7 +87,7 @@ private:
 	//assign_url_number
 public:
 	//key=site,value=FILE POINT
-	map<string, long int> url_map;
+	map<string, site_info> url_map;
 
 	//key=slave_id,value=slave_status
 	map<string, slave_status> slave_map;
@@ -98,7 +106,7 @@ public:
 
 	bool is_worktime() {
 		isworktime = !isworktime;
-		return 0;
+		return isworktime;
 	}
 	int service() {
 		//1 init variable
@@ -221,8 +229,8 @@ public:
 		if (slave_map.find(tmp_slave_id) != slave_map.end()) {
 			s_status = slave_map[tmp_slave_id];
 			s_status.status = 1;
+			cout << "last_task_site:" << s_status.last_task_site << endl;
 			if (req_cmd.last_task_status) {
-				cout << "last_task_site:" << s_status.last_task_site << endl;
 				s_status.site_status[s_status.last_task_site].good++;
 			} else {
 				s_status.site_status[s_status.last_task_site].bad++;
@@ -232,9 +240,9 @@ public:
 			//add_slave
 			slave_status s_status1; //= (slave_status) malloc(t1);
 			s_status1.slave_id = gh->num2str(req_cmd.slave_id);
-			for (map<string, long>::iterator it = this->url_map.begin();
+			for (map<string, site_info>::iterator it = this->url_map.begin();
 					it != this->url_map.end(); it++) {
-				site s1;
+				site_in_slave s1;
 				s1.bad = 0;
 				s1.good = 0;
 				s1.site_name = (*it).first;
@@ -304,7 +312,7 @@ public:
 		vector<string> vec_urls;
 		//		string request_url;
 		//lock in
-		if (!read_urls(slave_id, &vec_urls)) {
+		if (!read_urls_and_record(slave_id, &vec_urls)) {
 			return 0;
 		}
 		//lock out
@@ -317,39 +325,48 @@ public:
 	}
 	//================================================
 	//get the min bad of all site
-	string get_min_bad_of_sites(int slave_id) {
-
+	bool get_min_bad_of_sites(int slave_id, string& site_name) {
+		bool is_get_site_ok = false;
 		struct slave_status s_status;
 		s_status = this->slave_map[gh->num2str(slave_id)];
 
-		map<string, site>::iterator it = s_status.site_status.begin();
-		int badnum = (*it).second.bad;
-		string site_name = (*it).second.site_name;
+		map<string, site_in_slave>::iterator it;
+		it = s_status.site_status.begin();
+		map<string, site_in_slave> site_status2;
 		//int
+		int badnum = -1;
+
 		for (; it != s_status.site_status.end(); it++) {
+			// weather site 's task is finished
+			string s_n_str = ((*it).second.site_name);
+			if (this->url_map.find(s_n_str) == this->url_map.end()) {
+				continue;
+			}
+			if (url_map[s_n_str].isfinised) {
+				continue;
+			}
+			if (badnum == -1) {
+				badnum = (*it).second.bad;
+				site_name = (*it).second.site_name;
+			}
 			if (badnum > ((*it).second.bad)) {
 				badnum = (*it).second.bad;
 				site_name = (*it).second.site_name;
 			}
+			is_get_site_ok = true;
 			//cout << "key:" << (*it).first << " v:" << (*it).second.slave_id << endl;
 		}
 
 		//site_name = (*min_fail_site).second.site_name;
-		return site_name;
+		return is_get_site_ok;
 	}
-
-	bool read_urls(int slave_id, vector<string>* vec_urls) {
-
-		string site_name = get_min_bad_of_sites(slave_id);
-		cout << "site_name:" << site_name << endl;
-		//================================================
-		//get the min bad of all site
-		//================================================
-		long int pos = this->url_map[site_name];
-		FILE *fp_now = fopen("", "");
+	bool read_sitefile_lines(long int& pos, string site_name,
+			vector<string>* vec_urls) {
+		//
+		string fname = "./urls/" + site_name;
+		FILE *fp_now = fopen(fname.c_str(), "r");
 		char *filep;
 		string url;
-
 		char read_buff[1024];
 		bool isok = true;
 		int read_line = this->assign_url_number;
@@ -360,14 +377,60 @@ public:
 				isok = false;
 				break;
 			}
-			string s1 = read_buff;
-			int f1 = s1.find_first_of('\n');
-			string url = s1.substr(0, f1);
+			size_t line_length = strlen(read_buff);
+			read_buff[line_length - 1] = '\0';
+			//
+			string url = read_buff;
+			//filter space line without a char
+			if (url.find('.') == string::npos) {
+				read_line++;
+				continue;
+			}
+			url = gh->replace(url, "", "http://");
 			vec_urls->push_back(url);
 		}
-
-		this->url_map[site_name] = ftell(fp_now);
+		pos = ftell(fp_now);
+		fclose(fp_now);
 		return isok;
+	}
+	//real assign function
+	bool read_urls_and_record(int slave_id, vector<string>* vec_urls) {
+		//================================================
+		//get the min bad of all site
+		//================================================
+		string site_name;
+		bool is_get_site_ok = get_min_bad_of_sites(slave_id, site_name);
+		if (!is_get_site_ok) {
+			return false;
+		}
+		cout << " site_name:" << site_name << endl;
+		//================================================
+		//read urls
+		//================================================
+		//long int pos =
+		site_info si = this->url_map[site_name];
+		bool is_read_ok = read_sitefile_lines(si.finished_length, site_name,
+				vec_urls);
+		//========================
+		//record read process
+		//========================
+		if (is_read_ok) {
+			record_slave_read_urls(slave_id, site_name);
+			this->url_map[site_name] = si;
+		} else {
+			si.isfinised = true;
+			this->url_map[site_name] = si;
+		}
+		//================================================
+		//updata url map
+		//================================================
+		return is_read_ok;
+	}
+	void record_slave_read_urls(int slave_id, string site_name) {
+		struct slave_status s_status;
+		s_status = this->slave_map[gh->num2str(slave_id)];
+		s_status.last_task_site = site_name;
+		this->slave_map[gh->num2str(slave_id)] = s_status;
 	}
 	//
 	bool config_master() {
@@ -392,30 +455,13 @@ public:
 			//	std::cout << it2->first << " => " << it2->second << '\n';
 			string site_name = it2->first;
 			long num = atol(it2->second.c_str());
-//init var
-			FILE *fp_config;
-
-			string fsite = "./urls/" + site_name;
-			string url_config;
-			//open file
-			if ((fp_config = fopen(fsite.c_str(), "r")) == NULL) {
-				printf("open file %s error!!\n", fsite.c_str());
-				return false;
-			}
-			//read  num line
-			char *filep;
-			char read_buff[1024];
-			while (num--) {
-				filep = fgets(read_buff, 1024, fp_config);
-				if (filep == NULL) {
-					return false;
-				}
-			}
-			//store fp into map
-			url_map[site_name] = ftell(fp_config);
+			site_info si;
+			si.finished_length = num;
+			si.total_length = 0;
+			si.isfinised = false;
+			url_map[site_name] = si;
 
 		}
-
 		return 1;
 	}
 	void show_slave_status() {
