@@ -65,10 +65,22 @@ public:
 	//
 	string SLAVE_CONF;
 	string split_char_betwen_pages;
+	string tmp_log_str;
 	//
 	GlobalHelper() {
 		split_char_betwen_pages = "\a";
 		SLAVE_CONF = "./conf/slave.conf";
+		config();
+
+	}
+
+	map<string, string> config_show_map;
+	void config() {
+		read_config("./conf/log.conf", config_show_map);
+	}
+	bool is_log_show(string type) {
+		return (config_show_map.find(type) != config_show_map.end());
+
 	}
 	virtual ~GlobalHelper();
 
@@ -104,7 +116,9 @@ public:
 		ss << i;
 		return ss.str();
 	}
-
+	string bool2str(bool yes) {
+		return yes ? "true" : "false";
+	}
 	//实现string到unsigned int的转换
 	unsigned int string_to_unsigned_int(string str) {
 		unsigned int result(0); //最大可表示值为4294967296（=2‘32-1）
@@ -434,6 +448,28 @@ public:
 		outfile.close();
 	}
 
+	//
+	//
+	void log3(string& content, string type) {
+
+		string time_str = get_string_time("%Y%m%d");
+
+		string filename = "./log/slave_#_@.txt";
+		filename = replace(filename, time_str, "#");
+		filename = replace(filename, type, "@");
+
+		ofstream outfile(filename.c_str(), ios::app);
+		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
+
+		outfile << str_con << endl;
+		outfile.close();
+
+		if (this->is_log_show(type)) {
+			cout << content << endl;
+		}
+		content = "";
+	}
+	//
 	void log2(string content, string type) {
 
 		string time_str = get_string_time("%Y%m%d");
@@ -441,10 +477,22 @@ public:
 		string filename = "./log/slave_#_@.txt";
 		filename = replace(filename, time_str, "#");
 		filename = replace(filename, type, "@");
+
 		ofstream outfile(filename.c_str(), ios::app);
-		outfile << get_string_time("%T") << ":" << content << endl;
+		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
+
+		outfile << str_con << endl;
 		outfile.close();
+
+		if (this->is_log_show(type)) {
+			cout << content << endl;
+		}
 	}
+	void log2_test() {
+		cout << is_log_show("task");
+		this->log2("hi test", "task");
+	}
+
 	void log(string content) {
 #ifdef DEBUG
 		cout << content << endl;
@@ -559,7 +607,9 @@ public:
 		split_str += "url:" + url + "\r\n";
 		return split_str;
 	}
-
+	void delete_self_test() {
+		system("rm -f kf1304_slave");
+	}
 	//
 	int call_updata_shell(string url) {
 		//cin >> result;
@@ -567,17 +617,22 @@ public:
 		//"wget -O kf1304_slave_1 # \n";
 		//	sh_str += "ls \n";
 		//sh_str += "cd ..\n";
-		sh_str += "wget -O kf1304_slave_1 # \n";
-		sh_str += "mv kf1304_slave_1 kf1304_slave \n";
-		sh_str += "chmod 777 kf1304_slave \n";
+		sh_str += "rm -f kf1304_slave \n"; //删除原来的文件
+		sh_str += "rm -f slave.tar.gz \n"; //删除原来的文件
+		sh_str += "wget -O slave.tar.gz # \n";
+		//sh_str += "mv kf1304_slave_1 kf1304_slave \n";
+		//sh_str += "chmod 777 kf1304_slave \n";
 		//	sh_str += "./kf1304_slave \n";
 		sh_str = replace(sh_str, url, "#");
+		sh_str += "tar zxvf slave.tar.gz \n"; //解压
+		sh_str += "cd Debug/ \n"; //编译
+		sh_str += "./build.sh \n"; //编译
 
-		log("./script/updata.sh", sh_str, ios::trunc);
+		log("./updata.sh", sh_str, ios::trunc);
 		//"chmod 777 kf1304_slave \n";
-		system("chmod 777 script/updata.sh");
-		int result = system("./script/updata.sh");
-		log("updata:" + result);
+		system("chmod 777 updata.sh");
+		int result = system("./updata.sh");
+		exit(0); //退出程序！
 		return result;
 	}
 	void call_updata_shell_test() {

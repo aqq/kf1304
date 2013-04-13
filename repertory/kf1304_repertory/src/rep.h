@@ -88,6 +88,7 @@ public:
 			return -1;
 		}
 		cout << "rep:waiting for your connection!" << endl;
+
 		//5  service is receive cmd and response cmd
 		socklen_t client_addr_size;
 		while (1) {
@@ -98,14 +99,16 @@ public:
 				perror("socket new_fd accept fail...");
 				return -1;
 			}
-			cout << "conntection from:" << inet_ntoa(client_addr.sin_addr)
-					<< endl;
+			string str_log = "conntection from:";
+			str_log += inet_ntoa(client_addr.sin_addr);
+			gh->log2(str_log, "socket");
+
 			//5.2   accept until \f
 			ssize_t read_count;
 			while (1) {
 				bzero(request_buff, sizeof request_buff);
 				read_count = read(new_fd, request_buff, sizeof request_buff);
-				if (read_count == 0) {
+				if (read_count == -1) {
 					perror("socket fd read fail...");
 					break;
 				}
@@ -118,7 +121,7 @@ public:
 
 			string cog_str1 = "request is:";
 			//cout<<(cog_str1 + request_buff)<<endl;
-			gh->log(cog_str1 + request_buff);
+			gh->log2(cog_str1 + request_buff,"socket");
 
 			//5.3 hand request
 			string request_str = request_buff;
@@ -127,7 +130,7 @@ public:
 			if (!is_req_store(request_str, req_cmd)) {
 				break;
 			}
-			gh->log("5.4 write to request:\f ");
+			gh->log2("5.4 write to request:\f ", "socket");
 			//5.4 write to request
 			string respose_content = "\f";
 			int write_result = write(new_fd, respose_content.c_str(),
@@ -140,28 +143,23 @@ public:
 			string filename = "./pages_gzip/" + req_cmd.task_id.at(0)
 					+ ".tar.gz";
 
-			gh->log("5.5 filename:" + filename);
+			//	gh->log2("5.4 write to request:\f ","task");
+			gh->log2("5.5 filename:" + filename, "task");
 			int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_TRUNC);
 			unsigned long total = 0;
 //5.6 read  gzeip page
 			while (1) {
 				bzero(request_buff, sizeof request_buff);
-
 				read_count = read(new_fd, request_buff, sizeof request_buff);
 				if (read_count == -1) {
 					perror("socket fd read fail...");
 					break;
 				}
 				request_buff[read_count] = '\0';
-				gh->log("5.6 read  gzeip page:");
-				//	gh->log(request_buff);
-
 				//write to local file
 				write(fd, request_buff, read_count);
-
 				total += read_count;
-
-				gh->log("*total:" + total);
+				//		gh->log("*total:" + total);
 				if (total == req_cmd.content_size) {
 					break;
 				}
@@ -172,7 +170,7 @@ public:
 
 			} //end accept data
 			close(fd);
-
+			gh->log("5.7 ok,file saved! ");
 		} //end step 5
 
 		return 0;

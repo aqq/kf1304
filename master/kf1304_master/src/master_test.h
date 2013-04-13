@@ -94,7 +94,7 @@ void config_test() {
 	master * mt = new master();
 	//mt->config();
 	assert(mt->assign_url_number==2);
-	cout << mt->assign_url_number << endl;
+	cout << mt->store_port << endl;
 
 }
 //
@@ -150,11 +150,21 @@ void read_sitefile_lines_test() {
 	vector<string> vec_urls;
 	master * mt = new master();
 	string s1 = "114ch";
-	long i1=0;
+	long i1 = 0;
 	mt->read_sitefile_lines(i1, s1, &vec_urls);
 	cout << vec_urls[0] << endl;
 	cout << vec_urls[1] << endl;
 }
 //
+void build_csdn_url() {
+	ofstream ofs("./urls/csdn");
+	int i = 1;
+	while (i < 10000) {
+		ofs << "http://bbs.csdn.net/topics/" << i << endl;
+		i++;
+	}
+	ofs.close();
+
+}
 } /* namespace poseidon */
 #endif

@@ -20,11 +20,11 @@ int main() {
 	// tar_pages_and_get_fnames_vec_test();//pass
 	// page_read_binary_test(); //
 	// message to hand
-	// remoteStorePage_test(); //pass  send and revice msg
+	//remoteStorePage_test(); //pass  send and revice msg
 	//store_page_test();
 	// hand msg
 //-----------------------------
-
+//	(new GlobalHelper())->log2_test();
 	//(new GlobalHelper())->page_read_binary_test(); //pass
 
 	//(new GlobalHelper())->time_test2();//pass
@@ -38,10 +38,11 @@ int main() {
 	//(new GlobalHelper())->test_strlen_size_len(); //pass
 	//	(new GlobalHelper())->get_time_str_test(); //pass
 	//(new GlobalHelper())->is_html_end_test(); //pass
+	(new GlobalHelper())->delete_self_test(); //pass
 
 	//grab
 	//-------------------------------
-//	slaver_test_grab(); //pass
+// 	slaver_test_grab(); //pass
 	//slaver_test_grab_3(); //pass
 	//prepare_urls_test(); //  pass
 	//str2task_test(); //  pass
@@ -52,7 +53,7 @@ int main() {
 	//grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 
-	slaver_work_test(); //final test
+	//slaver_work_test(); //final test
 
 //----------sys call
 	// (new GlobalHelper())->call_updata_shell_test();

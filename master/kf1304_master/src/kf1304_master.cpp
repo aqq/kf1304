@@ -35,7 +35,8 @@ int main() {
 	//read_sitefile_lines_test();
 //	  read_site_test(); //pass
 	//--------------------------------
-
+//build pages
+  // build_csdn_url();
 	//hand_request_test(); //pass
 	master_test2slave(); //final test
 

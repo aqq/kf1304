@@ -71,6 +71,44 @@ public:
 		MASTER_IP = "192.168.75.128";
 		MASTER_PORT = 9001;
 	}
+	map<string, string> config_show_map;
+	void config() {
+		read_config("./conf/log.conf", config_show_map);
+	}
+	bool is_log_show(string type) {
+		return (config_show_map.find(type) != config_show_map.end());
+
+	}
+	string get_string_time(string formart) {
+
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, formart.c_str(), newtime);
+		string time_str = tmpbuf;
+		return time_str;
+	}
+	//
+	void log2(string content, string type) {
+
+		string time_str = get_string_time("%Y%m%d");
+
+		string filename = "./log/slave_#_@.txt";
+		filename = replace(filename, time_str, "#");
+		filename = replace(filename, type, "@");
+
+		ofstream outfile(filename.c_str(), ios::app);
+		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
+
+		outfile << str_con << endl;
+		outfile.close();
+
+		if (this->is_log_show(type)) {
+			cout << content << endl;
+		}
+	}
 	virtual ~GlobalHelper();
 
 	void timing_begin() {

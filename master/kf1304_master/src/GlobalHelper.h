@@ -25,6 +25,7 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include "fstream"
 //c++ 容器
 #include <algorithm>    // std::find_if
 #include <vector>       // std::vector
@@ -52,20 +53,7 @@ private:
 		return 0;
 	}
 protected:
-	/*	string command1 = "commd_id:1\r\n"
-	 "slave_id:1\r\n"
-	 "application_version:1\r\n"
-	 "\f";
-	 string command2 = "commd_id:2\r\n"
-	 "slave_id:1\r\n"
-	 "time:60\r\n"
-	 "\f";
-	 string command3 = "";
-	 string command4 = "commd_id:4\r\n"
-	 "slave_id:1\r\n"
-	 "task_id:1\r\n";
-	 string command5 = "";
-	 */
+
 public:
 
 	int TASK_BUF_SIZE; //1448
@@ -75,6 +63,44 @@ public:
 		TASK_BUF_SIZE = 1448;
 		MASTER_CONF = "./conf/master.conf";
 		WEBSITE_CONF = "./conf/website_grabing.log";
+	}
+	map<string, string> config_show_map;
+	void config() {
+		read_config("./conf/log.conf", config_show_map);
+	}
+	bool is_log_show(string type) {
+		return (config_show_map.find(type) != config_show_map.end());
+
+	}
+	string get_string_time(string formart) {
+
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, formart.c_str(), newtime);
+		string time_str = tmpbuf;
+		return time_str;
+	}
+	//
+	void log2(string content, string type) {
+
+		string time_str = get_string_time("%Y%m%d");
+
+		string filename = "./log/slave_#_@.txt";
+		filename = replace(filename, time_str, "#");
+		filename = replace(filename, type, "@");
+
+		ofstream outfile(filename.c_str(), ios::app);
+		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
+
+		outfile << str_con << endl;
+		outfile.close();
+
+		if (this->is_log_show(type)) {
+			cout << content << endl;
+		}
 	}
 	virtual ~GlobalHelper();
 
@@ -90,7 +116,7 @@ public:
 	}
 	void time_test2() {
 		timing_begin();
-		usleep(1);
+
 		timing_end();
 		cout << "cast_time" << cast_time() << "秒" << endl;
 	}

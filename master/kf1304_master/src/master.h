@@ -72,7 +72,6 @@ class master {
 private:
 	int master_port; //80
 //	string master_ip; //"192.168.75.128";
-	//command 1 salve 1
 
 	GlobalHelper *gh;
 	bool isworktime;
@@ -86,6 +85,8 @@ private:
 
 	//assign_url_number
 public:
+	vector<string> store_ip;
+	int store_port;
 	//key=site,value=FILE POINT
 	map<string, site_info> url_map;
 
@@ -97,6 +98,7 @@ public:
 
 		gh = new GlobalHelper();
 		isworktime = false;
+		isstoretime = false;
 		current_version = 2;
 		sleep_time = "2";
 
@@ -106,7 +108,12 @@ public:
 
 	bool is_worktime() {
 		isworktime = !isworktime;
-		return isworktime;
+		return 0;
+	}
+	bool isstoretime;
+	bool is_storetime(struct command req_cmd) {
+		isstoretime = !isstoretime;
+		return isstoretime;
 	}
 	int service() {
 		//1 init variable
@@ -136,7 +143,7 @@ public:
 			perror("socket fd listen fail...");
 			return -1;
 		}
-		cout << "waiting for your connection!" << endl;
+		cout << "master waiting for your connection!" << endl;
 		//5  service is receive cmd and response cmd
 		socklen_t size;
 		while (1) {
@@ -153,8 +160,12 @@ public:
 			int read_count;
 			while (1) {
 				read_count = read(new_fd, request_buff, sizeof request_buff);
-				if (read_count == 0) {
+				if (read_count == -1) {
 					perror("socket fd read fail...");
+					break;
+				}
+				if (read_count == 0) {
+					//perror("socket fd read end...");
 					break;
 				}
 				if (gh->tail_with_feature(request_buff, read_count, "\f")) {
@@ -219,6 +230,13 @@ public:
 		} else {
 			init_sleep_cmd(response_cmd_map, req_cmd);
 		}
+	}
+	void init_store_cmd(struct command& req_cmd,
+			map<string, string>& response_cmd_map) {
+		response_cmd_map["commd_id"] = "7";
+		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
+		response_cmd_map["store_ip"] = this->store_ip[0];
+		response_cmd_map["store_port"] = gh->num2str(this->store_port);
 	}
 
 	//2 update slave_status
@@ -285,8 +303,12 @@ public:
 				init_updata_cmd(response_cmd_map, req_cmd);
 			} //2.1.2 is work timeelse
 			else if (is_worktime()) {
-				//	bool is_exist_work = 0;
-				init_assign_cmd(req_cmd, response_cmd_map);
+				if (is_storetime(req_cmd)) {
+					init_store_cmd(req_cmd, response_cmd_map);
+				} else {
+					init_assign_cmd(req_cmd, response_cmd_map);
+				}
+
 				// show slaves status
 				show_slave_status();
 			} else {
@@ -442,6 +464,8 @@ public:
 		this->master_port = atoi((config_map1["master_port"]).c_str());
 		//
 		this->new_version_url.push_back(config_map1["new_version_url"].c_str());
+		this->store_ip.push_back(config_map1["store_ip"]);
+		this->store_port = atoi((config_map1["store_port"]).c_str());
 		//
 		return 1;
 	}
