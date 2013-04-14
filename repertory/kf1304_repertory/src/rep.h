@@ -24,6 +24,7 @@
 #include <iostream>
 #include <fstream>
 
+#include "errno.h"
 #include "map"
 #include "vector"
 #include "GlobalHelper.h"
@@ -38,22 +39,52 @@ struct rep_command {
 	unsigned long content_size;
 	int last_task_status;
 };
+struct req_task {
+	int sleep_time;
+
+	vector<string> task_id;
+
+	int slave_id;
+	int cmd_id;
+
+	string store_ip;
+	int store_port;
+
+	string request_ip;
+	int request_port;
+
+	string urls;
+
+	vector<string> urls_vec;
+	vector<string> urls_http_req;
+	vector<string> urls_sites;
+	map<string, string> response_cmd_map;
+	vector<string> new_version_url;
+	int version;
+
+};
+const string s_socket = "socket";
 
 class rep {
 	GlobalHelper *gh;
 public:
+	int rep_port;
+	vector<string> rep_ip;
+
 	int master_port;
 	vector<string> master_ip;
 	rep() {
 
 		gh = new GlobalHelper();
-		config_rep();
+		config();
 	}
 
 	virtual ~rep();
-	void config_rep() {
+	void config() {
 		map<string, string> config_map1;
 		gh->read_config(gh->REP_CONF, config_map1);
+		this->rep_port = atoi((config_map1["rep_port"]).c_str());
+		this->rep_ip.push_back(config_map1["rep_ip"]);
 		this->master_port = atoi((config_map1["master_port"]).c_str());
 		this->master_ip.push_back(config_map1["master_ip"]);
 
@@ -74,7 +105,7 @@ public:
 		}
 
 		//3 prepare listen access point
-		gh->init_address(&local_addr, PF_INET, this->master_port, INADDR_ANY);
+		gh->init_address(&local_addr, PF_INET, this->rep_port, INADDR_ANY);
 
 		//4 bind and listen
 		if (-1
@@ -91,7 +122,9 @@ public:
 
 		//5  service is receive cmd and response cmd
 		socklen_t client_addr_size;
+		int read_totals = 0;
 		while (1) {
+
 			client_addr_size = sizeof(client_addr);
 			//5.1 accept
 			if ((new_fd = accept(socketfd, (struct sockaddr*) (&client_addr),
@@ -121,7 +154,7 @@ public:
 
 			string cog_str1 = "request is:";
 			//cout<<(cog_str1 + request_buff)<<endl;
-			gh->log2(cog_str1 + request_buff,"socket");
+			gh->log2(cog_str1 + request_buff, "socket");
 
 			//5.3 hand request
 			string request_str = request_buff;
@@ -156,10 +189,8 @@ public:
 					break;
 				}
 				request_buff[read_count] = '\0';
-				//write to local file
 				write(fd, request_buff, read_count);
 				total += read_count;
-				//		gh->log("*total:" + total);
 				if (total == req_cmd.content_size) {
 					break;
 				}
@@ -171,6 +202,15 @@ public:
 			} //end accept data
 			close(fd);
 			gh->log("5.7 ok,file saved! ");
+
+			read_totals++;
+			if (read_totals > 5) {
+				read_totals = 1;
+				req_task r_task;
+				string result;
+				this->feedback_status(&r_task, result);
+			}
+
 		} //end step 5
 
 		return 0;
@@ -208,7 +248,105 @@ public:
 		return is_store;
 	}
 	//=========
+	string init_request_cmd_str() {
+		//init_map
+		map<string, string> cmd_map;
+		cmd_map["commd_id"] = "6";
 
+		cmd_map["available_disk_space"] = gh->float2str(
+				gh->available_disk_space());
+
+		//init str
+		string cmd_str = "";
+		for (map<string, string>::iterator it3 = cmd_map.begin();
+				it3 != cmd_map.end(); ++it3) {
+			cmd_str.append(it3->first + ":" + it3->second + "\r\n");
+		}
+		cmd_str.append("\f");
+		return cmd_str;
+
+	}
+#define BUFSIZE 1449
+#define READ_BUFF_SIZE 1448
+	bool feedback_status(req_task *mytask, string& str_cmd) {
+		//1 init variable
+		int socketfd;
+		struct sockaddr_in dest_addr;
+		char read_buf[BUFSIZE];
+		bzero(&read_buf, sizeof read_buf);
+		bool req_seccess = 0;
+		string log_str;
+		while (1) {
+
+			//2 create socket
+			if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+				log_str = "socket fd create fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror("socket fd create fail...");
+
+				break;
+			}
+
+			//3 prepare server address
+			gh->init_address(&dest_addr, PF_INET, this->master_port,
+					inet_addr(this->rep_ip[0].c_str()));
+
+			//4 connect to server
+			if (-1
+					== connect(socketfd, (struct sockaddr*) &dest_addr,
+							sizeof(struct sockaddr))) {
+				log_str = "socket fd connect fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket);
+				break;
+			}
+			gh->log2(
+					"Connect ot:" + this->rep_ip[0] + ":"
+							+ gh->num2str(this->rep_port), s_socket);
+
+			//5 write to master
+			int bytes_count;
+			string cmd_req_2send = "";
+			cmd_req_2send = this->init_request_cmd_str(); //last_task_status
+			int write_result = write(socketfd, cmd_req_2send.c_str(),
+					strlen(cmd_req_2send.c_str()));
+			if (write_result == -1) {
+				log_str = "socket fd write fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror
+				break; //continue;
+			}
+			gh->log2("write:" + cmd_req_2send, s_socket);
+
+			//6 read
+			int total = 0;
+			//	string t_str_cmd = "";
+			str_cmd = "";
+			while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
+				total += bytes_count;
+				if (bytes_count == 0) {
+					break;
+				}
+				if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+					break;
+				}
+				read_buf[bytes_count] = '\0';
+				str_cmd += read_buf;
+			}
+			req_seccess = 1;
+			break;
+		}
+		//}
+		//7 clear socket
+		close(socketfd);
+
+//	str_cmd = read_buf;
+
+		return req_seccess;
+
+	}
+
+	//=============
 };
 
 }

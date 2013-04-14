@@ -7,12 +7,13 @@
 //============================================================================
 
 #include <iostream>
-#include "slaver_test.h"
+
 #include "master_test.h"
 #include "GlobalHelper.h"
-
+#include "Cpp2mysql.h"
 using namespace std;
 using namespace poseidon;
+
 #define DEBUG
 int main() {
 
@@ -22,6 +23,13 @@ int main() {
 	//	(new GlobalHelper())->init_command_map_test();//pass
 	//(new GlobalHelper())->get_time_str_test();
 //	(new GlobalHelper())->replace_test();
+//	(new GlobalHelper())->log2_test();
+//------------------------------
+//cpp2mysql
+	//(new Cpp2mysql())->update_worker_tb_test();
+	//(new Cpp2mysql())->update_worker_site_tb_test();
+
+//	c->connectTest();
 
 	//--------------------------------
 	//A dynamic assign urls
@@ -33,10 +41,10 @@ int main() {
 	// get_min_bad_of_sites_test();
 	//4.continue to read
 	//read_sitefile_lines_test();
-//	  read_site_test(); //pass
+	// read_site_test(); //pass
 	//--------------------------------
 //build pages
-  // build_csdn_url();
+	// build_csdn_url();
 	//hand_request_test(); //pass
 	master_test2slave(); //final test
 

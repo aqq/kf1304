@@ -1,0 +1,81 @@
+/*
+ * Cpp2mysql.h
+ *
+ *  Created on: 2012-5-16
+ *      Author: root
+ */
+
+#ifndef CPP2MYSQL_H_
+#define CPP2MYSQL_H_
+#include<mysql/mysql.h>
+#include<iostream>
+#include<string>
+#include "GlobalHelper.h"
+using namespace std;
+
+namespace poseidon {
+struct worker_tb {
+	int slave_id;
+	string last_request_time;
+	string last_request_ip;
+	float available_disk_space;
+	int worker_type;
+};
+struct worker_site_tb {
+	int ws_id;
+	int slave_id;
+	string site_id;
+	int site_task_sucess;
+	int site_task_failed;
+};
+class Cpp2mysql {
+protected:
+	string host, user, psw, port, dbname;
+	MYSQL mysql;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+protected:
+	void init();
+
+public:
+	Cpp2mysql();
+	Cpp2mysql(string host, string user, string psw, string port, string dbname);
+	void connectTest();
+	virtual ~Cpp2mysql();
+
+	void close();
+	bool connect();
+	bool connect(string host, string user, string psw, string port,
+			string dbname);
+	MYSQL_RES* query(string sql);
+	int execute(string sql, MYSQL_RES* result);
+	int execute(string sql);
+	char* ConvertBinaryToString(char* pBinaryData, int nLen);
+	void insertBlobExample();
+	//
+	bool insertPacket();
+
+	bool preparedExcute();
+
+	void testReadBlob();
+	//================================
+	void update_worker_tb(worker_tb worker) {
+		char sqlquery1[500] =
+				"	update worker_tb set  last_request_time=%s where slave_id=%d";
+		char sqlquery2[500];
+		sprintf(sqlquery2, sqlquery1, worker.last_request_time.c_str(),
+				worker.slave_id);
+		int slave_id;
+		string last_request_time;
+		//	string last_request_ip;
+		//	float available_disk_space;
+		//	int worker_type;
+	}
+	//================================
+
+	//================================
+
+};
+
+} /* namespace poseidon */
+#endif /* CPP2MYSQL_H_ */

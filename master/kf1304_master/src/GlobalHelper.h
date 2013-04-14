@@ -63,6 +63,7 @@ public:
 		TASK_BUF_SIZE = 1448;
 		MASTER_CONF = "./conf/master.conf";
 		WEBSITE_CONF = "./conf/website_grabing.log";
+		config();
 	}
 	map<string, string> config_show_map;
 	void config() {
@@ -84,6 +85,22 @@ public:
 		return time_str;
 	}
 	//
+	void log(string filename, string content) {
+		ofstream outfile(filename.c_str(), ios::app);
+		outfile << content;
+		outfile.close();
+	}
+	void log(string filename, string content, ios::openmode t1) {
+		ofstream outfile(filename.c_str(), t1);
+		outfile << content;
+		outfile.close();
+	}
+	//
+	void log2(string c1, string c2, string type) {
+		string str = c1 + c2;
+		log2(str, type);
+
+	}
 	void log2(string content, string type) {
 
 		string time_str = get_string_time("%Y%m%d");
@@ -101,6 +118,9 @@ public:
 		if (this->is_log_show(type)) {
 			cout << content << endl;
 		}
+	}
+	void log2_test() {
+		log2("content", "socket");
 	}
 	virtual ~GlobalHelper();
 
@@ -122,6 +142,11 @@ public:
 	}
 	//num to string
 	string num2str(int i) {
+		stringstream ss;
+		ss << i;
+		return ss.str();
+	}
+	string float2str(float i) {
 		stringstream ss;
 		ss << i;
 		return ss.str();
@@ -304,6 +329,18 @@ public:
 	}
 
 	//=====================================
+	//"%Y%m%d%H%M%S"
+	string get_time_str(string timeformart) {
+		string time_str;
+		struct tm *newtime;
+		char tmpbuf[128];
+		time_t lt1;
+		time(&lt1);
+		newtime = localtime(&lt1);
+		strftime(tmpbuf, 128, timeformart.c_str(), newtime);
+		time_str.append(tmpbuf);
+		return time_str;
+	}
 	string get_time_str() {
 		string time_str;
 

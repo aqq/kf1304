@@ -31,6 +31,8 @@
 #include <vector>       // std::vector
 #include <map>
 #include "assert.h"
+//disk
+#include <sys/statfs.h>
 
 using namespace std;
 namespace poseidon {
@@ -138,7 +140,12 @@ public:
 		ss << i;
 		return ss.str();
 	}
-
+	//num to string
+	string float2str(float i) {
+		stringstream ss;
+		ss << i;
+		return ss.str();
+	}
 	//实现string到unsigned int的转换
 	unsigned int string_to_unsigned_int(string str) {
 		unsigned int result(0); //最大可表示值为4294967296（=2‘32-1）
@@ -399,7 +406,22 @@ public:
 		outfile.close();
 //#endif
 	}
-	//===
+	//===rep special
+	float available_disk_space() {
+		struct statfs diskInfo;
+		statfs("/", &diskInfo);
+		unsigned long long blocksize = diskInfo.f_bsize; //每个block里包含的字节数
+		unsigned long long availableDisk = diskInfo.f_bavail * blocksize; //可用空间大小
+		unsigned int availableDisk2 = availableDisk >> 20;
+		float availableDisk_ft = availableDisk2 / 1024.0;
+		cout << "availableDisk2=" << availableDisk_ft << endl;
+		return availableDisk_ft;
+
+	}
+	void disk_space_test() {
+		available_disk_space();
+	}
+	//
 
 };
 

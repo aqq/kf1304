@@ -22,11 +22,12 @@ using namespace std;
 namespace poseidon {
 
 StringHelper::StringHelper() {
+	// TODO Auto-generated constructor stub
 
 }
 
 StringHelper::~StringHelper() {
-
+	// TODO Auto-generated destructor stub
 }
 void StringHelper::CharCopy(char * des, char* src, int size) {
 	for (int i = 0; i < size; i++) {

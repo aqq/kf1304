@@ -5022,3 +5022,2047 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h:213: 错误：‘task’ 未声明
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(int*, std::string&)’:
+../src/rep.h:227: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:233: 错误：‘class poseidon::rep’ 没有名为 ‘init_address’ 的成员
+../src/rep.h:242: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:247: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:251: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:251: 错误：‘class poseidon::rep’ 没有名为 ‘init_request_cmd_str’ 的成员
+../src/rep.h:252: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:253: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:260: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:265: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:250: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:256: 错误：‘class poseidon::rep’ 没有名为 ‘init_address’ 的成员
+../src/rep.h:265: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:270: 错误：‘s_socket’ 在此作用域中尚未声明
+../src/rep.h:274: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:274: 错误：‘class poseidon::rep’ 没有名为 ‘init_request_cmd_str’ 的成员
+../src/rep.h:275: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:283: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:288: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:258: 错误：‘class poseidon::rep’ 没有名为 ‘init_address’ 的成员
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘init_request_cmd_str’ 的成员
+../src/rep.h:277: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:278: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:285: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:290: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:259: 错误：对 ‘poseidon::GlobalHelper::init_address(sockaddr_in*, int, int&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&)’ 的调用没有匹配的函数
+../src/GlobalHelper.h:239: 附注：备选为： void poseidon::GlobalHelper::init_address(sockaddr_in*, int, int, in_addr_t)
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘init_request_cmd_str’ 的成员
+../src/rep.h:277: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:278: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:285: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:290: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:276: 错误：‘class poseidon::rep’ 没有名为 ‘init_request_cmd_str’ 的成员
+../src/rep.h:277: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:278: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:285: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:290: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:280: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:281: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:282: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:289: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:294: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:290: 错误：‘class poseidon::rep’ 没有名为 ‘cmd_req_2send’ 的成员
+../src/rep.h:295: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+../src/rep.h: In member function ‘bool poseidon::rep::request_task(poseidon::req_task*, std::string&)’:
+../src/rep.h:295: 错误：‘READ_BUFF_SIZE’ 在此作用域中尚未声明
+make: *** [src/kf1304_repertory.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+../src/GlobalHelper.h: In member function ‘float poseidon::GlobalHelper::available_disk_space()’:
+../src/GlobalHelper.h:409: 错误：聚合 ‘poseidon::statfs diskInfo’ 类型不完全，无法被定义
+../src/GlobalHelper.h:410: 错误：invalid use of undefined type ‘struct poseidon::statfs’
+../src/GlobalHelper.h:409: 错误：forward declaration of ‘struct poseidon::statfs’
+make: *** [src/GlobalHelper.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_repertory.o ./src/master.o ./src/rep.o ./src/slaver.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/kf1304_master.cpp:10:25: 错误：slaver_test.h：没有那个文件或目录
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+../src/slaver.cpp:28:24: 错误：TextLogger.h：没有那个文件或目录
+make: *** [src/slaver.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:327: 错误：对 ‘poseidon::master::init_feedback_cmd(std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, poseidon::command&)’ 的调用没有匹配的函数
+../src/master.h:243: 附注：备选为： void poseidon::master::init_feedback_cmd(poseidon::command&, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:327: 错误：对 ‘poseidon::master::init_feedback_cmd(std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, poseidon::command&)’ 的调用没有匹配的函数
+../src/master.h:243: 附注：备选为： void poseidon::master::init_feedback_cmd(poseidon::command&, std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::init_feedback_cmd(poseidon::command&, poseidon::command&)’:
+../src/master.h:242: 错误：redeclaration of ‘poseidon::command& req_cmd’
+../src/master.h:242: 错误：‘poseidon::command& req_cmd’ 已在此声明过
+../src/master.h: In member function ‘std::string poseidon::master::hand_request(std::string)’:
+../src/master.h:325: 错误：对 ‘poseidon::master::init_feedback_cmd(std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, poseidon::command&)’ 的调用没有匹配的函数
+../src/master.h:242: 附注：备选为： void poseidon::master::init_feedback_cmd(poseidon::command&, poseidon::command&)
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_repertory ****
+
+make all 
+Building file: ../src/kf1304_repertory.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
+Finished building: ../src/kf1304_repertory.cpp
+ 
+Building file: ../src/rep.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
+Finished building: ../src/rep.cpp
+ 
+Building target: kf1304_repertory
+Invoking: GCC C++ Linker
+g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
+Finished building target: kf1304_repertory
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/kf1304_master.cpp: In function ‘int main()’:
+../src/kf1304_master.cpp:27: 错误：‘Cpp2mysql’ 在此作用域中尚未声明
+../src/kf1304_master.cpp:27: 错误：‘c’ 在此作用域中尚未声明
+../src/kf1304_master.cpp:27: 错误：expected type-specifier before ‘Cpp2mysql’
+../src/kf1304_master.cpp:27: 错误：expected `;' before ‘Cpp2mysql’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.cpp: In constructor ‘poseidon::Cpp2mysql::Cpp2mysql()’:
+../src/Cpp2mysql.cpp:30: 错误：‘StringHelper’ 在此作用域中尚未声明
+../src/Cpp2mysql.cpp:30: 错误：‘sh’ 在此作用域中尚未声明
+../src/Cpp2mysql.cpp:30: 错误：expected type-specifier before ‘StringHelper’
+../src/Cpp2mysql.cpp:30: 错误：expected `;' before ‘StringHelper’
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/StringHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/StringHelper.d" -MT"src/StringHelper.d" -o "src/StringHelper.o" "../src/StringHelper.cpp"
+Finished building: ../src/StringHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+./src/Cpp2mysql.o: In function `poseidon::Cpp2mysql::testReadBlob()':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/Cpp2mysql.cpp:226: undefined reference to `poseidon::Cpp2mysql::query(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+./src/Cpp2mysql.o: In function `poseidon::Cpp2mysql::execute(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/Cpp2mysql.cpp:135: undefined reference to `poseidon::Cpp2mysql::query(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+./src/Cpp2mysql.o: In function `poseidon::Cpp2mysql::execute(std::basic_string<char, std::char_traits<char>, std::allocator<char> >, st_mysql_res*)':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/Cpp2mysql.cpp:111: undefined reference to `poseidon::Cpp2mysql::query(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+./src/Cpp2mysql.o: In function `poseidon::Cpp2mysql::connectTest()':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/Cpp2mysql.cpp:80: undefined reference to `poseidon::Cpp2mysql::query(std::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+collect2: ld 返回 1
+make: *** [kf1304_master] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.cpp:69: 错误：‘poseidon::Cpp2mysql::Cpp2mysql(std::string, std::string, std::string, std::string, std::string)’ 的原型不匹配类 ‘poseidon::Cpp2mysql’ 中的任何一个
+../src/Cpp2mysql.h:18: 错误：备选为：poseidon::Cpp2mysql::Cpp2mysql(const poseidon::Cpp2mysql&)
+../src/Cpp2mysql.cpp:26: 错误：                poseidon::Cpp2mysql::Cpp2mysql()
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.cpp:69: 错误：‘poseidon::Cpp2mysql::Cpp2mysql(std::string, std::string, std::string, std::string, std::string)’ 的原型不匹配类 ‘poseidon::Cpp2mysql’ 中的任何一个
+../src/Cpp2mysql.h:18: 错误：备选为：poseidon::Cpp2mysql::Cpp2mysql(const poseidon::Cpp2mysql&)
+../src/Cpp2mysql.cpp:26: 错误：                poseidon::Cpp2mysql::Cpp2mysql()
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_tb(poseidon::worker_tb)’:
+../src/Cpp2mysql.h:67: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+../src/Cpp2mysql.h:68: 警告：未使用的变量 ‘slave_id’
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_tb(poseidon::worker_tb)’:
+../src/Cpp2mysql.h:67: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+../src/Cpp2mysql.h:68: 警告：未使用的变量 ‘slave_id’
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_tb(poseidon::worker_tb)’:
+../src/Cpp2mysql.h:67: 错误：expected unqualified-id before ‘)’ token
+../src/Cpp2mysql.h:68: 警告：未使用的变量 ‘slave_id’
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_tb(poseidon::worker_tb)’:
+../src/Cpp2mysql.h:68: 警告：未使用的变量 ‘slave_id’
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_tb(poseidon::worker_tb)’:
+../src/Cpp2mysql.h:68: 警告：未使用的变量 ‘slave_id’
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_site_tb(poseidon::worker_site_tb)’:
+../src/Cpp2mysql.h:83: 警告：未使用的变量 ‘ws_id’
+../src/Cpp2mysql.h:84: 警告：未使用的变量 ‘slave_id’
+../src/Cpp2mysql.h:86: 警告：未使用的变量 ‘site_task_sucess’
+../src/Cpp2mysql.h:87: 警告：未使用的变量 ‘site_task_failed’
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_site_tb(poseidon::worker_site_tb)’:
+../src/Cpp2mysql.h:83: 警告：未使用的变量 ‘ws_id’
+../src/Cpp2mysql.h:84: 警告：未使用的变量 ‘slave_id’
+../src/Cpp2mysql.h:86: 警告：未使用的变量 ‘site_task_sucess’
+../src/Cpp2mysql.h:87: 警告：未使用的变量 ‘site_task_failed’
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_site_tb(poseidon::worker_site_tb)’:
+../src/Cpp2mysql.h:94: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+../src/Cpp2mysql.h:94: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_site_tb(poseidon::worker_site_tb)’:
+../src/Cpp2mysql.h:94: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+../src/Cpp2mysql.h:94: 警告：不能通过 ‘...’ 传递有非简单旧数据类型 ‘struct std::string’ 的对象；调用会在运行时中止
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/Cpp2mysql.h: In member function ‘void poseidon::Cpp2mysql::update_worker_site_tb(poseidon::worker_site_tb)’:
+../src/Cpp2mysql.h:94: 错误：对成员 ‘c_str’ 的请求出现在 ‘w_s.poseidon::worker_site_tb::slave_id’ 中，而后者具有非类类型 ‘int’
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+../src/GlobalHelper.h: In member function ‘void poseidon::GlobalHelper::log2(std::string, std::string, std::string)’:
+../src/GlobalHelper.h:90: 错误：‘type’ 在此作用域中尚未声明
+make: *** [src/Cpp2mysql.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘int poseidon::master::service()’:
+../src/master.h:177: 错误：expected primary-expression before ‘<<’ token
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘int poseidon::master::service()’:
+../src/master.h:177: 错误：‘s_scoket’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status_to_db(poseidon::command&)’:
+../src/master.h:262: 错误：‘worker_tb’ 在此作用域中尚未声明
+../src/master.h:262: 错误：expected `;' before ‘w’
+../src/master.h:263: 错误：‘w’ 在此作用域中尚未声明
+../src/master.h:267: 错误：‘class poseidon::GlobalHelper’ 没有名为 ‘update_worker_tb’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status_to_db(poseidon::command&)’:
+../src/master.h:269: 错误：‘class poseidon::GlobalHelper’ 没有名为 ‘update_worker_tb’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘void poseidon::master::update_slave_status_to_db(poseidon::command&)’:
+../src/master.h:280: 错误：从类型 ‘int’ 到类型 ‘const char*’ 的转换无效
+../src/master.h:280: 错误：  初始化实参 1，属于 ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::read_urls_and_record(int, std::vector<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::basic_string<char, std::char_traits<char>, std::allocator<char> > > >*)’:
+../src/master.h:525: 错误：对 ‘poseidon::master::cmd_map_to_str(std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site_info, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, poseidon::site_info> > >&)’ 的调用没有匹配的函数
+../src/master.h:203: 附注：备选为： std::string poseidon::master::cmd_map_to_str(std::map<std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::less<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<const std::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&)
+../src/master.h:525: 警告：未使用的变量 ‘res’
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h:47: 错误：redefinition of ‘const int poseidon::M2S_STORE’
+../src/master.h:45: 错误：‘const int poseidon::M2S_STORE’ 已在此定义过
+../src/master.h: In member function ‘bool poseidon::master::need_sleep(poseidon::command)’:
+../src/master.h:132: 错误：expected ‘,’ or ‘;’ before ‘return’
+../src/master.h:130: 警告：未使用的变量 ‘need_sleep’
+../src/master.h:133: 警告：在有返回值的函数中未发现 return 语句
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘bool poseidon::master::need_sleep(poseidon::command)’:
+../src/master.h:132: 错误：expected ‘,’ or ‘;’ before ‘return’
+../src/master.h:130: 警告：未使用的变量 ‘need_sleep’
+../src/master.h:133: 警告：在有返回值的函数中未发现 return 语句
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****

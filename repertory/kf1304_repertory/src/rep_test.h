@@ -42,25 +42,20 @@ void read_config_test() {
 	rep *rep1 = new rep();
 	GlobalHelper *gh;
 	gh = new GlobalHelper();
-	cout << rep1->master_ip[0] << endl;
-	cout << rep1->master_port << endl;
-	assert( rep1->master_ip[0]==gh->MASTER_IP);
-	assert( rep1->master_port==gh->MASTER_PORT);
+	cout << rep1->rep_ip[0] << endl;
+	cout << rep1->rep_port << endl;
+	assert( rep1->rep_ip[0]==gh->MASTER_IP);
+	assert( rep1->rep_port==gh->MASTER_PORT);
 
 }
-float available_disk_space() {
-	struct statfs diskInfo;
-	statfs("/", &diskInfo);
-	unsigned long long blocksize = diskInfo.f_bsize; //每个block里包含的字节数
-	unsigned long long availableDisk = diskInfo.f_bavail * blocksize; //可用空间大小
-	unsigned int availableDisk2 = availableDisk >> 20;
-	float availableDisk_ft = availableDisk2 / 1024.0;
-	cout << "availableDisk2=" << availableDisk_ft << endl;
-	return availableDisk_ft;
+void rep_feedback_test() {
+	rep *rep1 = new rep();
+	GlobalHelper *gh;
+	gh = new GlobalHelper();
 
-}
-void disk_space_test() {
-	available_disk_space();
+	req_task r_task;
+	string result;
+	rep1->feedback_status(&r_task, result);
 }
 void report_disk_space() {
 	//float available_dk = available_disk_space();

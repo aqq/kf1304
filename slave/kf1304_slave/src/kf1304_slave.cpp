@@ -21,7 +21,7 @@ int main() {
 	// page_read_binary_test(); //
 	// message to hand
 	//remoteStorePage_test(); //pass  send and revice msg
-	//store_page_test();
+//	store_page_test();
 	// hand msg
 //-----------------------------
 //	(new GlobalHelper())->log2_test();
@@ -38,7 +38,7 @@ int main() {
 	//(new GlobalHelper())->test_strlen_size_len(); //pass
 	//	(new GlobalHelper())->get_time_str_test(); //pass
 	//(new GlobalHelper())->is_html_end_test(); //pass
-	(new GlobalHelper())->delete_self_test(); //pass
+	//(new GlobalHelper())->delete_self_test(); //pass
 
 	//grab
 	//-------------------------------
@@ -46,14 +46,14 @@ int main() {
 	//slaver_test_grab_3(); //pass
 	//prepare_urls_test(); //  pass
 	//str2task_test(); //  pass
-
+//	slaver_test_prepare_req_cmd();
 	//slaver_test_request(); //pass
 	//get_ip_by_name_test(); //test ip
 	//lookup_ip_test(); //pass
 	//grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 
-	//slaver_work_test(); //final test
+	slaver_work_test(); //final test
 
 //----------sys call
 	// (new GlobalHelper())->call_updata_shell_test();

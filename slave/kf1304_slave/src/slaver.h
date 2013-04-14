@@ -46,6 +46,8 @@ const string s_socket = "socket";
 const string s_normal = "normal";
 const string s_sql = "sql";
 const string s_work = "task";
+
+const string slave_private_conf = "./conf/slave_private.conf";
 struct storetask {
 	string request_ip;
 	int request_port;
@@ -63,7 +65,7 @@ struct grabtask {
 	string url;
 
 };
-struct task {
+struct req_task {
 	int sleep_time;
 
 	vector<string> task_id;
@@ -90,8 +92,6 @@ struct task {
 class slaver {
 private:
 
-//command 1 salve 1
-	string cmd_req_model;
 	GlobalHelper *gh;
 protected:
 
@@ -114,7 +114,8 @@ public:
 	slaver() {
 		gh = new GlobalHelper();
 		sleep_time = 1;
-		last_task_status = 2; //2 means no last task
+		last_task_status = -1; //-1 means no last task
+		this->last_cmd_id = -1;
 		loop_try_time_in_store = 5;
 		gh->log2("//====Start", s_moudle);
 		gh->log2("config().", s_moudle);
@@ -131,21 +132,26 @@ public:
 		gh->read_config(gh->SLAVE_CONF, config_map1);
 		this->master_port = atoi((config_map1["master_port"]).c_str());
 		this->master_ip.push_back(config_map1["master_ip"]);
-		this->slave_id = atoi((config_map1["slave_id"]).c_str());
+
 		this->app_version = atoi((config_map1["app_version"]).c_str());
 		this->store_ip.push_back(config_map1["store_ip"]);
 		this->store_port = atoi((config_map1["store_port"]).c_str());
+
+		map<string, string> config_map2;
+		gh->read_config(slave_private_conf, config_map2);
+		this->slave_id = atoi((config_map2["slave_id"]).c_str());
+
 	}
 
 	virtual ~slaver();
-	bool request_task(task* mytask, string& str_cmd);
-	bool grabpage_work(task& mytask);
+	bool request_task(req_task* mytask, string& str_cmd);
+	bool grabpage_work(req_task& mytask);
 	bool grab_page(grabtask gtask);
 
 	bool remoteStorePage(storetask s_task, string cmd, string send_content);
 
 	void work() {
-		task mytask;
+		req_task mytask;
 		string task_str;
 		int i = 2;
 
@@ -173,12 +179,14 @@ public:
 
 	}
 
-	bool hand_task(task& mytask) {
+	bool hand_task(req_task& mytask) {
 		bool is_task_finished = 1;
+		this->last_cmd_id = mytask.cmd_id;
 		switch (mytask.cmd_id) {
 		case SLEEP:
 			cout << "Sleep :" << mytask.sleep_time << " secoonds." << endl;
 			sleep(mytask.sleep_time); //sleep 1 second;
+			this->last_task_status = 1;
 			break;
 
 		case UPDATE:
@@ -188,7 +196,7 @@ public:
 			gh->log("Updata version:" + mytask.version);
 			//in real updata,the app_version will be write in code.
 			this->app_version = mytask.version;
-			exit(1); //in real one
+			this->last_task_status = 0;
 			break;
 
 		case GRABPAGE:
@@ -197,7 +205,7 @@ public:
 			gh->log3(gh->tmp_log_str, s_work);
 			is_task_finished = grabpage_work(mytask);
 			this->last_task_status = is_task_finished;
-			this->last_cmd_id = GRABPAGE;
+
 			break;
 
 		case STORE:
@@ -206,7 +214,7 @@ public:
 			s_task.request_ip = this->store_ip[0]; //"192.168.75.128";
 			s_task.request_port = this->store_port; //9001;
 			is_task_finished = store_page(s_task);
-			this->last_cmd_id = STORE;
+			this->last_task_status = is_task_finished;
 			break;
 		}
 		return is_task_finished;
@@ -334,7 +342,7 @@ public:
 		return isok;
 
 	}
-	void urls_str_to_http_reqs(task& mytask, string urls) {
+	void urls_str_to_http_reqs(req_task& mytask, string urls) {
 		vector<string> str_vec;
 		gh->split(urls, "#", str_vec);
 
@@ -417,7 +425,7 @@ public:
 		bzero(&(dest_addr->sin_zero), 8);
 	}
 //
-	void str2task(string response_command, task& mytask) {
+	void str2task(string response_command, req_task& mytask) {
 		map<string, string> response_cmd_map;
 
 		gh->command_str_to_map(response_command, &response_cmd_map);
@@ -446,11 +454,12 @@ public:
 		//init_map
 		map<string, string> cmd_map;
 		cmd_map["commd_id"] = "1";
-		cmd_map["slave_id"] = this->slave_id;
+		cmd_map["slave_id"] = gh->num2str(this->slave_id);
 		cmd_map["application_version"] = gh->num2str(this->app_version);
 		cmd_map["last_task_status"] = gh->num2str(this->last_task_status);
 		cmd_map["last_cmd_id"] = gh->num2str(this->last_cmd_id);
-
+		cmd_map["available_disk_space"] = gh->float2str(
+				gh->available_disk_space());
 		//init str
 		string cmd_str = "";
 		for (map<string, string>::iterator it3 = cmd_map.begin();
@@ -458,6 +467,7 @@ public:
 			cmd_str.append(it3->first + ":" + it3->second + "\r\n");
 		}
 		cmd_str.append("\f");
+		this->cmd_req_2send = cmd_str;
 		return cmd_str;
 
 	}

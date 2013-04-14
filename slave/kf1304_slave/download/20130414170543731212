@@ -1,0 +1,3734 @@
+
+url:bbs.csdn.net/topics/871
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Vary: Accept-Encoding
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack)
+ETag: "39350ff10e1cf14565ff9cb782b29572"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _csdn_newbbs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTIxMWM5ZDQ5NGE3Y2M0OWZiZmRjNDRkZmUwOTUzOGQxBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMW5DbjJhV3ZLL0NuM05UZHp5ZzJIUzB0eWsvQ0dBd3NxYTRFdmQ0UjlpK2c9BjsARg%3D%3D--6881933718bc19c935ee8f4bed6844c3984ca213; path=/; HttpOnly
+Server: nginx/1.2.4 + Phusion Passenger (mod_rails/mod_rack)
+X-UA-Compatible: IE=Edge,chrome=1
+
+1e11
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>我要学习ASP - CSDN论坛 - CSDN.NET</title>
+    <link href="/assets/main-c65d6b72001ff03e3698df226a4e4ffe.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-e72cd54f9ebb368ac82561934f7b9c72.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="nCn2aWvK/Cn3NTdzyg2HS0tyk/CGAwsqa4Evd4R9i+g=" name="csrf-token" />
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
+      <link href="/assets/sh-2bfcf65754f6d04d58df6ed87a3b6faf.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/sh-d778121d099d6e5ed8bb7ce42824a371.js" type="text/javascript"></script>
+  <script src="http://passport.csdn.net/content/loginbox/login.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="wraper">
+      <script type="text/javascript" src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"></script>
+
+        <!-- 页顶通栏 -->
+  <iframe id="Topic_Top" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicPageTop.htm"></iframe>
+
+      <div id="nav">
+        <a href="/" class="logo" target="_top"></a>
+        <div class="nav_list">
+          <a href="/home" title="CSDN论坛首页" class="home">首页</a><a href="/help" class=""><span>论坛帮助</span></a><a href="/rank" class=""><span>论坛牛人</span></a><a href="/map" class=""><span>论坛地图</span></a>
+        </div>
+
+        <div class="nav_sear">
+          <form action="http://so.csdn.net/search" target="_blank">
+            <input name="t" type="hidden" value="thread" />
+            <input name="q" type="text" />
+          </form>
+        </div>
+      </div>
+      <!--[if IE]>
+<style type="text/css" media="screen">
+.control_area .control .drop_menu{border:3px solid #ccc \9; _*border:3px solid #ccc;}
+</style>
+<![endif]-->
+
+  <!-- 页顶Button (D3) -->
+  <iframe id="frm_tt1" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyTop.htm?v=1"></iframe>
+  <script type="text/javascript">
+    setTimeout(function () { document.getElementById("frm_tt1").src = "/sda/TopicBodyTop.htm?v="+new Date().getTime(); }, 5000);
+  </script>
+
+<div class="bread_nav">
+  <a href="http://www.csdn.net" target="_blank">CSDN</a> <em>&gt;</em>
+  <a href="/" target="_blank">CSDN论坛</a> <em>&gt;</em>
+    <a href="/forums/WebDevelop" target="_blank">Web 开发</a> <em>&gt;</em>
+  <a href="/forums/ASP" target="_blank">ASP</a>
+</div>
+
+<div class="flash_messages">
+</div>
+
+
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_down"><a href="#" class="drop_toggle btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; top:26px;">
+            <li><a href="/topics/871/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/871/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/871/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/871/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/871/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/871/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/871/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/871/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/871/close" class="btn_1" rel='nofollow'><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=ASP" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="detail_title">
+  <h1>
+      我要学习ASP
+    <span>
+      [问题点数：50分，结帖人Tyro]
+    </span>
+  </h1>
+  <div class="fr">
+    <select name="filter_posts">
+      <option value="default">不显示删除回复</option>
+      <option value="all">显示所有回复</option>
+      <option value="star">显示星级回复</option>
+      <option value="pointed">显示得分回复</option>
+      <option value="lz">只显示楼主</option>
+    </select>
+    <a href="http://my.csdn.net/my/favorite/miniadd?u=http://bbs.csdn.net/topics/871&amp;t=%E6%88%91%E8%A6%81%E5%AD%A6%E4%B9%A0ASP" id="fav" class="fav" rel='nofollow'><img src="/assets/nolines_plus.gif" alt="" />收藏</a>
+  </div>
+</div>
+<div class="detailed">
+    <table border="0" cellspacing="0" cellpadding="0" id="post-871" class="post topic " data-post-id="871" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Tyro">
+            <a href="http://my.csdn.net/Tyro" target="_blank"><img alt="Tyro" class="avatar" src="http://avatar.profile.csdn.net/B/7/F/1_tyro.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Tyro" target="_blank">Tyro</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Tyro</span>
+          </dd>
+          <dd title="总技术分：3348；总技术排名：8725">等级：<img alt="Blank" class="grade user4" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：92%
+总发帖：25
+正常结帖：23
+未结帖：2">结帖率：92%</dd>
+          <div class="medal_gold " title="2000年7月 总版技术专家分月排行榜第一"></div><div class="medal_red " title="2000年7月 Web 开发大版内专家分月排行榜第一"></div><div class="medal_blue " title="2000年7月 VB大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info topic pointed" data-username="Tyro" data-floor="">
+                <div class="data">
+            <strong class="fr">
+              楼主
+            </strong>
+          <span class="time">
+              发表于：
+            2000-01-25 10:20:00
+          </span>
+        </div>
+        <div class="post_body">
+            我要学习ASP技术，请问各位高手需要了解哪些方面的知识，<br />
+应该从何处入手，最好有一些简单的例子。谢谢大家。<br />
+<br />
+我的Email:&nbsp;wjl@ufsoft.com.cn
+              <div class="tag ">
+              </div>
+        </div>
+          <!-- 主帖下Banner (D4) -->
+          <!-- 主帖下文字 (D5) -->
+          <iframe id="tad2" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyBottom.htm"></iframe>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+  <div class="fr">
+    <a href="/posts/871/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/871/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">�
+2000
+�个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/871/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/topics/871/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/topics/871/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+    <span class="return_time">回复次数：13</span>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+  <table border="0" cellspacing="0" cellpadding="0" id="post-492247" class="post  " data-post-id="492247" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info user_moderator">
+          <dt class="user_head" data-username="zdg">
+            <a href="http://my.csdn.net/zdg" target="_blank"><img alt="zdg" class="avatar" src="http://avatar.profile.csdn.net/8/2/2/1_zdg.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/zdg" target="_blank">zdg</a>
+            <img alt="版主" src="/assets/ico_BM-04df65c6033b993e1474606aa5ea59c5.png" title="扩充话题-股海浮沉版版主" />
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zdg</span>
+          </dd>
+          <dd title="总技术分：8966；总技术排名：3193">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：99.14%
+总发帖：116
+正常结帖：115
+未结帖：1">结帖率：99.14%</dd>
+          <div class="medal_jinshi " title="2000年 总版技术专家分年内排行榜第六"></div><div class="medal_silver " title="2000年1月 总版技术专家分月排行榜第二"></div><div class="medal_red count" title="2000年3月 Web 开发大版内专家分月排行榜第一
+2000年1月 VC/MFC大版内专家分月排行榜第一"><div class="medal_count">2</div></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="zdg" data-floor="1">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492247">#1</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:28:00
+          </span>
+        </div>
+        <div class="post_body">
+            慢慢来,&nbsp;最好能做些小程序,&nbsp;ASP常用的对象也就是:<br />
+Request(从浏览器获取信息),&nbsp;Response(输出到浏览器).<br />
+学会了基本操作再学数据库操作,&nbsp;到时你也能做一个积分制的论坛了...
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-1'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492247/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492247/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492247/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492247/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492247/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492250" class="post  " data-post-id="492250" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="tiger">
+            <a href="http://my.csdn.net/tiger" target="_blank"><img alt="tiger" class="avatar" src="http://avatar.profile.csdn.net/4/3/B/1_tiger.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/tiger" target="_blank">tiger</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">tiger</span>
+          </dd>
+          <dd title="总技术分：1485；总技术排名：19064">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：85.71%
+总发帖：56
+正常结帖：48
+未结帖：8">结帖率：85.71%</dd>
+          <div class="medal_blue " title="2000年1月 Delphi大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="tiger" data-floor="2">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492250">#2</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:44:00
+          </span>
+        </div>
+        <div class="post_body">
+            asp是不是用interdev做的?<br />
+哪儿能下载到interdev?
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-2'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492250/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492250/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492250/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492250/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492250/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492253" class="post  " data-post-id="492253" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ahfei">
+            <a href="http://my.csdn.net/ahfei" target="_blank"><img alt="ahfei" class="avatar" src="http://avatar.profile.csdn.net/F/5/8/1_ahfei.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ahfei" target="_blank">ahfei</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ahfei</span>
+          </dd>
+          <dd title="总技术分：1178；总技术排名：23473">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="ahfei" data-floor="3">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492253">#3</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:48:00
+          </span>
+        </div>
+        <div class="post_body">
+            买套Visual&nbsp;Studio98（6cd），里面有Visual&nbsp;Interdev，frontpage，然后在网上down<br />
+几本书，就可以开始学习了，几天就可以入门。
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-3'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492253/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对�
+2000
+�有用[0]</a>
+    <a href="/posts/492253/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492253/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492253/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492253/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492254" class="post  " data-post-id="492254" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info user_moderator">
+          <dt class="user_head" data-username="zdg">
+            <a href="http://my.csdn.net/zdg" target="_blank"><img alt="zdg" class="avatar" src="http://avatar.profile.csdn.net/8/2/2/1_zdg.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/zdg" target="_blank">zdg</a>
+            <img alt="版主" src="/assets/ico_BM-04df65c6033b993e1474606aa5ea59c5.png" title="扩充话题-股海浮沉版版主" />
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zdg</span>
+          </dd>
+          <dd title="总技术分：8966；总技术排名：3193">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：99.14%
+总发帖：116
+正常结帖：115
+未结帖：1">结帖率：99.14%</dd>
+          <div class="medal_jinshi " title="2000年 总版技术专家分年内排行榜第六"></div><div class="medal_silver " title="2000年1月 总版技术专家分月排行榜第二"></div><div class="medal_red count" title="2000年3月 Web 开发大版内专家分月排行榜第一
+2000年1月 VC/MFC大版内专家分月排行榜第一"><div class="medal_count">2</div></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="zdg" data-floor="4">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492254">#4</a>
+              得分：25
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:49:00
+          </span>
+        </div>
+        <div class="post_body">
+            InterDev在Visual&nbsp;Studio中就包含...<br />
+ASP也是文本文件,&nbsp;它有服务器的ASP.DLL来解释,&nbsp;所以如果你装了Win98+PWS就可以了...<br />
+InterDev只不过是一个好的IDE集成环境...<br />
+ASP本身和HTML一样是文本文件,&nbsp;可以用任何编辑器来编辑...
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-4'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492254/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492254/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492254/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492254/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492254/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492255" class="post  " data-post-id="492255" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ahfei">
+            <a href="http://my.csdn.net/ahfei" target="_blank"><img alt="ahfei" class="avatar" src="http://avatar.profile.csdn.net/F/5/8/1_ahfei.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ahfei" target="_blank">ahfei</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ahfei</span>
+          </dd>
+          <dd title="总技术分：1178；总技术排名：23473">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="ahfei" data-floor="5">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492255">#5</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:50:00
+          </span>
+        </div>
+        <div class="post_body">
+            哦，我以前写过留言版，聊天室，讨论区，不过都是很简单的，只能作为练习用，如果你要，我可以发给你：）
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-5'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492255/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492255/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492255/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492255/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492255/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492259" class="post  " data-post-id="492259" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Tyro">
+            <a href="http://my.csdn.net/Tyro" target="_blank"><img alt="Tyro" class="avatar" src="http://avatar.profile.csdn.net/B/7/F/1_tyro.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Tyro" target="_blank">Tyro</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Tyro</span>
+          </dd>
+          <dd title="总技术分：3348；总技术排名：8725">等级：<img alt="Blank" class="grade user4" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：92%
+总发帖：25
+正常结帖：23
+未结帖：2">结帖率：92%</dd>
+          <div class="medal_gold " title="2000年7月 总版技术专家分月排行榜第一"></div><div class="medal_red " title="2000年7月 Web 开发大版内专家分月排行榜第一"></div><div class="medal_blue " title="2000年7月 VB大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="Tyro" data-floor="6">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492259">#6</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:58:00
+          </span>
+        </div>
+        <div class="post_body">
+            谢谢zdg和ahfei,我现在正需要一些简单的小程序，希望大家提供。�
+1000
+�谢！
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-6'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492259/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492259/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492259/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492259/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492259/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492261" class="post  " data-post-id="492261" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="tiger">
+            <a href="http://my.csdn.net/tiger" target="_blank"><img alt="tiger" class="avatar" src="http://avatar.profile.csdn.net/4/3/B/1_tiger.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/tiger" target="_blank">tiger</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">tiger</span>
+          </dd>
+          <dd title="总技术分：1485；总技术排名：19064">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：85.71%
+总发帖：56
+正常结帖：48
+未结帖：8">结帖率：85.71%</dd>
+          <div class="medal_blue " title="2000年1月 Delphi大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="tiger" data-floor="7">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492261">#7</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 11:01:00
+          </span>
+        </div>
+        <div class="post_body">
+            哦,&nbsp;这样的,&nbsp;谢谢zdg,&nbsp;ahfei
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-7'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492261/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492261/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492261/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492261/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492261/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492262" class="post  " data-post-id="492262" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info user_moderator">
+          <dt class="user_head" data-username="zdg">
+            <a href="http://my.csdn.net/zdg" target="_blank"><img alt="zdg" class="avatar" src="http://avatar.profile.csdn.net/8/2/2/1_zdg.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/zdg" target="_blank">zdg
+2000
+</a>
+            <img alt="版主" src="/assets/ico_BM-04df65c6033b993e1474606aa5ea59c5.png" title="扩充话题-股海浮沉版版主" />
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zdg</span>
+          </dd>
+          <dd title="总技术分：8966；总技术排名：3193">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：99.14%
+总发帖：116
+正常结帖：115
+未结帖：1">结帖率：99.14%</dd>
+          <div class="medal_jinshi " title="2000年 总版技术专家分年内排行榜第六"></div><div class="medal_silver " title="2000年1月 总版技术专家分月排行榜第二"></div><div class="medal_red count" title="2000年3月 Web 开发大版内专家分月排行榜第一
+2000年1月 VC/MFC大版内专家分月排行榜第一"><div class="medal_count">2</div></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="zdg" data-floor="8">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492262">#8</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 11:14:00
+          </span>
+        </div>
+        <div class="post_body">
+            Tyro需要什么方面的程序呢???<br />
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-8'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492262/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492262/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492262/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492262/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492262/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492264" class="post  " data-post-id="492264" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ahfei">
+            <a href="http://my.csdn.net/ahfei" target="_blank"><img alt="ahfei" class="avatar" src="http://avatar.profile.csdn.net/F/5/8/1_ahfei.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ahfei" target="_blank">ahfei</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ahfei</span>
+          </dd>
+          <dd title="总技术分：1178；总技术排名：23473">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="ahfei" data-floor="9">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492264">#9</a>
+              得分：25
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 11:22:00
+          </span>
+        </div>
+        <div class="post_body">
+            发了,查收。写得不好，你别笑话我：）
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-9'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492264/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492264/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492264/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492264/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492264/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492283" class="post  " data-post-id="492283" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Tyro">
+            <a href="http://my.csdn.net/Tyro" target="_blank"><img alt="Tyro" class="avatar" src="http://avatar.profile.csdn.net/B/7/F/1_tyro.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Tyro" target="_blank">Tyro</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Tyro</span>
+          </dd>
+          <dd title="总技术分：3348；总技术排名：8725">等级：<img alt="Blank" class="grade user4" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：92%
+总发帖：25
+正常结帖：23
+未结帖：2">结帖率：92%</dd>
+          <div class="medal_gold " title="2000年7月 总版技术专家分月排行榜第一"></div><div class="medal_red " title="2000年7月 Web 开发大版内专家分月排行榜第一"></div><div class="medal_blue " title="2000年7月 VB大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="Tyro" data-floor="10">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492283">#10</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 12:54:00
+          </span>
+        </div>
+        <div class="post_body">
+            再次感谢ZDG和AHFEI，我刚刚要学习ASP，随便一些什么小程序让我有个参考就可以。<br />
+分数不多，略表敬意。<br />
+我们要放假了，也祝你们春节愉快！
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-10'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492283/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492283/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492283/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492283/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492283/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492291" class="post  " data-post-id="492291" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info user_moderator">
+          <dt class="user_head" data-username="zdg">
+            <a href="http://my.csdn.net/zdg" target="_blank"><img alt="zdg" class="avatar" src="http://avatar.profile.csdn.net/8/2/2/1_zdg.jpg" /></a>
+          </dt>
+          <dd class="username">
+  
+2000
+          <a href="http://my.csdn.net/zdg" target="_blank">zdg</a>
+            <img alt="版主" src="/assets/ico_BM-04df65c6033b993e1474606aa5ea59c5.png" title="扩充话题-股海浮沉版版主" />
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zdg</span>
+          </dd>
+          <dd title="总技术分：8966；总技术排名：3193">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：99.14%
+总发帖：116
+正常结帖：115
+未结帖：1">结帖率：99.14%</dd>
+          <div class="medal_jinshi " title="2000年 总版技术专家分年内排行榜第六"></div><div class="medal_silver " title="2000年1月 总版技术专家分月排行榜第二"></div><div class="medal_red count" title="2000年3月 Web 开发大版内专家分月排行榜第一
+2000年1月 VC/MFC大版内专家分月排行榜第一"><div class="medal_count">2</div></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="zdg" data-floor="11">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492291">#11</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 13:17:00
+          </span>
+        </div>
+        <div class="post_body">
+            我给你email了一个用ASP写的bbs程序,&nbsp;祝学习愉快...
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-11'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492291/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492291/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492291/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492291/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492291/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-499287" class="post  " data-post-id="499287" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="newfish">
+            <a href="http://my.csdn.net/newfish" target="_blank"><img alt="newfish" class="avatar" src="http://avatar.profile.csdn.net/8/4/4/1_newfish.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/newfish" target="_blank">newfish</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">newfish</span>
+          </dd>
+          <dd title="总技术分：0；总技术排名：4353869">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：5
+正常结帖：5
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="newfish" data-floor="12">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-499287">#12</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-02-27 16:55:00
+          </span>
+        </div>
+        <div class="post_body">
+            zdg,能给我也发一个吗?谢谢!
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-12'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/499287/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/499287/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/499287/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/499287/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/499287/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-499288" class="post  " data-post-id="499288" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="newfish">
+            <a href="http://my.csdn.net/newfish" target="_blank"><img alt="newfish" class="avatar" src="http://avatar.profile.csdn.net/8/4/4/1_newfish.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/newfish" target="_blank">newfish</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">newfish</span>
+          </dd>
+          <dd title="总技术分：0；总技术排名：4353869">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：5
+正常结帖：5
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="newfish" data-floor="13">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-499288">#13</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-02-27 16:56:00
+          </span>
+        </div>
+        <div class="post_body">
+            zdg,能给我也发一个吗?谢谢!我的MAIL&nbsp;&nbsp;是newfish_xu@sina.com
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-13'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/499288/digg?topic_id=871" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/499288/bury?topic_id=871" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/499288/report?topic_id=871" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/499288/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/499288/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+</div>
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_up"><a href="#" class="drop_toggle drop_toggle_up btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; bottom:26px;">
+            <li><a href="/topics/871/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/871/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/871/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/871/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><
+1000
+a href="/topics/871/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/871/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/871/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/871/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/871/close" class="btn_1"><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=ASP" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div class="comt">
+  <div class="ad_l">
+    <!-- 回复框文字 (D6) -->
+    <ul><li><a href="http://g.csdn.net/5243760" target="_blank">【招】应届生,入职年薪5-10万</a></li><li><a href="http://g.csdn.net/5246043" target="_blank">市面上最出色的刀片式服务器</a></li><li><a href="http://g.csdn.net/5245460" target="_blank">IBM 以高效设计为灵魂</a></li><li><a href="http://g.csdn.net/5239181" target="_blank">首届携程大赛开始报名啦</a></li></ul>
+    <ul>
+        <li><a href="http://club.csdn.net/cmdn/bbs/topic/7282" class="title_style_black" target="_blank">台湾程序员游戏开发经历</a></li>
+        <li><a href="http://g.csdn.net/5243630" class="title_style_black" target="_blank">陈勇- 敏捷开发现状及发展之路</a></li>
+        <li><a href="http://bbs.csdn.net/topics/390399592" class="title_style_black" target="_blank">分享你的发现 赢下载积分</a></li>
+    </ul>
+    <div class="ad_new" style='padding: 0 0 50px 0'>
+      <h4><img alt="" src="http://csdnimg.cn/www/images/csdn_logo_blue.gif"></h4>
+      <p class='title'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">微软MVP申请</a>
+      </p>
+      <p class='con'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">CSDN与微软合作，长期为用户提供申请“微软最有价值专家”的平台，希望大家积极参与。</a>
+      </p>
+    </div>
+  </div>
+  <div class="reply">
+      <h3>本帖子已过去太久远了，不再提供回复功能。</h3>
+  </div>
+</div>
+
+
+
+<!-- 对联广告 -->
+<div id="ad_left" style="position:absolute;width:120px;top:184px;left:10px;display:none">
+  <a style="float:right;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaLeft.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+<div id="ad_right" style="position:absolute;width:120px;top:184px;right:10px;display:none">
+  <a style="float:left;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaRight.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+
+
+
+      <script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://csdnimg.cn/pig/pubjs/cnick.js"></script>
+
+      <img alt="Top_arrow" class="top_arrow" id="top_arrow" src="http://news.csdn.net//images/top_arrow.png" />
+    </div>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+  topics_page_js.show_page();
+    var bulletin_link = '<a href="http://download.csdn.net/detail/aa10531239/5231705" class="title_style_red title_style_bold" target="_blank">【免费】全新海外营销策论分享 </a>'
+    $('#post-forum-bulletin-1').html(bulletin_link);
+    var bulletin_link = '<a href="http://e.weibo.com/csdnsupport" class="title_style_red title_style_bold" target="_blank">欢迎关注CSDN产品客服微博</a>'
+    $('#post-forum-bulletin-2').html(bulletin_link);
+    var bulletin_link = '<a href="http://blog.csdn.net/csd
+138
+n_ask/article/details/8751993" class="title_style_blue title_style_bold" target="_blank">CSDN问答频道3月声望排行榜出炉</a>'
+    $('#post-forum-bulletin-3').html(bulletin_link);
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-bbs.js"></script>
+
+  </body>
+</html>
+
+0
+
+
+url:bbs.csdn.net/topics/872
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Vary: Accept-Encoding
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack)
+ETag: "8f21a3e61d2bfc5209319b999939c2a1"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _csdn_newbbs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWQ1N2RmODg3MjRiYWI1YTBhYTRjYjVhMGJiYzdjZWQzBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWQwTngxY3hsU3gwL1NhUUR1TmREelZCTFpDQk5kMS8yUkxxcDE3MEJxMW89BjsARg%3D%3D--babc498dda67819099a52da87057841a252eb732; path=/; HttpOnly
+Server: nginx/1.2.4 + Phusion Passenger (mod_rails/mod_rack)
+X-UA-Compatible: IE=Edge,chrome=1
+
+1e11
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>请教一个注册表问题？ - CSDN论坛 - CSDN.NET</title>
+    <link href="/assets/main-c65d6b72001ff03e3698df226a4e4ffe.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-e72cd54f9ebb368ac82561934f7b9c72.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="d0Nx1cxlSx0/SaQDuNdDzVBLZCBNd1/2RLqp170Bq1o=" name="csrf-token" />
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
+      <link href="/assets/sh-2bfcf65754f6d04d58df6ed87a3b6faf.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/sh-d778121d099d6e5ed8bb7ce42824a371.js" type="text/javascript"></script>
+  <script src="http://passport.csdn.net/content/loginbox/login.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="wraper">
+      <script type="text/javascript" src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"></script>
+
+        <!-- 页顶通栏 -->
+  <iframe id="Topic_Top" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicPageTop.htm"></iframe>
+
+      <div id="nav">
+        <a href="/" class="logo" target="_top"></a>
+        <div class="nav_list">
+          <a href="/home" title="CSDN论坛首页" class="home">首页</a><a href="/help" class=""><span>论坛帮助</span></a><a href="/rank" class=""><span>论坛牛人</span></a><a href="/map" class=""><span>论坛地图</span></a>
+        </div>
+
+        <div class="nav_sear">
+          <form action="http://so.csdn.net/search" target="_blank">
+            <input name="t" type="hidden" value="thread" />
+            <input name="q" type="text" />
+          </form>
+        </div>
+      </div>
+      <!--[if IE]>
+<style type="text/css" media="screen">
+.control_area .control .drop_menu{border:3px solid #ccc \9; _*border:3px solid #ccc;}
+</style>
+<![endif]-->
+
+  <!-- 页顶Button (D3) -->
+  <iframe id="frm_tt1" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyTop.htm?v=1"></iframe>
+  <script type="text/javascript">
+    setTimeout(function () { document.getElementById("frm_tt1").src = "/sda/TopicBodyTop.htm?v="+new Date().getTime(); }, 5000);
+  </script>
+
+<div class="bread_nav">
+  <a href="http://www.csdn.net" target="_blank">CSDN</a> <em>&gt;</em>
+  <a href="/" target="_blank">CSDN论坛</a> <em>&gt;</em>
+    <a href="/forums/Cpp" target="_blank">C/C++</a> <em>&gt;</em>
+  <a href="/forums/C" target="_blank">C语言</a>
+</div>
+
+<div class="flash_messages">
+</div>
+
+
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_down"><a href="#" class="drop_toggle btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; top:26px;">
+            <li><a href="/topics/872/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/872/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/872/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/872/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/872/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/872/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/872/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/872/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/872/close" class="btn_1" rel='nofollow'><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=C" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="detail_title">
+  <h1>
+      请教一个注册表问题？
+    <span>
+      [问题点数：100分，结帖人Kun_Huang]
+    </span>
+  </h1>
+  <div class="fr">
+    <select name="filter_posts">
+      <option value="default">不显示删除回复</option>
+      <option value="all">显示所有回复</option>
+      <option value="star">显示星级回复</option>
+      <option value="pointed">显示得分回复</option>
+      <option value="lz">只显示楼主</option>
+    </select>
+    <a href="http://my.csdn.net/my/favorite/miniadd?u=http://bbs.csdn.net/topics/872&amp;t=%E8%AF%B7%E6%95%99%E4%B8%80%E4%B8%AA%E6%B3%A8%E5%86%8C%E8%A1%A8%E9%97%AE%E9%A2%98%EF%BC%9F" id="fav" class="fav" rel='nofollow'><img src="/assets/nolines_plus.gif" alt="" />收藏</a>
+  </div>
+</div>
+<div class="detailed">
+    <table border="0" cellspacing="0" cellpadding="0" id="post-872" class="post topic " data-post-id="872" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Kun_Huang">
+            <a href="http://my.csdn.net/Kun_Huang" target="_blank"><img alt="Kun_Huang" class="avatar" src="http://avatar.profile.csdn.net/E/3/5/1_kun_huang.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Kun_Huang" target="_blank">Kun_Huang</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Kun_Huang</span>
+          </dd>
+          <dd title="总技术分：0；总技术排名：4451656">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info topic pointed" data-username="Kun_Huang" data-floor="">
+                <div class="data">
+            <strong class="fr">
+              楼主
+            </strong>
+          <span class="time">
+              发表于：
+            2000-01-25 10:31:00
+          </span>
+        </div>
+        <div class="post_body">
+            &nbsp;&nbsp;&nbsp;我从注册表中导出的*.reg文件中发现以下键值：<br />
+&nbsp;&nbsp;&nbsp;[HKEY_LOCAL_MACHINE\MYREG\MICROSOFT\RPC]<br />
+&nbsp;&nbsp;&nbsp;"DCOM&nbsp;Protocols"=hex(7):6e,6f,21,83,76,69,70,52,00,00<br />
+&nbsp;&nbsp;&nbsp;我只知道二进制的键值导出为文本后应该显示为<br />
+&nbsp;&nbsp;&nbsp;[HKEY_LOCAL_MACHINE\MYREG\MICROSOFT\RPC]<br />
+&nbsp;&nbsp;&nbsp;"DCOM&nbsp;Protocols"=hex:6e,6f,21,83,76,69,70,52,00,00<br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;不知哪位高手知道hex(7)代表什么意思?如何通过编程将此类键值写入注册表?<br />
+
+              <div class="tag ">
+              </div>
+        </div>
+          <!-- 主帖下Banner (D4) -->
+          <!-- 主帖下文字 (D5) -->
+          <iframe id="tad2" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyBottom.htm"></iframe>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+  <div class="fr">
+ 
+2000
+   <a href="/posts/872/digg?topic_id=872" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/872/bury?topic_id=872" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/872/report?topic_id=872" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/topics/872/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/topics/872/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+    <span class="return_time">回复次数：3</span>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+  <table border="0" cellspacing="0" cellpadding="0" id="post-492258" class="post  " data-post-id="492258" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="sean">
+            <a href="http://my.csdn.net/sean" target="_blank"><img alt="sean" class="avatar" src="http://avatar.profile.csdn.net/9/B/9/1_sean.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/sean" target="_blank">sean</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">sean</span>
+          </dd>
+          <dd title="总技术分：916；总技术排名：28544">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：56
+正常结帖：56
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="sean" data-floor="1">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492258">#1</a>
+              得分：10
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:57:00
+          </span>
+        </div>
+        <div class="post_body">
+            还有其他参数如6e,6f....代表什么？谢谢！
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-1'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492258/digg?topic_id=872" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492258/bury?topic_id=872" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492258/report?topic_id=872" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492258/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492258/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492596" class="post  " data-post-id="492596" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="929">
+            <a href="http://my.csdn.net/929" target="_blank"><img alt="929" class="avatar" src="http://avatar.profile.csdn.net/0/D/0/1_929.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/929" target="_blank">929</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">929</span>
+          </dd>
+          <dd title="总技术分：7526；总技术排名：3858">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：2
+正常结帖：2
+未结帖：0">结帖率：100%</dd>
+          <div class="medal_jinshi " title="2000年 总版技术专家分年内排行榜第七"></div><div class="medal_gold " title="2000年3月 总版技术专家分月排行榜第一"></div><div class="medal_copper " title="2000年4月 总版技术专家分月排行榜第三"></div><a href="/users/929/medals" class="more_medals" target="_blank">更多勋章</a>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="929" data-floor="2">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492596">#2</a>
+              得分：70
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-26 13:29:00
+          </span>
+        </div>
+        <div class="post_body">
+            这些键值是微软PRC下的DCOM&nbsp;PROTOCOLS的键值。可用REGEDIT打开注册表通过查找RPC可看到RPC值下出现这些数据。可双击DCOM&nbsp;PROTOCOLS看到这些键值的意思，好象是一些DLL的名字。要把一些注册信息导入可把注册信息双击导入，或用REGEDIT实现。再不然用程序写注册表也可实现。
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-2'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492596/digg?topic_id=872" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492596/bury?topic_id=872" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492596/report?topic_id=872" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492596/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492596/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-493331" class="post  " data-post-id="493331" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="aborigine">
+            <a href="http://my.csdn.net/aborigine" target="_blank"><img alt="aborigine" class="avatar" src="http://avatar.profile.csdn.net/7/3/8/1_aborigine.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/aborigine" target="_blank">aborigine</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">aborigine</span>
+          </dd>
+          <dd title="总技术分：519；总技术排名：43580">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：2
+正常结帖：2
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="aborigine" data-floor="3">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-493331">#3</a>
+              得分：20
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-29 14:42:00
+          </span>
+        </div>
+        <div class="post_body">
+            调用WIN32&nbsp;API:<br />
+RegCreateKeyEx创建新键<br />
+RegSetValueEx设置键值
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-3'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/493331/digg?topic_id=872" class="red digg" data-method="put" d
+1000
+ata-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/493331/bury?topic_id=872" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/493331/report?topic_id=872" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/493331/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/493331/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+</div>
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_up"><a href="#" class="drop_toggle drop_toggle_up btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; bottom:26px;">
+            <li><a href="/topics/872/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/872/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/872/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/872/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/872/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/872/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/872/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/872/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/872/close" class="btn_1"><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=C" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div class="comt">
+  <div class="ad_l">
+    <!-- 回复框文字 (D6) -->
+    <ul><li><a href="http://g.csdn.net/5243760" target="_blank">【招】应届生,入职年薪5-10万</a></li><li><a href="http://g.csdn.net/5246043" target="_blank">市面上最出色的刀片式服务器</a></li><li><a href="http://g.csdn.net/5245460" target="_blank">IBM 以高效设计为灵魂</a></li><li><a href="http://g.csdn.net/5239181" target="_blank">首届携程大赛开始报名啦</a></li></ul>
+    <ul>
+        <li><a href="http://club.csdn.net/cmdn/bbs/topic/7282" class="title_style_black" target="_blank">台湾程序员游戏开发经历</a></li>
+        <li><a href="http://g.csdn.net/5243630" class="title_style_black" target="_blank">陈勇- 敏捷开发现状及发展之路</a></li>
+        <li><a href="http://bbs.csdn.net/topics/390399592" class="title_style_black" target="_blank">分享你的发现 赢下载积分</a></li>
+    </ul>
+    <div class="ad_new" style='padding: 0 0 50px 0'>
+      <h4><img alt="" src="http://csdnimg.cn/www/images/csdn_logo_blue.gif"></h4>
+      <p class='title'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">微软MVP申请</a>
+      </p>
+      <p class='con'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">CSDN与微软合作，长期为用户提供申请“微软最有价值专家”的平台，希望大家积极参与。</a>
+      </p>
+    </div>
+  </div>
+  <div class="reply">
+      <h3>本帖子已过去太久远了，不再提供回复功能。</h3>
+  </div>
+</div>
+
+
+
+<!-- 对联广告 -->
+<div id="ad_left" style="position:absolute;width:120px;top:184px;left:10px;display:none">
+  <a style="float:right;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe
+74d
+ src="/sda/TopicDaLeft.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+<div id="ad_right" style="position:absolute;width:120px;top:184px;right:10px;display:none">
+  <a style="float:left;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaRight.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+
+
+
+      <script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://csdnimg.cn/pig/pubjs/cnick.js"></script>
+
+      <img alt="Top_arrow" class="top_arrow" id="top_arrow" src="http://news.csdn.net//images/top_arrow.png" />
+    </div>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+  topics_page_js.show_page();
+    var bulletin_link = '<a href="http://blog.csdn.net/blogdevteam/article/details/8770910" class="title_style_red title_style_bold" target="_blank">Java应用级产品开发平台APDPlat作者杨尚川专访</a>'
+    $('#post-forum-bulletin-1').html(bulletin_link);
+    var bulletin_link = '<a href="http://blog.csdn.net/csdn_ask/article/details/8751993" class="title_style_blue title_style_bold" target="_blank">CSDN问答频道3月声望排行榜出炉</a>'
+    $('#post-forum-bulletin-2').html(bulletin_link);
+    var bulletin_link = '<a href="http://download.csdn.net/detail/aa10531239/5231705" class="title_style_red title_style_bold" target="_blank">【免费】全新海外营销策论分享 </a>'
+    $('#post-forum-bulletin-3').html(bulletin_link);
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-bbs.js"></script>
+
+  </body>
+</html>
+
+0
+
+
+url:bbs.csdn.net/topics/873
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Vary: Accept-Encoding
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack)
+ETag: "6144994c5661de6bd5da2e7a92b8e549"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _csdn_newbbs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWViMjExMWY0MGNhNmE2MDRhYjFiOGJkNGRmNTMwOWFjBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTJ0TFFwdWtkck8wT3RWN0JUUFNSSFNMQTdwN3M3RUcrQXg0OExaaWFDSk09BjsARg%3D%3D--e49ee842f133302d9bd8fb6b9bbc4353798619ec; path=/; HttpOnly
+Server: nginx/1.2.4 + Phusion Passenger (mod_rails/mod_rack)
+X-UA-Compatible: IE=Edge,chrome=1
+
+1e11
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>cl编译的问题，请问如何解决？ - CSDN论坛 - CSDN.NET</title>
+    <link href="/assets/main-c65d6b72001ff03e3698df226a4e4ffe.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-e72cd54f9ebb368ac82561934f7b9c72.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="2tLQpukdrO0OtV7BTPSRHSLA7p7s7EG+Ax48LZiaCJM=" name="csrf-token" />
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
+      <link href="/assets/sh-2bfcf65754f6d04d58df6ed87a3b6faf.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/sh-d778121d099d6e5ed8bb7ce42824a371.js" type="text/javascript"></script>
+  <script src="http://passport.csdn.net/content/loginbox/login.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="wraper">
+      <script type="text/javascript" src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"></script>
+
+        <!-- 页顶通栏 -->
+  <iframe id="Topic_Top" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicPageTop.htm"></iframe>
+
+      <div id="nav">
+        <a href="/" class="logo" target="_top"></a>
+        <div class="nav_list">
+          <a href="/home" title="CSDN论坛首页" class="home">首页</a><a href="/help" class=""><span>论坛帮助</span></a><a href="/rank" class=""><span>论坛牛人</span></a><a href="/map" class=""><span>论坛地图</span></a>
+        </div>
+
+        <div class="nav_sear">
+          <form action="http://so.csdn.net/search" target="_blank">
+            <input name="t" type="hidden" value="thread" />
+            <input name="q" type="text" />
+          </form>
+        </div>
+      </div>
+      <!--[if IE]>
+<style type="text/css" media="screen">
+.control_area .control .drop_menu{border:3px solid #ccc \9; _*border:3px solid #ccc;}
+</style>
+<![endif]-->
+
+  <!-- 页顶Button (D3) -->
+  <iframe id="frm_tt1" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyTop.htm?v=1"></iframe>
+  <script type="text/javascript">
+    setTimeout(function () { document.getElementById("frm_tt1").src = "/sda/TopicBodyTop.htm?v="+new Date().getTime(); }, 5000);
+  </script>
+
+<div class="bread_nav">
+  <a href="http://www.csdn.net" target="_blank">CSDN</a> <em>&gt;</em>
+  <a href="/" target="_blank">CSDN论坛</a> <em>&gt;</em>
+    <a href="/forums/VC" target="_blank">VC/MFC</a> <em>&gt;</em>
+  <a href="/forums/VC_Basic" target="_blank">基础类</a>
+</div>
+
+<div class="flash_messages">
+</div>
+
+
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_down"><a href="#" class="drop_toggle btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; top:26px;">
+            <li><a href="/topics/873/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/873/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/873/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/873/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/873/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/873/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/873/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/873/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/873/close" class="btn_1" rel='nofollow'><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=VC_Basic" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="detail_title">
+  <h1>
+      cl编译的问题，请问如何解决？
+    <span>
+      [问题点数：50分，结帖人rober]
+    </span>
+  </h1>
+  <div class="fr">
+    <select name="filter_posts">
+      <option value="default">不显示删除回复</option>
+      <option value="all">显示所有回复</option>
+      <option value="star">显示星级回复</option>
+      <option value="pointed">显示得分回复</option>
+      <option value="lz">只显示楼主</option>
+    </select>
+    <a href="http://my.csdn.net/my/favorite/miniadd?u=http://bbs.csdn.net/topics/873&amp;t=cl%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%8C%E8%AF%B7%E9%97%AE%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F" id="fav" class="fav" rel='nofollow'><img src="/assets/nolines_plus.gif" alt="" />收藏</a>
+  </div>
+</div>
+<div class="detailed">
+    <table border="0" cellspacing="0" cellpadding="0" id="post-873" class="post topic " data-post-id="873" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="rober">
+            <a href="http://my.csdn.net/rober" target="_blank"><img alt="rober" class="avatar" src="http://avatar.profile.csdn.net/5/2/5/1_rober.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/rober" target="_blank">rober</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">rober</span>
+          </dd>
+          <dd title="总技术分：108；总技术排名：119682">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：21
+正常结帖：21
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info topic pointed" data-username="rober" data-floor="">
+                <div class="data">
+            <strong class="fr">
+              楼主
+            </strong>
+          <span class="time">
+              发表于：
+            2000-01-25 10:40:00
+          </span>
+        </div>
+        <div class="post_body">
+            我用VC++6编了几个cpp的文件。其中包含了iostream.h<br />
+但我用cl编译时，老是出现：<br />
+&nbsp;&nbsp;fate&nbsp;error&nbsp;c1034:iostream.h:&nbsp;no&nbsp;include&nbsp;path&nbsp;set<br />
+我的cpp文件放在f:\new&nbsp;folder目录下，同时我也用path命令行作了<br />
+F:\Microsoft&nbsp;Visual&nbsp;Studio\VC98\Include的路径设置。<br />
+请问如何解决？
+              <div class="tag ">
+              </div>
+        </div>
+          <!-- 主帖下Banner (D4) -->
+          <!-- 主帖下文字 (D5) -->
+          <iframe id="tad2" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyBottom.htm"></iframe>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+  <div class="fr">
+    <a href="/posts/873/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/873/bury?topic_id=873" clas
+2000
+s="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/873/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/topics/873/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/topics/873/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+    <span class="return_time">回复次数：5</span>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+  <table border="0" cellspacing="0" cellpadding="0" id="post-492257" class="post  " data-post-id="492257" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ace">
+            <a href="http://my.csdn.net/ace" target="_blank"><img alt="ace" class="avatar" src="http://avatar.profile.csdn.net/3/6/0/1_ace.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ace" target="_blank">ace</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ace</span>
+          </dd>
+          <dd title="总技术分：730；总技术排名：33858">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：23
+正常结帖：23
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="ace" data-floor="1">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492257">#1</a>
+              得分：50
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 10:57:00
+          </span>
+        </div>
+        <div class="post_body">
+            不光要set&nbsp;path&nbsp;还要&nbsp;set&nbsp;include=...<br />
+<br />
+所以要用命令行编译的话,我一般这样:<br />
+<br />
+command&nbsp;/e:1024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--确保有足够的环境空间<br />
+在执行&nbsp;\Microsoft&nbsp;Visual&nbsp;Studio\VC98\Bin&nbsp;下的<br />
+Vcvars32.bat,这个批处理里进行了需要的设定.
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-1'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492257/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492257/bury?topic_id=873" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492257/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492257/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492257/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492363" class="post  " data-post-id="492363" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="rober">
+            <a href="http://my.csdn.net/rober" target="_blank"><img alt="rober" class="avatar" src="http://avatar.profile.csdn.net/5/2/5/1_rober.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/rober" target="_blank">rober</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">rober</span>
+          </dd>
+          <dd title="总技术分：108；总技术排名：119682">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：21
+正常结帖：21
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="rober" data-floor="2">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492363">#2</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 17:30:00
+          </span>
+        </div>
+        <div class="post_body">
+            我用cl&nbsp;/LD参数编译几个cpp,&nbsp;它编译出来*.exp和*.lib文件，但我的初衷时编译成Dll文件。现在我该怎么做才能得到DLL文件？请问如何解决？
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-2'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492363/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492363/bury?topic_id=873" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492363/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492363/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492363/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492389" class="post  " data-post-id="492389" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="kxy">
+            <a href="http://my.csdn.net/kxy" target="_blank"><img alt="kxy" class="avatar" src="http://avatar.profile.csdn.net/F/1/1/1_kxy.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/kxy" target="_blank">kxy</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">kxy</span>
+          </dd>
+          <dd title="总技术分：12491；总技术排名：2146">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：98.21%
+总发帖：56
+正常结帖：55
+未结帖：1">结帖率：98.21%</dd>
+          <div class="medal_tanhua " title="2000年 总版技术专家分年内排行榜第三"></div><div class="medal_gold " title="2000年1月 总版技术专家分月排行榜第一"></div><div class="medal_silver " title="2000年6月 总版技术专家分月排行榜第二"></div><a href="/users/kxy/medals" class="more_medals" target="_blank">更多勋章</a>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="kxy" data-floor="3">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492389">#3</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 19:03:00
+          </span>
+        </div>
+        <div class="post_body">
+            ren&nbsp;*.exp&nbsp;*.dll
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-3'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492389/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492389/bury?topic_id=873" class="bury" data-method="put" data-remote="true" rel=
+2000
+"nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492389/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492389/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492389/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492395" class="post  " data-post-id="492395" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="blaise">
+            <a href="http://my.csdn.net/blaise" target="_blank"><img alt="blaise" class="avatar" src="http://avatar.profile.csdn.net/6/A/3/1_blaise.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/blaise" target="_blank">blaise</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">blaise</span>
+          </dd>
+          <dd title="总技术分：892；总技术排名：29122">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：7
+正常结帖：7
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="blaise" data-floor="4">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492395">#4</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 19:36:00
+          </span>
+        </div>
+        <div class="post_body">
+            yes.<br />
+include=C:\Program&nbsp;Files\Microsoft&nbsp;Visual&nbsp;Studio\VC98\atl\include;C:\Program&nbsp;Files\Microsoft&nbsp;Visual<br />
+Studio\VC98\mfc\include;C:\Program&nbsp;Files\Microsoft&nbsp;Visual&nbsp;Studio\VC98\include
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-4'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492395/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492395/bury?topic_id=873" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492395/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492395/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492395/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492505" class="post  " data-post-id="492505" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ace">
+            <a href="http://my.csdn.net/ace" target="_blank"><img alt="ace" class="avatar" src="http://avatar.profile.csdn.net/3/6/0/1_ace.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ace" target="_blank">ace</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ace</span>
+          </dd>
+          <dd title="总技术分：730；总技术排名：33858">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：23
+正常结帖：23
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="ace" data-floor="5">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492505">#5</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-26 10:13:00
+          </span>
+        </div>
+        <div class="post_body">
+            <br />
+/LD&nbsp;没错呀,没有报其他的错误么.<br />
+看看是不是少了什么lib
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-5'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492505/digg?topic_id=873" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492505/bury?topic_id=873" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492505/report?topic_id=873" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492505/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492505/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+</div>
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_up"><a href="#" class="drop_toggle drop_toggle_up btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; bottom:26px;">
+            <li><a href="/topics/873/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/873/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/873/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/873/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/873/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/873/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/873/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/873/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/873/close" class="btn_1"><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=VC_Basic" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div class="comt">
+  <div class="ad_l">
+    <!-- 回复框文字 (D6) -->
+    <ul><li><a href="http://g.csdn.net/5243760" target="_blank">【招】应届生,入职年薪5-10万</a></li><li><a href="http://g.csdn.net/5246043" target="_blank">市面上最出色的刀片式服务器</a></li><li><a href="http://g.csdn.net/5245460" target="_blank">IBM 以高效设计为灵魂</a></li><li><a href="http://g.csdn.net/5239181" target="_blank">首届携程大赛开始报名啦</a></li></ul>
+    <ul>
+        <li><a href="http://club.csdn.net/cmdn/bbs/topic/7282" class="title_style_black" target="_blank">台湾程序员游戏开发经历</a></li>
+        <li><a href="http://g.csdn.net/5243630" class="title_style_black" target="_blank">陈勇- 敏捷开发现状及发展之路</a></li>
+        <li><a href="http://bbs.csdn.net/topics/390399592" class="title_style_black" target="_blank">分享你的发现 赢下载积分</a></li>
+    </ul>
+ 
+aae
+   <div class="ad_new" style='padding: 0 0 50px 0'>
+      <h4><img alt="" src="http://csdnimg.cn/www/images/csdn_logo_blue.gif"></h4>
+      <p class='title'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">微软MVP申请</a>
+      </p>
+      <p class='con'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">CSDN与微软合作，长期为用户提供申请“微软最有价值专家”的平台，希望大家积极参与。</a>
+      </p>
+    </div>
+  </div>
+  <div class="reply">
+      <h3>本帖子已过去太久远了，不再提供回复功能。</h3>
+  </div>
+</div>
+
+
+
+<!-- 对联广告 -->
+<div id="ad_left" style="position:absolute;width:120px;top:184px;left:10px;display:none">
+  <a style="float:right;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaLeft.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+<div id="ad_right" style="position:absolute;width:120px;top:184px;right:10px;display:none">
+  <a style="float:left;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaRight.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+
+
+
+      <script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://csdnimg.cn/pig/pubjs/cnick.js"></script>
+
+      <img alt="Top_arrow" class="top_arrow" id="top_arrow" src="http://news.csdn.net//images/top_arrow.png" />
+    </div>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+  topics_page_js.show_page();
+    var bulletin_link = '<a href="http://blog.csdn.net/blogdevteam/article/details/8770910" class="title_style_red title_style_bold" target="_blank">Java应用级产品开发平台APDPlat作者杨尚川专访</a>'
+    $('#post-forum-bulletin-1').html(bulletin_link);
+    var bulletin_link = '<a href="http://bbs.csdn.net/topics/390417639" class="title_style_blue title_style_bold" target="_blank">【限时优惠】第五届云计算大会社区门票抢购</a>'
+    $('#post-forum-bulletin-2').html(bulletin_link);
+    var bulletin_link = '<a href="http://blog.csdn.net/csdn_ask/article/details/8751993" class="title_style_blue title_style_bold" target="_blank">CSDN问答频道3月声望排行榜出炉</a>'
+    $('#post-forum-bulletin-3').html(bulletin_link);
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-bbs.js"></script>
+
+  </body>
+</html>
+
+0
+
+
+url:bbs.csdn.net/topics/874
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Vary: Accept-Encoding
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack)
+ETag: "5d6a9700507d83d3ae801a5fdc739295"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _csdn_newbbs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTIwZWIyMDJiNjcxZmM3NzEwMzE5MzUxZTA4OGY0ZjYwBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU9qcDIzN2Z3UEFSY1lJVktyTjIxS3dPN0l0SWRzL2dSZ3BUTmZNeC9peWM9BjsARg%3D%3D--2025fe899f2cad5856e8fbb4ae00312431274acf; path=/; HttpOnly
+Server: nginx/1.2.4 + Phusion Passenger (mod_rails/mod_rack)
+X-UA-Compatible: IE=Edge,chrome=1
+
+5cfa
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>pb中使用指针 - CSDN论坛 - CSDN.NET</title>
+    <link href="/assets/main-c65d6b72001ff03e3698df226a4e4ffe.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-e72cd54f9ebb368ac82561934f7b9c72.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="Ojp237fwPARcYIVKrN21KwO7ItIds/gRgpTNfMx/iyc=" name="csrf-token" />
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
+      <link href="/assets/sh-2bfcf65754f6d04d58df6ed87a3b6faf.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/sh-d778121d099d6e5ed8bb7ce42824a371.js" type="text/javascript"></script>
+  <script src="http://passport.csdn.net/content/loginbox/login.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="wraper">
+      <script type="text/javascript" src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"></script>
+
+        <!-- 页顶通栏 -->
+  <iframe id="Topic_Top" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicPageTop.htm"></iframe>
+
+      <div id="nav">
+        <a href="/" class="logo" target="_top"></a>
+        <div class="nav_list">
+          <a href="/home" title="CSDN论坛首页" class="home">首页</a><a href="/help" class=""><span>论坛帮助</span></a><a href="/rank" class=""><span>论坛牛人</span></a><a href="/map" class=""><span>论坛地图</span></a>
+        </div>
+
+        <div class="nav_sear">
+          <form action="http://so.csdn.net/search" target="_blank">
+            <input name="t" type="hidden" value="thread" />
+            <input name="q" type="text" />
+          </form>
+        </div>
+      </div>
+      <!--[if IE]>
+<style type="text/css" media="screen">
+.control_area .control .drop_menu{border:3px solid #ccc \9; _*border:3px solid #ccc;}
+</style>
+<![endif]-->
+
+  <!-- 页顶Button (D3) -->
+  <iframe id="frm_tt1" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyTop.htm?v=1"></iframe>
+  <script type="text/javascript">
+    setTimeout(function () { document.getElementById("frm_tt1").src = "/sda/TopicBodyTop.htm?v="+new Date().getTime(); }, 5000);
+  </script>
+
+<div class="bread_nav">
+  <a href="http://www.csdn.net" target="_blank">CSDN</a> <em>&gt;</em>
+  <a href="/" target="_blank">CSDN论坛</a> <em>&gt;</em>
+    <a href="/forums/PowerBuilder" target="_blank">PowerBuilder</a> <em>&gt;</em>
+  <a href="/forums/PB_Basic" target="_blank">基础类</a>
+</div>
+
+<div class="flash_messages">
+</div>
+
+
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_down"><a href="#" class="drop_toggle btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; top:26px;">
+            <li><a href="/topics/874/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/874/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/874/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/874/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/874/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/874/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/874/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/874/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/874/close" class="btn_1" rel='nofollow'><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=PB_Basic" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="detail_title">
+  <h1>
+      pb中使用指针
+    <span>
+      [问题点数：500分，结帖人zhangjun]
+    </span>
+  </h1>
+  <div class="fr">
+    <select name="filter_posts">
+      <option value="default">不显示删除回复</option>
+      <option value="all">显示所有回复</option>
+      <option value="star">显示星级回复</option>
+      <option value="pointed">显示得分回复</option>
+      <option value="lz">只显示楼主</option>
+    </select>
+    <a href="http://my.csdn.net/my/favorite/miniadd?u=http://bbs.csdn.net/topics/874&amp;t=pb%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%8C%87%E9%92%88" id="fav" class="fav" rel='nofollow'><img src="/assets/nolines_plus.gif" alt="" />收藏</a>
+  </div>
+</div>
+<div class="detailed">
+    <table border="0" cellspacing="0" cellpadding="0" id="post-874" class="post topic " data-post-id="874" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="zhangjun">
+            <a href="http://my.csdn.net/zhangjun" target="_blank"><img alt="zhangjun" class="avatar" src="http://avatar.profile.csdn.net/5/B/8/1_zhangjun.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/zhangjun" target="_blank">zhangjun</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zhangjun</span>
+          </dd>
+          <dd title="总技术分：45；总技术排名：192941">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：9
+正常结帖：9
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info topic pointed" data-username="zhangjun" data-floor="">
+                <div class="data">
+            <strong class="fr">
+              楼主
+            </strong>
+          <span class="time">
+              发表于：
+            2000-01-25 11:07:00
+          </span>
+        </div>
+        <div class="post_body">
+            PB&nbsp;中调用API&nbsp;函数，参数为字节指针，用&nbsp;CHAR&nbsp;BUF[]&nbsp;调用后，BUF&nbsp;无内容
+              <div class="tag ">
+              </div>
+        </div>
+          <!-- 主帖下Banner (D4) -->
+          <!-- 主帖下文字 (D5) -->
+          <iframe id="tad2" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyBottom.htm"></iframe>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+  <div class="fr">
+    <a href="/posts/874/digg?topic_id=874" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/874/bury?topic_id=874" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/874/report?topic_id=874" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/topics/874/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/topics/874/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+    <span class="return_time">回复次数：4</span>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+  <table border="0" cellspacing="0" cellpadding="0" id="post-492296" class="post  " data-post-id="492296" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="rmh">
+            <a href="http://my.csdn.net/rmh" target="_blank"><img alt="rmh" class="avatar" src="http://avatar.profile.csdn.net/1/1/4/1_rmh.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/rmh" target="_blank">rmh</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">rmh</span>
+          </dd>
+          <dd title="总技术分：1279；总技术排名：21874">等级：<img alt="Blank" class="grade user3" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：35
+正常结帖：35
+未结帖：0">结帖率：100%</dd>
+          <div class="medal_red " title="2000年1月 PowerBuilder大版内专家分月排行榜第一"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="rmh" data-floor="1">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492296">#1</a>
+              得分：500
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 13:31:00
+          </span>
+        </div>
+        <div class="post_body">
+            PB中无指针类型，用数组必须先分配内存，如char&nbsp;buf[1024]
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-1'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492296/digg?topic_id=874" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492296/bury?topic_id=874" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492296/report?topic_id=874" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492296/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492296/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492326" class="post  " data-post-id="492326" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="zhangjun">
+            <a href="http://my.csdn.net/zhangjun" target="_blank"><img alt="zhangjun" class="avatar" src="http://avatar.profile.csdn.net/5/B/8/1_zhangjun.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/zhangjun" target="_blank">zhangjun</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">zhangjun</span>
+          </dd>
+          <dd title="总技术分：45；总技术排名：192941">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：9
+正常结帖：9
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="zhangjun" data-floor="2">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492326">#2</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 14:54:00
+          </span>
+        </div>
+        <div class="post_body">
+            已定义&nbsp;BUF&nbsp;长度：<br />
+char&nbsp;lc_buf[6]<br />
+rec_count=&nbsp;ReadComm("Com4",&nbsp;lc_buf,&nbsp;lparam&nbsp;)<br />
+lc_buf&nbsp;无内容！<br />
+<br />
+函数定义为：<br />
+Function&nbsp;ulong&nbsp;ReadComm(string&nbsp;portname,&nbsp;char&nbsp;buf[],&nbsp;ulong&nbsp;count)Library&nbsp;"FDCOMM.DLL"<br />
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-2'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492326/digg?topic_id=874" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492326/bury?topic_id=874" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492326/report?topic_id=874" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492326/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492326/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-502402" class="post  " data-post-id="502402" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="rmh">
+            <a href="http://my.csdn.net/rmh" target="_blank"><img alt="rmh" class="avatar" src="http://avatar.profile.csdn.net/1/1/4/1_rmh.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/rmh" target="_blank">rmh</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">rmh</span>
+          </dd>
+          <dd title="总技术分：1279；总技术排名：21874">等级：<img alt="Blank" class="grade user3" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：35
+正常结帖：35
+未结帖：0">结帖率：100%</dd>
+          <div class="medal_red " title="2000年1月 PowerBuilder大版内专家分月排行榜第一"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="rmh" data-floor="3">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-502402">#3</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-03-07 11:51:00
+          </span>
+        </div>
+        <div class="post_body">
+            To&nbsp;zhangjun:<br />
+你是不是解决了问题才给我的分，如果没有解决，请<br />
+改动如下：<br />
+char&nbsp;lc_buf[6]=space(6)<br />
+rec_count=&nbsp;ReadComm("Com4",&nbsp;lc_buf,&nbsp;lparam&nbsp;)<br />
+这样就不会错了。<br />
+如有问题给我来信，这里的Email，我的有邮箱收不到了。<br />
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-3'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/502402/digg?topic_id=874" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/502402/bury?topic_id=874" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/502402/report?topic_id=874" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/502402/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/502402/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-504127" class="post  " data-post-id="504127" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="sweetbomb">
+            <a href="http://my.csdn.net/sweetbomb" target="_blank"><img alt="sweetbomb" class="avatar" src="http://avatar.profile.csdn.net/1/2/6/1_sweetbomb.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/sweetbomb" target="_blank">sweetbomb</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">sweetbomb</span>
+          </dd>
+          <dd title="总技术分：0；总技术排名：5067271">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：0%
+总发帖：0
+正常结帖：0
+未结帖：0">结帖率：0%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="sweetbomb" data-floor="4">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-504127">#4</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-03-11 21:18:00
+          </span>
+        </div>
+        <div class="post_body">
+            声明时用"ref&nbsp;char&nbsp;buf[]"！
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-4'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/504127/digg?topic_id=874" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/504127/bury?topic_id=874" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/504127/report?topic_id=874" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/504127/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/504127/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+</div>
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_up"><a href="#" class="drop_toggle drop_toggle_up btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; bottom:26px;">
+            <li><a href="/topics/874/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/874/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/874/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/874/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/874/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/874/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/874/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/874/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/874/close" class="btn_1"><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=PB_Basic" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div class="comt">
+  <div class="ad_l">
+    <!-- 回复框文字 (D6) -->
+    <ul><li><a href="http://g.csdn.net/5243760" target="_blank">【招】应届生,入职年薪5-10万</a></li><li><a href="http://g.csdn.net/5246043" target="_blank">市面上最出色的刀片式服务器</a></li><li><a href="http://g.csdn.net/5245460" target="_blank">IBM 以高效设计为灵魂</a></li><li><a href="http://g.csdn.net/5239181" target="_blank">首届携程大赛开始报名啦</a></li></ul>
+    <ul>
+        <li><a href="http://club.csdn.net/cmdn/bbs/topic/7282" class="title_style_black" target="_blank">台湾程序员游戏开发经历</a></li>
+        <li><a href="http://g.csdn.net/5243630" class="title_style_black" target="_blank">陈勇- 敏捷开发现状及发展之路</a></li>
+        <li><a href="http://bbs.csdn.net/topics/390399592" class="title_style_black" target="_blank">分享你的发现 赢下载积分</a></li>
+    </ul>
+    <div class="ad_new" style='padding: 0 0 50px 0'>
+      <h4><img alt="" src="http://csdnimg.cn/www/images/csdn_logo_blue.gif"></h4>
+      <p class='title'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">微软MVP申请</a>
+      </p>
+      <p class='con'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">CSDN与微软合作，长期为用户提供申请“微软最有价值专家”的平台，希望大家积极参与。</a>
+      </p>
+    </div>
+  </div>
+  <div class="reply">
+      <h3>本帖子已过去太久远了，不再提供回复功能。</h3>
+  </div>
+</div>
+
+
+
+<!-- 对联广告 -->
+<div id="ad_left" style="position:absolute;width:120px;top:184px;left:10px;display:none">
+  <a style="float:right;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaLeft.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+<div id="ad_right" style="position:absolute;width:120px;top:184px;right:10px;display:none">
+  <a style="float:left;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaRight.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+
+
+
+      <script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://csdnimg.cn/pig/pubjs/cnick.js"></script>
+
+      <img alt="Top_arrow" class="top_arrow" id="top_arrow" src="http://news.csdn.net//images/top_arrow.png" />
+    </div>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+  topics_page_js.show_page();
+    var bulletin_link = '<a href="http://bbs.csdn.net/topics/390417639" class="title_style_blue title_style_bold" target="_blank">【限时优惠】第五届云计算大会社区门票抢购</a>'
+    $('#post-forum-bulletin-1').html(bulletin_link);
+    var bulletin_link = '<a href="http://e.weibo.com/csdnsupport" class="title_style_red title_style_bold" target="_blank">欢迎关注CSDN产品客服微博</a>'
+    $('#post-forum-bulletin-2').html(bulletin_link);
+    var bulletin_link = '<a href="http://blog.csdn.net/csdn_ask/article/details/8751993" class="title_style_blue title_style_bold" target="_blank">CSDN问答频道3月声望排行榜出炉</a>'
+    $('#post-forum-bulletin-3').html(bulletin_link);
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-bbs.js"></script>
+
+  </body>
+</html>
+
+0
+
+
+url:bbs.csdn.net/topics/875
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+Vary: Accept-Encoding
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack)
+ETag: "6f35c7832dd37093b2dc64a1a91089e6"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _csdn_newbbs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJWJiZGQ2ODBlNDFmOWM2ZjU1M2Y4NjAzM2RhNzZhZjJkBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMWhnNzRkbkt5NFJVL0dhYlVHQ3ZxWUFLZGliaUJXSUVmR21jclljL1BtQnc9BjsARg%3D%3D--e5a7a227f8c2fe19474485a32f6077a2af6e4af8; path=/; HttpOnly
+Server: nginx/1.2.4 + Phusion Passenger (mod_rails/mod_rack)
+X-UA-Compatible: IE=Edge,chrome=1
+
+1e11
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>如何在C/S下用DELPHI 向MSSQL 6.5~7.0 追加数据？ - CSDN论坛 - CSDN.NET</title>
+    <link href="/assets/main-c65d6b72001ff03e3698df226a4e4ffe.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-e72cd54f9ebb368ac82561934f7b9c72.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="hg74dnKy4RU/GabUGCvqYAKdibiBWIEfGmcrYc/PmBw=" name="csrf-token" />
+    <link href="http://csdnimg.cn/www/images/favicon.ico" rel="SHORTCUT ICON">
+
+      <link href="/assets/sh-2bfcf65754f6d04d58df6ed87a3b6faf.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="/assets/sh-d778121d099d6e5ed8bb7ce42824a371.js" type="text/javascript"></script>
+  <script src="http://passport.csdn.net/content/loginbox/login.js" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div class="wraper">
+      <script type="text/javascript" src="http://csdnimg.cn/pubnav/js/pub_topnav_2011.js"></script>
+
+        <!-- 页顶通栏 -->
+  <iframe id="Topic_Top" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicPageTop.htm"></iframe>
+
+      <div id="nav">
+        <a href="/" class="logo" target="_top"></a>
+        <div class="nav_list">
+          <a href="/home" title="CSDN论坛首页" class="home">首页</a><a href="/help" class=""><span>论坛帮助</span></a><a href="/rank" class=""><span>论坛牛人</span></a><a href="/map" class=""><span>论坛地图</span></a>
+        </div>
+
+        <div class="nav_sear">
+          <form action="http://so.csdn.net/search" target="_blank">
+            <input name="t" type="hidden" value="thread" />
+            <input name="q" type="text" />
+          </form>
+        </div>
+      </div>
+      <!--[if IE]>
+<style type="text/css" media="screen">
+.control_area .control .drop_menu{border:3px solid #ccc \9; _*border:3px solid #ccc;}
+</style>
+<![endif]-->
+
+  <!-- 页顶Button (D3) -->
+  <iframe id="frm_tt1" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyTop.htm?v=1"></iframe>
+  <script type="text/javascript">
+    setTimeout(function () { document.getElementById("frm_tt1").src = "/sda/TopicBodyTop.htm?v="+new Date().getTime(); }, 5000);
+  </script>
+
+<div class="bread_nav">
+  <a href="http://www.csdn.net" target="_blank">CSDN</a> <em>&gt;</em>
+  <a href="/" target="_blank">CSDN论坛</a> <em>&gt;</em>
+    <a href="/forums/Delphi" target="_blank">Delphi</a> <em>&gt;</em>
+  <a href="/forums/DelphiVCL" target="_blank">VCL组件开发及应用</a>
+</div>
+
+<div class="flash_messages">
+</div>
+
+
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_down"><a href="#" class="drop_toggle btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; top:26px;">
+            <li><a href="/topics/875/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/875/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/875/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/875/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/875/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/875/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/875/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/875/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/875/close" class="btn_1" rel='nofollow'><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=DelphiVCL" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+<div class="detail_title">
+  <h1>
+      如何在C/S下用DELPHI 向MSSQL 6.5~7.0 追加数据？
+    <span>
+      [问题点数：50分，结帖人YF22]
+    </span>
+  </h1>
+  <div class="fr">
+    <select name="filter_posts">
+      <option value="default">不显示删除回复</option>
+      <option value="all">显示所有回复</option>
+      <option value="star">显示星级回复</option>
+      <option value="pointed">显示得分回复</option>
+      <option value="lz">只显示楼主</option>
+    </select>
+    <a href="http://my.csdn.net/my/favorite/miniadd?u=http://bbs.csdn.net/topics/875&amp;t=%E5%A6%82%E4%BD%95%E5%9C%A8C/S%E4%B8%8B%E7%94%A8DELPHI%20%E5%90%91MSSQL%206.5~7.0%20%E8%BF%BD%E5%8A%A0%E6%95%B0%E6%8D%AE%EF%BC%9F" id="fav" class="fav" rel='nofollow'><img src="/assets/nolines_plus.gif" alt="" />收藏</a>
+  </div>
+</div>
+<div class="detailed">
+    <table border="0" cellspacing="0" cellpadding="0" id="post-875" class="post topic " data-post-id="875" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="YF22">
+            <a href="http://my.csdn.net/YF22" target="_blank"><img alt="YF22" class="avatar" src="http://avatar.profile.csdn.net/B/1/C/1_yf22.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/YF22" target="_blank">YF22</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">YF22</span>
+          </dd>
+          <dd title="总技术分：0；总技术排名：1974377">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：2
+正常结帖：2
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info topic pointed" data-username="YF22" data-floor="">
+                <div class="data">
+            <strong class="fr">
+              楼主
+            </strong>
+          <span class="time">
+              发表于：
+            2000-01-25 11:12:00
+          </span>
+        </div>
+        <div class="post_body">
+            各位高手，我粗学DELPHI&nbsp;used&nbsp;in&nbsp;c/s&nbsp;下，如何编写在多台机器下同时用的DELPHI<br />
+向MSSQL数据库APPEND&nbsp;OR&nbsp;DELETE&nbsp;DATA，请多指教！
+              <div class="tag ">
+              </div>
+        </div>
+          <!-- 主帖下Banner (D4) -->
+          <!-- 主帖下文字 (D5) -->
+          <iframe id="tad2" marginwidth="0" marginheight="0" frameborder="0" scrolling="no" width="100%" src="/sda/TopicBodyBottom.htm"></iframe>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+  <div class="fr">
+    <a href="/posts/875/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/875/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/875/
+2000
+report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/topics/875/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/topics/875/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+    <span class="return_time">回复次数：9</span>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+  <table border="0" cellspacing="0" cellpadding="0" id="post-492269" class="post  " data-post-id="492269" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ahfei">
+            <a href="http://my.csdn.net/ahfei" target="_blank"><img alt="ahfei" class="avatar" src="http://avatar.profile.csdn.net/F/5/8/1_ahfei.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ahfei" target="_blank">ahfei</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ahfei</span>
+          </dd>
+          <dd title="总技术分：1178；总技术排名：23473">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="ahfei" data-floor="1">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492269">#1</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 11:51:00
+          </span>
+        </div>
+        <div class="post_body">
+            有问题吗？没什么困难呀！
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-1'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492269/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492269/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492269/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492269/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492269/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492270" class="post  " data-post-id="492270" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="hawkview">
+            <a href="http://my.csdn.net/hawkview" target="_blank"><img alt="hawkview" class="avatar" src="http://avatar.profile.csdn.net/9/0/B/1_hawkview.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/hawkview" target="_blank">hawkview</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">hawkview</span>
+          </dd>
+          <dd title="总技术分：190；总技术排名：85750">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：24
+正常结帖：24
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="hawkview" data-floor="2">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492270">#2</a>
+              得分：5
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 11:59:00
+          </span>
+        </div>
+        <div class="post_body">
+            服务器：create&nbsp;stored&nbsp;procedure&nbsp;sp_sample&nbsp;@firstpara&nbsp;int&nbsp;,@secondpara&nbsp;int&nbsp;as&nbsp;&nbsp;<br />
+insert&nbsp;into&nbsp;tablename&nbsp;values&nbsp;@firstpara,@secondpara<br />
+客户端：<br />
+storedprocddure1.prepare;<br />
+storedprocedure1.parambyname(@firstpara).asinteger:=strtoint(edit1.text);<br />
+storedprocedure1.parambyname(@secondpara).asinteger:=strtoint(edit1.text);<br />
+storedprocedure1.open;
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-2'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492270/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492270/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492270/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492270/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492270/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492278" class="post  " data-post-id="492278" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="LaoZheng">
+            <a href="http://my.csdn.net/LaoZheng" target="_blank"><img alt="LaoZheng" class="avatar" src="http://avatar.profile.csdn.net/6/4/6/1_laozheng.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/LaoZheng" target="_blank">LaoZheng</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">LaoZheng</span>
+          </dd>
+          <dd title="总技术分：2343；总技术排名：12527">等级：<img alt="Blank" class="grade user3" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：96.77%
+总发帖：93
+正常结帖：90
+未结帖：3">结帖率：96.77%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="LaoZheng" data-floor="3">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492278">#3</a>
+              得分：10
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 12:40:00
+          </span>
+        </div>
+        <div class="post_body">
+            服务器：create&nbsp;stored&nbsp;procedure&nbsp;sp_sample&nbsp;@firstpara&nbsp;int&nbsp;,@secondpara&nbsp;int&nbsp;as&nbsp;<br />
+insert&nbsp;into&nbsp;tablename&nbsp;values&nbsp;@firstpara,@secondpara<br />
+客户端：<br />
+query.close;<br />
+Query.SQL.Clear;<br />
+Query.SQL.add('insert&nbsp;into&nbsp;tablename(field1,field2)&nbsp;values(:v1,:v2)');<br />
+Query.parambyname(':V1').asinteger:=strtoint(edit1.text);<br />
+Query.parambyname(':v2').asinteger:=strtoint(edit1.text);<br />
+Query.ExecSQL;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-3'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492278/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492278/bury?topic_id=875" class="bury
+2000
+" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492278/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492278/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492278/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492279" class="post  " data-post-id="492279" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="LaoZheng">
+            <a href="http://my.csdn.net/LaoZheng" target="_blank"><img alt="LaoZheng" class="avatar" src="http://avatar.profile.csdn.net/6/4/6/1_laozheng.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/LaoZheng" target="_blank">LaoZheng</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">LaoZheng</span>
+          </dd>
+          <dd title="总技术分：2343；总技术排名：12527">等级：<img alt="Blank" class="grade user3" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：96.77%
+总发帖：93
+正常结帖：90
+未结帖：3">结帖率：96.77%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info pointed" data-username="LaoZheng" data-floor="4">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492279">#4</a>
+              得分：5
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 12:42:00
+          </span>
+        </div>
+        <div class="post_body">
+            query.close;<br />
+Query.SQL.Clear;<br />
+Query.SQL.add('insert&nbsp;into&nbsp;tablename(field1,field2)&nbsp;values(:v1,:v2)');<br />
+Query.parambyname(':V1').asinteger:=strtoint(edit1.text);<br />
+Query.parambyname(':v2').asinteger:=strtoint(edit1.text);<br />
+Query.ExecSQL;<br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp;<br />
+
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-4'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492279/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492279/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492279/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492279/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492279/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492300" class="post  " data-post-id="492300" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Michael">
+            <a href="http://my.csdn.net/Michael" target="_blank"><img alt="Michael" class="avatar" src="http://avatar.profile.csdn.net/0/A/C/1_michael.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Michael" target="_blank">Michael</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Michael</span>
+          </dd>
+          <dd title="总技术分：340；总技术排名：58713">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：14
+正常结帖：14
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="Michael" data-floor="5">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492300">#5</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 13:42:00
+          </span>
+        </div>
+        <div class="post_body">
+            用组件如TTable、TQuery及SQL语句都可以，仅要注意后端的数据库SQL&nbsp;SERVER的设置就可，当然C端要注意错误的检测。
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-5'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492300/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492300/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492300/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492300/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492300/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492318" class="post  " data-post-id="492318" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="ahfei">
+            <a href="http://my.csdn.net/ahfei" target="_blank"><img alt="ahfei" class="avatar" src="http://avatar.profile.csdn.net/F/5/8/1_ahfei.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/ahfei" target="_blank">ahfei</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">ahfei</span>
+          </dd>
+          <dd title="总技术分：1178；总技术排名：23473">等级：<img alt="Blank" class="grade user2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="ahfei" data-floor="6">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492318">#6</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 14:31:00
+          </span>
+        </div>
+        <div class="post_body">
+            有本书非常好，是李维写的《delphi3入门到精通》宇航出版社，是讲数据库开发比较好的一本书
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-6'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492318/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492318/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492318/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492318/edit" class="fancybox" rel
+2000
+="nofollow">编辑</a>
+          <a href="/posts/492318/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492345" class="post  " data-post-id="492345" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Powerbird">
+            <a href="http://my.csdn.net/Powerbird" target="_blank"><img alt="Powerbird" class="avatar" src="http://avatar.profile.csdn.net/B/1/7/1_powerbird.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Powerbird" target="_blank">Powerbird</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Powerbird</span>
+          </dd>
+          <dd title="总技术分：20；总技术排名：279960">等级：<img alt="Blank" class="grade user1" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：1
+正常结帖：1
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="Powerbird" data-floor="7">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492345">#7</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 16:11:00
+          </span>
+        </div>
+        <div class="post_body">
+            最好还是用Media或第三方控件以Client/Server模式编程。这样可以免除维护客户端的麻烦。
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-7'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492345/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492345/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492345/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492345/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492345/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492381" class="post  " data-post-id="492381" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="Firing_Sky">
+            <a href="http://my.csdn.net/Firing_Sky" target="_blank"><img alt="Firing_Sky" class="avatar" src="http://avatar.profile.csdn.net/2/3/A/1_firing_sky.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/Firing_Sky" target="_blank">Firing_Sky</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">Firing_Sky</span>
+          </dd>
+          <dd title="总技术分：7199；总技术排名：4058">等级：<img alt="Blank" class="grade user5" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：98.82%
+总发帖：85
+正常结帖：84
+未结帖：1">结帖率：98.82%</dd>
+          <div class="medal_silver " title="2000年2月 总版技术专家分月排行榜第二"></div><div class="medal_yellow " title="2000年2月 VB大版内专家分月排行榜第二"></div><div class="medal_blue " title="2000年2月 Delphi大版内专家分月排行榜第三"></div>
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info " data-username="Firing_Sky" data-floor="8">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492381">#8</a>
+              得分：0
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-25 18:45:00
+          </span>
+        </div>
+        <div class="post_body">
+            对你来说，修改的仅仅是数据源而已啊！<br />
+记得在带参数时要使用<br />
+SQL.Unprepare<br />
+SQL.Prepare
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-8'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492381/digg?topic_id=875" class="red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492381/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492381/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492381/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492381/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" id="post-492455" class="post  " data-post-id="492455" data-is-topic-locked="false">
+  <colgroup><col width="180" /><col /></colgroup>
+  <tr>
+      <td rowspan="2" valign="top" class="wirter">
+                <dl class="user_info ">
+          <dt class="user_head" data-username="agui">
+            <a href="http://my.csdn.net/agui" target="_blank"><img alt="agui" class="avatar" src="http://avatar.profile.csdn.net/A/C/0/1_agui.jpg" /></a>
+          </dt>
+          <dd class="username">
+            <a href="http://my.csdn.net/agui" target="_blank">agui</a>
+            
+          </dd>
+          <dd class="nickname">
+            <span class="name2nick">agui</span>
+          </dd>
+          <dd title="总技术分：11829；总技术排名：2333">等级：<img alt="Blank" class="grade star2" src="/assets/blank.gif" /></dd>
+          <dd class="close_rate" title="用户结帖率：100%
+总发帖：18
+正常结帖：18
+未结帖：0">结帖率：100%</dd>
+          
+        </dl>
+
+      </td>
+      <td valign="top" class="post_info star pointed" data-username="agui" data-floor="9">
+                <div class="data">
+            <span class="fr">
+              <a href="#post-492455">#9</a>
+              得分：30
+            </span>
+          <span class="time">
+              回复于：
+            2000-01-26 01:45:00
+          </span>
+        </div>
+        <div class="post_body">
+            不好意思，灌水！<br />
+你可能是想怎样解决多用户并发问题，不知道我有没猜对？<br />
+<br />
+如果用SQL，在Delphi中可以用TQuery构件达到，只要往TQuery的SQL属性中加入SQL语句(insert&nbsp;into&nbsp;...)，然后执行它的ExecSQL方法即可。<br />
+也可以用Cursor的方法，用TTable.AppendField(...)然后TTable.Post。<br />
+<br />
+也许你真正想解决的是怎样使键值不冲突，如果用TQuery，你可以写成这样：<br />
+insert&nbsp;into&nbsp;tablename&nbsp;(keyfieldname,&nbsp;...)&nbsp;values&nbsp;((select&nbsp;max(keyfield)&nbsp;from&nbsp;tablename)+1,&nbsp;...)<br />
+(不好意思，我没试过在将子查询的结果特别是它的运算结果放在SQL语句中，我明天就去试)<br />
+<br />
+如果都不行，我们一贯采取的策略是先取得最大的键值，然后变化(数值就是+1)，用于新的键值。
+        </div>
+
+      </td>
+    </tr>
+    <tr>
+      <td valign="bottom">
+          <div class="control">
+    <div id='post-forum-bulletin-9'  class='fl'>
+    </div>
+  <div class="fr">
+    <a href="/posts/492455/digg?topic_id=875" class=
+1000
+"red digg" data-method="put" data-remote="true" rel="nofollow">对我有用[0]</a>
+    <a href="/posts/492455/bury?topic_id=875" class="bury" data-method="put" data-remote="true" rel="nofollow">丢个板砖[0]</a>
+    <a href="#quote" class="quote">引用</a> |
+    <a href="/posts/492455/report?topic_id=875" class="fancybox red" rel="nofollow">举报 </a> |
+    <span class="manage-toggle">
+      <div class="manage" style="display: none;">
+          <a href="/posts/492455/edit" class="fancybox" rel="nofollow">编辑</a>
+          <a href="/posts/492455/destroy_edit" class="fancybox" rel="nofollow">删除</a>
+      </div>
+      管理
+    </span>
+  </div>
+</div>
+
+      </td>
+  </tr>
+</table>
+
+</div>
+<div class="control_area">
+  <form name="form" id="form">
+    
+    <div class="control">
+      <ul>
+        <li class="drop_menu_wrap drop_menu_up"><a href="#" class="drop_toggle drop_toggle_up btn_1"><span><img src="/assets/ico_set.gif" alt="" />管理菜单<img src="/assets/arrow_down.gif" alt="" /></span></a>
+        <ul class="drop_menu" style="display: none; bottom:26px;">
+            <li><a href="/topics/875/top" class="fancybox" rel="nofollow">置顶</a></li>
+
+  <li><a href="/topics/875/recommend" data-confirm="确定要将该帖推荐(加精)吗？被推荐的帖子将给帖主奖励可用分88分!" data-method="put" rel="nofollow">推荐</a></li>
+
+  <li><a href="/topics/875/lock" class="fancybox" rel="nofollow">锁定</a></li>
+
+<li><a href="/topics/875/move" class="fancybox" rel="nofollow">移动</a></li>
+<li><a href="/topics/875/edit" class="fancybox" rel="nofollow">编辑</a></li>
+<li><a href="/topics/875/destroy_edit" class="fancybox" rel="nofollow">删除</a></li>
+<li><a href="/topics/875/add_point" class="fancybox" rel="nofollow">帖子加分</a></li>
+  <li><a href="/topics/875/highlight" class="fancybox" rel="nofollow">帖子高亮</a></li>
+
+        </ul>
+        </li>
+        <li><a href="/topics/875/close" class="btn_1"><span><img src="/assets/ico_over.gif" alt="" />结帖</span></a></li>
+        <li><a href="/topics/new?forum_id=DelphiVCL" class="btn_1"><span><img src="/assets/ico_publish.gif" alt="" />发帖</span></a></li>
+        <li><a href="#new_post" class="btn_1"><span><img src="/assets/ico_return.gif" alt="" />回复</span></a></li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+<div class="comt">
+  <div class="ad_l">
+    <!-- 回复框文字 (D6) -->
+    <ul><li><a href="http://g.csdn.net/5243760" target="_blank">【招】应届生,入职年薪5-10万</a></li><li><a href="http://g.csdn.net/5246043" target="_blank">市面上最出色的刀片式服务器</a></li><li><a href="http://g.csdn.net/5245460" target="_blank">IBM 以高效设计为灵魂</a></li><li><a href="http://g.csdn.net/5239181" target="_blank">首届携程大赛开始报名啦</a></li></ul>
+    <ul>
+        <li><a href="http://club.csdn.net/cmdn/bbs/topic/7282" class="title_style_black" target="_blank">台湾程序员游戏开发经历</a></li>
+        <li><a href="http://g.csdn.net/5243630" class="title_style_black" target="_blank">陈勇- 敏捷开发现状及发展之路</a></li>
+        <li><a href="http://bbs.csdn.net/topics/390399592" class="title_style_black" target="_blank">分享你的发现 赢下载积分</a></li>
+    </ul>
+    <div class="ad_new" style='padding: 0 0 50px 0'>
+      <h4><img alt="" src="http://csdnimg.cn/www/images/csdn_logo_blue.gif"></h4>
+      <p class='title'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">微软MVP申请</a>
+      </p>
+      <p class='con'>
+      <a href="http://bbs.csdn.net/topics/390397080" target="_blank">CSDN与微软合作，长期为用户提供申请“微软最有价值专家”的平台，希望大家积极参与。</a>
+      </p>
+    </div>
+  </div>
+  <div class="reply">
+      <h3>本帖子已过去太久远了，不再提供回复功能。</h3>
+  </div>
+</div>
+
+
+
+<!-- 对联广告 -->
+<div id="ad_left" style="position:absolute;width:120px;top:184px;left:10px;display:none">
+  <a style="float:right;" href="#" onclick="javascript:this.parentNode.style.display='none'
+761
+;return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaLeft.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+<div id="ad_right" style="position:absolute;width:120px;top:184px;right:10px;display:none">
+  <a style="float:left;" href="#" onclick="javascript:this.parentNode.style.display='none';return false;">[关闭]</a>
+  <iframe src="/sda/TopicDaRight.htm?v201203051313" frameborder="0" height="600" width="120" scrolling="no"></iframe>
+</div>
+
+
+
+      <script type="text/javascript" src="http://csdnimg.cn/pubfooter/js/publib_footer.js"></script>
+<script type="text/javascript" src="http://www.csdn.net/ui/scripts/Csdn/counter.js"></script>
+<script type="text/javascript" src="http://csdnimg.cn/pig/pubjs/cnick.js"></script>
+
+      <img alt="Top_arrow" class="top_arrow" id="top_arrow" src="http://news.csdn.net//images/top_arrow.png" />
+    </div>
+    <script type="text/javascript" language="javascript" charset="utf-8">
+//<![CDATA[
+$(function(){
+  topics_page_js.show_page();
+    var bulletin_link = '<a href="http://download.csdn.net/detail/aa10531239/5231705" class="title_style_red title_style_bold" target="_blank">【免费】全新海外营销策论分享 </a>'
+    $('#post-forum-bulletin-1').html(bulletin_link);
+    var bulletin_link = '<a href="http://bbs.csdn.net/topics/390417639" class="title_style_blue title_style_bold" target="_blank">【限时优惠】第五届云计算大会社区门票抢购</a>'
+    $('#post-forum-bulletin-2').html(bulletin_link);
+    var bulletin_link = '<a href="http://blog.csdn.net/csdn_ask/article/details/8751993" class="title_style_blue title_style_bold" target="_blank">CSDN问答频道3月声望排行榜出炉</a>'
+    $('#post-forum-bulletin-3').html(bulletin_link);
+});
+//]]>
+</script>
+<script type="text/javascript" src="http://ad.csdn.net/scripts/ad-bbs.js"></script>
+
+  </body>
+</html>
+
+0
+

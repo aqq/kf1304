@@ -35,7 +35,8 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <sys/stat.h>
-
+//disk
+#include <sys/statfs.h>
 using namespace std;
 
 #define DEBUG
@@ -818,7 +819,28 @@ public:
 		}
 		return 1;
 	}
+	//===rep special
+	float available_disk_space() {
+		struct statfs diskInfo;
+		statfs("/", &diskInfo);
+		unsigned long long blocksize = diskInfo.f_bsize; //每个block里包含的字节数
+		unsigned long long availableDisk = diskInfo.f_bavail * blocksize; //可用空间大小
+		unsigned int availableDisk2 = availableDisk >> 20;
+		float availableDisk_ft = availableDisk2 / 1024.0;
+		//cout << "availableDisk2=" << availableDisk_ft << endl;
+		return availableDisk_ft;
 
+	}
+	void disk_space_test() {
+		available_disk_space();
+	}
+	//
+	//num to string
+	string float2str(float i) {
+		stringstream ss;
+		ss << i;
+		return ss.str();
+	}
 	//==========================================
 	// . connect to server
 	/*

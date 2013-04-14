@@ -27,11 +27,24 @@
 #include "map"
 #include "vector"
 #include "GlobalHelper.h"
+#include "Cpp2mysql.h"
+
 #define DEBUG
 using namespace std;
 
 namespace poseidon {
-
+const string s_moudle = "moudle";
+const string s_socket = "socket";
+const string s_normal = "normal";
+const string s_sql = "sql";
+const string s_work = "task";
+const int S2M_REQUEST = 1;
+const int M2S_SLEEP = 2;
+const int M2S_UPDATE = 3;
+const int M2S_URL = 4;
+const int S2R_STORE = 5;
+const int R2S_FEEDBACK = 6;
+const int M2S_STORE = 7;
 struct site_in_slave {
 	string site_name;
 	int good;
@@ -63,6 +76,8 @@ struct command {
 	//int task_id;
 
 	int last_task_status;
+	int last_cmd_id;
+	float available_disk_space;
 
 	vector<string> urls; //master to slave
 	vector<string> task_id;
@@ -74,6 +89,7 @@ private:
 //	string master_ip; //"192.168.75.128";
 
 	GlobalHelper *gh;
+	Cpp2mysql *mysql;
 	bool isworktime;
 	int current_version;
 	string sleep_time;
@@ -97,6 +113,7 @@ public:
 	master() {
 
 		gh = new GlobalHelper();
+
 		isworktime = false;
 		isstoretime = false;
 		current_version = 2;
@@ -104,16 +121,21 @@ public:
 
 		this->config_master();
 		this->config_website();
+		gh->log2("Begin init mysql","sql");
+		mysql = new Cpp2mysql();
+		gh->log2("Finish init mysql","sql");
 	}
 
-	bool is_worktime() {
-		isworktime = !isworktime;
-		return 0;
+	bool need_sleep(struct command req_cmd) {
+		map<string, string> config_map1;
+		gh->read_config(gh->MASTER_CONF, config_map1);
+		return (atoi(config_map1["need_sleep"].c_str()) == 1);
+
 	}
 	bool isstoretime;
-	bool is_storetime(struct command req_cmd) {
-		isstoretime = !isstoretime;
-		return isstoretime;
+	bool need_store(struct command req_cmd) {
+		return req_cmd.available_disk_space < 0.5;
+
 	}
 	int service() {
 		//1 init variable
@@ -134,7 +156,7 @@ public:
 
 		//4 bind and listen
 		if (-1
-				== bind(socketfd, (struct sockaddr*) (((((&local_addr))))),
+				== bind(socketfd, (struct sockaddr*) (((((((&local_addr))))))),
 						sizeof(struct sockaddr))) {
 			perror("socket fd connet fail...");
 			return -1;
@@ -149,8 +171,8 @@ public:
 		while (1) {
 			size = sizeof(client_addr);
 			//5.1 accept
-			if ((new_fd = accept(socketfd, (struct sockaddr*) (&client_addr),
-					&size)) == -1) {
+			if ((new_fd = accept(socketfd,
+					(struct sockaddr*) (((&client_addr))), &size)) == -1) {
 				perror("socket new_fd accept fail...");
 				return -1;
 			}
@@ -165,25 +187,23 @@ public:
 					break;
 				}
 				if (read_count == 0) {
-					//perror("socket fd read end...");
 					break;
 				}
 				if (gh->tail_with_feature(request_buff, read_count, "\f")) {
 					break;
-					//TODO:: extract a function :is revice OK?
 				}
-			}
+			} //end while
 
 			request_buff[read_count] = '\0';
-			cout << "request is :" << request_buff << endl;
+			gh->log2("request :", request_buff, s_socket);
 			//5.3 hand request
 			string request_str = request_buff;
 			string respose_content = hand_request(request_str);
-			cout << "response:" << respose_content << endl;
+			gh->log2("response :", respose_content, s_socket);
 			//5.4 write to request
-			int write_result = write(new_fd, respose_content.c_str(),
-					strlen(respose_content.c_str()));
-			if (write_result < 0) {
+			if (-1
+					== write(new_fd, respose_content.c_str(),
+							strlen(respose_content.c_str()))) {
 				perror("socket fd write fail...");
 			}
 		} //end step 5
@@ -192,7 +212,7 @@ public:
 	}
 
 	//input cmd and return string
-	string init_command(map<string, string>& cmd_map) {
+	string cmd_map_to_str(map<string, string>& cmd_map) {
 		map<string, string>::iterator it2;
 		string cmd_str;
 		for (it2 = cmd_map.begin(); it2 != cmd_map.end(); ++it2) {
@@ -231,6 +251,7 @@ public:
 			init_sleep_cmd(response_cmd_map, req_cmd);
 		}
 	}
+
 	void init_store_cmd(struct command& req_cmd,
 			map<string, string>& response_cmd_map) {
 		response_cmd_map["commd_id"] = "7";
@@ -239,15 +260,59 @@ public:
 		response_cmd_map["store_port"] = gh->num2str(this->store_port);
 	}
 
+	void init_feedback_cmd(map<string, string>& response_cmd_map,
+			struct command req_cmd) {
+		updata_rep_status(req_cmd);
+		//	response_cmd_map["commd_id"] = "2";
+		//response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
+		//	response_cmd_map["time"] = this->sleep_time;
+	}
+
+	void updata_rep_status(struct command& req_cmd) {
+		string log_str = "rep available_disk_space :";
+		log_str += gh->float2str(req_cmd.available_disk_space);
+		gh->log2(log_str, "rep_disk_space");
+	}
+
+	void update_slave_status_to_db(struct command& req_cmd) {
+		//update_worker_tb
+		worker_tb w;
+		w.slave_id = req_cmd.slave_id;
+		w.last_request_time = gh->get_time_str("%Y-%m-%d %H:%M:%S"); //"bbs_csdn";
+		mysql->update_worker_tb(w);
+	}
+
+	void update_slave_site_status_to_db(struct command& req_cmd) {
+		//update_worker_site_tb
+		if (req_cmd.commd_id != S2M_REQUEST) {
+			return;
+		}
+		if (req_cmd.last_task_status == 2) {
+			return;
+		}
+		string tmp_slave_id = gh->num2str(req_cmd.slave_id);
+		if (slave_map.find(tmp_slave_id) == slave_map.end()) {
+			return;
+		}
+		//exist
+		worker_site_tb ws;
+		ws.slave_id = req_cmd.slave_id;
+		slave_status s_status = slave_map[tmp_slave_id];
+		ws.site_id = s_status.last_task_site;
+		ws.site_task_sucess = req_cmd.last_task_status;
+		mysql->update_worker_site_tb(ws);
+	}
+
 	//2 update slave_status
-	void update_slave_status(struct command& req_cmd) {
+	void update_slave_status_in_memory(struct command& req_cmd) {
 		//2.1 weather slave_id in map
 		slave_status s_status;
 		string tmp_slave_id = gh->num2str(req_cmd.slave_id);
 		if (slave_map.find(tmp_slave_id) != slave_map.end()) {
+			//slave exist
 			s_status = slave_map[tmp_slave_id];
 			s_status.status = 1;
-			cout << "last_task_site:" << s_status.last_task_site << endl;
+			gh->log2("last_task_site:", s_status.last_task_site, s_work);
 			if (req_cmd.last_task_status) {
 				s_status.site_status[s_status.last_task_site].good++;
 			} else {
@@ -273,6 +338,46 @@ public:
 
 	}
 
+	void req_map_to_struct_cmd(struct command& req_cmd,
+			map<string, string> req_cmd_map) {
+		req_cmd.commd_id = atoi(req_cmd_map["commd_id"].c_str());
+		req_cmd.app_version = atoi(req_cmd_map["application_version"].c_str());
+		req_cmd.slave_id = atoi(req_cmd_map["slave_id"].c_str());
+		req_cmd.last_task_status = atoi(
+				req_cmd_map["last_task_status"].c_str());
+		req_cmd.last_cmd_id = atoi(req_cmd_map["last_cmd_id"].c_str());
+		req_cmd.available_disk_space = atof(
+				req_cmd_map["available_disk_space"].c_str());
+	}
+
+	void hand_slave_request(struct command& req_cmd,
+			map<string, string>& response_cmd_map) {
+
+		//  sleep
+		if (need_sleep(req_cmd)) {
+			init_sleep_cmd(response_cmd_map, req_cmd);
+
+			return;
+		}
+
+		//  update
+		if (req_cmd.app_version < this->current_version) {
+			init_updata_cmd(response_cmd_map, req_cmd);
+			return;
+		}
+
+		//  store
+		if (need_store(req_cmd)) {
+			//2 store
+			init_store_cmd(req_cmd, response_cmd_map);
+			return;
+		}
+
+		// assign
+		init_assign_cmd(req_cmd, response_cmd_map);
+		return;
+	}
+
 	//
 	string hand_request(string request_str) {
 		string respose_content;
@@ -282,16 +387,28 @@ public:
 		map<string, string> req_cmd_map;
 		gh->command_str_to_map(request_str, &req_cmd_map);
 		struct command req_cmd;
-		req_cmd.commd_id = atoi(req_cmd_map["commd_id"].c_str());
-		req_cmd.app_version = atoi(req_cmd_map["application_version"].c_str());
-		req_cmd.slave_id = atoi(req_cmd_map["slave_id"].c_str());
-		req_cmd.last_task_status = atoi(
-				req_cmd_map["last_task_status"].c_str());
-		cout << "request_command:" << req_cmd.commd_id << endl;
+		req_map_to_struct_cmd(req_cmd, req_cmd_map);
+		gh->log2("request_command:", gh->num2str(req_cmd.commd_id), "task");
+
 		//==============================================
 		//2 update slave_status
 		//==============================================
-		update_slave_status(req_cmd);
+		switch (req_cmd.commd_id) {
+		case S2M_REQUEST: //request from slave
+			update_slave_status_in_memory(req_cmd);
+			update_slave_status_to_db(req_cmd);
+			if (req_cmd.last_cmd_id == M2S_URL) {
+				update_slave_site_status_to_db(req_cmd);
+			} else if (req_cmd.last_cmd_id == M2S_STORE) {
+//wait to consider
+			}
+
+			break;
+		case 6:
+
+			break;
+		}
+
 		//==============================================
 		//3 switch command type
 		//==============================================
@@ -299,27 +416,13 @@ public:
 		switch (req_cmd.commd_id) {
 		case 1: //request from slave
 			//2.1.1 version
-			if (req_cmd.app_version < this->current_version) {
-				init_updata_cmd(response_cmd_map, req_cmd);
-			} //2.1.2 is work timeelse
-			else if (is_worktime()) {
-				if (is_storetime(req_cmd)) {
-					init_store_cmd(req_cmd, response_cmd_map);
-				} else {
-					init_assign_cmd(req_cmd, response_cmd_map);
-				}
-
-				// show slaves status
-				show_slave_status();
-			} else {
-				//2.1.2 sleep time
-				init_sleep_cmd(response_cmd_map, req_cmd);
-			}
-			respose_content = init_command(response_cmd_map);
+			hand_slave_request(req_cmd, response_cmd_map);
+			respose_content = cmd_map_to_str(response_cmd_map);
 			break;
 		case 6: //feedback from rep
-			//:TODO::feedback from rep logic
-			respose_content = init_command(response_cmd_map);
+			init_feedback_cmd(response_cmd_map, req_cmd);
+
+			respose_content = cmd_map_to_str(response_cmd_map);
 			break;
 		default:
 			respose_content = "-_-!,bad request!\f";
@@ -333,11 +436,11 @@ public:
 		//TODO::assign_task1
 		vector<string> vec_urls;
 		//		string request_url;
-		//lock in
+
 		if (!read_urls_and_record(slave_id, &vec_urls)) {
 			return 0;
 		}
-		//lock out
+
 		for (vector<string>::iterator it = vec_urls.begin();
 				it < vec_urls.end(); it++) {
 			request_url.append(*it);
@@ -345,8 +448,8 @@ public:
 		}
 		return 1;
 	}
-	//================================================
-	//get the min bad of all site
+//================================================
+//get the min bad of all site
 	bool get_min_bad_of_sites(int slave_id, string& site_name) {
 		bool is_get_site_ok = false;
 		struct slave_status s_status;
@@ -415,7 +518,7 @@ public:
 		fclose(fp_now);
 		return isok;
 	}
-	//real assign function
+//real assign function
 	bool read_urls_and_record(int slave_id, vector<string>* vec_urls) {
 		//================================================
 		//get the min bad of all site
@@ -425,27 +528,41 @@ public:
 		if (!is_get_site_ok) {
 			return false;
 		}
-		cout << " site_name:" << site_name << endl;
+		gh->log2("site_name:", site_name, s_work);
+
+		//****************************************lock begin
 		//================================================
 		//read urls
 		//================================================
-		//long int pos =
 		site_info si = this->url_map[site_name];
 		bool is_read_ok = read_sitefile_lines(si.finished_length, site_name,
 				vec_urls);
-		//========================
-		//record read process
-		//========================
+
+		//================================================
+		//record read process to memory
+		//================================================
 		if (is_read_ok) {
 			record_slave_read_urls(slave_id, site_name);
 			this->url_map[site_name] = si;
 		} else {
 			si.isfinised = true;
 			this->url_map[site_name] = si;
+			//url_map delete the site name
 		}
+
 		//================================================
-		//updata url map
+		//record read process to file
 		//================================================
+		map<string, site_info>::iterator it2;
+		string cmd_str;
+		for (it2 = url_map.begin(); it2 != url_map.end(); ++it2) {
+			cmd_str.append(
+					it2->first + ":" + gh->ld2str(it2->second.finished_length)
+							+ "\n");
+		}
+		gh->log(gh->WEBSITE_CONF, cmd_str, ios::trunc);
+		//****************************************lock end
+
 		return is_read_ok;
 	}
 	void record_slave_read_urls(int slave_id, string site_name) {
@@ -454,7 +571,7 @@ public:
 		s_status.last_task_site = site_name;
 		this->slave_map[gh->num2str(slave_id)] = s_status;
 	}
-	//
+//
 	bool config_master() {
 		map<string, string> config_map1;
 

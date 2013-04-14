@@ -37,7 +37,7 @@ slaver::~slaver() {
 
 }
 
-bool slaver::request_task(task *mytask, string& str_cmd) {
+bool slaver::request_task(req_task *mytask, string& str_cmd) {
 	//1 init variable
 	int socketfd;
 	struct sockaddr_in dest_addr;
@@ -114,7 +114,7 @@ bool slaver::request_task(task *mytask, string& str_cmd) {
 
 }
 
-bool slaver::grabpage_work(task& mytask) {
+bool slaver::grabpage_work(req_task& mytask) {
 	string dest_ip;
 
 	this->last_task_status = 0;

@@ -14,7 +14,7 @@ Finished building: ../src/master.cpp
  
 Building target: kf1304_master
 Invoking: GCC C++ Linker
-g++  -o "kf1304_master"  ./src/GlobalHelper.o ./src/StringHelper.o ./src/TextLogger.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/StringHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
 Finished building target: kf1304_master
  
 

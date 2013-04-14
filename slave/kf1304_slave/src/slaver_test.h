@@ -25,7 +25,7 @@ using namespace std;
 namespace poseidon {
 //slaver_test_grab
 //==========================================================================
-void init_grabpage_iis(task *mytask) {
+void init_grabpage_iis(req_task *mytask) {
 	//csdn 117.79.93.222
 	//iis 10.2.112.11
 	mytask->request_ip = "10.2.112.11";
@@ -43,7 +43,7 @@ void init_grabpage_iis(task *mytask) {
 					"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n\r\n");
 }
 //===============================================================
-void init_task(task *mytask) {
+void init_task(req_task *mytask) {
 	mytask->sleep_time = 1000;
 	mytask->store_ip = "180.149.131.104";
 	mytask->cmd_id = GRABPAGE;
@@ -57,7 +57,7 @@ void init_task(task *mytask) {
 
 //slaver_test_grab
 //==========================================================================
-void init_task_4_grabpage_114_wx_1(task *mytask) {
+void init_task_4_grabpage_114_wx_1(req_task *mytask) {
 	//119.75.220.34 zhidao
 	//"122.115.32.51" wx 114
 	mytask->request_ip = "122.115.32.51";
@@ -166,7 +166,7 @@ void slaver_test_grab_3() {
 //slaver_test_request
 void slaver_test_request() {
 	slaver * worker = new slaver();
-	task mytask; //commad
+	req_task mytask; //commad
 	string str;
 	//int i = 2;
 //	while (i--) {
@@ -181,7 +181,7 @@ void slaver_work_test() {
 }
 
 bool str2task_test() {
-	task mytask;
+	req_task mytask;
 	//GlobalHelper *gh = new GlobalHelper();
 	slaver * worker = new slaver();
 	string command1 =
@@ -210,7 +210,7 @@ bool str2task_test() {
 
 void prepare_urls_test() {
 	string urls = "www.1.com/1.html#www.2.com/2.html#www.3.com/3.html#";
-	task mytask;
+	req_task mytask;
 //	GlobalHelper *gh = new GlobalHelper();
 	//notice! the http request header is not set here
 	(new slaver())->urls_str_to_http_reqs(mytask, urls);
@@ -228,6 +228,7 @@ void prepare_urls_test() {
 
 bool slaver_test_prepare_req_cmd() {
 	slaver * worker = new slaver();
+
 	worker->init_request_cmd_str();
 	cout << "worker->cmd_req_2send: " << worker->cmd_req_2send << endl;
 	worker->app_version += 1;
@@ -238,7 +239,7 @@ bool slaver_test_prepare_req_cmd() {
 
 void hand_response_test() {
 	slaver * worker = new slaver();
-	task mytask; //commad
+	req_task mytask; //commad
 	mytask.sleep_time = 1;
 	mytask.cmd_id = GRABPAGE;
 	mytask.task_id.push_back("1");
@@ -289,7 +290,7 @@ void lookup_ip_test() {
 
 void grabpage_work_test() {
 	slaver * worker = new slaver();
-	task mytask; //commad
+	req_task mytask; //commad
 	mytask.sleep_time = 1;
 	//mytask.request_ip = "208.87.35.103";
 	//mytask.request_port = 80;

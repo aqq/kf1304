@@ -62,7 +62,7 @@ void read_site_test() {
 
 	req_cmd.slave_id = 1;
 	req_cmd.last_task_status = 2;
-	mt->update_slave_status(req_cmd);
+	mt->update_slave_status_in_memory(req_cmd);
 
 	mt->read_urls_and_record(1, &vec);
 	for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
@@ -71,7 +71,7 @@ void read_site_test() {
 	while (i--) {
 		cout << "read again 1:" << endl;
 		req_cmd.last_task_status = 1;
-		mt->update_slave_status(req_cmd);
+		mt->update_slave_status_in_memory(req_cmd);
 		vec.clear();
 		mt->read_urls_and_record(1, &vec);
 		for (vector<string>::iterator it = vec.begin(); it < vec.end(); it++) {
@@ -80,7 +80,7 @@ void read_site_test() {
 	}
 	return;
 	req_cmd.last_task_status = 0;
-	mt->update_slave_status(req_cmd);
+	mt->update_slave_status_in_memory(req_cmd);
 	cout << "read again 2:" << endl;
 	vec.clear();
 	mt->read_urls_and_record(1, &vec);
@@ -104,7 +104,7 @@ void update_slave_status_test() {
 	struct command req_cmd;
 	req_cmd.slave_id = 1;
 
-	mt->update_slave_status(req_cmd);
+	mt->update_slave_status_in_memory(req_cmd);
 	assert(mt->slave_map["1"].slave_id=="1");
 	for (map<string, slave_status>::iterator it = mt->slave_map.begin();
 			it != mt->slave_map.end(); it++) {
@@ -116,7 +116,7 @@ void update_slave_status_test() {
 //
 	mt->slave_map["1"].last_task_site = "alibb";
 	req_cmd.last_task_status = 1;
-	mt->update_slave_status(req_cmd);
+	mt->update_slave_status_in_memory(req_cmd);
 	int good1 = mt->slave_map["1"].site_status["alibb"].good;
 	//cout << "good1:" << good1 << endl;
 	assert(good1==1);
@@ -134,7 +134,7 @@ void get_min_bad_of_sites_test() {
 	master * mt = new master();
 	struct command req_cmd;
 	req_cmd.slave_id = 1;
-	mt->update_slave_status(req_cmd);
+	mt->update_slave_status_in_memory(req_cmd);
 	//mt->slave_map["1"].slave_id="1";
 //	mt->slave_map["1"].site_status["alibb"].bad = 4;
 	mt->slave_map["1"].site_status["hc360"].bad = 2;

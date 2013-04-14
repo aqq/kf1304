@@ -25,7 +25,7 @@
 #include "zlib.h"
 
 #include "GlobalHelper.h"
-#include "TextLogger.h"
+
 
 #define DEBUG
 namespace poseidon
