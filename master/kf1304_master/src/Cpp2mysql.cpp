@@ -6,7 +6,7 @@
  */
 
 #include "Cpp2mysql.h"
-//#include "mysql.h"
+
 #include<stdio.h>
 
 #include<iostream>
@@ -15,7 +15,7 @@
 using namespace std;
 
 #include<mysql/mysql.h>
-#include "StringHelper.h"
+
 namespace poseidon {
 /*
  *usage:
@@ -28,7 +28,7 @@ Cpp2mysql::Cpp2mysql() {
 	FILE *fp;
 	//char *filep;
 	char thefileName[1024];
-	StringHelper *sh = new StringHelper();
+
 	if ((fp = fopen("./conf/mysqlconn.conf", "r")) == NULL) {
 		printf("open file mysqlconn.config error!!\n");
 		return;
@@ -36,27 +36,27 @@ Cpp2mysql::Cpp2mysql() {
 	string content;
 
 	fgets(thefileName, 1024, fp); //每次调用文件指针fp会自动后移一行
-	sh->LineOpt(thefileName);
+	LineOpt(thefileName);
 	content = thefileName;
 	this->host = content.c_str();
 
 	fgets(thefileName, 1024, fp);
-	sh->LineOpt(thefileName);
+	LineOpt(thefileName);
 	content = thefileName;
 	this->user = content.c_str();
 
 	fgets(thefileName, 1024, fp);
-	sh->LineOpt(thefileName);
+	LineOpt(thefileName);
 	content = thefileName;
 	this->psw = content.c_str();
 
 	fgets(thefileName, 1024, fp);
-	sh->LineOpt(thefileName);
+	LineOpt(thefileName);
 	content = thefileName;
 	this->dbname = content.c_str();
 
 	fgets(thefileName, 1024, fp);
-	sh->LineOpt(thefileName);
+	LineOpt(thefileName);
 	content = thefileName;
 	this->port = content.c_str();
 	fclose(fp);
@@ -130,8 +130,6 @@ MYSQL_RES* Cpp2mysql::query(string sql) {
 		return result;
 	}
 }
-
-
 
 bool Cpp2mysql::preparedExcute() {
 	MYSQL_STMT *stmt;

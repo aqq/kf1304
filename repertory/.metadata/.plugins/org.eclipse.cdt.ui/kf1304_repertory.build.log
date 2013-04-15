@@ -2,20 +2,6 @@
 **** Build of configuration Debug for project kf1304_repertory ****
 
 make all 
-Building file: ../src/kf1304_repertory.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_repertory.d" -MT"src/kf1304_repertory.d" -o "src/kf1304_repertory.o" "../src/kf1304_repertory.cpp"
-Finished building: ../src/kf1304_repertory.cpp
- 
-Building file: ../src/rep.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/rep.d" -MT"src/rep.d" -o "src/rep.o" "../src/rep.cpp"
-Finished building: ../src/rep.cpp
- 
-Building target: kf1304_repertory
-Invoking: GCC C++ Linker
-g++  -o "kf1304_repertory"  ./src/GlobalHelper.o ./src/kf1304_repertory.o ./src/rep.o   
-Finished building target: kf1304_repertory
- 
+make: Nothing to be done for `all'.
 
 **** Build Finished ****

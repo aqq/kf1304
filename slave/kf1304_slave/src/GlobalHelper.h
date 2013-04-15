@@ -95,11 +95,19 @@ public:
 		tim_subtract(&diff, &start, &stop);
 		return ld2str(diff.tv_sec) + "." + ld2str(diff.tv_usec);
 	}
-	void time_test2() {
-		timing_begin();
+	bool is_over_cast_time(int mill_seconds) {
+		tim_subtract(&diff, &start, &stop);
+		return (diff.tv_sec > 0 || diff.tv_usec > mill_seconds);
 
-		timing_end();
-		cout << "cast_time" << cast_time() << "秒" << endl;
+	}
+	void time_test2() {
+		int i = 11;
+		while (i--) {
+			timing_begin();
+			//usleep(1000 * 500); //500毫秒
+			timing_end();
+			cout << "cast_time" << cast_time() << "秒" << endl;
+		}
 	}
 //num to string
 	string num2str(int i) {
@@ -471,6 +479,24 @@ public:
 		content = "";
 	}
 	//
+	void log2(string str1, string str2, string type) {
+		string str = "";
+		str += str1 + str2;
+		log2(str, type);
+	}
+	void log2(string str1, string str2, string str3, string type) {
+
+		string str = "";
+		str += str1 + str2 + str3;
+		log2(str, type);
+	}
+	void log2(string str1, string str2, string str3, string str4, string type) {
+
+		string str = "";
+		str += str1 + str2 + str3 + str4;
+		log2(str, type);
+	}
+	//
 	void log2(string content, string type) {
 
 		string time_str = get_string_time("%Y%m%d");
@@ -521,7 +547,9 @@ public:
 		return time_str;
 	}
 	void log_test() {
-		log("111");
+		//	log("111");
+		this->config();
+		log2("connect to ", "ip ", "port ", "socket");
 	}
 	//=====================================
 	void get_time_str(string& time_str) {

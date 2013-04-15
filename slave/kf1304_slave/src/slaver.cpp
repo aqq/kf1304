@@ -22,7 +22,7 @@
 #include <sstream>
 #include <string>
 #include <iostream>
-
+#include "unistd.h"
 #include "GlobalHelper.h"
 
 #define DEBUG
@@ -38,6 +38,9 @@ slaver::~slaver() {
 }
 
 bool slaver::request_task(req_task *mytask, string& str_cmd) {
+
+	gh->log2("connect to ", this->master_ip[0], ":",
+			gh->num2str(this->master_port), s_socket);
 	//1 init variable
 	int socketfd;
 	struct sockaddr_in dest_addr;
@@ -75,7 +78,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 
 		//5 write to master
 		int bytes_count;
-		this->cmd_req_2send=	this->init_request_cmd_str(); //last_task_status
+		this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
 		int write_result = write(socketfd, this->cmd_req_2send.c_str(),
 				strlen(this->cmd_req_2send.c_str()));
 		if (write_result == -1) {
@@ -132,6 +135,15 @@ bool slaver::grabpage_work(req_task& mytask) {
 			gt.url = mytask.urls_vec.at(index);
 
 			is_grab_ok = grab_page_log_time(gt);
+			//usleep(this->grab_interval); //500毫秒=500*1000=500000
+			gh->timing_begin();
+			//usleep(1000 * 500); //500毫秒
+			gh->timing_end();
+			while (!gh->is_over_cast_time(500000)) {
+				gh->timing_end();
+			}
+			cout << "cast_time" << gh->cast_time() << "秒" << endl;
+
 			this->last_task_status = is_grab_ok;
 			gh->log2("task is " + gh->bool2str(is_grab_ok), s_work);
 		}

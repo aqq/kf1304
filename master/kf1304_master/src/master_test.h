@@ -149,7 +149,7 @@ void get_min_bad_of_sites_test() {
 void read_sitefile_lines_test() {
 	vector<string> vec_urls;
 	master * mt = new master();
-	string s1 = "114ch";
+	string s1 = "114ch_badurls";
 	long i1 = 0;
 	mt->read_sitefile_lines(i1, s1, &vec_urls);
 	cout << vec_urls[0] << endl;
@@ -164,7 +164,20 @@ void build_csdn_url() {
 		i++;
 	}
 	ofs.close();
-
 }
+//
+void need_sleep_test() {
+	struct command req_cmd;
+	master * mt = new master();
+	cout << mt->need_sleep(req_cmd) << endl;
+}
+//
+void bad_url_read_test() {
+	struct command req_cmd;
+	master * mt = new master();
+	cout << mt->need_sleep(req_cmd) << endl;
+}
+//
+
 } /* namespace poseidon */
 #endif

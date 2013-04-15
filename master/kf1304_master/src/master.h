@@ -113,7 +113,7 @@ public:
 	master() {
 
 		gh = new GlobalHelper();
-
+		is_sleeptime = false;
 		isworktime = false;
 		isstoretime = false;
 		current_version = 2;
@@ -121,20 +121,25 @@ public:
 
 		this->config_master();
 		this->config_website();
-		gh->log2("Begin init mysql","sql");
+		gh->log2("Begin init mysql", "sql");
 		mysql = new Cpp2mysql();
-		gh->log2("Finish init mysql","sql");
+		gh->log2("Finish init mysql", "sql");
 	}
-
+	bool is_sleeptime;
 	bool need_sleep(struct command req_cmd) {
-		map<string, string> config_map1;
-		gh->read_config(gh->MASTER_CONF, config_map1);
-		return (atoi(config_map1["need_sleep"].c_str()) == 1);
+		//	map<string, string> config_map1;
+		//	gh->read_config(gh->MASTER_CONF, config_map1);
+		//	int need_sleep_i = atoi(config_map1["need_sleep"].c_str());
+//		return (need_sleep_i == 1);
+		//	is_sleeptime = !is_sleeptime;
+		return 0;
 
 	}
 	bool isstoretime;
 	bool need_store(struct command req_cmd) {
-		return req_cmd.available_disk_space < 0.5;
+		isstoretime = !isstoretime;
+		//return req_cmd.available_disk_space < 0.5;
+		return isstoretime;
 
 	}
 	int service() {
@@ -433,7 +438,7 @@ public:
 	}
 
 	bool assign_request(int slave_id, string& request_url) {
-		//TODO::assign_task1
+
 		vector<string> vec_urls;
 		//		string request_url;
 
@@ -485,6 +490,7 @@ public:
 		//site_name = (*min_fail_site).second.site_name;
 		return is_get_site_ok;
 	}
+
 	bool read_sitefile_lines(long int& pos, string site_name,
 			vector<string>* vec_urls) {
 		//
@@ -495,6 +501,7 @@ public:
 		char read_buff[1024];
 		bool isok = true;
 		int read_line = this->assign_url_number;
+
 		fseek(fp_now, pos, 0);
 		while (read_line--) {
 			filep = fgets(read_buff, 1024, fp_now);

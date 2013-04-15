@@ -59,6 +59,17 @@ public:
 	bool preparedExcute();
 
 	void testReadBlob();
+	//
+	void LineOpt(char *thefileName) {
+		int i = 0;
+		while (1) {
+			if (thefileName[i] != '\n')
+				i++;
+			else
+				break;
+		}
+		thefileName[i] = 0;
+	}
 	//================================
 	void update_worker_tb(worker_tb worker) {
 		char sqlquery1[500] =

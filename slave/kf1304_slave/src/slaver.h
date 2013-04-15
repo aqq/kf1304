@@ -93,6 +93,7 @@ class slaver {
 private:
 
 	GlobalHelper *gh;
+	int grab_interval;//毫秒
 protected:
 
 public:
@@ -136,6 +137,7 @@ public:
 		this->app_version = atoi((config_map1["app_version"]).c_str());
 		this->store_ip.push_back(config_map1["store_ip"]);
 		this->store_port = atoi((config_map1["store_port"]).c_str());
+		this->grab_interval = atoi((config_map1["grab_interval"]).c_str());
 
 		map<string, string> config_map2;
 		gh->read_config(slave_private_conf, config_map2);
@@ -160,6 +162,7 @@ public:
 
 			//1 requestTask
 			gh->log2("requestTask().", s_moudle);
+
 			if (!request_task(&mytask, task_str)) {
 				cout << "Master is sleeping,so i will sleep 5 seconds." << endl;
 				sleep(5);

@@ -372,6 +372,7 @@ public:
 		string url;
 		if ((fp = fopen(fname.c_str(), "r")) == NULL) {
 			printf("open file %s error!!\n", fname.c_str());
+			perror("open file  error!!\n");
 		}
 		//
 		vector<string> *vec = new vector<string>();
