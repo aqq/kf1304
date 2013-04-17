@@ -93,7 +93,7 @@ class slaver {
 private:
 
 	GlobalHelper *gh;
-	int grab_interval;//毫秒
+	int grab_interval; //毫秒
 protected:
 
 public:
@@ -233,7 +233,6 @@ public:
 		string tar_download_sh_fname = "./script/tar_download.sh";
 		ofstream outfile(tar_download_sh_fname.c_str(), ios::trunc);
 		outfile << "cd  download" << endl;
-
 		for (vector<string>::iterator it2 = fnames_evc.begin();
 				it2 != fnames_evc.end(); ++it2) {
 			string it_tar_cmd = "tar -zcvf  " + *it2 + ".tar.gz " + *it2;
@@ -274,8 +273,8 @@ public:
 			// 4.b
 			send_filename = "./download/" + fname + ".tar.gz";
 
-			string s1 = "enter remoteStorePage with " + send_filename;
-			gh->log2(s1, s_moudle);
+			string s1 = "commit page   " + send_filename;
+
 			gh->log2(s1, s_work);
 			bool is_store_ok = false;
 			while (!is_store_ok) {
@@ -432,7 +431,9 @@ public:
 		map<string, string> response_cmd_map;
 
 		gh->command_str_to_map(response_command, &response_cmd_map);
+    //
 
+		//
 		mytask.cmd_id = atoi(response_cmd_map["commd_id"].c_str());
 		mytask.response_cmd_map = response_cmd_map;
 		mytask.sleep_time = atoi(response_cmd_map["time"].c_str());

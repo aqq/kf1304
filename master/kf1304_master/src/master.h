@@ -115,7 +115,7 @@ public:
 		gh = new GlobalHelper();
 		is_sleeptime = false;
 		isworktime = false;
-		isstoretime = false;
+		is_store_time = false;
 		current_version = 2;
 		sleep_time = "2";
 
@@ -135,11 +135,11 @@ public:
 		return 0;
 
 	}
-	bool isstoretime;
+	bool is_store_time;
 	bool need_store(struct command req_cmd) {
-		isstoretime = !isstoretime;
+		is_store_time = !is_store_time;
 		//return req_cmd.available_disk_space < 0.5;
-		return isstoretime;
+		return is_store_time;
 
 	}
 	int service() {

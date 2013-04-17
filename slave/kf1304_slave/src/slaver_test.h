@@ -191,13 +191,19 @@ bool str2task_test() {
 					"version:3\r\n"
 					"urls:wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#wx.114chn.com/tradehtml/320200/3202001212190001/index.html#\r\n"
 					"\f";
-	worker->str2task(command1, mytask);
+	string s1 =
+			"commd_id:4\r\n"
+					"slave_id:1\r\n"
+					"task_id:20130416094957931480\r\n"
+					"urls:s.114chn.com/s-115007009002-kÆ¬ÃæŒÓ.html#s.114chn.com/s-115007009002-kÅÌÏØÊÕ·ÑÍøÕŸ.html#s.114chn.com/s-115007009002-kÍøÖ·µÚËÄÉ«Å®2472670890.html#s.114chn.com/s-115007009002-kÁÄÁÄÓïÒôË«¿ªÈíŒþÎÒÊÇQQ2573292802.html#s.114chn.com/s-115007009002-kµ÷œÌÅ®ÆÍÔõÃŽÅ®.html#s.114chn.com/s-115007009002-k³ÃÈËÐ¡ËµŒÓ£œ³ÃÈËÐ¡Ëµ.html#s.114chn.com/s-115007009002-kžßÇåÄÚÒÂÐã±íÑÝÏÂÔØ.html#s.114chn.com/s-115007009003-101011-kÅ®ÈËºÈÄÐÈËµÄÄòÊÓÆµŒÓ.html#s.114chn.com/s-115007009003-k80ºóÐÔžñ80ºóÐÔžñ×îÐÂ.html#s.114chn.com/s-115007009003-kvodÖÐ³öŒÓ¡ÖvodÖÐ³ö.html#s.114chn.com/s-115007009003-kšÑ§ÁÄÓïÒô×îÐÂ.html#s.114chn.com/s-115007009003-k¡â¹ãÍ¬œ»ÓÑÐÂµØÖ·.html#s.114chn.com/s-115007009003-k²»ÓÃ×¢²á»ÆÖ·ŒÓ.html#s.114chn.com/s-115007009003-kÄãºÃÁÄÁÄºÃÂð1910847577-s1.html#s.114chn.com/s-115007009003-k²©¿ÍÊ×Ò³ŒÓ.html#s.114chn.com/s-115007009003-kÖÜÓÑÆœÖÜÓÑÆœ¹Ù·œÍøÕŸ.html#s.114chn.com/s-115007009003-kŽóµšÅ·ÖÞÈËÌåŒÓ.html#s.114chn.com/s-115007009003-kÈÕ±ŸÄÐÅ®ŒÓ.html#s.114chn.com/s-115007009003-kÑîÆåº­£ŸŒÓ.html#s.114chn.com/s-115007009003-kÑîÓñÓšÇéÏÝºìÂ¥.html#s.114chn.com/s-115007009003-kÉòÑôÁÄÌìÈºŽò²»¿ª.html#s.114chn.com/s-115007009003-k²š¶àÒ°œáÒÂ2472670890£Ÿ.html#s.114chn.com/s-115007009003-kŒ€ÇéÎåÔÂÅ®QQ2472670890©¶.html#s.114chn.com/s-115007009003-kÌØŒ°ÍøŒÓ.html#s.114chn.com/s-115007009003-kÊŸ·¶£œŒÓ.html#s.114chn.com/s-115007009003-kÍøÉ«Íõ³¯ŒÓ.html#s.114chn.com/s-115007009003-kžØœ»ÀÏÆÅŒÓ.html#s.114chn.c\r\n"
+					"\f";
+	worker->str2task(s1, mytask);
 
 ///	cout << "cmd_id:" << mytask.cmd_id << endl;
 	//cout << "task_id:" << mytask.task_id_str << endl;
 
 	//cout << "urls:\n" << mytask.urls << endl;
-
+	return 1;
 	assert(
 			mytask.urls=="wx.114chn.com/TradeWeb/web/NewIndex/JobShow.aspx?ID=3202001212190001&channelID=06&JobID=1302280014#wx.114chn.com/tradehtml/320200/3202001212190001/index.html#");
 	assert( mytask.cmd_id==4);

@@ -126,7 +126,7 @@ public:
 		return ss.str();
 	}
 	string bool2str(bool yes) {
-		return yes ? "true" : "false";
+		return yes ? "sucessed" : "failed";
 	}
 	//实现string到unsigned int的转换
 	unsigned int string_to_unsigned_int(string str) {
@@ -239,17 +239,28 @@ public:
 		istringstream ss(in);
 		string t;
 		while (ss >> t) {
-			//	cout << t << endl;
+			//		cout << "split_line:" << t << endl;
 			vec->push_back(t);
 		}
+	}
+	void split_line2(string s1, vector<string>& str_vec) {
+
+		split(s1, "\n", str_vec);
+
 	}
 	//以 为分隔符 只能取前2个
 	//str=slave_id:1
 	void split_by_split_char(string str, vector<string> *vec, char split_char) {
 		string::size_type pos = 0;
 		pos = str.find_first_of(':', pos);
-		vec->push_back(str.substr(0, pos));
-		vec->push_back(str.substr(pos + 1, str.size()));
+		string key = str.substr(0, pos);
+		string value = str.substr(pos + 1, str.size());
+
+		vec->push_back(key);
+		vec->push_back(value);
+		//	this->log2(key, "kv");
+		//this->log2(value, "kv");
+
 	}
 	//以 为分隔符 尝试使用 算法模板 失败。待调试
 	void split_4alg(string str, vector<string> *vec, char split_char) {
@@ -340,13 +351,14 @@ public:
 			split_by_split_char(*it1, &vec2, ':');
 			string key = vec2.at(0);
 			string value = vec2.at(1);
-			//	log("**************");
-			//	log("key:" + key);
-			//	log("value:" + value);
-			//	log("**************");
+			//	log2("**************", "dg_command_str_to_map");
+			//	log2("key:", key, "dg_command_str_to_map");
+			//	log2("value:", value, "dg_command_str_to_map");
+			//log2("**************", "dg_command_str_to_map");
 			(*command_map)[key] = value;
 		}
 	}
+
 	//以"\r "为分隔符
 	bool command_str_to_map_test() {
 
@@ -354,13 +366,20 @@ public:
 		string command1 = "commd_id:1\r\n"
 				"slave_id:1\r\n"
 				"application_version:1\r\n"
+				"urls:"
 				"\f";
 
-		command_str_to_map(command1, &command_map);
+		string s1 =
+				"commd_id:4\r\n"
+						"slave_id:1\r\n"
+						"task_id:20130416094957931480\r\n"
+						"urls:s.114chn.com/s-115007009002-kÆ¬ÃæŒÓ.html#s.114chn.com/s-115007009002-kÅÌÏØÊÕ·ÑÍøÕŸ.html#s.114chn.com/s-115007009002-kÍøÖ·µÚËÄÉ«Å®2472670890.html#s.114chn.com/s-115007009002-kÁÄÁÄÓïÒôË«¿ªÈíŒþÎÒÊÇQQ2573292802.html#s.114chn.com/s-115007009002-kµ÷œÌÅ®ÆÍÔõÃŽÅ®.html#s.114chn.com/s-115007009002-k³ÃÈËÐ¡ËµŒÓ£œ³ÃÈËÐ¡Ëµ.html#s.114chn.com/s-115007009002-kžßÇåÄÚÒÂÐã±íÑÝÏÂÔØ.html#s.114chn.com/s-115007009003-101011-kÅ®ÈËºÈÄÐÈËµÄÄòÊÓÆµŒÓ.html#s.114chn.com/s-115007009003-k80ºóÐÔžñ80ºóÐÔžñ×îÐÂ.html#s.114chn.com/s-115007009003-kvodÖÐ³öŒÓ¡ÖvodÖÐ³ö.html#s.114chn.com/s-115007009003-kšÑ§ÁÄÓïÒô×îÐÂ.html#s.114chn.com/s-115007009003-k¡â¹ãÍ¬œ»ÓÑÐÂµØÖ·.html#s.114chn.com/s-115007009003-k²»ÓÃ×¢²á»ÆÖ·ŒÓ.html#s.114chn.com/s-115007009003-kÄãºÃÁÄÁÄºÃÂð1910847577-s1.html#s.114chn.com/s-115007009003-k²©¿ÍÊ×Ò³ŒÓ.html#s.114chn.com/s-115007009003-kÖÜÓÑÆœÖÜÓÑÆœ¹Ù·œÍøÕŸ.html#s.114chn.com/s-115007009003-kŽóµšÅ·ÖÞÈËÌåŒÓ.html#s.114chn.com/s-115007009003-kÈÕ±ŸÄÐÅ®ŒÓ.html#s.114chn.com/s-115007009003-kÑîÆåº­£ŸŒÓ.html#s.114chn.com/s-115007009003-kÑîÓñÓšÇéÏÝºìÂ¥.html#s.114chn.com/s-115007009003-kÉòÑôÁÄÌìÈºŽò²»¿ª.html#s.114chn.com/s-115007009003-k²š¶àÒ°œáÒÂ2472670890£Ÿ.html#s.114chn.com/s-115007009003-kŒ€ÇéÎåÔÂÅ®QQ2472670890©¶.html#s.114chn.com/s-115007009003-kÌØŒ°ÍøŒÓ.html#s.114chn.com/s-115007009003-kÊŸ·¶£œŒÓ.html#s.114chn.com/s-115007009003-kÍøÉ«Íõ³¯ŒÓ.html#s.114chn.com/s-115007009003-kžØœ»ÀÏÆÅŒÓ.html#s.114chn.c\r\n"
+						"\f";
+		command_str_to_map(s1, &command_map);
 
 		for (map<string, string>::iterator it2 = command_map.begin();
 				it2 != command_map.end(); ++it2) {
-			std::cout << it2->first << " => " << it2->second << '\n';
+			std::cout << it2->first << " => " << it2->second << endl;
 		}
 		//cout << "split_line_test:" << (commd_id == 1) << endl;
 

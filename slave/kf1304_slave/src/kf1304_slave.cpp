@@ -18,6 +18,8 @@ int main() {
 
 //	(new GlobalHelper())->time_test2(); //pass
 
+//	(new GlobalHelper())->command_str_to_map_test();
+
 //	(new GlobalHelper())->trave_dir_into_vec_test(); //pass	// read file in menu
 // tar_pages_and_get_fnames_vec_test();//pass
 // page_read_binary_test(); //
@@ -54,7 +56,7 @@ int main() {
 	//lookup_ip_test(); //pass
 //	grabpage_work_test(); //pass
 //	hand_response_test(); //pass
-
+	//str2task_test();
 	slaver_work_test(); //final test
 
 //----------sys call

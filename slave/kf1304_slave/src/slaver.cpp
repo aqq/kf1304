@@ -42,6 +42,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 	gh->log2("connect to ", this->master_ip[0], ":",
 			gh->num2str(this->master_port), s_socket);
 	//1 init variable
+	str_cmd = "";
 	int socketfd;
 	struct sockaddr_in dest_addr;
 	char read_buf[BUFSIZE];
@@ -72,9 +73,6 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 			gh->log2(log_str, s_socket);
 			break;
 		}
-		gh->log2(
-				"Connect ot:" + this->master_ip[0] + ":"
-						+ gh->num2str(this->master_port), s_socket);
 
 		//5 write to master
 		int bytes_count;
@@ -87,22 +85,26 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 			gh->log2(log_str, s_socket); //perror
 			break; //continue;
 		}
-		gh->log2("write:" + this->cmd_req_2send, s_socket);
+		gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
 
 		//6 read
 		int total = 0;
-		string t_str_cmd = "";
+
 		while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
 			total += bytes_count;
+			read_buf[bytes_count] = '\0';
+			str_cmd += read_buf;
+			gh->log2(read_buf, "debug_read_from_socekt");
+
 			if (bytes_count == 0) {
 				break;
 			}
 			if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
 				break;
 			}
-			read_buf[bytes_count] = '\0';
-			t_str_cmd += read_buf;
+
 		}
+		gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
 		req_seccess = 1;
 		break;
 	}
@@ -111,7 +113,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 	close(socketfd);
 	//8  init task
 //	cout << "receive:" << read_buf << endl;
-	str_cmd = read_buf;
+//	str_cmd = t_str_cmd;
 //	gh->log(str_cmd);
 	return req_seccess;
 
@@ -142,8 +144,7 @@ bool slaver::grabpage_work(req_task& mytask) {
 			while (!gh->is_over_cast_time(500000)) {
 				gh->timing_end();
 			}
-			cout << "cast_time" << gh->cast_time() << "秒" << endl;
-
+			//gh->log2("cast_time", gh->cast_time(), "cast_time");
 			this->last_task_status = is_grab_ok;
 			gh->log2("task is " + gh->bool2str(is_grab_ok), s_work);
 		}

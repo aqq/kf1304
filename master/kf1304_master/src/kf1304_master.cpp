@@ -41,7 +41,7 @@ int main() {
 	// get_min_bad_of_sites_test();
 	//4.continue to read
 	//read_sitefile_lines_test();
-	// read_site_test(); //pass
+	//read_site_test(); //pass
 	//--------------------------------
 //build pages
 	// build_csdn_url();
