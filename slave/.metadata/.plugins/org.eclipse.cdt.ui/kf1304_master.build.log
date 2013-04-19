@@ -1,0 +1,57 @@
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/GlobalHelper.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
+Finished building: ../src/GlobalHelper.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中未发现 return 语句
+../src/server.h: In member function ‘bool server::srun()’:
+../src/server.h:118: 警告：未使用的变量 ‘hbuf’
+../src/server.h:118: 警告：未使用的变量 ‘sbuf’
+../src/server.h:162: 警告：格式 ‘%d’ 需要类型 ‘int’，但实参 2 的类型为 ‘uint64_t’
+../src/server.h:163: 警告：未使用的变量 ‘done’
+../src/server.h: In function ‘void* worker_func(void*)’:
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+../src/server.h:57: 警告：在有返回值的函数中，控制流程到达函数尾
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中，控制流程到达函数尾
+Finished building: ../src/master.cpp
+ 
+Building file: ../src/parse.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parse.d" -MT"src/parse.d" -o "src/parse.o" "../src/parse.cpp"
+Finished building: ../src/parse.cpp
+ 
+Building file: ../src/slaver.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
+Finished building: ../src/slaver.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****

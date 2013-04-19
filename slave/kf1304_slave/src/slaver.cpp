@@ -137,11 +137,11 @@ bool slaver::grabpage_work(req_task& mytask) {
 			gt.url = mytask.urls_vec.at(index);
 
 			is_grab_ok = grab_page_log_time(gt);
-			//usleep(this->grab_interval); //500毫秒=500*1000=500000
+			//500毫秒=500*1000=500000
 			gh->timing_begin();
-			//usleep(1000 * 500); //500毫秒
+
 			gh->timing_end();
-			while (!gh->is_over_cast_time(500000)) {
+			while (!gh->is_over_cast_time(this->grab_interval)) {
 				gh->timing_end();
 			}
 			//gh->log2("cast_time", gh->cast_time(), "cast_time");
@@ -167,6 +167,7 @@ bool slaver::grab_page(grabtask gt) {
 			+ gh->num2str(request_port);
 	gh->log2(log_str, s_work);
 	gh->log2(http_req.substr(0, http_req.find('\r', 0)), s_socket);
+	gh->log2(http_req, "http_req");
 
 	struct sockaddr_in dest_addr;
 

@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project small_tool ****
+
+make all 
+Building file: ../src/t3.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/t3.d" -MT"src/t3.d" -o "src/t3.o" "../src/t3.cpp"
+Finished building: ../src/t3.cpp
+ 
+Building target: small_tool
+Invoking: GCC C++ Linker
+g++  -o "small_tool"  ./src/parse.o ./src/small_tool.o ./src/t3.o   -lpthread
+Finished building target: small_tool
+ 
+
+**** Build Finished ****

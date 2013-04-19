@@ -229,10 +229,7 @@ public:
 	bool not_split_char(char c) {
 		return c != ':';
 	}
-	//for test
-	bool IsOdd(int i) {
-		return ((i % 2) == 1);
-	}
+
 	//
 	//按行分割
 	void split_line(string in, vector<string> *vec) {
@@ -390,7 +387,7 @@ public:
 
 		string::size_type pos(0);
 		pos = str.find_first_of(special_char);
-		str = str.replace(pos, 1, "");
+		str = str.replace(pos, special_char.size(), "");
 		return str.insert(pos, new_str);
 	}
 	void replace_test() {
@@ -422,40 +419,145 @@ public:
 		//	cout << "urlbody:" << urlbody << endl;
 		return req;
 	}
+	int file_lines(string filename) {
+		ifstream ReadFile;
+		int n = 0;
+		char line[1024];
+		ReadFile.open(filename.c_str(), ios::in); //ios::in 表示以只读的方式读取文件
+		if (ReadFile.fail()) {
+			return 0;
+		}
+
+		while (!ReadFile.eof()) {
+			ReadFile.getline(line, 1024, '\n');
+			n++;
+		}
+		ReadFile.close();
+		return n;
+	}
+
+	string read_line(string fname, int index_line) {
+		ifstream ReadFile;
+		int n = 0;
+		char line[1024];
+		ReadFile.open(fname.c_str(), ios::in);
+		if (ReadFile.fail()) {
+			return 0;
+		}
+		while (!ReadFile.eof()) {
+			ReadFile.getline(line, 1024, '\n');
+			n++;
+			if (n == index_line) {
+				break;
+			}
+		}
+		ReadFile.close();
+		string res = line;
+		return res;
+	}
+	void read_line_from_test() {
+		string fpath = "./conf/user_agent";
+
+		//	cout << file_lines(fpath) << endl;
+		//	cout << read_line(fpath, 2) << endl;
+		int i = 6;
+		while (i--) {
+			cout << random_get_one_line(fpath) << endl;
+		}
+	}
+
+	string random_get_one_line(string fpath) {
+
+		int flines = file_lines(fpath);
+		int random_int = rand() % flines;
+		string user_agent_str = read_line(fpath, random_int);
+		//"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31";
+		return user_agent_str;
+	}
 
 	string convert_url_to_http_req(string url) {
+		string fpath_user_agent = "./http_req/User-Agent";
+		string fpath_accept = "./http_req/Accept";
+		string fpath_accept_language = "./http_req/Accept-Language";
+		string fpath_accept_charset = "./http_req/Accept-Charset";
 		string req =
-		//"GET # HTTP/1.1\r\n"
-		//		"Host: @\r\n"
-		//	"Connection: keep-alive\r\n"
-		//	"Cache-Control: max-age=0\r\n"
-		//	"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
-		//	"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
-		//	"Accept-Encoding: gzip,deflate,sdch\r\n"
-		//	"Accept-Language: zh-CN,zh;q=0.8\r\n"
-		//	"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n"
-		//	"Cookie: $\r\n"
-		//	"\r\n";*/
-		//string req_lb=
 				"GET # HTTP/1.1\r\n"
-						"Host: @\r\n"
+						"Host: #\r\n"
 						"Connection: close\r\n"
 						"Cache-Control: max-age=0\r\n"
-						"User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.84 Safari/535.11 SE 2.X MetaSr 1.0\r\n"
 						"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+						"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
 						"Accept-Language: zh-CN,zh;q=0.8\r\n"
-						"Accept-Charset: utf-8;q=0.7,*;q=0.3\r\n"
-						"Cookie: $\r\n\r\n";
+						"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n\r\n";
+		log2(url, "convert_url_to_http_req");
 		string::size_type pos1; //  pos of  '/'
 		pos1 = url.find_first_of('/', 0);
-		string sitename = url.substr(0, pos1);
+		string host = url.substr(0, pos1);
 		string urlbody = url.substr(pos1);
-
 		req = replace(req, urlbody, "#");
-		req = replace(req, sitename, "@");
-		req = replace(req, "", "$");
-		//cout << "sitename:" << sitename << endl;
-		//	cout << "urlbody:" << urlbody << endl;
+		req = replace(req, host, "#"); //host
+
+		//req = replace(req, "", "#"); //cookie
+		return req;
+	}
+	string convert_url_to_http_req3(string url) {
+		string fpath_user_agent = "./http_req/User-Agent";
+		string fpath_accept = "./http_req/Accept";
+		string fpath_accept_language = "./http_req/Accept-Language";
+		string fpath_accept_charset = "./http_req/Accept-Charset";
+		string req = "GET # HTTP/1.1\r\n"
+				"Host: #\r\n"
+				"Connection: close\r\n"
+				//		"Cache-Control: max-age=0\r\n"
+				"User-Agent: #\r\n"
+				//			"Accept: #\r\n"
+				//			"Accept-Language: #\r\n"
+				//			"Accept-Charset: #\r\n"
+				//"Cookie:#\r\n"
+				"\r\n";
+		log2(url, "convert_url_to_http_req");
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string host = url.substr(0, pos1);
+		string urlbody = url.substr(pos1);
+		string user_agent_str = random_get_one_line(fpath_user_agent);
+		req = replace(req, urlbody, "#");
+		req = replace(req, host, "#"); //host
+		req = replace(req, random_get_one_line(fpath_user_agent), "#");
+//		req = replace(req, random_get_one_line(fpath_accept), "#");
+//		req = replace(req, random_get_one_line(fpath_accept_language), "#");
+		//	req = replace(req, random_get_one_line(fpath_accept_charset), "#");
+		//req = replace(req, "", "#"); //cookie
+		return req;
+	}
+	string convert_url_to_http_req4(string url) {
+		string fpath_user_agent = "./http_req/User-Agent";
+		string fpath_accept = "./http_req/Accept";
+		string fpath_accept_language = "./http_req/Accept-Language";
+		string fpath_accept_charset = "./http_req/Accept-Charset";
+		string req = "GET # HTTP/1.1\r\n"
+				"Host: #\r\n"
+				"Connection: close\r\n"
+				"Cache-Control: max-age=0\r\n"
+				"User-Agent: #\r\n"
+				"Accept: #\r\n"
+				"Accept-Language: #\r\n"
+				"Accept-Charset: #\r\n"
+				//"Cookie:#\r\n"
+				"\r\n";
+		log2(url, "convert_url_to_http_req");
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string host = url.substr(0, pos1);
+		string urlbody = url.substr(pos1);
+		string user_agent_str = random_get_one_line(fpath_user_agent);
+		req = replace(req, urlbody, "#");
+		req = replace(req, host, "#"); //host
+		req = replace(req, random_get_one_line(fpath_user_agent), "#");
+		req = replace(req, random_get_one_line(fpath_accept), "#");
+		req = replace(req, random_get_one_line(fpath_accept_language), "#");
+		req = replace(req, random_get_one_line(fpath_accept_charset), "#");
+		//req = replace(req, "", "#"); //cookie
 		return req;
 	}
 	bool convert_url_to_http_req_test() {
@@ -476,8 +578,8 @@ public:
 		outfile.close();
 	}
 
-	//
-	//
+//
+//
 	void log3(string& content, string type) {
 
 		string time_str = get_string_time("%Y%m%d");
@@ -497,7 +599,7 @@ public:
 		}
 		content = "";
 	}
-	//
+//
 	void log2(string str1, string str2, string type) {
 		string str = "";
 		str += str1 + str2;
@@ -515,7 +617,7 @@ public:
 		str += str1 + str2 + str3 + str4;
 		log2(str, type);
 	}
-	//
+//
 	void log2(string content, string type) {
 
 		string time_str = get_string_time("%Y%m%d");
@@ -553,7 +655,7 @@ public:
 		outfile.close();
 //#endif
 	}
-	// %Y%m%d"
+// %Y%m%d"
 	string get_string_time(string formart) {
 
 		struct tm *newtime;
@@ -570,7 +672,7 @@ public:
 		this->config();
 		log2("connect to ", "ip ", "port ", "socket");
 	}
-	//=====================================
+//=====================================
 	void get_time_str(string& time_str) {
 		struct tm *newtime;
 		char tmpbuf[128];
@@ -592,13 +694,13 @@ public:
 		get_time_str(s2);
 		cout << s2 << endl;
 	}
-	//==========================================
+//==========================================
 
 	string grab_page_filename(int index, string task_id) {
 		string filename = "./download/" + task_id;
 		return filename;
 	}
-	//================
+//================
 	bool is_html_end(char* buf, size_t count) {
 		{
 			while (1) {
@@ -639,7 +741,7 @@ public:
 		assert(a1 == true);
 		cout << "</HTML>\r\n" << a1 << endl;
 	}
-	//================
+//================
 	void test_strlen_size_len() {
 		//string s2 = "\a";
 		string s2 = "123";
@@ -648,7 +750,7 @@ public:
 
 	}
 
-	//=======================
+//=======================
 
 	string get_str_betwen_pages(string url) {
 		string split_str = "\a\r\n";
@@ -658,28 +760,29 @@ public:
 	void delete_self_test() {
 		system("rm -f kf1304_slave");
 	}
-	//
+//
 	int call_updata_shell(string url) {
 		//cin >> result;
 		string sh_str = "";
 		//"wget -O kf1304_slave_1 # \n";
 		//	sh_str += "ls \n";
 		//sh_str += "cd ..\n";
-		sh_str += "rm -f kf1304_slave \n"; //删除原来的文件
+
 		sh_str += "rm -f slave.tar.gz \n"; //删除原来的文件
 		sh_str += "wget -O slave.tar.gz # \n";
 		//sh_str += "mv kf1304_slave_1 kf1304_slave \n";
 		//sh_str += "chmod 777 kf1304_slave \n";
 		//	sh_str += "./kf1304_slave \n";
 		sh_str = replace(sh_str, url, "#");
+		sh_str = replace(sh_str, ":", "#"); //替换掉XX＃8080中的＃为:
 		sh_str += "tar zxvf slave.tar.gz \n"; //解压
 		sh_str += "cd Debug/ \n"; //编译
-		sh_str += "./build.sh \n"; //编译
+		sh_str += "./build.sh \n"; //
 
-		log("./updata.sh", sh_str, ios::trunc);
+		log("./update.sh", sh_str, ios::trunc);
 		//"chmod 777 kf1304_slave \n";
-		system("chmod 777 updata.sh");
-		int result = system("./updata.sh");
+		system("chmod 777 update.sh");
+		int result = system("./update.sh");
 		exit(0); //退出程序！
 		return result;
 	}
@@ -688,14 +791,14 @@ public:
 		cin >> result;
 		cout << result << endl;
 	}
-	//===================================
+//===================================
 	void call_shell_test() {
 		int result = system("./updata.sh");
 
 		cin >> result;
 		cout << result << endl;
 	}
-	//
+//
 	void auto_restart_test() {
 		//	int result = 1;
 		//	cin >> result;
@@ -742,7 +845,7 @@ public:
 		printf("/n");
 		return 0;
 	}
-	//===================================
+//===================================
 	bool trave_dir_into_vec(string path, vector<string>& fnames_evc) {
 		DIR *d; //声明一个句柄
 		struct dirent *file; //readdir函数的返回值就存放在这个结构体中
@@ -788,7 +891,7 @@ public:
 		dest_addr->sin_addr.s_addr = ip;
 		bzero(&(dest_addr->sin_zero), 8);
 	}
-	//
+//
 
 	bool page_read_binary(string send_filename, char * page_buff,
 			size_t& length) {
@@ -818,7 +921,7 @@ public:
 		is_page.close();
 		return 1;
 	}
-	//not pass
+//not pass
 	void page_read_binary_test() {
 		string send_filename = "./download/t1.tar.gz";
 		char * page_buff;
@@ -830,9 +933,9 @@ public:
 		os_page.close();
 		//free(page_buff);
 	}
-	//
+//
 
-	//==========================================
+//==========================================
 	bool read_config(string fname, map<string, string>& config_map) {
 		//
 		FILE *fp;
@@ -866,7 +969,7 @@ public:
 		}
 		return 1;
 	}
-	//===rep special
+//===rep special
 	float available_disk_space() {
 		struct statfs diskInfo;
 		statfs("/", &diskInfo);
@@ -881,15 +984,15 @@ public:
 	void disk_space_test() {
 		available_disk_space();
 	}
-	//
-	//num to string
+//
+//num to string
 	string float2str(float i) {
 		stringstream ss;
 		ss << i;
 		return ss.str();
 	}
-	//==========================================
-	// . connect to server
+//==========================================
+// . connect to server
 	/*
 	 for (vector<string>::iterator it2
 	 = fnames_evc.begin();
@@ -904,7 +1007,8 @@ public:
 
 
 	 * */
-	//
-};
+//
+}
+;
 }
 #endif /* GLOBALHELPER_H_ */

@@ -2,20 +2,6 @@
 **** Build of configuration Debug for project kf1304_master ****
 
 make all 
-Building file: ../src/kf1304_master.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
-Finished building: ../src/kf1304_master.cpp
- 
-Building file: ../src/master.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
-Finished building: ../src/master.cpp
- 
-Building target: kf1304_master
-Invoking: GCC C++ Linker
-g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/master.o ./src/slaver.o   -lmysqlclient
-Finished building target: kf1304_master
- 
+make: Nothing to be done for `all'.
 
 **** Build Finished ****

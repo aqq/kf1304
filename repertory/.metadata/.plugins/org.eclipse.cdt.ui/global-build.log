@@ -7471,3 +7471,390 @@ Finished building target: kf1304_master
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中未发现 return 语句
+../src/server.h: In member function ‘bool server::srun()’:
+../src/server.h:118: 警告：未使用的变量 ‘hbuf’
+../src/server.h:118: 警告：未使用的变量 ‘sbuf’
+../src/server.h:162: 警告：格式 ‘%d’ 需要类型 ‘int’，但实参 2 的类型为 ‘uint64_t’
+../src/server.h:163: 警告：未使用的变量 ‘done’
+../src/server.h: In function ‘void* worker_func(void*)’:
+../src/server.h:57: 警告：在有返回值的函数中，控制流程到达函数尾
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中，控制流程到达函数尾
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/parse.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parse.d" -MT"src/parse.d" -o "src/parse.o" "../src/parse.cpp"
+Finished building: ../src/parse.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+./src/main.o: In function `main':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/main.cpp:13: multiple definition of `main'
+./src/kf1304_master.o:/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/kf1304_master.cpp:18: first defined here
+/usr/bin/ld: Warning: size of symbol `main' changed from 36 in ./src/kf1304_master.o to 315 in ./src/main.o
+./src/parse.o: In function `main':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/parse.cpp:4: multiple definition of `main'
+./src/kf1304_master.o:/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/kf1304_master.cpp:18: first defined here
+/usr/bin/ld: Warning: size of symbol `main' changed from 315 in ./src/kf1304_master.o to 192 in ./src/parse.o
+collect2: ld 返回 1
+make: *** [kf1304_master] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中未发现 return 语句
+../src/server.h: In member function ‘bool server::srun()’:
+../src/server.h:118: 警告：未使用的变量 ‘hbuf’
+../src/server.h:118: 警告：未使用的变量 ‘sbuf’
+../src/server.h:162: 警告：格式 ‘%d’ 需要类型 ‘int’，但实参 2 的类型为 ‘uint64_t’
+../src/server.h:163: 警告：未使用的变量 ‘done’
+../src/server.h: In function ‘void* worker_func(void*)’:
+../src/server.h:57: 警告：在有返回值的函数中，控制流程到达函数尾
+../src/lock_free_queue.h: In function ‘int reset(volatile int*)’:
+../src/lock_free_queue.h:53: 警告：在有返回值的函数中，控制流程到达函数尾
+Finished building: ../src/main.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+./src/parse.o: In function `main':
+/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/parse.cpp:4: multiple definition of `main'
+./src/kf1304_master.o:/opt/workspace2/kf1304/master/kf1304_master/Debug/../src/kf1304_master.cpp:18: first defined here
+/usr/bin/ld: Warning: size of symbol `main' changed from 36 in ./src/kf1304_master.o to 192 in ./src/parse.o
+collect2: ld 返回 1
+make: *** [kf1304_master] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/parse.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/parse.d" -MT"src/parse.d" -o "src/parse.o" "../src/parse.cpp"
+Finished building: ../src/parse.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master.h: In member function ‘std::string poseidon::master::GetLocalIp()’:
+../src/master.h:634: 错误：‘SIOCGIFADDR’ 在此作用域中尚未声明
+../src/master.h:634: 错误：‘ioctl’ 在此作用域中尚未声明
+../src/master.h:637: 错误：‘struct sockaddr_in’ 没有名为 ‘ifr_addr’ 的成员
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+在包含自 ../src/master_test.h：9 的文件中，
+                 从 ../src/kf1304_master.cpp：11:
+../src/master.h:27:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:28:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:29:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:30:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:31:20: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:32:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:33:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:34:19: 警告：#include 指示的末尾有多余的标识符
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+在包含自 ../src/master.cpp：8 的文件中:
+../src/master.h:27:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:28:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:29:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:30:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:31:20: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:32:24: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:33:23: 警告：#include 指示的末尾有多余的标识符
+../src/master.h:34:19: 警告：#include 指示的末尾有多余的标识符
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/master_test.h: In function ‘void poseidon::local_ip_test()’:
+../src/master_test.h:182: 警告：未使用的变量 ‘mt’
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+../src/kf1304_master.cpp: In function ‘int main()’:
+../src/kf1304_master.cpp:51: 错误：‘local_ip_test’ 在此作用域中尚未声明
+make: *** [src/kf1304_master.o] 错误 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/Cpp2mysql.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Cpp2mysql.d" -MT"src/Cpp2mysql.d" -o "src/Cpp2mysql.o" "../src/Cpp2mysql.cpp"
+Finished building: ../src/Cpp2mysql.cpp
+ 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+Building file: ../src/kf1304_master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_master.d" -MT"src/kf1304_master.d" -o "src/kf1304_master.o" "../src/kf1304_master.cpp"
+Finished building: ../src/kf1304_master.cpp
+ 
+Building file: ../src/master.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/master.d" -MT"src/master.d" -o "src/master.o" "../src/master.cpp"
+Finished building: ../src/master.cpp
+ 
+Building target: kf1304_master
+Invoking: GCC C++ Linker
+g++  -o "kf1304_master"  ./src/Cpp2mysql.o ./src/GlobalHelper.o ./src/kf1304_master.o ./src/main.o ./src/master.o ./src/parse.o ./src/slaver.o   -lmysqlclient
+Finished building target: kf1304_master
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project kf1304_master ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

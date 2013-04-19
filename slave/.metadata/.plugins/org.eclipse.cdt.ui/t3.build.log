@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project t3 ****
+
+make all 
+Building file: ../src/t3.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/t3.d" -MT"src/t3.d" -o "src/t3.o" "../src/t3.cpp"
+Finished building: ../src/t3.cpp
+ 
+Building target: t3
+Invoking: GCC C++ Linker
+g++  -o "t3"  ./src/t3.o   
+Finished building target: t3
+ 
+
+**** Build Finished ****

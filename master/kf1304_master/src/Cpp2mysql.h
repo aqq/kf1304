@@ -73,9 +73,10 @@ public:
 	//================================
 	void update_worker_tb(worker_tb worker) {
 		char sqlquery1[500] =
-				"	update worker_tb set last_request_time='%s' where slave_id=%d";
+				"	update worker_tb set last_request_time='%s',last_ip='%s',available_disk_space='%f' where slave_id=%d";
 		char sqlquery2[500];
 		sprintf(sqlquery2, sqlquery1, worker.last_request_time.c_str(),
+				worker.last_request_ip.c_str(), worker.available_disk_space,
 				worker.slave_id);
 
 		gh->log2(sqlquery2, "sql");

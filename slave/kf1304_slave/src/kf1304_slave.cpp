@@ -14,6 +14,8 @@ using namespace std;
 using namespace poseidon;
 #define DEBUG
 int main() {
+
+	//(new GlobalHelper())->read_line_from_test();
 	//slave to rep
 
 //	(new GlobalHelper())->time_test2(); //pass
@@ -36,7 +38,7 @@ int main() {
 	//(new Gread_buflobalHelper())->split_line_test();//pass
 	//(new GlobalHelper())->split_test();//pass
 	//(new GlobalHelper())->replace_test(); //pass
-	//(new GlobalHelper())->convert_url_to_http_req_test(); //pass
+//	(new GlobalHelper())->convert_url_to_http_req_test(); //pass
 	//(new GlobalHelper())->log_test(); //pass
 
 	//(new GlobalHelper())->test_strlen_size_len(); //pass
@@ -44,6 +46,7 @@ int main() {
 	//(new GlobalHelper())->is_html_end_test(); //pass
 	//(new GlobalHelper())->delete_self_test(); //pass
 
+	//(new GlobalHelper())->convert_url_to_http_req_test();
 	//grab
 	//-------------------------------
 // 	slaver_test_grab(); //pass
@@ -56,7 +59,7 @@ int main() {
 	//lookup_ip_test(); //pass
 //	grabpage_work_test(); //pass
 //	hand_response_test(); //pass
-	//str2task_test();
+//	str2task_test();
 	slaver_work_test(); //final test
 
 //----------sys call

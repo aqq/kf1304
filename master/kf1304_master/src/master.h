@@ -79,6 +79,7 @@ struct command {
 	int last_cmd_id;
 	float available_disk_space;
 
+	vector<string> slave_ip;
 	vector<string> urls; //master to slave
 	vector<string> task_id;
 };
@@ -86,7 +87,7 @@ class master {
 
 private:
 	int master_port; //80
-//	string master_ip; //"192.168.75.128";
+	//string local_ip_str; //"192.168.75.128";
 
 	GlobalHelper *gh;
 	Cpp2mysql *mysql;
@@ -203,7 +204,7 @@ public:
 			gh->log2("request :", request_buff, s_socket);
 			//5.3 hand request
 			string request_str = request_buff;
-			string respose_content = hand_request(request_str);
+			string respose_content = hand_request(request_str); ///
 			gh->log2("response :", respose_content, s_socket);
 			//5.4 write to request
 			if (-1
@@ -283,6 +284,8 @@ public:
 		//update_worker_tb
 		worker_tb w;
 		w.slave_id = req_cmd.slave_id;
+		w.last_request_ip = req_cmd.slave_ip[0];
+		w.available_disk_space = req_cmd.available_disk_space;
 		w.last_request_time = gh->get_time_str("%Y-%m-%d %H:%M:%S"); //"bbs_csdn";
 		mysql->update_worker_tb(w);
 	}
@@ -353,6 +356,8 @@ public:
 		req_cmd.last_cmd_id = atoi(req_cmd_map["last_cmd_id"].c_str());
 		req_cmd.available_disk_space = atof(
 				req_cmd_map["available_disk_space"].c_str());
+		req_cmd.slave_ip.push_back(req_cmd_map["slave_ip"]);
+
 	}
 
 	void hand_slave_request(struct command& req_cmd,
@@ -590,6 +595,7 @@ public:
 		this->new_version_url.push_back(config_map1["new_version_url"].c_str());
 		this->store_ip.push_back(config_map1["store_ip"]);
 		this->store_port = atoi((config_map1["store_port"]).c_str());
+		this->current_version = atoi((config_map1["app_version"]).c_str());
 		//
 		return 1;
 	}
@@ -615,6 +621,7 @@ public:
 	void show_slave_status() {
 
 	}
+
 	virtual ~master() {
 		//fclose(fp);
 	}
