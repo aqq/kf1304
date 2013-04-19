@@ -6,8 +6,8 @@
 	<section name="DialogBounds_SearchDialog">
 		<item value="676" key="DIALOG_WIDTH"/>
 		<item value="95" key="DIALOG_Y_ORIGIN"/>
-		<item value="468" key="DIALOG_HEIGHT"/>
 		<item value="243" key="DIALOG_X_ORIGIN"/>
+		<item value="468" key="DIALOG_HEIGHT"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">
@@ -28,11 +28,11 @@
 			<item value="org.eclipse.jdt.ui.JavaSearchPage"/>
 		</list>
 	</section>
-	<section name="org.eclipse.search.text.FileSearchResultPage">
-		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
-	</section>
 	<section name="org.eclipse.cdt.ui.pdomSearchViewPage">
 		<item value="true" key="showEnclosingDefinitions"/>
+	</section>
+	<section name="org.eclipse.search.text.FileSearchResultPage">
+		<item value="1000" key="org.eclipse.search.resultpage.limit"/>
 	</section>
 	<section name="TextSearchPage">
 		<item value="false" key="CASE_SENSITIVE"/>

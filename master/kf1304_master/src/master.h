@@ -138,9 +138,9 @@ public:
 	}
 	bool is_store_time;
 	bool need_store(struct command req_cmd) {
-		is_store_time = !is_store_time;
-		//return req_cmd.available_disk_space < 0.5;
-		return is_store_time;
+		//is_store_time = !is_store_time;
+		return req_cmd.available_disk_space < 0.5;
+		return 0;
 
 	}
 	int service() {

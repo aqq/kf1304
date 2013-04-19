@@ -7,8 +7,8 @@
 
 #include "slaver.h"
 
-#include<sys/types.h>
-#include<sys/socket.h>
+#include <sys/types.h>
+#include <sys/socket.h>
 #include<netinet/in.h>
 #include <arpa/inet.h>
 
@@ -172,6 +172,12 @@ bool slaver::grab_page(grabtask gt) {
 	struct sockaddr_in dest_addr;
 
 	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+	int nNetTimeout = 10000; //10秒
+	//SO_RCVTIMEO time
+	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &nNetTimeout,
+			sizeof(nNetTimeout));
+
 	while (1) {
 		if (-1 == sockfd) {
 			perror("socket fd create fail...");

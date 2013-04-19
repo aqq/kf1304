@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1028" x="0" y="27">
 <fastViewData fastViewLocation="1024"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="82" y="28"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -34,6 +34,8 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -42,17 +44,25 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/conf/slave.conf.server"/>
 <editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="94" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="slaver.h" partName="slaver.h" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/slaver.h" title="slaver.h" tooltip="kf1304_slave/src/slaver.h" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="slaver.h" partName="slaver.h" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/slaver.h" title="slaver.h" tooltip="kf1304_slave/src/slaver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/src/slaver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9138" selectionTopPixel="6238"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7252" selectionTopPixel="5184"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="slaver.cpp" partName="slaver.cpp" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/slaver.cpp" title="slaver.cpp" tooltip="kf1304_slave/src/slaver.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/src/slaver.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3170" selectionTopPixel="2202"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="5877" selectionTopPixel="4023"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="kf1304_slave.cpp" partName="kf1304_slave.cpp" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/kf1304_slave.cpp" title="kf1304_slave.cpp" tooltip="kf1304_slave/src/kf1304_slave.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="kf1304_slave.cpp" partName="kf1304_slave.cpp" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/kf1304_slave.cpp" title="kf1304_slave.cpp" tooltip="kf1304_slave/src/kf1304_slave.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/src/kf1304_slave.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="624"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2038" selectionTopPixel="854"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalHelper.h" partName="GlobalHelper.h" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/GlobalHelper.h" title="GlobalHelper.h" tooltip="kf1304_slave/src/GlobalHelper.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/src/GlobalHelper.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13264" selectionTopPixel="8210"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="slaver_test.h" partName="slaver_test.h" path="/opt/workspace2/kf1304/slave/kf1304_slave/src/slaver_test.h" title="slaver_test.h" tooltip="kf1304_slave/src/slaver_test.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/kf1304_slave/src/slaver_test.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5533" selectionTopPixel="3268"/>
 </editor>
 </editors>
 <views>
@@ -63,9 +73,9 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="6" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
-<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="7" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="2" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -74,8 +84,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors (7 items)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="120" org.eclipse.ui.ide.markerType="306" org.eclipse.ui.ide.pathField="160" org.eclipse.ui.ide.resourceField="120" org.eclipse.ui.ide.severityAndDescriptionField="400"/>
@@ -164,14 +173,14 @@
 <new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
-<hide_toolbar_item_id id="org.eclipse.mylyn.tasks.ui.navigate.task.history"/>
-<hide_toolbar_item_id id="org.eclipse.ui.navigate.backwardHistory"/>
 <hide_toolbar_item_id id="org.eclipse.ui.workbench.navigate"/>
+<hide_toolbar_item_id id="org.eclipse.ui.navigate.backwardHistory"/>
+<hide_toolbar_item_id id="org.eclipse.mylyn.tasks.ui.navigate.task.history"/>
 <hide_toolbar_item_id id="org.eclipse.ui.navigate.previous"/>
-<hide_toolbar_item_id id="cruise.umple.ui.eclipse.UmpleAction"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.navigate.forwardHistory"/>
+<hide_toolbar_item_id id="cruise.umple.ui.eclipse.UmpleAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.ui.navigate.forwardHistory"/>
 <hide_toolbar_item_id id="org.eclipse.ui.navigate.next"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
@@ -207,8 +216,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.16914988" ratioLeft="193" ratioRight="948" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.704246" ratioLeft="481" ratioRight="202" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.23575811" ratioLeft="269" ratioRight="872" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.5241581" ratioLeft="358" ratioRight="325" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
@@ -228,7 +237,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="topRight" ratio="0.75770926" ratioLeft="688" ratioRight="220" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="topRight" ratio="0.63866514" ratioLeft="555" ratioRight="314" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
@@ -247,167 +256,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/t3/src/t3.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/t3/to.cjt"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/keep_slave_run_20130413_0.sh"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/conf/slave_private.conf"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/conf/log.conf"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/start_slave.sh"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/conf/slave.conf"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/conf/slave.conf.server"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/slaver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/slaver.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/kf1304_slave.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/slaver.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/GlobalHelper.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/slaver_test.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/conf/slave.conf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/kf1304_slave/src/slaver.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/small_tool/User-Agent"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/http_req/User-Agent"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/http_req/Accept-Language"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/http_req/Accept-Charset"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/kf1304_slave/http_req/Accept"/>
 </editors>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2289" y="0"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2019" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2247" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="5548" y="13"/>
 </item>
-<item historyLabel="to.cjt" index="1">
-<position info="not_deleted" x="2473" y="0"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2028" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="slave.conf" index="4">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2028" y="0"/>
+</item>
+<item historyLabel="slave.conf" index="4">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="944" y="17"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2028" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="9365" y="0"/>
+</item>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="16706" y="0"/>
+</item>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="20898" y="17"/>
+</item>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="21670" y="22"/>
+</item>
+<item historyLabel="slave.conf" index="4">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="944" y="17"/>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="21670" y="22"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="9365" y="0"/>
+</item>
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="3709" y="12"/>
+</item>
+<item historyLabel="slaver.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2533" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1405" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1456" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="slaver.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
+<item historyLabel="slaver.cpp" index="5">
 <position/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1273" y="3"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2028" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2170" y="4"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="4149" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1466" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="5469" y="16"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position/>
+<item historyLabel="slave.conf" index="4">
+<position info="not_deleted" x="89" y="0"/>
 </item>
-<item historyLabel="to.cjt" index="1">
-<position info="not_deleted" x="2473" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="5469" y="16"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2909" y="0"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2040" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2898" y="0"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="4118" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2857" y="0"/>
+<item historyLabel="User-Agent" index="6">
+<position info="not_deleted" x="0" y="1081"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1413" y="14"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="4118" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2856" y="0"/>
+<item historyLabel="User-Agent" index="7">
+<position info="not_deleted" x="915" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1413" y="14"/>
+<item historyLabel="Accept-Language" index="8">
+<position info="not_deleted" x="21" y="0"/>
 </item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1501" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2855" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1413" y="14"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="1593" y="0"/>
-</item>
-<item historyLabel="t3.cpp" index="0">
-<position info="not_deleted" x="2814" y="0"/>
-</item>
-<item historyLabel="keep_slave_run_20130413_0.sh" index="2">
-<position info="not_deleted" x="1" y="303"/>
-</item>
-<item historyLabel="slave_private.conf" index="3">
+<item historyLabel="Accept-Charset" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="log.conf" index="4">
-<position/>
+<item historyLabel="Accept" index="10">
+<position info="not_deleted" x="63" y="0"/>
 </item>
-<item historyLabel="start_slave.sh" index="5">
+<item historyLabel="Accept-Charset" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="log.conf" index="4">
-<position/>
+<item historyLabel="Accept-Language" index="8">
+<position info="not_deleted" x="21" y="0"/>
 </item>
-<item historyLabel="log.conf" index="4">
-<position/>
+<item historyLabel="User-Agent" index="7">
+<position info="not_deleted" x="915" y="0"/>
 </item>
-<item historyLabel="slave.conf" index="6">
-<position info="not_deleted" x="108" y="0"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="4118" y="0"/>
 </item>
-<item historyLabel="slave.conf.server" index="7">
-<position info="not_deleted" x="10" y="11"/>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="14117" y="0"/>
 </item>
-<item historyLabel="slave.conf" index="6">
-<position info="not_deleted" x="59" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="628" y="474"/>
 </item>
-<item historyLabel="slave.conf.server" index="7">
-<position info="not_deleted" x="94" y="13"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="4118" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2040" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="3972" y="5"/>
+<item historyLabel="GlobalHelper.h" index="2">
+<position info="not_deleted" x="13264" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="3761" y="13"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="814" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="4505" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="13378" y="20"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="5342" y="0"/>
+<item historyLabel="kf1304_slave.cpp" index="0">
+<position info="not_deleted" x="2038" y="0"/>
 </item>
-<item historyLabel="slaver.cpp" index="9">
-<position info="not_deleted" x="3170" y="0"/>
+<item historyLabel="slaver_test.h" index="3">
+<position info="not_deleted" x="5533" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="8286" y="18"/>
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="3912" y="4"/>
 </item>
-<item historyLabel="log.conf" index="4">
-<position info="not_deleted" x="82" y="0"/>
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="3845" y="0"/>
 </item>
-<item historyLabel="slaver.h" index="8">
-<position info="not_deleted" x="9138" y="0"/>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="5964" y="0"/>
 </item>
-<item active="true" historyLabel="kf1304_slave.cpp" index="10">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="3845" y="0"/>
+</item>
+<item historyLabel="slaver.cpp" index="5">
+<position info="not_deleted" x="5877" y="15"/>
+</item>
+<item active="true" historyLabel="slaver.h" index="1">
+<position info="not_deleted" x="7407" y="15"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -415,9 +424,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -430,6 +436,30 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Accept" tooltip="kf1304_slave/http_req/Accept">
+<persistable path="/kf1304_slave/http_req/Accept"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Accept-Charset" tooltip="kf1304_slave/http_req/Accept-Charset">
+<persistable path="/kf1304_slave/http_req/Accept-Charset"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Accept-Language" tooltip="kf1304_slave/http_req/Accept-Language">
+<persistable path="/kf1304_slave/http_req/Accept-Language"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="User-Agent" tooltip="kf1304_slave/http_req/User-Agent">
+<persistable path="/kf1304_slave/http_req/User-Agent"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="User-Agent" tooltip="small_tool/User-Agent">
+<persistable path="/small_tool/User-Agent"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="slave.conf" tooltip="kf1304_slave/conf/slave.conf">
+<persistable path="/kf1304_slave/conf/slave.conf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="slaver_test.h" tooltip="kf1304_slave/src/slaver_test.h">
+<persistable path="/kf1304_slave/src/slaver_test.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalHelper.h" tooltip="kf1304_slave/src/GlobalHelper.h">
+<persistable path="/kf1304_slave/src/GlobalHelper.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="kf1304_slave.cpp" tooltip="kf1304_slave/src/kf1304_slave.cpp">
 <persistable path="/kf1304_slave/src/kf1304_slave.cpp"/>
 </file>
@@ -445,35 +475,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="slave.conf.server" tooltip="kf1304_slave/conf/slave.conf.server">
 <persistable path="/kf1304_slave/conf/slave.conf.server"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="slave.conf" tooltip="kf1304_slave/conf/slave.conf">
-<persistable path="/kf1304_slave/conf/slave.conf"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="start_slave.sh" tooltip="kf1304_slave/start_slave.sh">
 <persistable path="/kf1304_slave/start_slave.sh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="slave_private.conf" tooltip="kf1304_slave/conf/slave_private.conf">
-<persistable path="/kf1304_slave/conf/slave_private.conf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="keep_slave_run_20130413_0.sh" tooltip="kf1304_slave/keep_slave_run_20130413_0.sh">
-<persistable path="/kf1304_slave/keep_slave_run_20130413_0.sh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="t1" tooltip="t3/t1">
-<persistable path="/t3/t1"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="t3.cpp" tooltip="t3/src/t3.cpp">
-<persistable path="/t3/src/t3.cpp"/>
-</file>
-<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stdlib.h" tooltip="/usr/include/stdlib.h">
-<persistable path="/usr/include/stdlib.h" project="kf1304_slave"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stl_iterator.h" tooltip="/usr/include/c++/4.1.1/bits/stl_iterator.h">
-<persistable uri="file:/usr/include/c++/4.1.1/bits/stl_iterator.h"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stl_map.h" tooltip="/usr/include/c++/4.1.1/bits/stl_map.h">
-<persistable uri="file:/usr/include/c++/4.1.1/bits/stl_map.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GlobalHelper.cpp" tooltip="kf1304_slave/src/GlobalHelper.cpp">
-<persistable path="/kf1304_slave/src/GlobalHelper.cpp"/>
 </file>
 </mruList>
 </workbench>

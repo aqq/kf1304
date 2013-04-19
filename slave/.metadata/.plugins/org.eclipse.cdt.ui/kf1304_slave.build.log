@@ -2,20 +2,10 @@
 **** Build of configuration Debug for project kf1304_slave ****
 
 make all 
-Building file: ../src/GlobalHelper.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GlobalHelper.d" -MT"src/GlobalHelper.d" -o "src/GlobalHelper.o" "../src/GlobalHelper.cpp"
-Finished building: ../src/GlobalHelper.cpp
- 
 Building file: ../src/kf1304_slave.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/kf1304_slave.d" -MT"src/kf1304_slave.d" -o "src/kf1304_slave.o" "../src/kf1304_slave.cpp"
 Finished building: ../src/kf1304_slave.cpp
- 
-Building file: ../src/slaver.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/slaver.d" -MT"src/slaver.d" -o "src/slaver.o" "../src/slaver.cpp"
-Finished building: ../src/slaver.cpp
  
 Building target: kf1304_slave
 Invoking: GCC C++ Linker

@@ -26,7 +26,7 @@ int main() {
 // tar_pages_and_get_fnames_vec_test();//pass
 // page_read_binary_test(); //
 // message to hand
-//remoteStorePage_test(); //pass  send and revice msg
+ //remoteStorePage_test(); //pass  send and revice msg
 //store_page_test();
 // hand msg
 //-----------------------------
