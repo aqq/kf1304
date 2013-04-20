@@ -1,8 +1,8 @@
 //============================================================================
 // Name        : t3.cpp
-// Author      : QinKF
+// Author      : andrew
 // Version     :
-// Copyright   : GXNUCSE
+// Copyright   : newplayer
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 #include <fcntl.h>
@@ -55,6 +55,30 @@ void log(string filename, string content) {
 	ofstream outfile(filename.c_str(), ios::app);
 	outfile << content << endl;
 	outfile.close();
+}
+
+void store_site_url2(string sub_item2, string url) {
+	string site_name;
+	site_name = "Webpub";
+	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
+			site_name.c_str())) {
+		log(site_name, url);
+		return;
+	}
+	site_name = "tradehtml";
+	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
+			site_name.c_str())) {
+		log(site_name, url);
+		return;
+	}
+	site_name = "m";
+	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
+			site_name.c_str())) {
+		log(site_name, url);
+		return;
+	}
+
+	log("others", url);
 }
 void store_site_url(string sub_item2, string url) {
 	string site_name;
@@ -138,7 +162,7 @@ void store_str(string sub_item2, string url, vector<string> key_vec) {
 
 }
 //
-int main(int argc, char *argv[]) {
+int main_split_http_req(int argc, char *argv[]) {
 	cout << argc << endl;
 	cout << "usage: filename   " << endl;
 	string fname = "http_req_record.log"; // argv[1];
@@ -173,11 +197,66 @@ int main(int argc, char *argv[]) {
 		key_vec.push_back("Accept-Language");
 		key_vec.push_back("Accept-Charset");
 		key_vec.push_back("User-Agent");
-		string v1 = url.substr(url.find(':', 0) + 1, url.find('\n', 0)-1);
+		string v1 = url.substr(url.find(':', 0) + 1, url.find('\n', 0) - 1);
 //		cout <<"@" <<v1 << "@"<<endl;
 		store_str(sub_item2, v1, key_vec);
 
 	}
 	fclose(fp);
+	return 1;
 }
+//
+int main(int argc, char *argv[]) {
 
+	if (argc != 2) {
+		cout << "usage: main {filename}" << endl;
+		return 1;
+	}
+	string fname = "urls_file"; // argv[1];
+//
+	FILE *fp;
+	char *filep;
+	string url;
+	if ((fp = fopen(argv[1], "r")) == NULL) {
+		printf("open file %s error!!\n", fname.c_str());
+	}
+//
+	char read_buff[1024];
+	while (1) {
+		filep = fgets(read_buff, 1024, fp);
+		if (filep == NULL) {
+			break;
+		}
+
+		string url = read_buff;
+		//	cout << url << endl; //http://www.1.com/1
+		string item = url.substr(0, url.find_first_of('\n'));
+		string sub_item = replace_str(item, "", "http://");
+		//cout << sub_item << endl;
+
+		string key_words = "";
+		//CASE1 and CASSE 2:	 www.1.com/Webpub/   yw.114chn.com/tradehtml/
+		size_t it = sub_item.find_first_of("/", 0);
+		if (it == string::npos) {
+			continue;
+		}
+		//	cout << it << endl;
+
+		size_t it2 = sub_item.find_first_of("/", it + 1);
+//		cout << it2 << endl;
+		if (it2 == string::npos) {
+			continue;
+		}
+
+		key_words = sub_item.substr(it + 1, it2 - it - 1);
+		cout << key_words << endl;
+		//CASE3:tradehtml
+//luzhou.114chn.com/m/web/shop/Index.aspx?shopid=5105001303200001
+
+		store_site_url2(key_words, item);
+		//cout<<endl;
+
+	}
+	fclose(fp);
+	return 1;
+}

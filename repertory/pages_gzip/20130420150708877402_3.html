@@ -1,0 +1,527 @@
+
+url:s.114chn.com/s-ap5ittqgl-c.html
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 54239
+Content-Type: text/html
+Server: Microsoft-IIS/7.5
+X-AspNet-Version: 4.0.30319
+Set-Cookie: ASP.NET_SessionId=3olvxukzdmzfluwc3fuuopci; path=/; HttpOnly
+Date: Sat, 20 Apr 2013 07:07:33 GMT
+Connection: close
+
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>贝儿多爸爸泡芙工房(印象城店)的优惠信息_苏州114生活网</title>
+    <meta name="keywords" content="贝儿多爸爸泡芙工房(印象城店)的优惠信息" />
+    <meta name="description" content="贝儿多爸爸泡芙工房(印象城店)的优惠信息，尽在苏州114生活网" />
+    <link href="/Styles/index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">        window.path = "/";</script>
+    <script src="/Scripts/checklogin.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="/Scripts/life.Popup.js" type="text/javascript"></script>    
+    <script type="text/javascript" language="javascript">
+        function GetCouponsNum(cid, mid) {
+            jQuery.post("/Ajax/AjaxCouponsNum.aspx", { "cid": cid, "mid": mid }, function (msg) {
+                $("#youNum" + cid).html(msg);
+            });
+        }
+        function HaveInterest(cid, mid) {
+            jQuery.post("/Ajax/AjaxInterestCoupons.aspx", { "cid": cid }, function (res) {
+                if (res == "0") {
+                    GetCouponsNum(cid, mid);
+                    $("<div id=\"divpop\" align=\"center\"><img src=\"" + window.path + "Styles/images/success.gif\"></img>成功了哦！</div>").appendTo(document.body).Popup({ autoOpen: true, height: 100, width: 350 });
+                    timeUpdate(10);
+                } else if (res == "2") {
+                    $("<div id=\"divpop\" align=\"center\"><img src=\"" + window.path + "Styles/face/20110822084983.gif\"></img>该优惠已经在您的感兴趣列表中存在了哦！</div>").appendTo(document.body).Popup({ autoOpen: true, height: 100, width: 350 });
+                    timeUpdate(10);
+                }
+                else if (res == "-1") {
+                    alert("没有成功哦！");
+                }
+            });
+        }
+        function timeUpdate(times) {
+            if (times == 0) { $("#divpop").Popup("destroy").remove(); return; };
+            $("#divpop").Popup("option", "title", "温馨提示：本窗口将在 " + times + " 秒后自动关闭");
+            times--;
+            setTimeout(function () {
+                timeUpdate(times);
+            }, 1000);
+        }
+        function checkLo(mid, cid) {
+            cl(function () {
+                window.location = window.path + "m-" + mid + "-c-" + cid + ".html", "_blank";
+            });
+        }
+    </script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            jQuery("#divCoupons ul:eq(0)").attr("style", "background:none;border:none");
+            $.get("/ajax/Shop.ashx", { action: "addvisit", mid: "ap5ittqgl" });
+        });
+    </script>
+</head>
+<body>
+<!--头部-->
+
+<script src="/scripts/common.js"></script>
+<script src="/scripts/life.membercard.js"></script>
+
+ <div id="divDialogPraise" style="display: none; overflow-y:hidden;*padding-bottom:0;padding-bottom:0\0;_height:290px;">
+</div> 
+<div id="divDialogMessage" style="display: none; width: 340px; overflow-y: hidden;">
+    <div class="clearfix" style="height: 118px">
+        <span class="fl">私信内容：</span><span style="float: right;">您还可以输入<em name="nums" class="f16 enfont"
+            id="nums">140</em>个汉字</span>
+        <textarea name="txtMessageContent" id="txtMessageContent" onfocus="focusin('#txtMessageContent','')"
+            onblur="blurin('#txtMessageContent','')" style="overflow: auto; width: 336px;margin:0 auto;
+            height: 91px; line-height: 20px;"></textarea></div>
+</div>
+ <script src="/Scripts/Praise.js" type="text/javascript"></script>
+ <script src="/Scripts/Message.js" type="text/javascript"></script>
+  <script src="/Scripts/DescriptionAndExpression.js" type="text/javascript"></script>
+<div class="header f12">
+    <!--头部横条-->
+    <div class="topbox f12">
+        <div class="top pr" id="topLife">
+            <div id="PageTop_divChannel" class="fl left" style="width:220px;_width:280px;">
+                <div class="fl fb tl" style="margin-left:25px;">
+                    <a href="/beijing" title="北京生活信息交友网首页">北京114生活网</a></div>
+                <div class="fl fenlei2">
+                    <div class="fenleipindao" id="fenleiclick">
+                        <em class="daohang"><a target="_blank" href="/beijing-map-1.html">快速导航</a></em>
+                        <div class="fenleilist" id="fenleilist" style="border-top: 0px dashed #cccccc;">
+                        <ul>
+                            <li><a href='/beijing-f' class='pl5'>北京美食</a></li><li><a href='/beijing-w' class='pl5'>北京购物</a></li><li><a href='/beijing-y' class='pl5'>北京休闲娱乐</a></li><li><a href='/beijing-l' class='pl5'>北京丽人</a></li><li><a href='/beijing-j' class='pl5'>北京健身</a></li><li><a href='/beijing-d' class='pl5'>北京酒店</a></li><li><a href='/beijing-x' class='pl5'>北京旅游出行</a></li><li><a href='/beijing-r' class='pl5'>北京房产</a></li><li><a href='/beijing-c' class='pl5'>北京车辆</a></li><li><a href='/beijing-e' class='pl5'>北京教育培训</a></li><li><a href='/beijing-b' class='pl5'>北京家居建材</a></li><li><a href='/beijing-s' class='pl5'>北京生活服务</a></li><li><a href='/beijing-u' class='pl5'>北京商务服务</a></li><li><a href='/beijing-m' class='pl5'>北京医疗服务</a></li><li><a href='/beijing-h' class='pl5'>北京金融服务</a></li><li><a href='/beijing-a' class='pl5'>北京办事机构</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <input type="hidden" id="hidLoginId" value="" /><input type="hidden" id="type" /><input type="hidden" id="Descriptionid"/>
+                    <input type="hidden" id="hdExpression"/>
+                </div>
+                
+            </div>
+            
+            
+            <div class="fr clearfix right" id="userinfo">
+                <div id="defaultlogion">
+                    <a href="/mm/OAuth/qq/logintoqq.aspx" title="用QQ帐号登录生活网" target="_blank" class="qq" style="top:8px;right:197px"></a>
+                    <span>
+                    <a rel="nofollow" target="_blank" href="/mm/MemberRegister.aspx">个人注册</a>
+                    </span>
+                    <span>|</span>
+                    <span id="plogin">
+                    <a id="toplogin" rel="nofollow" href="javascript:void(0)">个人登录</a>
+                    </span>
+                    <span>|</span>
+                    <span>
+                    <a rel="nofollow" target="_blank" href="/help/QuestionList0101.html">帮助</a>
+                    </span>
+                </div>
+                <script type="text/javascript">
+                    loginLoad('/ajax/toploginstate.ashx?d=False');
+                    //window.setTimeout("cl(null,null)", 120000);                          
+                </script>
+                <!--[if IE 6]><div></div><![endif]-->
+                <dl class="pa" id="prompt" style="right:8px;top:38px;display:none;">
+                <dt></dt>
+                <dd class="clearfix pr"><div class="dtbg"></div><!--[if IE 6]><div></div><![endif]-->  <div class="t-loginbg-left"></div><div class="t-loginbg-right"></div></dd>
+                <dd class="ddbg"><p class="tc mb5">您当前还没有登录，请登录。</p><p class="tr pr10 bluelink"><a href="javascript:void(0);" onclick="noprompt()">不再提醒</a></p></dd>
+                <dd class=""><div class="b-loginbg-left"></div><div class="b-loginbg-right"></div></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!--头部横条-->
+    <!--logo/seach/fontlink-->
+    <div class="container clearfix">
+        <div class="bannerbox  clearfix pb10">
+            <div id="PageTop_logo" class="fl logobox"><a href="/beijing" title="北京生活信息交友网"><img src="/styles/images/discount_logo.gif" border="0" /></a></div>
+            <div class="fl searchbox">
+                <div class="citybox">
+                    <div class="cityname red"><a href="/beijing">北京</a></div>
+                    <div class="fl pl5 pr5 f12 grey9">
+                        |</div>
+                    <div class="changebox" id="changebox" style="border-top: 1px solid #ffffff; border-left: 1px solid #ffffff;
+                        z-index: 100!important;">
+                        <div class="changecity" id="changecity" style="width: 100px; z-index: 100!important;">
+                            切换城市</div>
+                        <div class="citylist" id="cc" style="z-index: 100!important;">
+                            <script type="text/javascript" src="/ajax/HotCity.ashx"></script>
+                            
+                            <script src="/Scripts/cookie.js"></script>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="scbox clearfix "><input type="hidden" name="aid" value="101001" />
+                    <div class="area" id="selectSublist"><a href="javascript:;" id="curSubname">选择区域</a>
+                        <!--搜索选择地区的下拉菜单 -->
+                        <input type="hidden" id="txtQuXian" value="" />
+                        <div class="open" id="selectSublistOpen" style="display:none">
+                        <ul>
+                        <li><a href="javascript:setQuyu('101001001','东城')">东城</a></li><li><a href="javascript:setQuyu('101001002','西城')">西城</a></li><li><a href="javascript:setQuyu('101001003','朝阳')">朝阳</a></li><li><a href="javascript:setQuyu('101001004','丰台')">丰台</a></li><li><a href="javascript:setQuyu('101001005','石景山')">石景山</a></li><li><a href="javascript:setQuyu('101001006','海淀')">海淀</a></li><li><a href="javascript:setQuyu('101001007','门头沟')">门头沟</a></li><li><a href="javascript:setQuyu('101001008','房山')">房山</a></li><li><a href="javascript:setQuyu('101001009','通州')">通州</a></li><li><a href="javascript:setQuyu('101001010','顺义')">顺义</a></li><li><a href="javascript:setQuyu('101001011','昌平')">昌平</a></li><li><a href="javascript:setQuyu('101001012','大兴')">大兴</a></li><li><a href="javascript:setQuyu('101001013','怀柔')">怀柔</a></li><li><a href="javascript:setQuyu('101001014','平谷')">平谷</a></li><li><a href="javascript:setQuyu('101001016','延庆')">延庆</a></li><li><a href='/miyun'>密云</a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    <input class="textbox" type="text" id="txtKey" name="key" value="店铺名、商圈等" style="color:#ccc;" onfocus="focusin('#txtKey','店铺名、商圈等')"
+                            onblur="blurin('#txtKey','店铺名、商圈等')" onkeypress="if(event.keyCode==13){search(jQuery('#txtKey').val(),jQuery('#txtQuXian').val(),'');return false;}" /><input type="button" class="scbtn" onclick="search(jQuery('#txtKey').val(),jQuery('#txtQuXian').val(),'');return false;" />
+                </div>
+                
+                <script>if ($("#txtQuXian").val().length == 9) { $("#curSubname").html('全部区域') }</script>
+                <div class="fl spanwidth"><a href="http://www.114chn.com/web/htm/recruitchn114" target="_blank">北京114生活网和114黄页网诚招代理商，招商热线：<em class="fb">4006-114-996</em></a></div>
+
+            </div>
+            <!--logo/seach/fontlink-->
+            <div class="fl fontlink clearfix">
+                <script language="javascript" type="text/javascript" src="/LifeAD/101001000000000/0000/0001.js"></script>
+            </div>
+            <div class="cb">
+            </div>
+        </div>
+        <div class="cb">
+        </div>
+        <div class="nav clearfix yaheifont fb">
+            <div class="left">
+                <span><a href='/beijing' class='fb'>北京首页</a></span> <span><a class='fb' href='/beijing-f'>美食</a></span> <span><a class='fb' href='/beijing-w'>购物</a></span> <span><a class='fb' href='/beijing-y'>休闲娱乐</a></span> <span><a class='fb' href='/beijing-l'>丽人</a></span> <span><a class='fb' href='/beijing-j'>健身</a></span> <span><a class='fb' href='/beijing-d'>酒店</a></span> <span><a class='fb' href='/beijing-x'>旅游出行</a></span> <span><a class='fb' href='/beijing-r'>房产</a></span> <span><a class='fb' href='/beijing-c'>车辆</a></span> <span><a href='/beijing-v' class='fb'>更多服务</a></span> <span style='position:relative;'><a href='/beijing-z' class='fb'>找优惠</a><img class='imgpa' src='/styles/images/new5.gif' /></span> <span style='position:relative;'><a href='/beijing-t' class='fb'>找活动</a><img class='imgpa' src='/styles/images/new5.gif' /></span> 
+            </div>
+            
+        </div>
+        <div class="cb" >
+        </div>
+    </div>
+    <div class="cb" >
+    </div>
+</div>
+<div id="dvDescription" style="display:none;">
+    <div class="Impression" id="dvImpressionCount" style="width: 500px; height: 150px;margin-top:10px;">
+        <span  id="span_DescriptionCount"></span>
+    </div>
+    <br />
+    <br />
+    <div style="text-align:center; width:500px;margin-bottom:10px;"><input type="text" style="border: 1px solid #CCCCCC;height: 18px;line-height: 18px;width: 210px;" maxlength="10" id="DescriptionCount" /></div>
+        <div style="text-align:center; width:500px;"><label style="text-align:left;margin-right:5px;color:Gray;">(温馨提示：请您选择或是输入不超过10字内容)</label></div>
+
+</div>
+             <div id="DialogDiv" class="DialogDiv" style="display: none;">
+                <h2>
+                    温馨提示：<span style="color:Red;" id="spanNum"></span>秒自动关闭<a href="javascript:void(0)" id="btn_close"><span class="display:none;" id="spanDialog" onmouseover="this.style.display='block'" onmouseout="this.style.display='none'">&nbsp;</span></a></h2>
+                <div class="form" >
+                   <span id="alert" style="font-family:Lucida Grande,Lucida Sans,Arial,sans-serif"></span><img alt="" id="imgAlertBox" src="" />
+                </div>
+                <div class="btnbox"><button id="btnDialogClose" type="button" role="button" aria-disabled="false"><span>关闭</span></button></div>
+            </div>
+
+   <div id="dvFaceShow" style="display: none;">
+    <div class="faceoutline">
+        <div class="p10" id="divExpressionList" style="background-color: #fff;">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/scripts/top.js?1"></script>
+<script type="text/javascript">
+    function openMenu() {
+        document.getElementById("topMenu").className = "onurlhome pr";
+        document.getElementById("menu").style.display = "block"
+    
+    }
+
+    function closeMenu() {
+        document.getElementById("topMenu").className = "pr";
+        document.getElementById("menu").style.display = "none"
+    }
+    jQuery(function () {
+        jQuery("#topLife .divchange").each(function () {
+            jQuery(this).mouseover(function () {
+                jQuery("#topLife .divchange").removeClass("spanbg");
+                jQuery(this).addClass("spanbg");
+            });
+        });
+        jQuery("#liUnReadTrends").add("#liMessageUnRead").click(function(){
+            jQuery(this).hide();return true;
+        });
+    });
+
+    ssetInterval();
+    function ssetInterval() {
+    (function($){
+        //if ($("#plogin").length != 1) { $("#PageTop_divChannel3").hide() }
+        if ($("#amembername").length == 1) {
+            $.ajax({
+                type: "POST",
+                url: "/Ajax/AjaxUnReadTrends.ashx",
+                data: { "location": (new Date()).getTime() },
+                success: function (data) {
+                    if (data && $.trim(data) != "") {
+                        var dataObj = eval("(" + data + ")");
+                        var liUnReadTrends=$("#liUnReadTrends"),liMessageUnRead=$("#liMessageUnRead");
+                        if (dataObj.ut!=0) {
+                               liUnReadTrends.html("<a href=\"/mm/manage/AboutMeTrends.aspx\">新动态（<em class=\"fb red\">" + dataObj.ut + "</em>）</a>").show();
+                           }else {
+                                liUnReadTrends.html("").hide();;
+                           }
+                           if (dataObj.um!=0) {
+                                liMessageUnRead.html("<a href=\"/mm/manage/MessageRecieve.aspx\">私信（<em class=\"fb red\">" + dataObj.um + "</em>）</a>").show();
+                           }else {
+                                liMessageUnRead.html("").hide();
+                           }
+                      
+                        window.getUnRead = setTimeout(ssetInterval,parseInt(1440)*1000);
+                    }
+                }
+            });
+        }
+        else {
+        if(window.getUnRead){delete window.getUnRead;}
+        }
+        })(jQuery);
+    }
+</script>
+
+
+<!--头部-->
+<!--页面中部-->
+<div class="container">
+<div class="mainbody clearfix">
+<!--左-->
+<div class="sideleft">
+ <div class="crumbs" style="border: none">您当前所在的位置：<span id="spancnav"><span class="blue3"><a href="/suzhou" target="_blank">苏州生活网</a></span><span style="padding: 0 2px;">&gt;</span><span class="blue3"><a href="/s-110005005.html" target="_blank">吴中区</a></span><span style="padding: 0 2px;">&gt;</span><span class="blue3"><a href="/s-110005005032.html" target="_blank">左岸商业街</a></span><span style="padding: 0 2px;">&gt;</span><span class="blue3"><a href="/s-110005005032-101.html" target="_blank">左岸商业街美食</a></span><span style="padding: 0 2px;">&gt;</span><span class="blue3"><a href="/s-110005005032-101014.html" target="_blank">左岸商业街面包房/糕点/饮品店</a></span><span style="padding: 0 2px;">&gt;</span><span class="blue3"><a href="/s-ap5ittqgl" target="_blank">贝儿多爸爸泡芙工房(印象城店)</a></span><span style="padding: 0 2px;">&gt;</span>优惠</span></div>
+ <div id="ShopInfo_divShopInfo" class="Name mb20" style="height:210px;min-height:100px;">
+    <span class="Top"></span><span class="Bottom"></span>
+    <div class="Line blue3" id="divmc">
+        <div id="ShopInfo_h2Title" class="clearfix namebox" style="height:34px;min-height:34px;"><h1 id='h1title'>贝儿多爸爸泡芙工房(印象城店)</h1><img src="/styles/images/dizhu.gif" alt="清英F刹那目前是“贝儿多爸爸泡芙工房(印象城店)”的地主，为它贡献了10分" title="清英F刹那目前是“贝儿多爸爸泡芙工房(印象城店)”的地主，为它贡献了10分" class="fl ml10" /><em class="pl5">地主：<a href="/m-cgdmngcz" target="_blank">清英F刹那</a></em></div>
+        <ul class="clearfix" style="height:auto;">
+            <li class="Lhalf fl" style="width:512px;">
+                <div class="clearfix">
+                    <div class="rate-disp fl" id="scoreDetail">
+                        <div id="ShopInfo_totleScore" class="rate-disp-i">
+                        </div>
+                    </div>
+                    <div style="line-height: 20px;" class="fl pr">
+                        <em id="scoreNum" class="pr bluelink">&nbsp;总分<em id="ShopInfo_scoreValue" class="red fb enfont">0</em>分&nbsp;
+                            <div id="ShopInfo_numbox" style="display: none;" class="numbox"><div class="h6div">共<em class="txtC4 fb red "><a href="/s-d-ap5ittqgl.html" target="_blank">0</a></em>人参与了打分</div><div class="p10" style="background: #EFEFEF"><div class="numietm clearfix"><div class="rate-disp fl"><div style="width:89px" class="rate-disp-i"></div></div><div class="numright h6div">0人</div></div><div class="numietm clearfix"><div class="rate-disp fl"><div style="width:71px" class="rate-disp-i"></div></div><div class="numright h6div">0人</div></div><div class="numietm clearfix"><div class="rate-disp fl"><div style="width:53px" class="rate-disp-i"></div></div><div class="numright h6div">0人</div></div><div class="numietm clearfix"><div class="rate-disp fl"><div style="width:35px" class="rate-disp-i"></div></div><div class="numright h6div">0人</div></div><div class="numietm clearfix"><div class="rate-disp fl"><div style="width:17px" class="rate-disp-i"></div></div><div class="numright h6div">0人</div></div></div><div class="lh150 tr h6div">平均总分<em class="red fb">0</em>分</div></div>
+                        </em><a class="bluelink" id="aComentNumber" href="/s-d-ap5ittqgl.html">点评</a> <a class="pr10"
+                            href="/s-ap5ittqgl-c.html">优惠</a><a href="/s-p-ap5ittqgl.html" class="pr10">图片</a><a href="/s-b-ap5ittqgl.html" class="pr10">去过</a><a href="/s-g-ap5ittqgl.html" class="pr10">想去</a>
+                    </div>
+                    <script language="javascript" type="text/javascript">
+                        $("#scoreDetail,#scoreNum").hover(function () {
+                            $("#ShopInfo_numbox").show();
+                        }, function () { $("#ShopInfo_numbox").hide(); });                                     
+                    </script>
+                </div>   <div class="cb"></div>
+                <dl class="clearfix">
+                    <dd class="leftdd">
+                        创建人：&nbsp;</dd>
+                    <dd id="Td1" class="centerdd1" style="width: 280px;">
+                        <a href="/m-cgdmngcz" id="ShopInfo_aCreater" target="_blank">清英F刹那</a>
+                    </dd>
+                </dl><div class="cb"></div>
+                <dl class="clearfix">
+                    <dd class="leftdd">
+                        查看榜单：&nbsp;</dd>
+                    <dd class="centerdd1" style="width: 400px;" colspan="2">
+                        <a href="/s-g-ap5ittqgl-1.html"  class="gxblink"
+                            target="_blank">查看贡献榜</a> &#12288;<a href="/suzhou-p-101014" id="apx" style="color: #F60;
+                                text-decoration: underline;" target="_blank">苏州面包房/糕点/饮品店排行榜</a><em style="padding:3px 0 0 12px;background:url(/styles/images/icoph.png) no-repeat 0 -1px;margin-left:3px">&nbsp;</em> 
+                    </dd>
+                </dl><div class="cb"></div>
+                <dl class="clearfix">
+                    <dd class="leftdd">
+                        电话：&nbsp;</dd>
+                    <dd id="divtel" class="centerdd1">
+                    <em class='grey9'>暂无</em>
+                        </dd>
+                </dl><div class="cb"></div>
+                <dl class="clearfix">
+                    <dd class="leftdd">
+                        所属地区：&nbsp;</dd>
+                    <dd class="centerdd1">
+                        苏州&nbsp;吴中区&nbsp;左岸商业街&nbsp;</dd>
+                </dl><div class="cb"></div>
+        <dl class="clearfix">
+            <dd class="leftdd">
+                地址：&nbsp;</dd>
+            <dd  class="centerdd1" style="width: 400px; height:24px;overflow:hidden;">
+                现代大道1699号印象城购物中心B1楼(近苏嘉杭高速)</dd>            
+        </dl>
+
+            </li>
+            <li class="Rhalf fl" style="width:128px; text-align:right;">
+                <div class="flash"style="width:116px;height:90px;font-size:12px;margin-left:15px;border:none;">
+                    <a href="/s-ap5ittqgl" target="_blank" class="pa" style="top:55px; right: 32px; display: block;padding:3px;border:1px solid #e5e5e5;">
+                        <img style="max-height:81px;max-width:108px;margin: auto;"title="贝儿多爸爸泡芙工房(印象城店)"
+                            alt="贝儿多爸爸泡芙工房(印象城店)" src="/ajax/GetShopLogo.ashx?w=108&h=81&p=shop&mid=ap5ittqgl" /></a>
+                </div>
+            </li>
+        </ul><div class="cb" style="font-size:0;"></div>
+        
+        <a href="/s-ap5ittqgl" class="pa" style="top: 156px; right: 26px; display: block">
+            <img src="/styles/images/goshopbtn.gif" title="贝儿多爸爸泡芙工房(印象城店)" alt="查看商户详情" /></a>
+    </div>
+</div>
+
+<!--优惠券列表-->
+<div class="couponList pt10" id="divCoupons">   
+<h1 class="tc f24 fb mb10 mt20 yaheifont" style="font-weight:700;padding-bottom:10px;border-bottom:2px solid #f60;">
+<span id="mlName" style="font-family: '微软雅黑','黑体','宋体';">贝儿多爸爸泡芙工房(印象城店)的优惠信息</span></h1>
+<div style="font-size:12px; line-height:24px; padding:12px 0 0 12px;"></div>
+    	<div>
+		<div class='p10 pr lh180 mb10'><p>暂时还没有优惠信息哦～</p><p>准确、有效的优惠信息，将成为其他网友的重要消费参考，并影响该商户评分。</p><p class='mb10'>如果您知道最新的优惠，马上点击发布，提高您的影响力，并获得更多<a href='http://s.114chn.com/help/QuestionList0113.html#110830000031' target='_blank'>经验值</a>。</p><p>帮助他人，就是帮助自己，114生活网有你更精彩！</p><span class="outbgbtn pa" style="top: 30px;right: 10px;"><a class="inbgbtn" href="/PublishCoupons.aspx?mid=ap5ittqgl" target="-blank">我要发布优惠</a></span></div>
+	</div>
+ 
+</div>
+</div>
+<!--右-->
+<div class="sideright">
+    <!--我身边的店-->
+    
+    <!--大家正在说-->
+    
+<div class="mb10"><a href="/addshop.aspx" target="_blank"><img src="/styles/images/addshopbtn.png" alt="免费添加商户"  /></a></div>
+<div class="makingbox" id="divonsaying"><div class="boxborder">
+    <div class="h4div" id="divSayingTitle">大家正在说<span class="morebox"><a href="javascript:void(0);" onclick="checkState();">我要说</a></span></div><div  id="dvSaying" style="height:400px;overflow:hidden"></div>
+</div></div>
+<script type="text/javascript" language="javascript">
+(function ($) {
+    $.fn.extend({
+        Scroll: function (opt, callback) {
+            //参数初始化
+            if (!opt) var opt = {};
+            var _this = this.eq(0);
+                    timer = opt.timer ? parseInt(opt.timer, 10) : 5000; //滚动的时间间隔（毫秒）
+
+            //滚动函数         
+            scrollUp = function () {
+                var children = _this.children();
+                var chileLast = children.last();
+                var chileFirst = children.first();
+                var upHeight = chileLast.height();
+                chileLast.css({ "margin": "0px 10px 0px 10px", "padding-top": "0px" }).height(0).children().hide();
+                chileLast.insertBefore(chileFirst);
+                chileLast.animate({
+                    height: upHeight
+                }, 2000, function () { $(this).children().fadeIn(2000); });
+            }
+            //鼠标事件绑定
+            _this.hover(function () {
+                clearInterval(timerID);
+            }, function () {
+                timerID = setInterval("scrollUp()", timer);
+            }).mouseout();
+        }
+    });
+})(jQuery);
+      
+$("#dvSaying img").each(function () {
+         var $this = $(this);
+         $this.MemberCard($this.parents("div .making-line").eq(0).attr("mid"));
+});
+function checkState()
+{
+    cl(function(){
+        window.location.href=window.path+"mm/manage/MyHome.aspx";
+    });
+}
+$.get("/Ajax/AjaxReadSaying.aspx", { "areaid":$("div .scbox input:hidden").eq(0).val(),"rnd": (new Date()).getTime() }, function (data)
+{
+    $("#dvSaying").html(data);
+    var saycount=$("#dvSaying .making-line ").length;  
+    if(saycount>2)
+    {
+        $("#dvSaying").Scroll({ timer: 5000 });
+    }
+    $.get("/Ajax/CreateSayHtml.aspx",{"areaid":$("div .scbox input:hidden").eq(0).val(),"rnd":(new Date()).getTime()});
+});
+
+</script>
+
+
+    <!--您感兴趣的店-->
+    <div class="publicbox3 mb10" id="favoriteShop"><div class="h3div">附近的店</div><dl><dt class="bluelink pr"><a href="/s-dp5ittwlo" target="_blank" title='珍奶会所(国际教育园店)'>珍奶会所(国际教育园店)</a></dt><dd class="e5link"><a href="s-b-dp5ittwlo.html" target="_blank" class="pr10">去过</a><a href="s-g-dp5ittwlo.html" target="_blank" class="pr10">想去</a><a href="s-p-dp5ittwlo.html" target="_blank" class="pr10">图片</a><a href="s-dp5ittwlo-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-dp5ittwlo.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-dp5ittwlo-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-0h5itt3gg" target="_blank" title='瑞蒙娜巧克力专卖店'>瑞蒙娜巧克力专卖店</a></dt><dd class="e5link"><a href="s-b-0h5itt3gg.html" target="_blank" class="pr10">去过</a><a href="s-g-0h5itt3gg.html" target="_blank" class="pr10">想去</a><a href="s-p-0h5itt3gg.html" target="_blank" class="pr10">图片</a><a href="s-0h5itt3gg-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-0h5itt3gg.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-0h5itt3gg-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-e25itt48" target="_blank" title='艾维尔(东吴店)'>艾维尔(东吴店)</a></dt><dd class="e5link"><a href="s-b-e25itt48.html" target="_blank" class="pr10">去过</a><a href="s-g-e25itt48.html" target="_blank" class="pr10">想去</a><a href="s-p-e25itt48.html" target="_blank" class="pr10">图片</a><a href="s-e25itt48-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-e25itt48.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-e25itt48-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-1z5itt48" target="_blank" title='MOVENPICK'>MOVENPICK</a></dt><dd class="e5link"><a href="s-b-1z5itt48.html" target="_blank" class="pr10">去过</a><a href="s-g-1z5itt48.html" target="_blank" class="pr10">想去</a><a href="s-p-1z5itt48.html" target="_blank" class="pr10">图片</a><a href="s-1z5itt48-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-1z5itt48.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-1z5itt48-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-0p5ittwlo" target="_blank" title='顶东面包花园(方洲路店)'>顶东面包花园(方洲路店)</a></dt><dd class="e5link"><a href="s-b-0p5ittwlo.html" target="_blank" class="pr10">去过</a><a href="s-g-0p5ittwlo.html" target="_blank" class="pr10">想去</a><a href="s-p-0p5ittwlo.html" target="_blank" class="pr10">图片</a><a href="s-0p5ittwlo-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-0p5ittwlo.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-0p5ittwlo-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-9d5ittwlo" target="_blank" title='LEONIDAS(久光店)'>LEONIDAS(久光店)</a></dt><dd class="e5link"><a href="s-b-9d5ittwlo.html" target="_blank" class="pr10">去过</a><a href="s-g-9d5ittwlo.html" target="_blank" class="pr10">想去</a><a href="s-p-9d5ittwlo.html" target="_blank" class="pr10">图片</a><a href="s-9d5ittwlo-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-9d5ittwlo.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-9d5ittwlo-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-cx5itt3gg" target="_blank" title='海月西饼店'>海月西饼店</a></dt><dd class="e5link"><a href="s-b-cx5itt3gg.html" target="_blank" class="pr10">去过</a><a href="s-g-cx5itt3gg.html" target="_blank" class="pr10">想去</a><a href="s-p-cx5itt3gg.html" target="_blank" class="pr10">图片</a><a href="s-cx5itt3gg-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-cx5itt3gg.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-cx5itt3gg-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-ci5itt3gg" target="_blank" title='街客(越溪大学城店)'>街客(越溪大学城店)</a></dt><dd class="e5link"><a href="s-b-ci5itt3gg.html" target="_blank" class="pr10">去过</a><a href="s-g-ci5itt3gg.html" target="_blank" class="pr10">想去</a><a href="s-p-ci5itt3gg.html" target="_blank" class="pr10">图片</a><a href="s-ci5itt3gg-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-ci5itt3gg.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-ci5itt3gg-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-9e5ittqgl" target="_blank" title='面包新语(印象城店)'>面包新语(印象城店)</a></dt><dd class="e5link"><a href="s-b-9e5ittqgl.html" target="_blank" class="pr10">去过</a><a href="s-g-9e5ittqgl.html" target="_blank" class="pr10">想去</a><a href="s-p-9e5ittqgl.html" target="_blank" class="pr10">图片</a><a href="s-9e5ittqgl-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-9e5ittqgl.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-9e5ittqgl-1.html" target="_blank">贡献榜</a></dd></dl><dl><dt class="bluelink pr"><a href="/s-aa5itt3gg" target="_blank" title='喜多烘焙体验馆'>喜多烘焙体验馆</a></dt><dd class="e5link"><a href="s-b-aa5itt3gg.html" target="_blank" class="pr10">去过</a><a href="s-g-aa5itt3gg.html" target="_blank" class="pr10">想去</a><a href="s-p-aa5itt3gg.html" target="_blank" class="pr10">图片</a><a href="s-aa5itt3gg-c.html" class="pr10" target="_blank">优惠</a><a href="s-d-aa5itt3gg.html"  class="pr10"  target="_blank">点评</a><a class="pl0" href="s-g-aa5itt3gg-1.html" target="_blank">贡献榜</a></dd></dl></div>
+    <!--大家正在做-->
+    
+
+<div class="makingbox">
+ <div class="boxborder">
+ <div class="h4div" id="divDoingTitle">大家正在做</div>
+ <div id="divondoing" style="height: 340px; overflow: hidden"><div id="divdoingmodule1"><div class="making-line pb5"><div class="picbox"><a href="/m-a1111" target="_blank" rel="nofollow" title="我心飞翔"><img src="/HeadPic/small_headpic.png" mid="201112060019"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-a1111" target="_blank">我心飞翔</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201112060019-c-20120612000020.html" target="_blank">首选造型 水疗特价！！</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-" rel="nofollow" target="_blank" title=""><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201206250022"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-" target="_blank"></a> <span class="red fb pl5 pr5">评论了</span><a href="/d-101006-20120625000195.html" target="_blank">湖畔农家</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-xiyufeifei" target="_blank" rel="nofollow" title="细雨霏霏"><img src="/HeadPic/small_fbf90e3fab864d779c63bc448057f19d.png" mid="201108220021"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-xiyufeifei" target="_blank">细雨霏霏</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108220021-c-20121116000044.html" target="_blank">买大份套餐免费得热辣脆鸡翅1对</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-caochunlin2009" rel="nofollow" target="_blank" title="功夫年少"><img src="/HeadPic/small_headpic.png" mid="201303040070"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-caochunlin2009" target="_blank">功夫年少</a> <span class="red fb pl5 pr5">获得了徽章</span><a>摄世之初</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-w1111" rel="nofollow" target="_blank" title="我"><img src="/HeadPic/small_headpic.png" mid="201112060004" /></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-w1111" target="_blank">我</a> <span class="red fb pl5 pr5">上传图片到</span><a href="/s-1p5itt48" target="_blank">汉堡王(印象城店)</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-h68269919" rel="nofollow" target="_blank" title="123654"><img src="/HeadPic/small_201210110306.jpeg" mid="201210110306"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-h68269919" target="_blank">123654</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-ks5iudvi" target="_blank">苏州吴中区疏通下水道68269919</a></div><div class="cb"></div></div></div><div id="divdoingmodule2"><div class="making-line pb5"><div class="picbox"><a href="/m-caochunlin2009" rel="nofollow" target="_blank" title="功夫年少"><img src="/HeadPic/small_headpic.png" mid="201303040070" /></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-caochunlin2009" target="_blank">功夫年少</a> <span class="red fb pl5 pr5">上传图片到</span><a href="/s-xd5itt48" target="_blank">功夫年少专业散打培训队</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-a1111" target="_blank" rel="nofollow" title="我心飞翔"><img src="/HeadPic/small_headpic.png" mid="201112060019"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-a1111" target="_blank">我心飞翔</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201112060019-c-20120607000030.html" target="_blank">嘉旺茶餐厅印象城店优惠券 尝鲜 天天半价</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-w1111" target="_blank" rel="nofollow" title="我"><img src="/HeadPic/small_headpic.png" mid="201112060004"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-w1111" target="_blank">我</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201112060004-c-20120508000022.html" target="_blank">汉堡王优惠券 洋葱圈7元8片</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-xiyufeifei" target="_blank" rel="nofollow" title="细雨霏霏"><img src="/HeadPic/small_fbf90e3fab864d779c63bc448057f19d.png" mid="201108220021"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-xiyufeifei" target="_blank">细雨霏霏</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108220021-c-20121116000045.html" target="_blank">黑加仑新地买一送一</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-xiyufeifei" target="_blank" rel="nofollow" title="细雨霏霏"><img src="/HeadPic/small_fbf90e3fab864d779c63bc448057f19d.png" mid="201108220021"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-xiyufeifei" target="_blank">细雨霏霏</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108220021-c-20121116000042.html" target="_blank">风情翅7元/对，嫩香鸡块8元/6块</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-aa632389218" target="_blank" rel="nofollow" title="黑眼猪乌溜溜的"><img src="/HeadPic/small_109d26fd85e2432795105f853e7be6f9.png" mid="201108180001"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-aa632389218" target="_blank">黑眼猪乌溜溜的</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108180001-c-20121206000057.html" target="_blank">汉堡王优惠券小皇堡6元</a></div><div class="cb"></div></div></div><div id="divdoingmodule3"><div class="making-line pb5"><div class="picbox"><a href="/m-aa632389218" target="_blank" rel="nofollow" title="黑眼猪乌溜溜的"><img src="/HeadPic/small_109d26fd85e2432795105f853e7be6f9.png" mid="201108180001"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-aa632389218" target="_blank">黑眼猪乌溜溜的</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108180001-c-20121221000022.html" target="_blank">送给女士冬季的滋润</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-a1111" target="_blank" rel="nofollow" title="我心飞翔"><img src="/HeadPic/small_headpic.png" mid="201112060019"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-a1111" target="_blank">我心飞翔</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201112060019-c-20120608000014.html" target="_blank">汉堡王买任意大份套餐免费得热辣脆鸡翅1对</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-aa632389218" target="_blank" rel="nofollow" title="黑眼猪乌溜溜的"><img src="/HeadPic/small_109d26fd85e2432795105f853e7be6f9.png" mid="201108180001"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-aa632389218" target="_blank">黑眼猪乌溜溜的</a> <span class="red fb pl5 pr5">发布了优惠</span><a href="/m-201108180001-c-20121206000058.html" target="_blank">汉堡王优惠券特价风情翅（1对）7元</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-cx9pxy" rel="nofollow" target="_blank" title="华娱3DM"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110185337"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-cx9pxy" target="_blank">华娱3DM</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-gu5ittqgk" target="_blank">刀马旦沐足中心(邻里中心店)</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-cx9pxy" rel="nofollow" target="_blank" title="华娱3DM"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110185337"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-cx9pxy" target="_blank">华娱3DM</a> <span class="red fb pl5 pr5">获得了徽章</span><a>添砖加瓦</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-cx9pxy" rel="nofollow" target="_blank" title="华娱3DM"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110185337"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-cx9pxy" target="_blank">华娱3DM</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-w15itt48" target="_blank">新花园国际娱乐会所</a></div><div class="cb"></div></div></div><div id="divdoingmodule4"><div class="making-line pb5"><div class="picbox"><a href="/m-kscvefgw" rel="nofollow" target="_blank" title="萌草谷"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184918"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-kscvefgw" target="_blank">萌草谷</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-tt5itt8gl" target="_blank">宝贝大脑运动营</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-lxo2dow" rel="nofollow" target="_blank" title="魔教侍女"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184916"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-lxo2dow" target="_blank">魔教侍女</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-hp5itt3gg" target="_blank">百花学习塾苏州分校</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-lxo2dow" rel="nofollow" target="_blank" title="魔教侍女"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184916"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-lxo2dow" target="_blank">魔教侍女</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-8n5itt48" target="_blank">北大建筑贴膜</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-lxo2dow" rel="nofollow" target="_blank" title="魔教侍女"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184916"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-lxo2dow" target="_blank">魔教侍女</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-h25ittqgl" target="_blank">德奈福洗衣</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-q7gn641" rel="nofollow" target="_blank" title="早早_C"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184911"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-q7gn641" target="_blank">早早_C</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-8k5itt48" target="_blank">车速递汽车租赁(印象城店)</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-q7gn641" rel="nofollow" target="_blank" title="早早_C"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184911"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-q7gn641" target="_blank">早早_C</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-hz5ittqgl" target="_blank">祥友装饰工程</a></div><div class="cb"></div></div></div><div id="divdoingmodule5"><div class="making-line pb5"><div class="picbox"><a href="/m-ycoufr" rel="nofollow" target="_blank" title="念出来是猪"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184900"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-ycoufr" target="_blank">念出来是猪</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-hb5ittqgl" target="_blank">占林电动车修理部</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-ycoufr" rel="nofollow" target="_blank" title="念出来是猪"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184900"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-ycoufr" target="_blank">念出来是猪</a> <span class="red fb pl5 pr5">获得了徽章</span><a>添砖加瓦</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-ycoufr" rel="nofollow" target="_blank" title="念出来是猪"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184900"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-ycoufr" target="_blank">念出来是猪</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-4t5ittwlo" target="_blank">卡内基训练</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-ur36bn" rel="nofollow" target="_blank" title="轻轻_风"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184898"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-ur36bn" target="_blank">轻轻_风</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-hc5ittqgl" target="_blank">仁通汽车租赁</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-ur36bn" rel="nofollow" target="_blank" title="轻轻_风"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184898"/></a></div><div class="txtbox blue3" style="height:40px;overflow:hidden"><a href="/m-ur36bn" target="_blank">轻轻_风</a> <span class="red fb pl5 pr5">获得了徽章</span><a>添砖加瓦</a></div><div class="cb"></div></div><div class="making-line pb5"><div class="picbox"><a href="/m-ur36bn" rel="nofollow" target="_blank" title="轻轻_风"><img src="/Styles/DefaultHeadPic/smallHeadpic.png" mid="201110184898"/></a></div><div class="txtbox blue3"   style="height:40px;overflow:hidden"><a href="/m-ur36bn" target="_blank">轻轻_风</a> <span class="red fb pl5 pr5">添加了</span><a href="/s-4r5ittwlo" target="_blank">康福丰田汽车销售</a></div><div class="cb"></div></div></div></div>
+</div>
+</div>
+<script type="text/javascript">
+function slideDown(ContId, interTime, speed)
+    {
+        var doingBox = $("#" + ContId);
+        var intval, timeOut, sInterval;
+        doingBox.hover(function(){ 
+        clearInterval(intval);
+        },function()
+        {
+            intval = setInterval(function () {
+                    var lastDoing = $("> div:last", doingBox);
+                    lastDoing.hide().prependTo(doingBox)
+                    .slideDown(2000, function () { $(this).animate({ opacity: 1 },2000)});                
+                }, interTime);
+        }).trigger("mouseleave");
+    }
+$(document).ready(function(){
+    slideDown("divondoing", 5000, 20);
+});
+    $("#divondoing img[mid]").each(function(){
+    var $this=$(this);
+    $this.MemberCard($this.attr("mid"));
+    });
+
+</script>
+
+
+
+  
+</div>
+</div>
+</div>
+<!--页面底部-->
+<div class="container">
+<input type="hidden" id="btntqhidden" />
+
+<div id="Bottom_pageCommend" class="botulbox" style="padding-top:20px;"><ul class="clearfix grey9"><li><a href="http://www.114chn.com" target='_blank'>114</a></li><li><a href="http://search.114chn.com" target='_blank'>114查询</a></li><li><a href="http://www.114chn.com/chtml/000000/HotInfo.html" target='_blank'>114分类信息</a></li><li><a href="http://www.114chn.com/web/htm/recruitchn114/" target='_blank'>114代理</a></li><li><a href="http://www.114chn.com/tel.htm" target='_blank'>电话号码查询</a></li><li><a href="http://s.114chn.com/" target='_blank'>生活网</a></li><li><a href="http://s.114chn.com/beijing" target='_blank'>北京商场打折信息</a></li><li><a href="http://s.114chn.com/tianjin" target='_blank'>天津</a></li></ul></div>
+<div id="Bottom_linkDiv" class="botulbox mb10" style="border:none;"><ul class="clearfix grey9"><li><a href="http://s.114chn.com/guigang-f" title='贵港美食' target='_blank'>贵港美食</a></li><li><a href="http://s.114chn.com/aba-f" title='阿坝小吃' target='_blank'>阿坝小吃</a></li><li><a href="http://s.114chn.com/ruili-f" title='瑞丽市特色小吃' target='_blank'>瑞丽特色小吃</a></li><li><a href="http://s.114chn.com/kashi-f" title='喀什地区有什么好吃的地方' target='_blank'>喀什有什么好吃的地方</a></li><li><a href="http://s.114chn.com/chengde-f" title='承德好吃的地方' target='_blank'>承德好吃的地方</a></li><li><a href="http://s.114chn.com/dandong-f" title='丹东餐饮' target='_blank'>丹东餐饮</a></li><li><a href="http://s.114chn.com/qiqihaer-f" title='齐齐哈尔餐馆' target='_blank'>齐齐哈尔餐馆</a></li><li><a href="http://s.114chn.com/yancheng-f" title='盐城饭店' target='_blank'>盐城饭店</a></li><li><a href="http://s.114chn.com/nanping-f" title='南平美食网' target='_blank'>南平美食网</a></li><li><a href="http://s.114chn.com/jiujiang-f" title='九江特色美食' target='_blank'>九江特色美食</a></li><li><a href="http://s.114chn.com/jx_fuzhou-f" title='抚州餐饮网' target='_blank'>抚州餐饮网</a></li><li><a href="http://s.114chn.com/weifang-f" title='潍坊特色餐厅' target='_blank'>潍坊特色餐厅</a></li><li><a href="http://s.114chn.com/xinxiang-f" title='新乡特色餐馆' target='_blank'>新乡特色餐馆</a></li><li><a href="http://s.114chn.com/zhaoqing-f" title='肇庆特色饭店' target='_blank'>肇庆特色饭店</a></li><li><a href="http://s.114chn.com/beihai-f" title='北海特色餐饮' target='_blank'>北海特色餐饮</a></li><li><a href="http://s.114chn.com/panzhihua-f" title='攀枝花美食' target='_blank'>攀枝花美食</a></li></ul></div>
+
+
+<div class="footer" style="*margin-top:-20px;">
+  
+
+  <p class="lh150 grey9 pb5" style="padding-top:10px; text-align:center;">
+        免责声明：以上信息由用户自行提供并由系统自动收录，内容的准确性、完整性、合法性、真实性由用户负责。114生活网对此不承担任何责任。
+    </p>
+
+    <hr />
+
+    <div class="lh180 mt5">
+        <div class="enfont clearfix"style="width:520px;margin:0 auto;">
+       <span class="fl" style="line-height:18px;"> 电信增值业务许可证：京ICP证041524　京ICP备10027778　建议投诉合作：</span><img class="fl" src="/Styles/images/120mail.gif"></div>
+        <div class="hei">
+            Copyright©2003-2013  &nbsp;&nbsp;&nbsp;&nbsp;114生活网 -- 中国<a href="http://www.114chn.com" target="_blank">114</a>黄页旗下网站</div>
+        <div align="center" valign="middle">
+            <div class="fwrx">
+                公安局备案号：110 1081859</div>
+                <span style="display:none">
+            <script type="text/javascript" language="javascript" src="http://w.cnzz.com/c.php?id=30067495" ></script>
+        </span>  
+        </div>
+        </div>
+</div>
+
+
+<script type="text/javascript" language="javascript" src="//tqjs/tqcode.js"></script>
+ 
+
+</div>
+
+<iframe src="/MerchantCoupons.aspx?mid=ap5ittqgl&Page=&noredirect=true" scrolling="no" width="0px" height="0px" frameborder="0" style="display:none;"></iframe></body>
+</html>
+<script src="ajax/MerchantAreadAndCategoryCooke.aspx?areaId=110005005032000&Category=101014" language="javascript" type="text/javascript"></script>
+�P¿�P¿
