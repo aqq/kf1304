@@ -846,7 +846,7 @@ public:
 		return 0;
 	}
 //===================================
-	bool trave_dir_into_vec_rep(string path, vector<string>& fnames_evc) {
+	bool trave_dir_into_vec(string path, vector<string>& fnames_evc) {
 		DIR *d; //声明一个句柄
 		struct dirent *file; //readdir函数的返回值就存放在这个结构体中
 		if (!(d = opendir(path.c_str()))) {
@@ -872,7 +872,7 @@ public:
 	}
 	void trave_dir_into_vec_test() {
 		vector<string> fnames_evc;
-		trave_dir_into_vec_rep("./download/", fnames_evc);
+		trave_dir_into_vec("./download/", fnames_evc);
 		for (vector<string>::iterator it2 = fnames_evc.begin();
 				it2 != fnames_evc.end(); ++it2) {
 			std::cout << "   " << *it2 << endl;

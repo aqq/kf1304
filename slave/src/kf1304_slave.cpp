@@ -14,6 +14,9 @@ using namespace std;
 using namespace poseidon;
 #define DEBUG
 int main() {
+	//
+	(new slaver())->request_task_timeo_test3();
+	//
 
 	//(new GlobalHelper())->read_line_from_test();
 	//slave to rep
@@ -26,7 +29,7 @@ int main() {
 // tar_pages_and_get_fnames_vec_test();//pass
 // page_read_binary_test(); //
 // message to hand
- //remoteStorePage_test(); //pass  send and revice msg
+	//remoteStorePage_test(); //pass  send and revice msg
 //store_page_test();
 // hand msg
 //-----------------------------
@@ -60,7 +63,9 @@ int main() {
 //	grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 //	str2task_test();
-	slaver_work_test(); //final test
+	//slaver_work_test(); //final test
+
+	//slaver_test_grab_for_login();
 
 //----------sys call
 	// (new GlobalHelper())->call_updata_shell_test();

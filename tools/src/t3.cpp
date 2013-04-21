@@ -57,28 +57,28 @@ void log(string filename, string content) {
 	outfile.close();
 }
 
-void store_site_url2(string sub_item2, string url) {
+void store_site_url2(string sub_item2, string url, string fname) {
 	string site_name;
 	site_name = "Webpub";
 	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
 			site_name.c_str())) {
-		log(site_name, url);
+		log(fname + "_" + site_name, url);
 		return;
 	}
 	site_name = "tradehtml";
 	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
 			site_name.c_str())) {
-		log(site_name, url);
+		log(fname + "_" + site_name, url);
 		return;
 	}
 	site_name = "m";
 	if (tail_with_feature(sub_item2.c_str(), sub_item2.size(),
 			site_name.c_str())) {
-		log(site_name, url);
+		log(fname + "_" + site_name, url);
 		return;
 	}
-
-	log("others", url);
+	site_name = "others";
+	log(fname + "_" + site_name, url);
 }
 void store_site_url(string sub_item2, string url) {
 	string site_name;
@@ -134,11 +134,11 @@ int main_split(int argc, char *argv[]) {
 		string url = read_buff;
 		//cout << url << endl;
 		string item = url.substr(0, url.find_first_of('\n'));
-		//	cout << item << endl;
+		cout << item << endl;
 		string sub_item = replace_str(item, "", "http://");
-		//	cout << sub_item << endl;
+		cout << sub_item << endl;
 		string sub_item2 = sub_item.substr(0, sub_item.find_first_of("/", 0));
-		//	cout << sub_item2 << endl;
+		cout << sub_item2 << endl;
 //
 		store_site_url(sub_item2, url.substr(0, url.find(' ', 0)));
 
@@ -212,12 +212,12 @@ int main(int argc, char *argv[]) {
 		cout << "usage: main {filename}" << endl;
 		return 1;
 	}
-	string fname = "urls_file"; // argv[1];
+	string fname = argv[1]; // argv[1];
 //
 	FILE *fp;
 	char *filep;
 	string url;
-	if ((fp = fopen(argv[1], "r")) == NULL) {
+	if ((fp = fopen(fname.c_str(), "r")) == NULL) {
 		printf("open file %s error!!\n", fname.c_str());
 	}
 //
@@ -253,7 +253,7 @@ int main(int argc, char *argv[]) {
 		//CASE3:tradehtml
 //luzhou.114chn.com/m/web/shop/Index.aspx?shopid=5105001303200001
 
-		store_site_url2(key_words, item);
+		store_site_url2(key_words, item, fname);
 		//cout<<endl;
 
 	}

@@ -156,6 +156,38 @@ void slaver_test_grab() {
 	worker->grab_page(gt);
 
 }
+void slaver_test_grab_for_login() {
+	GlobalHelper *gh = new GlobalHelper();
+	gh->timing_begin();
+
+	slaver * worker = new slaver();
+	grabtask gt;
+	gt.http_req =
+			"POST /login.aspx?ReturnUrl=http%3a%2f%2fwww.cnblogs.com%2f HTTP/1.1\r\n"
+					"Host: passport.cnblogs.com\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3\r\n"
+					"Accept-Encoding: gzip, deflate\r\n"
+					"Cookie: __utma=226521935.761821559.1366532875.1366532875.1366532875.1; __utmb=226521935.1.10.1366532875; __utmc=226521935; __utmz=226521935.1366532875.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=cnblogs; __gads=ID=c7f669b811bc0b65:T=1366532936:S=ALNI_MYXTfQ4GJe13K4exXBjecxzcONgYg\r\n"
+					"Connection: keep-alive\r\n\r\n";
+	gt.http_req =
+			"GET /login HTTP/1.1\r\n"
+					"Host: 100.100.100.100\r\n"
+					"User-Agent: Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0\r\n"
+					"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
+					"Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3\r\n"
+					"Cookie:username=qinkf;password=q4651199;save_user=ture;save_pass=true\r\n"
+					"Connection: close\r\n\r\n";
+	gt.request_ip = "100.100.100.100";
+	gt.request_port = 80;
+	gt.index = 1;
+	gt.task_id = "slaver_test_grab_for_login";
+	gt.url = "slaver_test_grab_for_login";
+	worker->grab_page(gt);
+
+}
+
 void slaver_test_grab_3() {
 	slaver_test_grab();
 	slaver_test_grab();

@@ -25,6 +25,8 @@
 #include "unistd.h"
 #include "GlobalHelper.h"
 
+#include <signal.h>
+
 #define DEBUG
 #define DEBUG_GRAB
 #define BUFSIZE 1449
@@ -81,6 +83,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 		//5 write to master
 		int bytes_count;
 		this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
+
 		int write_result = write(socketfd, this->cmd_req_2send.c_str(),
 
 		strlen(this->cmd_req_2send.c_str()));
@@ -99,8 +102,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 			total += bytes_count;
 			read_buf[bytes_count] = '\0';
 			str_cmd += read_buf;
-			gh->log2(read_buf, "debug_read_from_socekt");
-
+			//gh->log2(read_buf, "debug_read_from_socekt");
 			if (bytes_count == 0) {
 				break;
 			}
@@ -109,7 +111,9 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 			}
 
 		}
+
 		gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
+
 		req_seccess = 1;
 		break;
 	}
@@ -179,9 +183,12 @@ bool slaver::grab_page(grabtask gt) {
 	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
 	int nNetTimeout = 10000; //10秒
-	//SO_RCVTIMEO time
 	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &nNetTimeout,
 			sizeof(nNetTimeout));
+
+	//
+
+	//
 
 	while (1) {
 		if (-1 == sockfd) {
@@ -302,12 +309,15 @@ bool slaver::remoteStorePage(storetask s_task, string send_cmd,
 			gh->log2(log_str, s_socket);
 			break;
 		}
+
 		//==============================
 		//3.revice message
 		//==============================
+
 		int count = 0;
 		string response_content;
 		char buf[1449];
+
 		while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
 			buf[count] = '\0';
 			//cout << "3.revice message buf :" << buf << endl;
@@ -322,6 +332,7 @@ bool slaver::remoteStorePage(storetask s_task, string send_cmd,
 				break;
 			}
 		}
+
 		//==============================
 		//4.prepare send content
 		//==============================
@@ -348,22 +359,25 @@ bool slaver::remoteStorePage(storetask s_task, string send_cmd,
 	return is_store_ok;
 
 }
+
 /*
- string slaver::getHttpHeader(string url_header, vector<string> url_body,
- int id) {
- //url_header.replace(url_header.find_first_of('#'),,url_body);
+ int connect_timeo(int sockfd, const SA *saptr, socklen_t salen, int nsec) {
+ Sigfunc *sigfunc;
+ int n;
 
- string::size_type pos(0);
+ sigfunc = Signal(SIGALRM, connect_alarm);
+ if (alarm(nsec) != 0)
+ err_msg("connect_timeo: alarm was already set");
 
- const string special_char = "#";
- const string s4 = url_body.at(id);
+ if ((n = connect(sockfd, saptr, salen)) < 0) {
+ close(sockfd);
+ if (errno == EINTR)
+ errno = ETIMEDOUT;
+ }
+ alarm(0); //  turn off the alarm  /
+ Signal(SIGALRM, sigfunc); restore previous signal handler
 
- pos = url_header.find_first_of('#');
- //	if ((pos = url_header.find(special_char)) != string::npos)
-
- url_header = url_header.replace(pos, 1, "");
- return url_header.insert(pos, s4);
-
+ return (n);
  }*/
 
 } /* namespace poseidon */

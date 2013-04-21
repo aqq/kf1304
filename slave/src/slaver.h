@@ -40,6 +40,8 @@
 #include "errno.h"
 #include "GlobalHelper.h"
 
+#include <signal.h>
+
 #define REQUEST 1
 #define SLEEP 2
 #define UPDATE 3
@@ -47,7 +49,8 @@
 #define STORE 7
 
 #define DEBUG
-
+#define BUFSIZE 1449
+#define READ_BUFF_SIZE 1448
 using namespace std;
 
 namespace poseidon {
@@ -99,6 +102,14 @@ struct req_task {
 	int version;
 
 };
+
+//extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+static void read_alarm(int signo) {
+	cout << "read_alarm:time out!" << endl;
+	exit(1);
+	return;
+}
+
 class slaver {
 private:
 
@@ -143,11 +154,13 @@ public:
 		map<string, string> config_map1;
 		gh->read_config(gh->SLAVE_CONF, config_map1);
 		this->master_port = atoi((config_map1["master_port"]).c_str());
+
+		this->master_ip.clear();
 		this->master_ip.push_back(config_map1["master_ip"]);
 
 		this->app_version = atoi((config_map1["app_version"]).c_str());
-		this->store_ip.push_back(config_map1["store_ip"]);
-		this->store_port = atoi((config_map1["store_port"]).c_str());
+		//	this->store_ip.push_back(config_map1["store_ip"]);
+		//	this->store_port = atoi((config_map1["store_port"]).c_str());
 		this->grab_interval = atoi((config_map1["grab_interval"]).c_str());
 
 		map<string, string> config_map2;
@@ -482,6 +495,7 @@ public:
 		mytask.new_version_url.push_back(
 				response_cmd_map["new_version_url"].c_str());
 		if (mytask.cmd_id == 7) {
+			this->store_ip.clear();
 			this->store_ip.push_back(response_cmd_map["store_ip"]);
 			this->store_port = atoi(response_cmd_map["store_port"].c_str());
 		} else if (mytask.cmd_id == 4) {
@@ -544,6 +558,228 @@ public:
 	}
 //
 
+	bool request_task_timeo(req_task *mytask, string& str_cmd) {
+
+		gh->log2("connect to ", this->master_ip[0], ":",
+				gh->num2str(this->master_port), s_socket);
+		//1 init variable
+		str_cmd = "";
+		int socketfd;
+		struct sockaddr_in dest_addr;
+		char read_buf[BUFSIZE];
+		bzero(&read_buf, sizeof read_buf);
+		bool req_seccess = 0;
+		string log_str;
+		while (1) {
+
+			//2 create socket
+			if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+				log_str = "socket fd create fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror("socket fd create fail...");
+
+				break;
+			}
+			//
+			//this->set_socket(socketfd);
+			//
+			//3 prepare server address
+			this->init_address(&dest_addr, PF_INET, this->master_port,
+					this->master_ip[0]);
+
+			//4 connect to server
+			if (-1
+					== connect(socketfd, (struct sockaddr*) &dest_addr,
+							sizeof(struct sockaddr))) {
+				log_str = "socket fd connect fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket);
+				break;
+			}
+
+			//5 write to master
+			int bytes_count;
+			//this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
+			this->cmd_req_2send = "hi test!"; //last_task_status
+			int write_result = write(socketfd, this->cmd_req_2send.c_str(),
+
+			strlen(this->cmd_req_2send.c_str()));
+			if (write_result == -1) {
+				log_str = "socket fd write fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror
+				break; //continue;
+			}
+			gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
+
+			//6 read
+			int total = 0;
+			///
+			__sighandler_t sigfunc1;
+			int nsec = 10;
+			sigfunc1 = signal(SIGALRM, read_alarm);
+			if (alarm(nsec) != 0) {
+				cout << "connect_timeo: alarm was already set" << endl;
+			}
+			///
+			while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
+				if (errno == EINTR) {
+					cout << "error and timeout." << endl;
+					break;
+				}
+				total += bytes_count;
+				read_buf[bytes_count] = '\0';
+				str_cmd += read_buf;
+				//gh->log2(read_buf, "debug_read_from_socekt");
+				if (bytes_count == 0) {
+					break;
+				}
+				if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+					break;
+				}
+
+				cout << bytes_count << endl;
+
+			}
+			alarm(0); //  turn off the alarm  /
+			signal(SIGALRM, sigfunc1); //restore previous signal handler
+			///
+			//	gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
+
+			req_seccess = 1;
+			break;
+		}
+		//}
+		//7 clear socket
+		close(socketfd);
+		//8  init task
+
+		return req_seccess;
+	}
+	//
+	void request_task_timeo_test() {
+		req_task mytask; //commad
+		string str;
+		this->request_task_timeo(&mytask, str);
+		cout << "over" << endl;
+	}
+	//
+	void request_task_timeo_test2() {
+
+		__sighandler_t sigfunc1;
+		int nsec = 11;
+		int i = 0;
+		sigfunc1 = signal(SIGALRM, read_alarm);
+		if (alarm(nsec) != 0) {
+			cout << "connect_timeo: alarm was already set" << endl;
+		}
+		scanf("%d", &i);
+		if (errno == EINTR) {
+			cout << "error and timeout." << endl;
+		}
+		alarm(0); //  turn off the alarm  /
+		signal(SIGALRM, sigfunc1); //restore previous signal handler
+		cout << " over 2." << endl;
+	}
+	void request_task_timeo_test3() {
+		int j = 3;
+		while (j--) {
+			request_task_timeo_test2();
+		}
+	}
+	//
+	bool request_task_setsocketop(req_task *mytask, string& str_cmd) {
+
+		gh->log2("connect to ", this->master_ip[0], ":",
+				gh->num2str(this->master_port), s_socket);
+		//1 init variable
+		str_cmd = "";
+		int socketfd;
+		struct sockaddr_in dest_addr;
+		char read_buf[BUFSIZE];
+		bzero(&read_buf, sizeof read_buf);
+		bool req_seccess = 0;
+		string log_str;
+		while (1) {
+
+			//2 create socket
+			if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+				log_str = "socket fd create fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror("socket fd create fail...");
+
+				break;
+			}
+
+			//
+			this->set_socket(socketfd);
+			//
+
+			//3 prepare server address
+			this->init_address(&dest_addr, PF_INET, this->master_port,
+					this->master_ip[0]);
+
+			//4 connect to server
+			if (-1
+					== connect(socketfd, (struct sockaddr*) &dest_addr,
+							sizeof(struct sockaddr))) {
+				log_str = "socket fd connect fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket);
+				break;
+			}
+
+			//5 write to master
+			int bytes_count;
+			this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
+
+			int write_result = write(socketfd, this->cmd_req_2send.c_str(),
+
+			strlen(this->cmd_req_2send.c_str()));
+			if (write_result == -1) {
+				log_str = "socket fd write fail...";
+				log_str += strerror(errno);
+				gh->log2(log_str, s_socket); //perror
+				break; //continue;
+			}
+			gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
+
+			//6 read
+			int total = 0;
+
+			while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
+				total += bytes_count;
+				read_buf[bytes_count] = '\0';
+				str_cmd += read_buf;
+				//gh->log2(read_buf, "debug_read_from_socekt");
+				if (bytes_count == 0) {
+					break;
+				}
+				if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+					break;
+				}
+
+			}
+
+			gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
+
+			req_seccess = 1;
+			break;
+		}
+		//}
+		//7 clear socket
+		close(socketfd);
+		//8  init task
+		//	cout << "receive:" << read_buf << endl;
+		//	str_cmd = t_str_cmd;
+		//	gh->log(str_cmd);
+		return req_seccess;
+
+	}
+	void request_task_setsocketop_test() {
+
+	}
+	//
 };
 
 } /* namespace poseidon */
