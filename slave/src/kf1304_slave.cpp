@@ -15,7 +15,8 @@ using namespace poseidon;
 #define DEBUG
 int main() {
 	//
-	(new slaver())->request_task_timeo_test3();
+	(new slaver())->request_task_setsocketop_expectin();
+//	(new slaver())->request_task_timeo_test3();
 	//
 
 	//(new GlobalHelper())->read_line_from_test();

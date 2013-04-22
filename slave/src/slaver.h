@@ -115,6 +115,8 @@ private:
 
 	GlobalHelper *gh;
 	int grab_interval; //毫秒
+	int receive_time_out;
+	int send_time_out;
 protected:
 
 public:
@@ -134,6 +136,7 @@ public:
 	//feed back
 	int last_task_status;
 	int last_cmd_id;
+	map<string, string> dns_map;
 	slaver() {
 		gh = new GlobalHelper();
 		sleep_time = 1;
@@ -163,10 +166,21 @@ public:
 		//	this->store_port = atoi((config_map1["store_port"]).c_str());
 		this->grab_interval = atoi((config_map1["grab_interval"]).c_str());
 
+		this->receive_time_out = atoi(
+				(config_map1["receive_time_out"]).c_str());
+		this->send_time_out = atoi((config_map1["send_time_out"]).c_str());
+
 		map<string, string> config_map2;
 		gh->read_config(slave_private_conf, config_map2);
 		this->slave_id = atoi((config_map2["slave_id"]).c_str());
 		this->local_ip_str = local_ip();
+
+		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
+		for (map<string, string>::iterator it2 = config_map1.begin();
+				it2 != config_map1.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << endl;
+		}
+		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
 
 	}
 	string local_ip() {
@@ -186,7 +200,7 @@ public:
 		strncpy(ifr_ip.ifr_name, "eth0", sizeof(ifr_ip.ifr_name) - 1);
 
 		if (ioctl(sock_get_ip, SIOCGIFADDR, &ifr_ip) < 0) {
-			return "";
+			return "can't get ip";
 		}
 		sin = (struct sockaddr_in *) &ifr_ip.ifr_addr;
 		strcpy(ipaddr, inet_ntoa(sin->sin_addr));
@@ -238,6 +252,7 @@ public:
 		bool is_task_finished = 1;
 		this->last_cmd_id = mytask.cmd_id;
 		switch (mytask.cmd_id) {
+
 		case SLEEP:
 			cout << "Sleep :" << mytask.sleep_time << " secoonds." << endl;
 			sleep(mytask.sleep_time); //sleep 1 second;
@@ -419,7 +434,7 @@ public:
 		}
 	}
 //
-	map<string, string> dns_map;
+
 	bool lookup_ip(string sitename, string& dest_ip) {
 //1 check map
 		dest_ip = dns_map[sitename];
@@ -465,19 +480,7 @@ public:
 		return 1;
 	}
 //
-	string& replace_all(string& str, const string& old_value,
-			const string& new_value);
-	string getHttpHeader(string url_header, vector<string> url_body, int id);
-//help
 
-	void init_address(struct sockaddr_in *dest_addr, int sin_family, int port,
-			string ip) {
-		bzero(dest_addr, sizeof(dest_addr));
-		dest_addr->sin_family = sin_family;
-		dest_addr->sin_port = htons(port);
-		dest_addr->sin_addr.s_addr = inet_addr(ip.c_str());
-		bzero(&(dest_addr->sin_zero), 8);
-	}
 //
 	void str2task(string response_command, req_task& mytask) {
 		map<string, string> response_cmd_map;
@@ -531,33 +534,89 @@ public:
 
 	}
 //
-	void set_socket(int listenfd) {
+	void set_socket(int socketfd) {
 		int keepAlive = 1;
-		setsockopt(listenfd, SOL_SOCKET, SO_KEEPALIVE, (void*) &keepAlive,
+		setsockopt(socketfd, SOL_SOCKET, SO_KEEPALIVE, (void*) &keepAlive,
 				sizeof(keepAlive));
 		int keepIdle = 10; //开始首次KeepAlive探测前的TCP空闭时间
 		int keepInterval = 10; // 两次KeepAlive探测间的时间间隔
 		int keepCount = 1; // 判定断开前的KeepAlive探测次数
 
-		setsockopt(listenfd, IPPROTO_TCP, TCP_KEEPIDLE, (void *) &keepIdle,
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPIDLE, (void *) &keepIdle,
 				sizeof(keepIdle));
-		setsockopt(listenfd, IPPROTO_TCP, TCP_KEEPINTVL, (void *) &keepInterval,
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPINTVL, (void *) &keepInterval,
 				sizeof(keepInterval));
-		setsockopt(listenfd, IPPROTO_TCP, TCP_KEEPCNT, (void *) &keepCount,
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPCNT, (void *) &keepCount,
 				sizeof(keepCount));
 
-		int nNetTimeout_send = 1000; //1秒
+		struct timeval tv1;
+		tv1.tv_sec = this->send_time_out;
+		tv1.tv_usec = 0;
 		//发送时限
-		setsockopt(listenfd, SOL_SOCKET, SO_SNDTIMEO,
-				(char *) &nNetTimeout_send, sizeof(nNetTimeout_send));
+		setsockopt(socketfd, SOL_SOCKET, SO_SNDTIMEO, (char *) &tv1,
+				sizeof(tv1));
 
 		//接收时限
-		int nNetTimeout_rev = 2000;
-		setsockopt(listenfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &nNetTimeout_rev,
-				sizeof(int));
+		struct timeval tv2;
+		tv2.tv_sec = this->receive_time_out;
+		tv2.tv_usec = 0;
+		setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &tv2,
+				sizeof(tv2));
 	}
-//
+	//1．建立socket
+	//2．将该socket设置为非阻塞模式
+	//3．调用connect()
+	//4．使用select()检查该socket描述符是否可写（注意，是可写）
+	//5．根据select()返回的结果判断connect()结果
+	//6．将socket设置为阻塞模式（如果你的程序不需要用阻塞模式的，这步就省了，不过一般情况下都是用阻塞模式的，这样也容易管理）
+	bool socket_connect_timeout(int sockfd, struct sockaddr_in dest_addr,
+			int TIME_OUT_TIME) {
+		int error = -1;
+		int len = sizeof(int);
+		struct timeval tm;
+		fd_set set;
+		unsigned long ul = 1;
+		ioctl(sockfd, FIONBIO, &ul); //设置为非阻塞模式
+		bool ret = 0;
+		if (connect(sockfd, (struct sockaddr *) &dest_addr, sizeof(dest_addr))
+				== -1) {
+			tm.tv_sec = TIME_OUT_TIME;
+			tm.tv_usec = 0;
+			FD_ZERO(&set);
+			FD_SET(sockfd, &set);
+			if (select(sockfd + 1, NULL, &set, NULL, &tm) > 0) {
 
+				getsockopt(sockfd, SOL_SOCKET, SO_ERROR, &error,
+						(socklen_t *) &len);
+				if (error == 0) {
+					ret = true;
+				} else {
+					ret = false;
+				}
+
+			} else {
+				ret = false;
+			} //end select if
+
+		} else {
+			ret = true; //end select
+		} //end  connect if
+
+		ul = 0;
+		ioctl(sockfd, FIONBIO, &ul); //设置为阻塞模式
+		if (!ret) {
+			//	close(sockfd);
+			fprintf(stderr, "Cannot Connect the server!/n");
+			return 0;
+		}
+		//	fprintf(stderr, "Connected!/n");
+		return 1;
+	}
+
+/////////////////////////test
+	void down_test() {
+
+	}
 	bool request_task_timeo(req_task *mytask, string& str_cmd) {
 
 		gh->log2("connect to ", this->master_ip[0], ":",
@@ -584,8 +643,8 @@ public:
 			//this->set_socket(socketfd);
 			//
 			//3 prepare server address
-			this->init_address(&dest_addr, PF_INET, this->master_port,
-					this->master_ip[0]);
+			gh->init_address(&dest_addr, PF_INET, this->master_port,
+					inet_addr(this->master_ip[0].c_str()));
 
 			//4 connect to server
 			if (-1
@@ -661,7 +720,7 @@ public:
 		req_task mytask; //commad
 		string str;
 		this->request_task_timeo(&mytask, str);
-		cout << "over" << endl;
+		cout << "over request_task_timeo_test" << endl;
 	}
 	//
 	void request_task_timeo_test2() {
@@ -688,7 +747,9 @@ public:
 		}
 	}
 	//
-	bool request_task_setsocketop(req_task *mytask, string& str_cmd) {
+
+	//
+	bool request_task_expection(req_task *mytask, string& str_cmd) {
 
 		gh->log2("connect to ", this->master_ip[0], ":",
 				gh->num2str(this->master_port), s_socket);
@@ -700,86 +761,130 @@ public:
 		bzero(&read_buf, sizeof read_buf);
 		bool req_seccess = 0;
 		string log_str;
-		while (1) {
 
-			//2 create socket
-			if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
-				log_str = "socket fd create fail...";
-				log_str += strerror(errno);
-				gh->log2(log_str, s_socket); //perror("socket fd create fail...");
+		//2 create socket
+		if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
+			log_str = "socket fd create fail...";
+			log_str += strerror(errno);
+			gh->log2(log_str, s_socket); //perror("socket fd create fail...");
 
-				break;
-			}
-
-			//
-			this->set_socket(socketfd);
-			//
-
-			//3 prepare server address
-			this->init_address(&dest_addr, PF_INET, this->master_port,
-					this->master_ip[0]);
-
-			//4 connect to server
-			if (-1
-					== connect(socketfd, (struct sockaddr*) &dest_addr,
-							sizeof(struct sockaddr))) {
-				log_str = "socket fd connect fail...";
-				log_str += strerror(errno);
-				gh->log2(log_str, s_socket);
-				break;
-			}
-
-			//5 write to master
-			int bytes_count;
-			this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
-
-			int write_result = write(socketfd, this->cmd_req_2send.c_str(),
-
-			strlen(this->cmd_req_2send.c_str()));
-			if (write_result == -1) {
-				log_str = "socket fd write fail...";
-				log_str += strerror(errno);
-				gh->log2(log_str, s_socket); //perror
-				break; //continue;
-			}
-			gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
-
-			//6 read
-			int total = 0;
-
-			while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
-				total += bytes_count;
-				read_buf[bytes_count] = '\0';
-				str_cmd += read_buf;
-				//gh->log2(read_buf, "debug_read_from_socekt");
-				if (bytes_count == 0) {
-					break;
-				}
-				if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
-					break;
-				}
-
-			}
-
-			gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
-
-			req_seccess = 1;
-			break;
+			//	break;
+			close(socketfd);
+			return 0;
 		}
+
+		//
+		this->set_socket(socketfd);
+		//
+
+		//3 prepare server address
+		gh->init_address(&dest_addr, PF_INET, this->master_port,
+				inet_addr(this->master_ip[0].c_str()));
+
+		//4 connect to server
+		//
+		if (0 == this->socket_connect_timeout(socketfd, dest_addr, 5)) {
+			log_str = "socket fd connect fail...";
+			log_str += strerror(errno);
+			gh->log2(log_str, s_socket);
+			gh->log2(" timeout socket_connect_timeout ", s_socket);
+
+			close(socketfd);
+			return 0;
+		}
+		gh->log2(" socket_connect ok ", s_socket);
+
+		/*	if (-1
+		 == connect(socketfd, (struct sockaddr*) &dest_addr,
+		 sizeof(struct sockaddr))) {
+		 log_str = "socket fd connect fail...";
+		 log_str += strerror(errno);
+		 gh->log2(log_str, s_socket);
+		 gh->log2(" timeout socket_connect_timeout ", s_socket);
+		 break;
+		 }*/
+
+		//
+		//5 write to master
+		int bytes_count;
+		this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
+		//	this->cmd_req_2send = "hi test!";
+		///
+		int write_result = write(socketfd, this->cmd_req_2send.c_str(),
+				strlen(this->cmd_req_2send.c_str()));
+		if (write_result == -1) {
+			log_str = "socket fd write fail...";
+			log_str += strerror(errno);
+			gh->log2(log_str, s_socket); //perror
+			close(socketfd);
+			return 0;
+		}
+		gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
+
+		//6 read
+		int total = 0;
+		bool read_sucessed = 0;
+		while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
+			total += bytes_count;
+			read_buf[bytes_count] = '\0';
+			str_cmd += read_buf;
+			if (bytes_count == -1) {
+				//gh->log2(read_buf, "debug_read_from_socekt");
+				cout << "time_out or bad" << endl;
+
+			}
+
+			if (bytes_count == 0) {
+				read_sucessed = 1;
+				break;
+			}
+			if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+				read_sucessed = 1;
+				break;
+			}
+		}
+
+		gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
+
+		req_seccess = read_sucessed; //
+
 		//}
 		//7 clear socket
 		close(socketfd);
-		//8  init task
-		//	cout << "receive:" << read_buf << endl;
-		//	str_cmd = t_str_cmd;
-		//	gh->log(str_cmd);
+
 		return req_seccess;
 
 	}
-	void request_task_setsocketop_test() {
-
+	void request_task_setsocketop_expectin() {
+		req_task mytask; //commad
+		string str;
+		this->request_task_expection(&mytask, str);
+		//	this->request_task(&mytask, str);
+		cout << "over request_task_setsocketop_expectin " << endl;
 	}
-	//
+
+	int socket_readable_timeo(int fd, int sec) {
+		fd_set rset;
+		struct timeval tv;
+
+		FD_ZERO(&rset);
+		FD_SET(fd, &rset);
+
+		tv.tv_sec = sec;
+		tv.tv_usec = 0;
+
+		return (select(fd + 1, &rset, NULL, NULL, &tv));
+		/* 4> 0 if descriptor is readable */
+	}
+	int socket_readable_timeo_test(int fd, int sec) {
+		int n;
+
+		if ((n = socket_readable_timeo(fd, sec)) < 0)
+			printf("readable_timeo error");
+		return (n);
+	}
+//
+	/* end readable_timeo */
 };
 
 } /* namespace poseidon */

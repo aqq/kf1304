@@ -43,6 +43,7 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 
 	gh->log2("connect to ", this->master_ip[0], ":",
 			gh->num2str(this->master_port), s_socket);
+
 	//1 init variable
 	str_cmd = "";
 	int socketfd;
@@ -55,28 +56,21 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 
 		//2 create socket
 		if ((socketfd = socket(PF_INET, SOCK_STREAM, 0)) == -1) {
-			log_str = "socket fd create fail...";
-			log_str += strerror(errno);
-			gh->log2(log_str, s_socket); //perror("socket fd create fail...");
-
+			gh->log2("socket fd create fail...", strerror(errno), s_socket); //perror("socket fd create fail...");
 			break;
 		}
 
-		//
 		this->set_socket(socketfd);
-		//
 
 		//3 prepare server address
-		this->init_address(&dest_addr, PF_INET, this->master_port,
-				this->master_ip[0]);
+		gh->init_address(&dest_addr, PF_INET, this->master_port,
+				inet_addr(this->master_ip[0].c_str()));
 
 		//4 connect to server
 		if (-1
 				== connect(socketfd, (struct sockaddr*) &dest_addr,
 						sizeof(struct sockaddr))) {
-			log_str = "socket fd connect fail...";
-			log_str += strerror(errno);
-			gh->log2(log_str, s_socket);
+			gh->log2("socket fd connect fail...", strerror(errno), s_socket);
 			break;
 		}
 
@@ -85,48 +79,47 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 		this->cmd_req_2send = this->init_request_cmd_str(); //last_task_status
 
 		int write_result = write(socketfd, this->cmd_req_2send.c_str(),
+				strlen(this->cmd_req_2send.c_str()));
 
-		strlen(this->cmd_req_2send.c_str()));
 		if (write_result == -1) {
-			log_str = "socket fd write fail...";
-			log_str += strerror(errno);
-			gh->log2(log_str, s_socket); //perror
+			gh->log2("socket fd write fail...", strerror(errno), s_socket); //perror
 			break; //continue;
 		}
 		gh->log2("write:[" + this->cmd_req_2send, "]", s_socket);
 
 		//6 read
-		int total = 0;
-
 		while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
-			total += bytes_count;
 			read_buf[bytes_count] = '\0';
 			str_cmd += read_buf;
 			//gh->log2(read_buf, "debug_read_from_socekt");
+
 			if (bytes_count == 0) {
+				req_seccess = 1;
+				break;
+			}
+			if (bytes_count == -1) {
+				gh->log("socket fd read faild  error...");
+
 				break;
 			}
 			if (gh->tail_with_feature(read_buf, bytes_count, "\f")) {
+				req_seccess = 1;
 				break;
 			}
 
-		}
-
-		gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
-
-		req_seccess = 1;
+		} //end while
+		  //	gh->log2(str_cmd, "debug_read_from_socekt_str_cmd");
 		break;
-	}
-	//}
+	} //end while
+
 	//7 clear socket
 	close(socketfd);
-	//8  init task
-//	cout << "receive:" << read_buf << endl;
-//	str_cmd = t_str_cmd;
-//	gh->log(str_cmd);
+
 	return req_seccess;
 
 }
+//
+//
 
 bool slaver::grabpage_work(req_task& mytask) {
 	string dest_ip;
@@ -161,7 +154,9 @@ bool slaver::grabpage_work(req_task& mytask) {
 	}
 	return is_grab_ok;
 }
-//ip:port,http_req,index
+//
+//
+//[001]<2013.04.22>Ensure the integrity of the web page.andrew
 bool slaver::grab_page(grabtask gt) {
 
 	string http_req = gt.http_req; //= mytask.urls_http_req.at(index);
@@ -179,15 +174,10 @@ bool slaver::grab_page(grabtask gt) {
 	gh->log2(http_req, "http_req");
 
 	struct sockaddr_in dest_addr;
-
 	int sockfd = socket(AF_INET, SOCK_STREAM, 0);
 
-	int nNetTimeout = 10000; //10秒
-	setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &nNetTimeout,
-			sizeof(nNetTimeout));
-
 	//
-
+	this->set_socket(sockfd);
 	//
 
 	while (1) {
@@ -224,10 +214,14 @@ bool slaver::grab_page(grabtask gt) {
 
 		int total = 0;
 		string page_content = "";
+		bool page_completed = true;
 		while ((count = read(sockfd, buf, READ_BUFF_SIZE)) > 0) {
 			total += count;
 			if (count == -1) {
 				gh->log("socket fd read faild...");
+				//[001]-----------------------------------------
+				page_completed = false;
+				//end of [001] -----------------------------------------
 				break;
 			}
 			if (count == 0) {
@@ -236,14 +230,16 @@ bool slaver::grab_page(grabtask gt) {
 			}
 			buf[count] = '\0';
 			page_content += buf;
-			//	if (gh->is_html_end(buf, count)) {
-			//		break;
-			//		}
+
 		}
 
-		string filename = gh->grab_page_filename(task_index, task_id);
-		string split_s1 = gh->get_str_betwen_pages(gt.url);
-		gh->log(filename, split_s1 + page_content);
+		if (page_completed) {
+			string filename = gh->grab_page_filename(task_index, task_id);
+			string split_s1 = gh->get_str_betwen_pages(gt.url);
+			gh->log(filename, split_s1 + page_content);
+		} else {
+			gh->log2(gt.url + " read error", s_socket);
+		}
 		string head = page_content.substr(0, page_content.find('\r', 0));
 		gh->log2(gt.url + " " + head, s_socket);
 		gh->log2(gt.url + " " + head, s_work);

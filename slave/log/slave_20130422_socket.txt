@@ -1,0 +1,70 @@
+20130422 13:36:15:connect to 10.2.112.92:9000
+20130422 13:36:17:write:[hi test!]
+20130422 13:45:17:connect to 192.168.60.22:9000
+20130422 13:45:17:socket fd connect fail...Connection refused
+20130422 13:45:31:connect to 192.168.60.22:80
+20130422 13:45:31:write:[hi test!]
+20130422 13:46:40:connect to 192.168.60.22:80
+20130422 13:46:40:write:[hi test!]
+20130422 14:18:21:connect to 192.168.60.22:80
+20130422 14:18:21:write:[hi test!]
+20130422 14:18:55:connect to 192.168.60.22:80
+20130422 14:18:55:write:[hi test!]
+20130422 14:58:24:connect to 192.168.60.22:80
+20130422 14:58:24:write:[application_version:3
+available_disk_space:3.58594
+commd_id:1
+last_cmd_id:-1
+last_task_status:-1
+slave_id:1
+slave_ip:10.2.112.92
+]
+20130422 14:59:39:connect to 192.168.60.22:80
+20130422 14:59:39:write:[hi test!]
+20130422 15:00:47:connect to 192.168.60.22:80
+20130422 15:00:48:write:[hi test!]
+20130422 15:11:49:connect to 192.168.60.22:80
+20130422 15:11:49:write:[hi test!]
+20130422 15:12:36:connect to 192.168.60.22:80
+20130422 15:12:36:write:[hi test!]
+20130422 15:18:05:connect to 192.168.60.22:80
+20130422 15:18:05:write:[hi test!]
+20130422 15:19:41:connect to 192.168.60.22:80
+20130422 15:19:41:write:[hi test!]
+20130422 16:59:37:connect to 192.168.60.22:80
+20130422 17:00:20:socket fd connect fail...Operation now in progress
+20130422 17:00:21: timeout socket_connect_timeout 
+20130422 17:10:22:connect to 192.168.60.22:80
+20130422 17:10:22: socket_connect ok 
+20130422 17:10:22:write:[hi test!]
+20130422 17:11:26:connect to 192.168.60.22:9001
+20130422 17:11:26: socket_connect ok 
+20130422 17:11:26:write:[hi test!]
+20130422 17:11:59:connect to 1.202.248.41:9001
+20130422 17:12:00:socket fd connect fail...Operation now in progress
+20130422 17:12:00: timeout socket_connect_timeout 
+20130422 17:13:22:connect to 1.202.248.41:9001
+20130422 17:13:34:socket fd connect fail...Operation now in progress
+20130422 17:13:34: timeout socket_connect_timeout 
+20130422 17:16:36:connect to 1.202.248.41:9001
+20130422 17:16:42:socket fd connect fail...Operation now in progress
+20130422 17:16:42: timeout socket_connect_timeout 
+20130422 17:19:20:connect to 1.202.248.41:9001
+20130422 17:19:27:socket fd connect fail...Operation now in progress
+20130422 17:19:27: timeout socket_connect_timeout 
+20130422 17:19:42:connect to 192.168.60.22:9001
+20130422 17:19:42: socket_connect ok 
+20130422 17:19:42:write:[hi test!]
+20130422 17:19:52:connect to 192.168.60.22:80
+20130422 17:19:52: socket_connect ok 
+20130422 17:19:52:write:[hi test!]
+20130422 17:20:18:connect to 192.168.60.22:80
+20130422 17:20:18: socket_connect ok 
+20130422 17:20:18:write:[application_version:3
+available_disk_space:3.58301
+commd_id:1
+last_cmd_id:-1
+last_task_status:-1
+slave_id:1
+slave_ip:10.2.112.92
+]
