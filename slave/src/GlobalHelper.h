@@ -45,8 +45,7 @@ namespace poseidon {
 
 class GlobalHelper {
 private:
-//	clock_t clockBegin;
-//	clock_t clockEnd;
+
 	struct timeval start, stop, diff;
 	int tim_subtract(struct timeval *result, struct timeval *start,
 			struct timeval *stop) {
@@ -66,7 +65,7 @@ public:
 	//
 	string SLAVE_CONF;
 	string split_char_betwen_pages;
-	string tmp_log_str;
+
 	//
 	GlobalHelper() {
 		split_char_betwen_pages = "\a";
@@ -81,7 +80,10 @@ public:
 	}
 	bool is_log_show(string type) {
 		return (config_show_map.find(type) != config_show_map.end());
-
+	}
+	bool is_log_to_file() {
+		string is_log = config_show_map["log"];
+		return (is_log == "1");
 	}
 	virtual ~GlobalHelper();
 
@@ -579,27 +581,7 @@ public:
 	}
 
 //
-//
-	void log3(string& content, string type) {
 
-		string time_str = get_string_time("%Y%m%d");
-
-		string filename = "./log/slave_#_@.txt";
-		filename = replace(filename, time_str, "#");
-		filename = replace(filename, type, "@");
-
-		ofstream outfile(filename.c_str(), ios::app);
-		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
-
-		outfile << str_con << endl;
-		outfile.close();
-
-		if (this->is_log_show(type)) {
-			cout << content << endl;
-		}
-		content = "";
-	}
-//
 	void log2(string str1, string str2, string type) {
 		string str = "";
 		str += str1 + str2;
@@ -620,17 +602,17 @@ public:
 //
 	void log2(string content, string type) {
 
-		string time_str = get_string_time("%Y%m%d");
-
-		string filename = "./log/slave_#_@.txt";
-		filename = replace(filename, time_str, "#");
-		filename = replace(filename, type, "@");
-
-		ofstream outfile(filename.c_str(), ios::app);
-		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
-
-		outfile << str_con << endl;
-		outfile.close();
+		if (is_log_to_file()) {
+			string time_str = get_string_time("%Y%m%d");
+			string filename = "./log/slave_#_@.txt";
+			filename = replace(filename, time_str, "#");
+			filename = replace(filename, type, "@");
+			ofstream outfile(filename.c_str(), ios::app);
+			string str_con = time_str + " " + get_string_time("%T") + ":"
+					+ content;
+			outfile << str_con << endl;
+			outfile.close();
+		}
 
 		if (this->is_log_show(type)) {
 			cout << content << endl;
@@ -642,9 +624,9 @@ public:
 	}
 
 	void log(string content) {
-#ifdef DEBUG
-		cout << content << endl;
-#endif
+		if (!this->is_log_to_file()) {
+			return;
+		}
 		string time_str = get_string_time("%Y%m%d");
 		//cout << time_str << endl;
 		string filename = "./log/slave#.txt";
@@ -798,53 +780,7 @@ public:
 		cin >> result;
 		cout << result << endl;
 	}
-//
-	void auto_restart_test() {
-		//	int result = 1;
-		//	cin >> result;
-		//cout << result << endl;
-		while (1) {
-			this->log("./test", "yes i'm alive!");
 
-		}
-	}
-
-	int trave_dir(char* path, int depth, char filename[256][256], int& len) {
-		DIR *d; //声明一个句柄
-		struct dirent *file; //readdir函数的返回值就存放在这个结构体中
-		struct stat sb;
-
-		if (!(d = opendir(path))) {
-			printf("error opendir %s!!!/n", path);
-			return -1;
-		}
-		while ((file = readdir(d)) != NULL) {
-			//把当前目录.，上一级目录..及隐藏文件都去掉，避免死循环遍历目录
-			if (strncmp(file->d_name, ".", 1) == 0)
-				continue;
-			strcpy(filename[len++], file->d_name); //保存遍历到的文件名
-			//判断该文件是否是目录，及是否已搜索了三层，这里我定义只搜索了三层目录，太深就不搜了，省得搜出太多文件
-			if (stat(file->d_name, &sb) >= 0 && S_ISDIR(sb.st_mode)
-					&& depth <= 1) {
-				trave_dir(file->d_name, depth + 1, filename, len);
-			}
-		}
-		closedir(d);
-		return 0;
-	}
-	int trave_dir_test() {
-		char filename[256][256];
-		int len = 0;
-
-		int depth = 1;
-		int i;
-		trave_dir("./download/", depth, filename, len);
-		for (i = 0; i < len; i++) {
-			printf("%s\n", filename[i]);
-		}
-		printf("/n");
-		return 0;
-	}
 //===================================
 	bool trave_dir_into_vec(string path, vector<string>& fnames_evc) {
 		DIR *d; //声明一个句柄

@@ -67,9 +67,9 @@ bool slaver::request_task(req_task *mytask, string& str_cmd) {
 				inet_addr(this->master_ip[0].c_str()));
 
 		//4 connect to server
-		if (-1
-				== connect(socketfd, (struct sockaddr*) &dest_addr,
-						sizeof(struct sockaddr))) {
+		if (0
+				== socket_connect_timeout(socketfd, dest_addr,
+						this->connect_time_out)) {
 			gh->log2("socket fd connect fail...", strerror(errno), s_socket);
 			break;
 		}
@@ -138,15 +138,15 @@ bool slaver::grabpage_work(req_task& mytask) {
 			gt.task_id = mytask.task_id.at(0);
 			gt.url = mytask.urls_vec.at(index);
 
-			is_grab_ok = grab_page_log_time(gt);
-			//500毫秒=500*1000=500000
-			gh->timing_begin();
+			//is_grab_ok = grab_page_log_time(gt);//for log
+			is_grab_ok = this->grab_page(gt);
 
+			gh->timing_begin(); //500毫秒=500*1000=500000
 			gh->timing_end();
 			while (!gh->is_over_cast_time(this->grab_interval)) {
 				gh->timing_end();
 			}
-			//gh->log2("cast_time", gh->cast_time(), "cast_time");
+
 			this->last_task_status = is_grab_ok;
 			gh->log2("task is " + gh->bool2str(is_grab_ok), s_work);
 		}
@@ -189,9 +189,9 @@ bool slaver::grab_page(grabtask gt) {
 		gh->init_address(&dest_addr, AF_INET, request_port,
 				inet_addr(request_ip.c_str()));
 
-		if (-1
-				== connect(sockfd, (struct sockaddr*) &dest_addr,
-						sizeof(struct sockaddr))) {
+		if (0
+				== socket_connect_timeout(sockfd, dest_addr,
+						this->connect_time_out)) {
 			log_str = "socket fd connect fail...";
 			log_str += strerror(errno);
 			gh->log2(log_str, s_socket);
@@ -267,18 +267,16 @@ bool slaver::remoteStorePage(storetask s_task, string send_cmd,
 	//char * page_buff;
 	while (1) {
 		if (-1 == sockfd) {
-			//	perror("socket fd create fail...");.
-			log_str.append("socket fd socket fail...").append(strerror(errno));
-			gh->log2(log_str, s_socket);
+			gh->log2("socket fd socket fail...", strerror(errno), s_socket);
 			break;
 		}
 
 		gh->init_address(&dest_addr, AF_INET, request_port,
 				inet_addr(request_ip.c_str()));
 
-		if (-1
-				== connect(sockfd, (struct sockaddr*) &dest_addr,
-						sizeof(struct sockaddr))) {
+		if (0
+				== socket_connect_timeout(sockfd, dest_addr,
+						this->connect_time_out)) {
 			log_str.append("socket fd connect fail...").append(strerror(errno));
 			gh->log2(log_str, s_socket);
 			break;

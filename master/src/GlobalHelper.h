@@ -14,6 +14,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <linux/tcp.h>
 //c
 #include<fcntl.h>
 #include<string.h>
@@ -68,6 +69,10 @@ public:
 	map<string, string> config_show_map;
 	void config() {
 		read_config("./conf/log.conf", config_show_map);
+
+
+
+
 	}
 	bool is_log_show(string type) {
 		return (config_show_map.find(type) != config_show_map.end());
@@ -430,6 +435,25 @@ public:
 
 	}
 	//
+
+
+//
+	//==========================================
+	// . connect to server
+	/*
+	 for (vector<string>::iterator it2
+	 = fnames_evc.begin();
+	 it2 != fnames_evc.end(); ++it2) {
+	 std::cout << it2->first << " => " << it2->second << '\n';
+	 }
+
+	 for (map<string, string>::iterator it2 = command_map.begin();
+	 it2 != command_map.end(); ++it2) {
+	 std::cout << it2->first << " => " << it2->second << '\n';
+	 }
+
+
+	 * */
 };
 
 }

@@ -49,6 +49,8 @@ int main() {
 	//
 	//need_sleep_test();
 
+//	hand_slave_request_test();
+
 	master_test2slave(); //final test
 
 	return 0;

@@ -29,7 +29,7 @@
 #include <iostream>
 
 #include <sys/types.h>
-#include <sys/socket.h>
+
 #include <sys/ioctl.h>
 #include <netinet/in.h>
 #include <net/if.h>
@@ -117,6 +117,7 @@ private:
 	int grab_interval; //毫秒
 	int receive_time_out;
 	int send_time_out;
+	int connect_time_out;
 protected:
 
 public:
@@ -153,61 +154,57 @@ public:
 		gh->log2("Slave " + gh->num2str(slave_id) + " wake up.", "normal");
 		gh->log2("app_version:" + gh->num2str(app_version), "normal");
 	}
-	void config() {
-		map<string, string> config_map1;
-		gh->read_config(gh->SLAVE_CONF, config_map1);
-		this->master_port = atoi((config_map1["master_port"]).c_str());
-
-		this->master_ip.clear();
-		this->master_ip.push_back(config_map1["master_ip"]);
-
-		this->app_version = atoi((config_map1["app_version"]).c_str());
-		//	this->store_ip.push_back(config_map1["store_ip"]);
-		//	this->store_port = atoi((config_map1["store_port"]).c_str());
-		this->grab_interval = atoi((config_map1["grab_interval"]).c_str());
-
-		this->receive_time_out = atoi(
-				(config_map1["receive_time_out"]).c_str());
-		this->send_time_out = atoi((config_map1["send_time_out"]).c_str());
-
-		map<string, string> config_map2;
-		gh->read_config(slave_private_conf, config_map2);
-		this->slave_id = atoi((config_map2["slave_id"]).c_str());
-		this->local_ip_str = local_ip();
-
+	void show_config(map<string, string> config_map1) {
 		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
 		for (map<string, string>::iterator it2 = config_map1.begin();
 				it2 != config_map1.end(); ++it2) {
 			std::cout << it2->first << " => " << it2->second << endl;
 		}
 		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
+	}
+
+	void config() {
+		map<string, string> config_map1;
+		gh->read_config(gh->SLAVE_CONF, config_map1);
+		this->master_port = atoi((config_map1["master_port"]).c_str());
+		this->master_ip.clear();
+		this->master_ip.push_back(config_map1["master_ip"]);
+		this->app_version = atoi((config_map1["app_version"]).c_str());
+		//	this->store_ip.push_back(config_map1["store_ip"]);
+		//	this->store_port = atoi((config_map1["store_port"]).c_str());
+		this->grab_interval = atoi((config_map1["grab_interval"]).c_str());
+		this->receive_time_out = atoi(
+				(config_map1["receive_time_out"]).c_str());
+		this->send_time_out = atoi((config_map1["send_time_out"]).c_str());
+		this->connect_time_out = atoi(
+				(config_map1["connect_time_out"]).c_str());
+		show_config(config_map1);
+
+		map<string, string> config_map2;
+		gh->read_config(slave_private_conf, config_map2);
+		this->slave_id = atoi((config_map2["slave_id"]).c_str());
+		this->local_ip_str = local_ip();
 
 	}
-	string local_ip() {
 
+	string local_ip() {
 		int sock_get_ip;
 		char ipaddr[50];
-
-		struct sockaddr_in *sin;
+		struct sockaddr_in* sin;
 		struct ifreq ifr_ip;
-
 		if ((sock_get_ip = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
 			printf("socket create failse...GetLocalIp!/n");
 			return "can't get ip";
 		}
-
 		memset(&ifr_ip, 0, sizeof(ifr_ip));
 		strncpy(ifr_ip.ifr_name, "eth0", sizeof(ifr_ip.ifr_name) - 1);
-
 		if (ioctl(sock_get_ip, SIOCGIFADDR, &ifr_ip) < 0) {
 			return "can't get ip";
 		}
 		sin = (struct sockaddr_in *) &ifr_ip.ifr_addr;
 		strcpy(ipaddr, inet_ntoa(sin->sin_addr));
-
 		//printf("local ip:%s /n", ipaddr);
 		close(sock_get_ip);
-
 		return string(ipaddr);
 	}
 
@@ -215,34 +212,29 @@ public:
 	bool request_task(req_task* mytask, string& str_cmd);
 	bool grabpage_work(req_task& mytask);
 	bool grab_page(grabtask gtask);
-
 	bool remoteStorePage(storetask s_task, string cmd, string send_content);
 
 	void work() {
 		req_task mytask;
 		string task_str;
 		int i = 1;
-
 		while (i) {
 			memset(&mytask, 0, sizeof(mytask));
-
 			//1 requestTask
 			gh->log2("requestTask().", s_moudle);
-
 			if (!request_task(&mytask, task_str)) {
 				cout << "Master is sleeping,so i will sleep 5 seconds." << endl;
 				sleep(5);
 				continue;
 			}
-
 			//2 str2task
 			gh->log2("str2task().", s_moudle);
-			gh->log2("str2task:" + task_str, s_normal);
+			gh->log2("str2task:[" + task_str, "]", s_normal);
 			str2task(task_str, mytask);
-
 			//3 hand_response
 			gh->log2("hand_task().", s_moudle);
-			gh->log2("hand_response:" + gh->num2str(mytask.cmd_id), s_normal);
+			gh->log2("hand_response:［" + gh->num2str(mytask.cmd_id), "]",
+					s_normal);
 			hand_task(mytask);
 		}
 
@@ -270,9 +262,9 @@ public:
 			break;
 
 		case GRABPAGE:
-			gh->tmp_log_str += "Grab page totals:" // << mytask.urls_http_req.size() << endl;
-			+ gh->size_t2str(mytask.urls_http_req.size());
-			gh->log3(gh->tmp_log_str, s_work);
+
+			gh->log2("Grab page totals:",
+					gh->size_t2str(mytask.urls_http_req.size()), s_work);
 			is_task_finished = grabpage_work(mytask);
 			this->last_task_status = is_task_finished;
 
@@ -289,14 +281,12 @@ public:
 		}
 		return is_task_finished;
 	}
+
 	void tar_pages_and_get_fnames_vec(vector<string>& fnames_evc) {
 		//vector<string> fnames_evc;
-
 		//1.tar
 		//	string tar_fname = "./download/";
-
 		gh->trave_dir_into_vec("download/", fnames_evc);
-
 		string tar_download_sh_fname = "./script/tar_download.sh";
 		ofstream outfile(tar_download_sh_fname.c_str(), ios::trunc);
 		outfile << "cd  download" << endl;
@@ -309,14 +299,12 @@ public:
 		outfile.close();
 		system("chmod 777 script/tar_download.sh");
 		system("./script/tar_download.sh");
-
 	}
-	bool store_page(storetask s_task) {
 
+	bool store_page(storetask s_task) {
 		//1. read file in menu
 		//vector<string> fnames_evc;
 		tar_pages_and_get_fnames_vec(s_task.fnames_evc);
-
 		//2 foreach pages and send  to rep
 		string send_filename;
 		for (vector<string>::iterator it2 = s_task.fnames_evc.begin();
@@ -330,24 +318,19 @@ public:
 			cmd_map["task_id"] = fname;
 			cmd_map["content_size"] = "#";
 			int loop_store_total = 0; //this->loop_store_time;
-
 			for (map<string, string>::iterator it3 = cmd_map.begin();
 					it3 != cmd_map.end(); ++it3) {
 				cmd_str.append(it3->first + ":" + it3->second + "\r\n");
 			}
 			cmd_str.append("\f");
-
 			// 4.b
 			send_filename = "./download/" + fname + ".tar.gz";
-
 			string s1 = "commit page   " + send_filename;
-
 			gh->log2(s1, s_work);
 			bool is_store_ok = false;
 			while (!is_store_ok) {
 				is_store_ok = this->remoteStorePage(s_task, cmd_str,
 						send_filename);
-
 				if (is_store_ok) {
 					this->sleep_time = 1;
 					//delete file
@@ -355,7 +338,6 @@ public:
 					del_cmd_str = "rm download/" + fname + " -f";
 					gh->log2(del_cmd_str, "shell");
 					system(del_cmd_str.c_str());
-
 					del_cmd_str = "rm download/" + fname + ".tar.gz -f";
 					gh->log2(del_cmd_str, "shell");
 					system(del_cmd_str.c_str());
@@ -379,8 +361,10 @@ public:
 			} //end store one
 
 		} //end store all
+
 		return true;
 	}
+
 	bool grab_page_log_time(grabtask gt) {
 		bool isok = false;
 		string http_req = gt.http_req; //= mytask.urls_http_req.at(index);
@@ -389,32 +373,26 @@ public:
 		int index = gt.index;
 		string task_id = gt.task_id; // = mytask.task_id.at(0);
 		string url = gt.url; //mytask.urls.at(index);
-
 		gh->timing_begin();
 		isok = grab_page(gt);
 		gh->timing_end();
-
 		string filename = gh->grab_page_filename(index, task_id);
-
 		string info = "" + gh->num2str(index);
 		info += " " + gh->cast_time();
 		//info += " " + gh->num2str(gh->file_size(filename));
 		info += "\n";
-
 		string filename2 = "log/cast_time_";
 		filename2 += request_ip;
 		filename2 += "_";
 		filename2 += gh->num2str(request_port);
 		filename2 += ".log";
-
 		gh->log(filename2, info);
 		return isok;
-
 	}
+
 	void urls_str_to_http_reqs(req_task& mytask, string urls) {
 		vector<string> str_vec;
 		gh->split(urls, "#", str_vec);
-
 		vector<string>::iterator url_it;
 		string req;
 		//urls_http_req
@@ -433,36 +411,33 @@ public:
 			mytask.urls_vec.push_back(*url_it);
 		}
 	}
-//
 
+	//
 	bool lookup_ip(string sitename, string& dest_ip) {
-//1 check map
+		//1 check map
 		dest_ip = dns_map[sitename];
 		if (dest_ip != "") {
 			cout << "get" << sitename << " from cache!" << endl;
 			return true;
 		}
-
 		//2 lookup ip
 		if (get_ip_by_name(sitename, dest_ip)) {
 			dns_map[sitename] = dest_ip;
 			return true;
 		} else {
-// not find
+			// not find
 			return false;
 		}
-
 	}
-	bool get_ip_by_name(string hostname, string& ip) {
-		struct hostent *pt;
-		char **ptr;
-		char str[INET_ADDRSTRLEN];
 
+	bool get_ip_by_name(string hostname, string& ip) {
+		struct hostent* pt;
+		char** ptr;
+		char str[INET_ADDRSTRLEN];
 		if ((pt = gethostbyname(hostname.c_str())) == NULL) {
 			cout << "gethostname " << hostname << " error\n" << endl;
 
 		}
-
 		switch (pt->h_addrtype) {
 		case AF_INET:
 			ptr = pt->h_addr_list;
@@ -476,25 +451,21 @@ public:
 			return 0;
 			break;
 		}
-
 		return 1;
 	}
-//
 
-//
+	//
+	//
 	void str2task(string response_command, req_task& mytask) {
 		map<string, string> response_cmd_map;
-
 		gh->command_str_to_map(response_command, &response_cmd_map);
 		//
-
 		//
 		mytask.cmd_id = atoi(response_cmd_map["commd_id"].c_str());
 		mytask.response_cmd_map = response_cmd_map;
 		mytask.sleep_time = atoi(response_cmd_map["time"].c_str());
 		mytask.slave_id = atoi(response_cmd_map["slave_id"].c_str());
 		mytask.version = atoi(response_cmd_map["version"].c_str());
-
 		mytask.new_version_url.push_back(
 				response_cmd_map["new_version_url"].c_str());
 		if (mytask.cmd_id == 7) {
@@ -507,7 +478,6 @@ public:
 			string task_id = mytask.response_cmd_map["task_id"];
 			mytask.task_id.push_back(task_id);
 		}
-
 	}
 
 	string init_request_cmd_str() {
@@ -520,7 +490,6 @@ public:
 		cmd_map["last_cmd_id"] = gh->num2str(this->last_cmd_id);
 		cmd_map["available_disk_space"] = gh->float2str(
 				gh->available_disk_space());
-
 		cmd_map["slave_ip"] = local_ip_str;
 		//init str
 		string cmd_str = "";
@@ -531,9 +500,9 @@ public:
 		cmd_str.append("\f");
 		this->cmd_req_2send = cmd_str;
 		return cmd_str;
-
 	}
-//
+
+	//
 	void set_socket(int socketfd) {
 		int keepAlive = 1;
 		setsockopt(socketfd, SOL_SOCKET, SO_KEEPALIVE, (void*) &keepAlive,
@@ -541,21 +510,18 @@ public:
 		int keepIdle = 10; //开始首次KeepAlive探测前的TCP空闭时间
 		int keepInterval = 10; // 两次KeepAlive探测间的时间间隔
 		int keepCount = 1; // 判定断开前的KeepAlive探测次数
-
 		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPIDLE, (void *) &keepIdle,
 				sizeof(keepIdle));
 		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPINTVL, (void *) &keepInterval,
 				sizeof(keepInterval));
 		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPCNT, (void *) &keepCount,
 				sizeof(keepCount));
-
 		struct timeval tv1;
 		tv1.tv_sec = this->send_time_out;
 		tv1.tv_usec = 0;
 		//发送时限
 		setsockopt(socketfd, SOL_SOCKET, SO_SNDTIMEO, (char *) &tv1,
 				sizeof(tv1));
-
 		//接收时限
 		struct timeval tv2;
 		tv2.tv_sec = this->receive_time_out;
@@ -563,24 +529,25 @@ public:
 		setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &tv2,
 				sizeof(tv2));
 	}
+
 	//1．建立socket
 	//2．将该socket设置为非阻塞模式
 	//3．调用connect()
 	//4．使用select()检查该socket描述符是否可写（注意，是可写）
 	//5．根据select()返回的结果判断connect()结果
 	//6．将socket设置为阻塞模式（如果你的程序不需要用阻塞模式的，这步就省了，不过一般情况下都是用阻塞模式的，这样也容易管理）
-	bool socket_connect_timeout(int sockfd, struct sockaddr_in dest_addr,
-			int TIME_OUT_TIME) {
+	bool socket_connect_timeout(int& sockfd, struct sockaddr_in& dest_addr,
+			int time_out) {
 		int error = -1;
 		int len = sizeof(int);
 		struct timeval tm;
 		fd_set set;
 		unsigned long ul = 1;
-		ioctl(sockfd, FIONBIO, &ul); //设置为非阻塞模式
+		ioctl(sockfd, FIONBIO, &ul);
 		bool ret = 0;
 		if (connect(sockfd, (struct sockaddr *) &dest_addr, sizeof(dest_addr))
 				== -1) {
-			tm.tv_sec = TIME_OUT_TIME;
+			tm.tv_sec = time_out;
 			tm.tv_usec = 0;
 			FD_ZERO(&set);
 			FD_SET(sockfd, &set);
@@ -600,25 +567,23 @@ public:
 
 		} else {
 			ret = true; //end select
-		} //end  connect if
-
+		}
 		ul = 0;
-		ioctl(sockfd, FIONBIO, &ul); //设置为阻塞模式
+		ioctl(sockfd, FIONBIO, &ul);
 		if (!ret) {
 			//	close(sockfd);
-			fprintf(stderr, "Cannot Connect the server!/n");
+			//fprintf(stderr, "Cannot Connect the server!/n");
 			return 0;
 		}
 		//	fprintf(stderr, "Connected!/n");
 		return 1;
 	}
 
-/////////////////////////test
+	/////////////////////////test
 	void down_test() {
-
 	}
-	bool request_task_timeo(req_task *mytask, string& str_cmd) {
 
+	bool request_task_timeo(req_task* mytask, string& str_cmd) {
 		gh->log2("connect to ", this->master_ip[0], ":",
 				gh->num2str(this->master_port), s_socket);
 		//1 init variable
@@ -647,9 +612,9 @@ public:
 					inet_addr(this->master_ip[0].c_str()));
 
 			//4 connect to server
-			if (-1
-					== connect(socketfd, (struct sockaddr*) &dest_addr,
-							sizeof(struct sockaddr))) {
+			if (0
+					== socket_connect_timeout(socketfd, dest_addr,
+							this->connect_time_out)) {
 				log_str = "socket fd connect fail...";
 				log_str += strerror(errno);
 				gh->log2(log_str, s_socket);
@@ -712,9 +677,9 @@ public:
 		//7 clear socket
 		close(socketfd);
 		//8  init task
-
 		return req_seccess;
 	}
+
 	//
 	void request_task_timeo_test() {
 		req_task mytask; //commad
@@ -722,9 +687,9 @@ public:
 		this->request_task_timeo(&mytask, str);
 		cout << "over request_task_timeo_test" << endl;
 	}
+
 	//
 	void request_task_timeo_test2() {
-
 		__sighandler_t sigfunc1;
 		int nsec = 11;
 		int i = 0;
@@ -737,7 +702,7 @@ public:
 			cout << "error and timeout." << endl;
 		}
 		alarm(0); //  turn off the alarm  /
-		signal(SIGALRM, sigfunc1); //restore previous signal handler
+		signal(SIGALRM, sigfunc1);
 		cout << " over 2." << endl;
 	}
 	void request_task_timeo_test3() {
@@ -792,7 +757,7 @@ public:
 			close(socketfd);
 			return 0;
 		}
-		gh->log2(" socket_connect ok ", s_socket);
+		//	gh->log2(" socket_connect ok ", s_socket);
 
 		/*	if (-1
 		 == connect(socketfd, (struct sockaddr*) &dest_addr,

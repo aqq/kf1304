@@ -15,7 +15,7 @@ using namespace poseidon;
 #define DEBUG
 int main() {
 	//
-	(new slaver())->request_task_setsocketop_expectin();
+	//(new slaver())->request_task_setsocketop_expectin();
 //	(new slaver())->request_task_timeo_test3();
 	//
 
@@ -64,7 +64,7 @@ int main() {
 //	grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 //	str2task_test();
-	//slaver_work_test(); //final test
+	slaver_work_test(); //final test
 
 	//slaver_test_grab_for_login();
 

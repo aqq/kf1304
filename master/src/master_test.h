@@ -177,6 +177,32 @@ void bad_url_read_test() {
 	master * mt = new master();
 	cout << mt->need_sleep(req_cmd) << endl;
 }
+//
+void hand_slave_request_test() {
+	master * mt = new master();
+	struct command req_cmd;
+	map<string, string> response_cmd_map;
+	//1 request
+	req_cmd.commd_id = 1;
+	req_cmd.slave_id = 1;
+
+	mt->hand_slave_request(req_cmd, response_cmd_map);
+	assert(response_cmd_map["commd_id"]=="7");
+// time out return store
+
+//2 store success
+	req_cmd.commd_id = 1;
+	req_cmd.last_cmd_id = 7;
+	req_cmd.last_task_status = 1;
+	map<string, string> response_cmd_map2;
+	mt->hand_slave_request(req_cmd, response_cmd_map2);
+	assert(response_cmd_map2["commd_id"]!="2");
+
+	for (map<string, string>::iterator it2 = response_cmd_map2.begin();
+			it2 != response_cmd_map2.end(); ++it2) {
+		std::cout << it2->first << " => " << it2->second << '\n';
+	}
+}
 
 //
 } /* namespace poseidon */
