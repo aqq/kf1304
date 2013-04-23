@@ -625,7 +625,6 @@ public:
 				(config_map1["connect_time_out"]).c_str());
 		show_config(config_map1);
 
-		show_config(config_map1);
 		//
 		return 1;
 	}

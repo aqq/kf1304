@@ -70,9 +70,6 @@ public:
 	void config() {
 		read_config("./conf/log.conf", config_show_map);
 
-
-
-
 	}
 	bool is_log_show(string type) {
 		return (config_show_map.find(type) != config_show_map.end());
@@ -420,6 +417,9 @@ public:
 
 		string::size_type pos(0);
 		pos = str.find_first_of(special_char);
+		if (pos == string::npos) {
+			return str;
+		}
 		str = str.replace(pos, special_char.size(), "");
 		return str.insert(pos, new_str);
 	}
@@ -435,7 +435,6 @@ public:
 
 	}
 	//
-
 
 //
 	//==========================================
