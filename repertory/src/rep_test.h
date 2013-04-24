@@ -50,8 +50,6 @@ void read_config_test() {
 }
 void rep_feedback_test() {
 	rep *rep1 = new rep();
-	GlobalHelper *gh;
-	gh = new GlobalHelper();
 
 	req_task r_task;
 	string result;

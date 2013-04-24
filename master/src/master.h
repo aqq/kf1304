@@ -2,7 +2,7 @@
  * master.h
  *
  *  Created on: 2013-4-1
- *      Author: root
+ *      Author: andrew
  */
 
 #ifndef MASTER_H_
@@ -29,7 +29,6 @@
 #include "GlobalHelper.h"
 #include "Cpp2mysql.h"
 
-#define DEBUG
 using namespace std;
 
 namespace poseidon {
@@ -45,6 +44,7 @@ const int M2S_URL = 4;
 const int S2R_STORE = 5;
 const int R2S_FEEDBACK = 6;
 const int M2S_STORE = 7;
+
 struct site_in_slave {
 	string site_name;
 	int good;
@@ -68,7 +68,7 @@ struct slave_status {
 
 };
 
-struct command {
+struct req_command {
 	int commd_id;
 	int slave_id;
 	int app_version;
@@ -80,23 +80,22 @@ struct command {
 	float available_disk_space;
 
 	vector<string> slave_ip;
-	vector<string> urls; //master to slave
-	vector<string> task_id;
+	vector<string> rep_id;
+	vector<string> worker_type;
 };
+
 class master {
 
 private:
-	int master_port; //80
+	int master_port;
 
 	GlobalHelper *gh;
 	Cpp2mysql *mysql;
 	bool isworktime;
 	int current_version;
 	string sleep_time;
-	//ifstream *site_2;
-	//FILE *fp;
-	int read_url_num;
-	vector<string> new_version_url;
+
+	vector<string> update_shell;
 	int slave_work_time_begin;
 	int slave_work_time_end;
 public:
@@ -130,7 +129,7 @@ public:
 		gh->log2("Finish init mysql", "sql");
 	}
 
-	bool need_sleep(struct command req_cmd) {
+	bool need_sleep(struct req_command req_cmd) {
 		//%H 24小时制的小时
 		int time_h = atoi(gh->get_string_time("%H").c_str());
 
@@ -146,7 +145,7 @@ public:
 		return 1;
 	}
 
-	bool need_store(struct command req_cmd) {
+	bool need_store(struct req_command req_cmd) {
 		int time_h = atoi(gh->get_string_time("%H").c_str());
 
 		if (time_h >= this->slave_work_time_begin
@@ -173,7 +172,7 @@ public:
 			perror("socket fd create fail...");
 			return -1;
 		}
-
+		this->set_socket(socketfd);
 		//3 prepare listen access point
 		gh->init_address(&local_addr, PF_INET, this->master_port, INADDR_ANY);
 
@@ -247,7 +246,7 @@ public:
 	}
 
 	void init_sleep_cmd(map<string, string>& response_cmd_map,
-			struct command req_cmd) {
+			struct req_command req_cmd) {
 		//2.1.2 sleep time
 		response_cmd_map["commd_id"] = "2";
 		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
@@ -255,14 +254,14 @@ public:
 	}
 
 	void init_updata_cmd(map<string, string>& response_cmd_map,
-			struct command& req_cmd) {
+			struct req_command& req_cmd) {
 		response_cmd_map["commd_id"] = "3";
 		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
 		response_cmd_map["version"] = gh->num2str(this->current_version);
-		response_cmd_map["new_version_url"] = this->new_version_url[0];
+		response_cmd_map["update_shell"] = this->update_shell[0];
 	}
 
-	void init_assign_cmd(struct command& req_cmd,
+	void init_assign_cmd(struct req_command& req_cmd,
 			map<string, string>& response_cmd_map) {
 		string urls;
 		if (assign_request(req_cmd.slave_id, urls)) {
@@ -275,7 +274,7 @@ public:
 		}
 	}
 
-	void init_store_cmd(struct command& req_cmd,
+	void init_store_cmd(struct req_command& req_cmd,
 			map<string, string>& response_cmd_map) {
 		response_cmd_map["commd_id"] = "7";
 		response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
@@ -284,20 +283,29 @@ public:
 	}
 
 	void init_feedback_cmd(map<string, string>& response_cmd_map,
-			struct command req_cmd) {
-		updata_rep_status(req_cmd);
+			struct req_command req_cmd) {
+		//	updata_rep_status(req_cmd);
 		//	response_cmd_map["commd_id"] = "2";
 		//response_cmd_map["slave_id"] = gh->num2str(req_cmd.slave_id);
 		//	response_cmd_map["time"] = this->sleep_time;
 	}
 
-	void updata_rep_status(struct command& req_cmd) {
+	void updata_rep_status(struct req_command& req_cmd) {
+		//log
 		string log_str = "rep available_disk_space :";
 		log_str += gh->float2str(req_cmd.available_disk_space);
 		gh->log2(log_str, "rep_disk_space");
+
+		worker_tb w;
+		w.slave_id = atoi(req_cmd.rep_id[0].c_str());
+		w.last_request_ip = req_cmd.slave_ip[0];
+		w.available_disk_space = req_cmd.available_disk_space;
+		w.last_request_time = gh->get_time_str("%Y-%m-%d %H:%M:%S");
+		w.worker_type = req_cmd.worker_type[0];
+		mysql->update_worker_tb(w);
 	}
 
-	void update_slave_status_to_db(struct command& req_cmd) {
+	void update_slave_status_to_db(struct req_command& req_cmd) {
 		//update_worker_tb
 		worker_tb w;
 		w.slave_id = req_cmd.slave_id;
@@ -307,7 +315,7 @@ public:
 		mysql->update_worker_tb(w);
 	}
 
-	void update_slave_site_status_to_db(struct command& req_cmd) {
+	void update_slave_site_status_to_db(struct req_command& req_cmd) {
 		//update_worker_site_tb
 		if (req_cmd.commd_id != S2M_REQUEST) {
 			return;
@@ -329,7 +337,7 @@ public:
 	}
 
 	//2 update slave_status
-	void update_slave_status_in_memory(struct command& req_cmd) {
+	void update_slave_status_in_memory(struct req_command& req_cmd) {
 		//2.1 weather slave_id in map
 		slave_status s_status;
 		string tmp_slave_id = gh->num2str(req_cmd.slave_id);
@@ -363,7 +371,7 @@ public:
 
 	}
 
-	void req_map_to_struct_cmd(struct command& req_cmd,
+	void req_map_to_struct_cmd(struct req_command& req_cmd,
 			map<string, string> req_cmd_map) {
 		req_cmd.commd_id = atoi(req_cmd_map["commd_id"].c_str());
 		req_cmd.app_version = atoi(req_cmd_map["application_version"].c_str());
@@ -374,10 +382,14 @@ public:
 		req_cmd.available_disk_space = atof(
 				req_cmd_map["available_disk_space"].c_str());
 		req_cmd.slave_ip.push_back(req_cmd_map["slave_ip"]);
+		req_cmd.rep_id.push_back(req_cmd_map["rep_id"]);
+		req_cmd.worker_type.push_back(req_cmd_map["worker_type"]);
+		//  req_cmd["rep_id"];
+		// req_cmd["worker_type"];
 
 	}
 
-	void hand_slave_request(struct command& req_cmd,
+	void hand_slave_request(struct req_command& req_cmd,
 			map<string, string>& response_cmd_map) {
 		//  store
 		if (need_store(req_cmd)) {
@@ -412,7 +424,7 @@ public:
 		//==============================================
 		map<string, string> req_cmd_map;
 		gh->command_str_to_map(request_str, &req_cmd_map);
-		struct command req_cmd;
+		struct req_command req_cmd;
 		req_map_to_struct_cmd(req_cmd, req_cmd_map);
 		gh->log2("request_command:", gh->num2str(req_cmd.commd_id), "task");
 
@@ -426,12 +438,12 @@ public:
 			if (req_cmd.last_cmd_id == M2S_URL) {
 				update_slave_site_status_to_db(req_cmd);
 			} else if (req_cmd.last_cmd_id == M2S_STORE) {
-//wait to consider
+
 			}
 
 			break;
-		case 6:
-
+		case poseidon::R2S_FEEDBACK:
+			this->updata_rep_status(req_cmd);
 			break;
 		}
 
@@ -440,14 +452,13 @@ public:
 		//==============================================
 		map<string, string> response_cmd_map;
 		switch (req_cmd.commd_id) {
-		case 1: //request from slave
+		case poseidon::S2M_REQUEST: //request from slave
 			//2.1.1 version
 			hand_slave_request(req_cmd, response_cmd_map);
 			respose_content = cmd_map_to_str(response_cmd_map);
 			break;
-		case 6: //feedback from rep
+		case poseidon::R2S_FEEDBACK: //feedback from rep
 			init_feedback_cmd(response_cmd_map, req_cmd);
-
 			respose_content = cmd_map_to_str(response_cmd_map);
 			break;
 		default:
@@ -609,7 +620,7 @@ public:
 				(config_map1["assign_url_number"]).c_str());
 		this->master_port = atoi((config_map1["master_port"]).c_str());
 		//
-		this->new_version_url.push_back(config_map1["new_version_url"].c_str());
+
 		this->store_ip.push_back(config_map1["store_ip"]);
 		this->store_port = atoi((config_map1["store_port"]).c_str());
 		this->current_version = atoi((config_map1["app_version"]).c_str());
@@ -623,19 +634,14 @@ public:
 		this->send_time_out = atoi((config_map1["send_time_out"]).c_str());
 		this->connect_time_out = atoi(
 				(config_map1["connect_time_out"]).c_str());
-		show_config(config_map1);
+		gh->show_config(config_map1, gh->MASTER_CONF);
 
+		//read all file to a str.
+		this->update_shell.push_back(config_map1["new_version_url"]);
 		//
 		return 1;
 	}
-	void show_config(map<string, string> config_map1) {
-		std::cout << "==========" << gh->MASTER_CONF << "==========" << endl;
-		for (map<string, string>::iterator it2 = config_map1.begin();
-				it2 != config_map1.end(); ++it2) {
-			std::cout << it2->first << " => " << it2->second << endl;
-		}
-		std::cout << "==========" << gh->MASTER_CONF << "==========" << endl;
-	}
+
 	bool config_website() {
 		map<string, string> config_map2;
 		gh->read_config(gh->WEBSITE_CONF, config_map2);
@@ -653,6 +659,7 @@ public:
 			url_map[site_name] = si;
 
 		}
+		gh->show_config(config_map2, gh->WEBSITE_CONF);
 		return 1;
 	}
 	void show_slave_status() {

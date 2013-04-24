@@ -25,54 +25,20 @@ namespace poseidon {
  * */
 Cpp2mysql::Cpp2mysql() {
 	gh = new GlobalHelper();
-	FILE *fp;
-	//char *filep;
-	char thefileName[1024];
+	map<string, string> mysql_config_map;
+	gh->read_config("./conf/mysqlconn.conf", mysql_config_map);
+	//mysql_ip:192.168.60.22
+	//mysql_port:3306
+	//mysql_account:root
+	//mysql_password:andrew
+	//mysql_database:cjt
 
-	if ((fp = fopen("./conf/mysqlconn.conf", "r")) == NULL) {
-		printf("open file mysqlconn.config error!!\n");
-		return;
-	}
-	string content;
+	this->host.push_back(mysql_config_map["mysql_ip"].c_str());
+	this->user.push_back(mysql_config_map["mysql_account"].c_str());
+	this->psw.push_back(mysql_config_map["mysql_password"].c_str());
+	this->dbname.push_back(mysql_config_map["mysql_database"].c_str());
+	this->port = atoi(mysql_config_map["mysql_port"].c_str());
 
-	fgets(thefileName, 1024, fp); //每次调用文件指针fp会自动后移一行
-	LineOpt(thefileName);
-	content = thefileName;
-	this->host = content.c_str();
-
-	fgets(thefileName, 1024, fp);
-	LineOpt(thefileName);
-	content = thefileName;
-	this->user = content.c_str();
-
-	fgets(thefileName, 1024, fp);
-	LineOpt(thefileName);
-	content = thefileName;
-	this->psw = content.c_str();
-
-	fgets(thefileName, 1024, fp);
-	LineOpt(thefileName);
-	content = thefileName;
-	this->dbname = content.c_str();
-
-	fgets(thefileName, 1024, fp);
-	LineOpt(thefileName);
-	content = thefileName;
-	this->port = content.c_str();
-	fclose(fp);
-
-	result = NULL;
-	init();
-
-}
-Cpp2mysql::Cpp2mysql(string host, string user, string psw, string port,
-		string dbname) {
-	this->host = host;
-	this->user = user;
-	this->psw = psw;
-	this->port = port;
-	this->dbname = dbname;
-	result = NULL;
 	init();
 
 }
@@ -103,8 +69,8 @@ void Cpp2mysql::connectTest() {
 
 }
 bool Cpp2mysql::connect() {
-	if (!mysql_real_connect(&mysql, host.c_str(), user.c_str(), psw.c_str(),
-			dbname.c_str(), atoi(port.c_str()), 0, 0)) {
+	if (!mysql_real_connect(&mysql, host[0].c_str(), user[0].c_str(),
+			psw[0].c_str(), dbname[0].c_str(), port, 0, 0)) {
 		//如果处理失败，返回出错信息
 		mysql_errno(&mysql);
 		const char * s = mysql_error(&mysql);
@@ -131,59 +97,13 @@ MYSQL_RES* Cpp2mysql::query(string sql) {
 	}
 }
 
-bool Cpp2mysql::preparedExcute() {
-	MYSQL_STMT *stmt;
-//	if (!mysql_real_connect(&mysql, host.c_str(), user.c_str(), psw.c_str(),
-//			dbname.c_str(), atoi(port.c_str()), 0, 0))
-	stmt = mysql_stmt_init(&mysql);
-	string sql = "INSERT b_test(ID,Type,Value) values('idtest',1,?)";
-	int res1 = mysql_stmt_prepare(stmt,
-			"INSERT b_test(ID,Type,Value) values('idtest',1,?)",
-			strlen("INSERT b_test(ID,Type,Value) values('idtest',1,?)"));
-	cout << res1 << endl;
-	if (res1 != 0) {
-		fprintf(stderr, " mysql_stmt_prepare(), insert failed\r\n");
-		fprintf(stderr, " %s\r\n", mysql_stmt_error(stmt));
-		return false;
-	}
-
-	MYSQL_BIND bind[1];
-	unsigned long length[1];
-	my_bool is_null[1];
-
-	memset(bind, 0, sizeof(bind));
-	memset(length, 0, sizeof(length));
-	memset(is_null, 0, sizeof(is_null));
-
-	char *st = "test2";
-	bind[0].buffer_type = MYSQL_TYPE_BLOB;
-	bind[0].buffer = (char *) &st;
-	bind[0].buffer_length = sizeof(st);
-	length[0] = sizeof(st);
-	bind[0].length = &length[0];
-	bind[0].is_null = &is_null[0];
-
-	if (mysql_stmt_bind_param(stmt, bind)) {
-		fprintf(stderr, "mysql_stmt_bind_param failed,err = %s\r\n",
-				mysql_stmt_error(stmt));
-		return false;
-	}
-
-	if (mysql_stmt_execute(stmt)) {
-		fprintf(stderr, "mysql_stmt_excute failed,err = %s\r\n",
-				mysql_stmt_error(stmt));
-		return false;
-	}
-	return 1;
-}
-
 void Cpp2mysql::close() {
 
-	this->host = "";
-	this->user = "";
-	this->psw = "";
-	this->port = "";
-	this->dbname = "";
+	this->host.clear();
+	this->user.clear();
+	this->psw.clear();
+	this->port = 0;
+	this->dbname.clear();
 	mysql_free_result(result);
 	result = NULL;
 	mysql_close(&mysql);

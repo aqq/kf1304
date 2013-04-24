@@ -1,5 +1,5 @@
-echo "cd Debug/"
-cd Debug/
+echo "cd Debug_64/"
+cd Debug_64/
 
 echo "make clean"
 make clean
@@ -9,6 +9,8 @@ make all
 
 echo "cd .."
 cd ..
+
+ 
 
 echo "cp -f conf/master.conf.std conf/master.conf "
 cp -f conf/master.conf.std conf/master.conf

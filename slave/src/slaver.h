@@ -98,7 +98,7 @@ struct req_task {
 	vector<string> urls_http_req;
 	vector<string> urls_sites;
 	map<string, string> response_cmd_map;
-	vector<string> new_version_url;
+	vector<string> update_shell;
 	int version;
 
 };
@@ -154,14 +154,6 @@ public:
 		gh->log2("Slave " + gh->num2str(slave_id) + " wake up.", "normal");
 		gh->log2("app_version:" + gh->num2str(app_version), "normal");
 	}
-	void show_config(map<string, string> config_map1) {
-		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
-		for (map<string, string>::iterator it2 = config_map1.begin();
-				it2 != config_map1.end(); ++it2) {
-			std::cout << it2->first << " => " << it2->second << endl;
-		}
-		std::cout << "==========" << gh->SLAVE_CONF << "==========" << endl;
-	}
 
 	void config() {
 		map<string, string> config_map1;
@@ -178,7 +170,7 @@ public:
 		this->send_time_out = atoi((config_map1["send_time_out"]).c_str());
 		this->connect_time_out = atoi(
 				(config_map1["connect_time_out"]).c_str());
-		show_config(config_map1);
+		gh->show_config(config_map1, gh->SLAVE_CONF);
 
 		map<string, string> config_map2;
 		gh->read_config(slave_private_conf, config_map2);
@@ -212,7 +204,7 @@ public:
 	bool request_task(req_task* mytask, string& str_cmd);
 	bool grabpage_work(req_task& mytask);
 	bool grab_page(grabtask gtask);
-	bool remoteStorePage(storetask s_task, string cmd, string send_content);
+	bool remote_store_page(storetask s_task, string cmd, string send_content);
 
 	void work() {
 		req_task mytask;
@@ -253,9 +245,11 @@ public:
 
 		case UPDATE:
 			//update app begin
-			gh->call_updata_shell(mytask.new_version_url[0]);
-			//update app end
 			gh->log("Updata version:" + mytask.version);
+			cout << mytask.update_shell[0] << endl;
+			gh->call_updata_shell(mytask.update_shell[0]);
+			//update app end
+
 			//in real updata,the app_version will be write in code.
 			this->app_version = mytask.version;
 			this->last_task_status = 0;
@@ -329,7 +323,7 @@ public:
 			gh->log2(s1, s_work);
 			bool is_store_ok = false;
 			while (!is_store_ok) {
-				is_store_ok = this->remoteStorePage(s_task, cmd_str,
+				is_store_ok = this->remote_store_page(s_task, cmd_str,
 						send_filename);
 				if (is_store_ok) {
 					this->sleep_time = 1;
@@ -466,8 +460,7 @@ public:
 		mytask.sleep_time = atoi(response_cmd_map["time"].c_str());
 		mytask.slave_id = atoi(response_cmd_map["slave_id"].c_str());
 		mytask.version = atoi(response_cmd_map["version"].c_str());
-		mytask.new_version_url.push_back(
-				response_cmd_map["new_version_url"].c_str());
+		mytask.update_shell.push_back(response_cmd_map["update_shell"].c_str());
 		if (mytask.cmd_id == 7) {
 			this->store_ip.clear();
 			this->store_ip.push_back(response_cmd_map["store_ip"]);

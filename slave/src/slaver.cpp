@@ -251,7 +251,7 @@ bool slaver::grab_page(grabtask gt) {
 	return this->last_task_status;
 }
 
-bool slaver::remoteStorePage(storetask s_task, string send_cmd,
+bool slaver::remote_store_page(storetask s_task, string send_cmd,
 		string send_filename) {
 	bool is_store_ok = 0;
 	string request_ip = s_task.request_ip;

@@ -407,7 +407,7 @@ void remoteStorePage_test() {
 			"task_id:20130409181510256411\r\n"
 			"content_size:#\r\n"
 			"\f";
-	worker->remoteStorePage(s_task, cmd, send_filename);
+	worker->remote_store_page(s_task, cmd, send_filename);
 }
 
 void store_page_test() {

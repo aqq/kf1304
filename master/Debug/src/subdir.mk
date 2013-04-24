@@ -9,8 +9,7 @@ CPP_SRCS += \
 ../src/kf1304_master.cpp \
 ../src/main.cpp \
 ../src/master.cpp \
-../src/parse.cpp \
-../src/slaver.cpp 
+../src/parse.cpp 
 
 OBJS += \
 ./src/Cpp2mysql.o \
@@ -18,8 +17,7 @@ OBJS += \
 ./src/kf1304_master.o \
 ./src/main.o \
 ./src/master.o \
-./src/parse.o \
-./src/slaver.o 
+./src/parse.o 
 
 CPP_DEPS += \
 ./src/Cpp2mysql.d \
@@ -27,8 +25,7 @@ CPP_DEPS += \
 ./src/kf1304_master.d \
 ./src/main.d \
 ./src/master.d \
-./src/parse.d \
-./src/slaver.d 
+./src/parse.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

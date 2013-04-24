@@ -17,8 +17,8 @@ int main() {
 	//
 	//(new slaver())->request_task_setsocketop_expectin();
 //	(new slaver())->request_task_timeo_test3();
-	//
-
+	//GlobalHelper
+//	(new GlobalHelper())->call_updata_shell_test();
 	//(new GlobalHelper())->read_line_from_test();
 	//slave to rep
 
@@ -39,7 +39,7 @@ int main() {
 
 	//(new GlobalHelper())->time_test2();//pass
 	//(new GlobalHelper())->string_contain_test();//pass
-	//(new Gread_buflobalHelper())->split_line_test();//pass
+	//(new GlobalHelper())->split_line_test(); //pass
 	//(new GlobalHelper())->split_test();//pass
 	//(new GlobalHelper())->replace_test(); //pass
 //	(new GlobalHelper())->convert_url_to_http_req_test(); //pass
@@ -69,7 +69,7 @@ int main() {
 	//slaver_test_grab_for_login();
 
 //----------sys call
-	// (new GlobalHelper())->call_updata_shell_test();
+	//(new GlobalHelper())->call_updata_shell_test();
 	//(new GlobalHelper())->auto_restart_test();
 
 	return 0;

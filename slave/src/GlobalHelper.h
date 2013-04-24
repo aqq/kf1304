@@ -77,6 +77,7 @@ public:
 	map<string, string> config_show_map;
 	void config() {
 		read_config("./conf/log.conf", config_show_map);
+
 	}
 	bool is_log_show(string type) {
 		return (config_show_map.find(type) != config_show_map.end());
@@ -225,13 +226,6 @@ public:
 		return true;
 	}
 
-	bool split_char(char c) {
-		return c == ':';
-	}
-	bool not_split_char(char c) {
-		return c != ':';
-	}
-
 	//
 	//按行分割
 	void split_line(string in, vector<string> *vec) {
@@ -283,26 +277,21 @@ public:
 	}
 
 //以"\r "为分隔符
-	bool split_line_test() {
-		vector<string> *vec = new vector<string>();
+	void split_line_test() {
+		//	vector<string> *vec = new vector<string>();
 		string command1 = "commd_id:1\r\n"
 				"slave_id:1\r\n"
 				"application_version:1\r\n"
+				"update_shell:echo \"ls\" ;echo ll>>ll.txt"
 				"\f";
-		split_line(command1, vec);
-		bool res = false;
-		string s1 = "commd_id:1";
-		res = (s1 == vec->at(0));
-		if (!res) {
-			cout << res << endl;
-			return res;
-		}
+
+		string s1 = "update_shell:echo \"ls\" ;echo ll>>ll.txt";
+
 		vector<string> *vec2 = new vector<string>();
 		split_by_split_char(s1, vec2, ':');
-		res = (s1 == vec2->at(0));
+
 		cout << vec2->at(0) << endl;
 		cout << vec2->at(1) << endl;
-		return res;
 
 	}
 	//==================================
@@ -352,7 +341,7 @@ public:
 			string value = vec2.at(1);
 			//	log2("**************", "dg_command_str_to_map");
 			//	log2("key:", key, "dg_command_str_to_map");
-			//	log2("value:", value, "dg_command_str_to_map");
+			//log2("value:", value, "dg_command_str_to_map");
 			//log2("**************", "dg_command_str_to_map");
 			(*command_map)[key] = value;
 		}
@@ -389,6 +378,9 @@ public:
 
 		string::size_type pos(0);
 		pos = str.find_first_of(special_char);
+		if (pos == string::npos) {
+			return str;
+		}
 		str = str.replace(pos, special_char.size(), "");
 		return str.insert(pos, new_str);
 	}
@@ -742,36 +734,24 @@ public:
 	void delete_self_test() {
 		system("rm -f kf1304_slave");
 	}
-//
-	int call_updata_shell(string url) {
-		//cin >> result;
+
+	int call_updata_shell(string shell_str) {
 		string sh_str = "";
-		//"wget -O kf1304_slave_1 # \n";
-		//	sh_str += "ls \n";
-		//sh_str += "cd ..\n";
-
-		sh_str += "rm -f slave.tar.gz \n"; //删除原来的文件
-		sh_str += "wget -O slave.tar.gz # \n";
-		//sh_str += "mv kf1304_slave_1 kf1304_slave \n";
-		//sh_str += "chmod 777 kf1304_slave \n";
-		//	sh_str += "./kf1304_slave \n";
-		sh_str = replace(sh_str, url, "#");
+		sh_str += "rm -f update.sh \n"; //删除原来的文件
+		sh_str += "wget -O update.sh # \n";
+		sh_str = replace(sh_str, shell_str, "#");
 		sh_str = replace(sh_str, ":", "#"); //替换掉XX＃8080中的＃为:
-		sh_str += "tar zxvf slave.tar.gz \n"; //解压
-		sh_str += "cd Debug/ \n"; //编译
-		sh_str += "./build.sh \n"; //
-
 		log("./update.sh", sh_str, ios::trunc);
-		//"chmod 777 kf1304_slave \n";
+
 		system("chmod 777 update.sh");
 		int result = system("./update.sh");
 		exit(0); //退出程序！
 		return result;
 	}
+
 	void call_updata_shell_test() {
-		int result = call_updata_shell("www.csdn.net");
-		cin >> result;
-		cout << result << endl;
+		call_updata_shell("www.baidu.com:80");
+
 	}
 //===================================
 	void call_shell_test() {
@@ -926,6 +906,14 @@ public:
 		stringstream ss;
 		ss << i;
 		return ss.str();
+	}
+	void show_config(map<string, string> config_map1, string title) {
+		std::cout << "==========" << title << "==========" << endl;
+		for (map<string, string>::iterator it2 = config_map1.begin();
+				it2 != config_map1.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << endl;
+		}
+		std::cout << "==========" << title << "==========" << endl;
 	}
 //==========================================
 // . connect to server

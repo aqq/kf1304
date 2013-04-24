@@ -19,7 +19,7 @@ struct worker_tb {
 	string last_request_time;
 	string last_request_ip;
 	float available_disk_space;
-	int worker_type;
+	string worker_type;
 };
 struct worker_site_tb {
 	int ws_id;
@@ -30,7 +30,12 @@ struct worker_site_tb {
 };
 class Cpp2mysql {
 protected:
-	string host, user, psw, port, dbname;
+	vector<string> host;
+	vector<string> user;
+	vector<string> psw;
+	vector<string> dbname;
+	int port;
+
 	MYSQL mysql;
 	MYSQL_RES* result;
 	MYSQL_ROW row;
@@ -40,7 +45,7 @@ protected:
 
 public:
 	Cpp2mysql();
-	Cpp2mysql(string host, string user, string psw, string port, string dbname);
+	//Cpp2mysql(string host, string user, string psw, string port, string dbname);
 	void connectTest();
 	virtual ~Cpp2mysql();
 
@@ -51,35 +56,19 @@ public:
 	MYSQL_RES* query(string sql);
 	int execute(string sql, MYSQL_RES* result);
 	int execute(string sql);
-	char* ConvertBinaryToString(char* pBinaryData, int nLen);
-	void insertBlobExample();
-	//
-	bool insertPacket();
 
-	bool preparedExcute();
-
-	void testReadBlob();
-	//
-	void LineOpt(char *thefileName) {
-		int i = 0;
-		while (1) {
-			if (thefileName[i] != '\n')
-				i++;
-			else
-				break;
-		}
-		thefileName[i] = 0;
-	}
 	//================================
 	void update_worker_tb(worker_tb worker) {
 		char sqlquery1[500] =
-				"	update worker_tb set last_request_time='%s',last_ip='%s',available_disk_space='%f' where slave_id=%d";
+				"	update worker_tb set "
+						"last_request_time='%s',last_ip='%s',available_disk_space='%f',worker_type='%s' "
+						"where slave_id=%d";
 		char sqlquery2[500];
 		sprintf(sqlquery2, sqlquery1, worker.last_request_time.c_str(),
 				worker.last_request_ip.c_str(), worker.available_disk_space,
-				worker.slave_id);
+				worker.worker_type.c_str(), worker.slave_id);
 
-		gh->log2(sqlquery2, "sql");
+	//	gh->log2(sqlquery2, "sql");
 		this->query(sqlquery2);
 	}
 	void update_worker_tb_test() {
@@ -104,8 +93,8 @@ public:
 		char sqlquery2[500];
 		sprintf(sqlquery2, sqlquery1, site_task_str.c_str(),
 				site_task_str.c_str(), w_s.slave_id, w_s.site_id.c_str());
-		cout << sqlquery2 << endl;
-		gh->log2(sqlquery2, "sql");
+
+		//	gh->log2(sqlquery2, "sql");
 		this->query(sqlquery2);
 	}
 	void update_worker_site_tb_test() {
@@ -116,7 +105,6 @@ public:
 
 		update_worker_site_tb(w);
 	}
-	//================================
 	//================================
 
 };

@@ -57,7 +57,7 @@ void read_site_test() {
 
 	vector<string> vec;
 
-	struct command req_cmd;
+	struct req_command req_cmd;
 	int i = 14;
 
 	req_cmd.slave_id = 1;
@@ -101,7 +101,7 @@ void config_test() {
 
 void update_slave_status_test() {
 	master * mt = new master();
-	struct command req_cmd;
+	struct req_command req_cmd;
 	req_cmd.slave_id = 1;
 
 	mt->update_slave_status_in_memory(req_cmd);
@@ -132,7 +132,7 @@ void update_slave_status_test() {
 
 void get_min_bad_of_sites_test() {
 	master * mt = new master();
-	struct command req_cmd;
+	struct req_command req_cmd;
 	req_cmd.slave_id = 1;
 	mt->update_slave_status_in_memory(req_cmd);
 	//mt->slave_map["1"].slave_id="1";
@@ -167,20 +167,20 @@ void build_csdn_url() {
 }
 //
 void need_sleep_test() {
-	struct command req_cmd;
+	struct req_command req_cmd;
 	master * mt = new master();
 	cout << mt->need_sleep(req_cmd) << endl;
 }
 //
 void bad_url_read_test() {
-	struct command req_cmd;
+	struct req_command req_cmd;
 	master * mt = new master();
 	cout << mt->need_sleep(req_cmd) << endl;
 }
 //
 void hand_slave_request_test() {
 	master * mt = new master();
-	struct command req_cmd;
+	struct req_command req_cmd;
 	map<string, string> response_cmd_map;
 	//1 request
 	req_cmd.commd_id = 1;

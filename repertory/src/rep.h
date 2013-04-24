@@ -23,7 +23,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-
+#include <linux/tcp.h>
 #include "errno.h"
 #include "map"
 #include "vector"
@@ -73,6 +73,10 @@ public:
 
 	int master_port;
 	vector<string> master_ip;
+
+	vector<string> worker_type;
+	vector<string> rep_id;
+
 	rep() {
 
 		gh = new GlobalHelper();
@@ -87,6 +91,10 @@ public:
 		this->rep_ip.push_back(config_map1["rep_ip"]);
 		this->master_port = atoi((config_map1["master_port"]).c_str());
 		this->master_ip.push_back(config_map1["master_ip"]);
+
+		this->worker_type.push_back(config_map1["worker_type"]);
+		this->rep_id.push_back(config_map1["rep_id"]);
+		gh->show_config(config_map1, gh->REP_CONF);
 
 	}
 	int service() {
@@ -147,7 +155,7 @@ public:
 				}
 				if (gh->tail_with_feature(request_buff, read_count, "\f")) {
 					break;
-					//TODO:: extract a function :is revice OK?
+
 				}
 			}
 			request_buff[read_count] = '\0';
@@ -252,7 +260,8 @@ public:
 		//init_map
 		map<string, string> cmd_map;
 		cmd_map["commd_id"] = "6";
-
+		cmd_map["rep_id"] = this->rep_id[0];
+		cmd_map["worker_type"] = this->worker_type[0];
 		cmd_map["available_disk_space"] = gh->float2str(
 				gh->available_disk_space());
 
@@ -286,7 +295,7 @@ public:
 
 				break;
 			}
-
+			this->set_socket(socketfd);
 			//3 prepare server address
 			gh->init_address(&dest_addr, PF_INET, this->master_port,
 					inet_addr(this->rep_ip[0].c_str()));
@@ -324,6 +333,9 @@ public:
 			str_cmd = "";
 			while ((bytes_count = read(socketfd, read_buf, READ_BUFF_SIZE)) > 0) {
 				total += bytes_count;
+				if (bytes_count == -1) {
+					break;
+				}
 				if (bytes_count == 0) {
 					break;
 				}
@@ -347,6 +359,34 @@ public:
 	}
 
 	//=============
+	void set_socket(int socketfd) {
+		int keepAlive = 1;
+		setsockopt(socketfd, SOL_SOCKET, SO_KEEPALIVE, (void*) &keepAlive,
+				sizeof(keepAlive));
+		int keepIdle = 10; //开始首次KeepAlive探测前的TCP空闭时间
+		int keepInterval = 10; // 两次KeepAlive探测间的时间间隔
+		int keepCount = 1; // 判定断开前的KeepAlive探测次数
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPIDLE, (void *) &keepIdle,
+				sizeof(keepIdle));
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPINTVL, (void *) &keepInterval,
+				sizeof(keepInterval));
+		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPCNT, (void *) &keepCount,
+				sizeof(keepCount));
+		struct timeval tv1;
+		tv1.tv_sec = 20;
+		tv1.tv_usec = 0;
+		//发送时限
+		setsockopt(socketfd, SOL_SOCKET, SO_SNDTIMEO, (char *) &tv1,
+				sizeof(tv1));
+		//接收时限
+		struct timeval tv2;
+		tv2.tv_sec = 20;
+		tv2.tv_usec = 0;
+		setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &tv2,
+				sizeof(tv2));
+	}
+
+	//
 };
 
 }

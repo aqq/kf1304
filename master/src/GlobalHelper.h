@@ -190,53 +190,6 @@ public:
 		fclose(stream);
 		return length;
 	}
-	void string_contain_test() {
-		string s1 = "HTTP/1.1 200 OK\r\n"
-				"Cache-Control: max-age=86400\r\n"
-				"Date: Thu, 04 Apr 2013 10:34:04 GMT\r\n"
-				"Content-Length: 20035\r\n"
-				"Content-Type: text/html\r\n";
-
-		string s2;
-		if (string_contain(s1, "Content-Length", &s2)) {
-			cout << s2 << endl;
-		}
-		string::size_type len;
-		if (Content_length(s1, &len)) {
-			cout << len << endl;
-		}
-
-	}
-	bool Content_length(string s1, string::size_type *length) {
-		string s2;
-		if (string_contain(s1, "Content-Length", &s2)) {
-			*length = this->string_to_unsigned_int(s2);
-			return true;
-		}
-		return false;
-	}
-	bool string_contain(string str, string key, string *result) {
-		unsigned int pos;
-		unsigned int pos1;
-		unsigned int pos2;
-		//STRING.FIND 查找，找到第一个取其：后\r\n 前的值。
-		if ((pos = str.find(key, 0)) == string::npos) {
-			return false;
-		}
-		if ((pos1 = str.find(":", pos)) == string::npos) {
-			return false;
-		}
-		pos1++;
-		if ((pos2 = str.find("\r", pos)) == string::npos) {
-			return false;
-		}
-		cout << "pos=" << pos << " pos1=" << pos1 << " pos2=" << pos2 << endl;
-		if (pos1 > pos2) {
-			return false;
-		}
-		*result = str.substr(pos1, pos2 - pos1);
-		return true;
-	}
 
 	//是否以给定字符串结尾
 	bool tail_with_feature(char* buf, int count, const char* feature) {
@@ -435,8 +388,26 @@ public:
 
 	}
 	//
+	void show_config(map<string, string> config_map1, string title) {
+		std::cout << "==========" << title << "==========" << endl;
+		for (map<string, string>::iterator it2 = config_map1.begin();
+				it2 != config_map1.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << endl;
+		}
+		std::cout << "==========" << title << "==========" << endl;
+	}
 
 //
+	string read_all_file(string fname) {
+		ifstream ifs;
+		ifs.open(fname.c_str(), ios::in);
+		int f_size = this->file_size(fname);
+		char fcontent[f_size];
+		ifs.read(fcontent, f_size);
+		ifs.close();
+		string res = fcontent;
+		return res;
+	}
 	//==========================================
 	// . connect to server
 	/*

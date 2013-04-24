@@ -75,10 +75,13 @@ public:
 		MASTER_CONF = "./conf/master.conf";
 		MASTER_IP = "192.168.75.128";
 		MASTER_PORT = 9001;
+		config();
 	}
 	map<string, string> config_show_map;
 	void config() {
-		read_config("./conf/log.conf", config_show_map);
+		string confname = "./conf/log.conf";
+		read_config(confname, config_show_map);
+		this->show_config(config_show_map, confname);
 	}
 	bool is_log_show(string type) {
 		return (config_show_map.find(type) != config_show_map.end());
@@ -95,20 +98,24 @@ public:
 		string time_str = tmpbuf;
 		return time_str;
 	}
-	//
+	//.
+	bool is_log_to_file() {
+		string is_log = config_show_map["log"];
+		return (is_log == "1");
+	}
 	void log2(string content, string type) {
 
-		string time_str = get_string_time("%Y%m%d");
-
-		string filename = "./log/slave_#_@.txt";
-		filename = replace(filename, time_str, "#");
-		filename = replace(filename, type, "@");
-
-		ofstream outfile(filename.c_str(), ios::app);
-		string str_con = time_str + " " + get_string_time("%T") + ":" + content;
-
-		outfile << str_con << endl;
-		outfile.close();
+		if (is_log_to_file()) {
+			string time_str = get_string_time("%Y%m%d");
+			string filename = "./log/slave_#_@.txt";
+			filename = replace(filename, time_str, "#");
+			filename = replace(filename, type, "@");
+			ofstream outfile(filename.c_str(), ios::app);
+			string str_con = time_str + " " + get_string_time("%T") + ":"
+					+ content;
+			outfile << str_con << endl;
+			outfile.close();
+		}
 
 		if (this->is_log_show(type)) {
 			cout << content << endl;
@@ -579,6 +586,15 @@ public:
 
 	}
 	//
+	//
+	void show_config(map<string, string> config_map1, string title) {
+		std::cout << "==========" << title << "==========" << endl;
+		for (map<string, string>::iterator it2 = config_map1.begin();
+				it2 != config_map1.end(); ++it2) {
+			std::cout << it2->first << " => " << it2->second << endl;
+		}
+		std::cout << "==========" << title << "==========" << endl;
+	}
 };
 
 }

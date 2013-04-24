@@ -1,0 +1,40 @@
+=====================================================
+1.master 
+#cp src
+scp -r /opt/workspace2/kf1304/master/src/ root@192.168.60.22:/home/andrew/master/
+#cp conf
+scp -r /opt/workspace2/kf1304/master/src/ root@192.168.60.22:/home/andrew/master/
+
+scp  /opt/workspace2/kf1304/slave/kf1304_slave/temp2/slave.tar.gz root@192.168.60.22:/home/andrew/tomcat/apache-tomcat-6.0.36/webapps/ROOT/slave/
+
+
+
+=====================================================
+2.rep src
+scp -r /opt/workspace2/kf1304/repertory/src/ root@192.168.60.22:/home/andrew/repertory/
+
+=====================================================
+3.slave src####################
+ 
+#a#10.2.112.19
+scp -r /opt/workspace2/kf1304/slave/* root@10.2.112.19:/home/andrew/slave/ 
+scp -r /opt/workspace2/kf1304/slave/src/ root@10.2.112.19:/home/andrew/slave/
+#b#10.2.112.23
+scp -r /opt/workspace2/kf1304/slave/* root@10.2.112.23:/home/andrew/slave/ 
+#####
+scp -r /opt/workspace2/kf1304/slave/kf1304_slave/src/ root@10.2.112.47:/home/andrew/slave/
+
+scp -r /opt/workspace2/kf1304/slave/kf1304_slave root@10.2.112.95:/home/andrew/slave/  
+scp  /opt/workspace2/kf1304/slave/kf1304_slave/temp2/slave.tar.gz root@10.2.112.95:/home/andrew/slave/  
+
+=====================================================
+4.update tools
+scp   /opt/workspace2/kf1304/tools/src/t3.cpp root@192.168.60.22:/home/url_data/
+
+=====================================================
+5.SSH
+ssh -R 9003:localhost:22 root@10.2.112.95 "touch login;sleep 2400;touch logout;"
+
+
+6.information
+scp -r /opt/workspace2/kf1304/information_extraction/ root@192.168.60.22:/home/andrew/
