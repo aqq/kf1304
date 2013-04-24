@@ -1,7 +1,0 @@
-make clean
-make all
-cd ..
-echo "cd .."
-mv Debug/kf1304_master kf1304_master
-echo "mv Debug/kf1304_master kf1304_master"
-

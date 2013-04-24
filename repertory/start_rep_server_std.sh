@@ -17,5 +17,5 @@ echo "cp -f Debug/kf1304_repertory kf1304_repertory"
 cp -f Debug/kf1304_repertory kf1304_repertory
 
  
-echo "./start_rep.sh"
-./start_rep.sh
+echo "./repertory_run.sh"
+./repertory_run.sh

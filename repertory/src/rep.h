@@ -115,6 +115,7 @@ public:
 		//3 prepare listen access point
 		gh->init_address(&local_addr, PF_INET, this->rep_port, INADDR_ANY);
 
+		this->set_socket(socketfd);
 		//4 bind and listen
 		if (-1
 				== bind(socketfd, (struct sockaddr*) (&local_addr),
@@ -131,14 +132,14 @@ public:
 		//5  service is receive cmd and response cmd
 		socklen_t client_addr_size;
 		int read_totals = 0;
+		client_addr_size = sizeof(client_addr);
 		while (1) {
 
-			client_addr_size = sizeof(client_addr);
 			//5.1 accept
 			if ((new_fd = accept(socketfd, (struct sockaddr*) (&client_addr),
 					&client_addr_size)) == -1) {
-				perror("socket new_fd accept fail...");
-				return -1;
+				//		perror("socket new_fd accept fail...");
+				continue;
 			}
 			string str_log = "conntection from:";
 			str_log += inet_ntoa(client_addr.sin_addr);
@@ -146,30 +147,39 @@ public:
 
 			//5.2   accept until \f
 			ssize_t read_count;
+			bool read_error = false;
+			string req_str = "";
 			while (1) {
 				bzero(request_buff, sizeof request_buff);
 				read_count = read(new_fd, request_buff, sizeof request_buff);
 				if (read_count == -1) {
-					perror("socket fd read fail...");
+					cout << "socket fd read fail..." << endl;
+					read_error = true;
 					break;
 				}
+				request_buff[read_count] = '\0';
+				req_str += request_buff;
 				if (gh->tail_with_feature(request_buff, read_count, "\f")) {
 					break;
-
+				}
+				if (read_count == 0) {
+					break;
 				}
 			}
-			request_buff[read_count] = '\0';
 
+			if (read_error) {
+				continue;
+			}
 			string cog_str1 = "request is:";
 			//cout<<(cog_str1 + request_buff)<<endl;
-			gh->log2(cog_str1 + request_buff, "socket");
+			gh->log2(cog_str1 + req_str, "socket");
 
 			//5.3 hand request
-			string request_str = request_buff;
+			string request_str = req_str;
 			struct rep_command req_cmd;
 
 			if (!is_req_store(request_str, req_cmd)) {
-				break;
+				continue;
 			}
 			gh->log2("5.4 write to request:\f ", "socket");
 			//5.4 write to request
@@ -184,11 +194,11 @@ public:
 			string filename = "./pages_gzip/" + req_cmd.task_id.at(0)
 					+ ".tar.gz";
 
-			//	gh->log2("5.4 write to request:\f ","task");
 			gh->log2("5.5 filename:" + filename, "task");
 			int fd = open(filename.c_str(), O_CREAT | O_WRONLY | O_TRUNC);
 			unsigned long total = 0;
-//5.6 read  gzeip page
+
+			//5.6 read  gzeip page
 			while (1) {
 				bzero(request_buff, sizeof request_buff);
 				read_count = read(new_fd, request_buff, sizeof request_buff);
@@ -373,14 +383,14 @@ public:
 		setsockopt(socketfd, IPPROTO_TCP, TCP_KEEPCNT, (void *) &keepCount,
 				sizeof(keepCount));
 		struct timeval tv1;
-		tv1.tv_sec = 20;
+		tv1.tv_sec = 10;
 		tv1.tv_usec = 0;
 		//发送时限
 		setsockopt(socketfd, SOL_SOCKET, SO_SNDTIMEO, (char *) &tv1,
 				sizeof(tv1));
 		//接收时限
 		struct timeval tv2;
-		tv2.tv_sec = 20;
+		tv2.tv_sec = 10;
 		tv2.tv_usec = 0;
 		setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (char *) &tv2,
 				sizeof(tv2));

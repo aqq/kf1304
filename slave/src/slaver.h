@@ -54,11 +54,7 @@
 using namespace std;
 
 namespace poseidon {
-const string s_moudle = "moudle";
-const string s_socket = "socket";
-const string s_normal = "normal";
-const string s_sql = "sql";
-const string s_work = "task";
+
 
 const string slave_private_conf = "./private/slave_private.conf";
 struct storetask {

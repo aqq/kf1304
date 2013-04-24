@@ -42,7 +42,11 @@ using namespace std;
 #define DEBUG
 #define LOG
 namespace poseidon {
-
+const string s_moudle = "moudle";
+const string s_socket = "socket";
+const string s_normal = "normal";
+const string s_sql = "sql";
+const string s_work = "task";
 class GlobalHelper {
 private:
 
@@ -469,12 +473,9 @@ public:
 		return user_agent_str;
 	}
 
-	string convert_url_to_http_req(string url) {
-		string fpath_user_agent = "./http_req/User-Agent";
-		string fpath_accept = "./http_req/Accept";
-		string fpath_accept_language = "./http_req/Accept-Language";
-		string fpath_accept_charset = "./http_req/Accept-Charset";
-		string req =
+	string convert_url_to_http_req_bak(string url) {
+
+		string req = // http_req_str_vec[random_int];
 				"GET # HTTP/1.1\r\n"
 						"Host: #\r\n"
 						"Connection: close\r\n"
@@ -483,47 +484,47 @@ public:
 						"User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31\r\n"
 						"Accept-Language: zh-CN,zh;q=0.8\r\n"
 						"Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3\r\n\r\n";
-		log2(url, "convert_url_to_http_req");
-		string::size_type pos1; //  pos of  '/'
-		pos1 = url.find_first_of('/', 0);
-		string host = url.substr(0, pos1);
-		string urlbody = url.substr(pos1);
-		req = replace(req, urlbody, "#");
-		req = replace(req, host, "#"); //host
 
-		//req = replace(req, "", "#"); //cookie
-		return req;
-	}
-	string convert_url_to_http_req3(string url) {
-		string fpath_user_agent = "./http_req/User-Agent";
-		string fpath_accept = "./http_req/Accept";
-		string fpath_accept_language = "./http_req/Accept-Language";
-		string fpath_accept_charset = "./http_req/Accept-Charset";
-		string req = "GET # HTTP/1.1\r\n"
-				"Host: #\r\n"
-				"Connection: close\r\n"
-				//		"Cache-Control: max-age=0\r\n"
-				"User-Agent: #\r\n"
-				//			"Accept: #\r\n"
-				//			"Accept-Language: #\r\n"
-				//			"Accept-Charset: #\r\n"
-				//"Cookie:#\r\n"
-				"\r\n";
 		log2(url, "convert_url_to_http_req");
+
 		string::size_type pos1; //  pos of  '/'
 		pos1 = url.find_first_of('/', 0);
 		string host = url.substr(0, pos1);
 		string urlbody = url.substr(pos1);
-		string user_agent_str = random_get_one_line(fpath_user_agent);
 		req = replace(req, urlbody, "#");
 		req = replace(req, host, "#"); //host
-		req = replace(req, random_get_one_line(fpath_user_agent), "#");
-//		req = replace(req, random_get_one_line(fpath_accept), "#");
-//		req = replace(req, random_get_one_line(fpath_accept_language), "#");
-		//	req = replace(req, random_get_one_line(fpath_accept_charset), "#");
+		log2(req, "convert_url_to_http_req");
 		//req = replace(req, "", "#"); //cookie
 		return req;
 	}
+	//整体组合
+	string convert_url_to_http_req(string url) {
+
+		map<string, string> config_show_map;
+		string fname = "./http_req/http_head";
+		string content = "";
+
+		content = read_all_file(fname);
+		vector<string> http_req_str_vec;
+		this->split(content, "@", http_req_str_vec);
+	//	int flines = (int) http_req_str_vec.size();
+
+		//int random_int = rand() % flines;
+		string req = http_req_str_vec[7];
+
+		log2(url, "convert_url_to_http_req");
+
+		string::size_type pos1; //  pos of  '/'
+		pos1 = url.find_first_of('/', 0);
+		string host = url.substr(0, pos1);
+		string urlbody = url.substr(pos1);
+		req = replace(req, urlbody, "#");
+		req = replace(req, host, "#"); //host
+		log2(req, "convert_url_to_http_req");
+		//req = replace(req, "", "#"); //cookie
+		return req;
+	}
+	//随机组合
 	string convert_url_to_http_req4(string url) {
 		string fpath_user_agent = "./http_req/User-Agent";
 		string fpath_accept = "./http_req/Accept";
@@ -555,10 +556,14 @@ public:
 		return req;
 	}
 	bool convert_url_to_http_req_test() {
-		string url = "wx.114chn.com/m/web/shop/index.aspx";
-		cout << "url:" << url << endl;
-		string http_req = convert_url_to_http_req(url);
-		cout << "http_req:" << http_req << endl;
+		int i = 50;
+		while (i--) {
+			string url = "wx.114chn.com/m/web/shop/index.aspx";
+			cout << "url:" << url << endl;
+			string http_req = convert_url_to_http_req(url);
+			cout << "http_req:" << http_req << endl;
+
+		}
 		return 1;
 	}
 	void log(string filename, string content) {
@@ -914,6 +919,17 @@ public:
 			std::cout << it2->first << " => " << it2->second << endl;
 		}
 		std::cout << "==========" << title << "==========" << endl;
+	}
+	//
+	string read_all_file(string fname) {
+		ifstream ifs;
+		ifs.open(fname.c_str(), ios::in);
+		int f_size = this->file_size(fname);
+		char fcontent[f_size];
+		ifs.read(fcontent, f_size);
+		ifs.close();
+		string res = fcontent;
+		return res;
 	}
 //==========================================
 // . connect to server
