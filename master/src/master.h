@@ -144,8 +144,11 @@ public:
 		this->sleep_time = "3600";
 		return 1;
 	}
-
+	bool store;
 	bool need_store(struct req_command req_cmd) {
+		store = !store; //测试
+		return store;
+
 		int time_h = atoi(gh->get_string_time("%H").c_str());
 
 		if (time_h >= this->slave_work_time_begin

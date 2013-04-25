@@ -1,0 +1,18 @@
+20130425 13:11:17:Begin init mysql
+20130425 13:11:23:Finish init mysql
+20130425 13:11:35:	update worker_tb set last_request_time='2013-04-25 13:11:35',last_ip='10.2.112.92',available_disk_space='6.102540',worker_type='' where slave_id=1
+20130425 13:11:42:	update worker_tb set last_request_time='2013-04-25 13:11:42',last_ip='10.2.112.92',available_disk_space='6.102540',worker_type='' where slave_id=1
+20130425 13:11:42:	update worker_site_tb set site_task_sucess=site_task_sucess+1 where slave_id=1 and site_id='csdn'
+20130425 13:13:18:Begin init mysql
+20130425 13:13:18:Finish init mysql
+20130425 13:13:33:Begin init mysql
+20130425 13:13:33:Finish init mysql
+20130425 13:13:41:	update worker_tb set last_request_time='2013-04-25 13:13:41',last_ip='10.2.112.92',available_disk_space='6.103520',worker_type='' where slave_id=1
+20130425 13:13:42:	update worker_tb set last_request_time='2013-04-25 13:13:42',last_ip='10.2.112.92',available_disk_space='6.104490',worker_type='' where slave_id=1
+20130425 13:13:50:	update worker_tb set last_request_time='2013-04-25 13:13:50',last_ip='10.2.112.92',available_disk_space='6.103520',worker_type='' where slave_id=1
+20130425 13:13:50:	update worker_site_tb set site_task_sucess=site_task_sucess+1 where slave_id=1 and site_id='csdn'
+20130425 13:13:50:	update worker_tb set last_request_time='2013-04-25 13:13:50',last_ip='10.2.112.92',available_disk_space='6.104490',worker_type='' where slave_id=1
+20130425 13:13:57:	update worker_tb set last_request_time='2013-04-25 13:13:57',last_ip='10.2.112.92',available_disk_space='6.103520',worker_type='' where slave_id=1
+20130425 13:13:57:	update worker_site_tb set site_task_sucess=site_task_sucess+1 where slave_id=1 and site_id='csdn'
+20130425 13:13:57:	update worker_tb set last_request_time='2013-04-25 13:13:57',last_ip='',available_disk_space='6.103520',worker_type='rep' where slave_id=101
+20130425 13:13:57:	update worker_tb set last_request_time='2013-04-25 13:13:57',last_ip='10.2.112.92',available_disk_space='6.104490',worker_type='' where slave_id=1
