@@ -507,7 +507,7 @@ public:
 		content = read_all_file(fname);
 		vector<string> http_req_str_vec;
 		this->split(content, "@", http_req_str_vec);
-	//	int flines = (int) http_req_str_vec.size();
+		//	int flines = (int) http_req_str_vec.size();
 
 		//int random_int = rand() % flines;
 		string req = http_req_str_vec[7];
@@ -930,6 +930,33 @@ public:
 		ifs.close();
 		string res = fcontent;
 		return res;
+	}
+	//
+	//string page_content =
+	//"HTTP/1.1 200 OK\r\n";
+	bool response_status(string page_content, int status1) {
+		vector<string> str_vec;
+		split(page_content.c_str(), " ", str_vec);
+		if (str_vec.size() != 3) {
+			return 0;
+		}
+		int status2 = atoi(str_vec[1].c_str());
+		return (status1 == status2);
+
+		//	cout << str_vec[2] << endl;
+	}
+
+	void get_status_of_head_test() {
+		string page_content =
+				"HTTP/1.1 200 OK\r\n";
+		int status = 200;
+		cout << response_status(page_content, status) << endl;
+
+		string page_content1 =
+				"HTTP/1.1 2001K\r\n";
+		int status1 = 200;
+		cout << response_status(page_content1, status1) << endl;
+
 	}
 //==========================================
 // . connect to server

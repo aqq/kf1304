@@ -51,6 +51,8 @@ int main() {
 	//(new GlobalHelper())->delete_self_test(); //pass
 
 	//(new GlobalHelper())->convert_url_to_http_req_test();
+//	(new GlobalHelper())->get_status_of_head_test();
+
 	//grab
 	//-------------------------------
 // 	slaver_test_grab(); //pass
@@ -64,7 +66,7 @@ int main() {
 //	grabpage_work_test(); //pass
 //	hand_response_test(); //pass
 //	str2task_test();
-
+	//split_response_status();
 	slaver_work_test(); //final test
 
 	//slaver_test_grab_for_login();

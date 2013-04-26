@@ -198,7 +198,7 @@ public:
 			//5.1 accept
 			if ((new_fd = accept(socketfd,
 					(struct sockaddr*) (((&client_addr))), &size)) == -1) {
-				perror("socket new_fd accept fail...");
+			//	perror("socket new_fd accept fail...");
 				continue;
 			}
 			cout << "conntection from:" << inet_ntoa(client_addr.sin_addr)

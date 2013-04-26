@@ -449,5 +449,18 @@ void local_ip_test() {
 	slaver * worker = new slaver();
 	cout << worker->local_ip() << endl;
 }
+
+void split_response_status() {
+
+	string page_content =
+			"ja.114chn.com/chtml/360800/HotInfoView100104000173.html HTTP/1.1 200 OK\r\n";
+	GlobalHelper *gh = new GlobalHelper();
+
+	vector<string> str_vec;
+	gh->split(page_content.c_str(), " ", str_vec);
+	cout << str_vec[2] << endl;
+
+	//ja.114chn.com/chtml/360800/HotInfoView100104000173.html HTTP/1.1 200 OK
+}
 } /* namespace poseidon */
 #endif /* slave_test_H_ */

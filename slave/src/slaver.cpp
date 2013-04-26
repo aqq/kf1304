@@ -231,8 +231,9 @@ bool slaver::grab_page(grabtask gt) {
 			buf[count] = '\0';
 			page_content += buf;
 
-		}
+		}//end while
 
+		bool page_200 = false;
 		if (page_completed) {
 			string filename = gh->grab_page_filename(task_index, task_id);
 			string split_s1 = gh->get_str_betwen_pages(gt.url);
@@ -240,10 +241,13 @@ bool slaver::grab_page(grabtask gt) {
 		} else {
 			gh->log2(gt.url + " read error", s_socket);
 		}
+
 		string head = page_content.substr(0, page_content.find('\r', 0));
+		page_200 = gh->response_status(head, 200);
+
 		gh->log2(gt.url + " " + head, s_socket);
-		gh->log2(gt.url + " " + head, s_work);
-		this->last_task_status = 1; //
+		//	gh->log2(gt.url + " " + head, s_work);
+		this->last_task_status = page_200; //
 		break;
 	}
 	close(sockfd);
